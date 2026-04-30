@@ -60,9 +60,9 @@ const fmtPct = (n: number | null) => n == null ? "—" : `${n.toFixed(1)}%`;
 
 const greeting = () => {
   const h = new Date().getHours();
-  if (h < 12) return "Good morning";
-  if (h < 17) return "Good afternoon";
-  return "Good evening";
+  if (h < 12) return "Good Morning";
+  if (h < 17) return "Good Afternoon";
+  return "Good Evening";
 };
 
 const todayLabel = () =>
