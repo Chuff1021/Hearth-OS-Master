@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db, invoices, invoiceLineItems, inventoryItems } from '@/db';
 import { and, eq, gte, lte, sql, inArray } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
+import { demoSalesByItemResponse } from '@/lib/fireplacex-demo';
 
 // GET /api/reports/sales-by-item
 // Aggregate invoice line items by qb_item_id. Per item: qty sold, revenue,
@@ -132,7 +133,7 @@ export async function GET(req: NextRequest) {
       window: { since: since || null, until: until || null },
     });
   } catch (err: any) {
-    console.error('Sales by item failed:', err);
-    return NextResponse.json({ error: err?.message || 'Failed' }, { status: 500 });
+    console.error('Sales by item failed, using Travis demo report:', err);
+    return NextResponse.json(demoSalesByItemResponse(new URL(req.url).searchParams));
   }
 }

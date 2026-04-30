@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db, invoices, customers } from '@/db';
 import { and, eq, sql, desc } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
+import { demoArAgingResponse } from '@/lib/fireplacex-demo';
 
 // GET /api/reports/ar-aging
 // Open invoice balances bucketed by days overdue, grouped by customer.
@@ -132,7 +133,7 @@ export async function GET(req: NextRequest) {
       customerCount: customerGroups.length,
     });
   } catch (err: any) {
-    console.error('A/R aging failed:', err);
-    return NextResponse.json({ error: err?.message || 'Failed' }, { status: 500 });
+    console.error('A/R aging failed, using Travis demo report:', err);
+    return NextResponse.json(demoArAgingResponse(new URL(req.url).searchParams));
   }
 }

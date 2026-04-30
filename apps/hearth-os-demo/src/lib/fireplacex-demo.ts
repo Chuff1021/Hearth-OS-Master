@@ -184,3 +184,170 @@ export function demoVendorResponse() {
   const totals = items.reduce((acc, x) => ({ vendors: acc.vendors + 1, balance: acc.balance + x.balance, openBills: acc.openBills + x.openBillCount, openPOs: acc.openPOs + x.openPOCount }), { vendors: 0, balance: 0, openBills: 0, openPOs: 0 });
   return { items, totals, moneyBar: { totalOwed: totals.balance, openBillCount: totals.openBills, overdueAmount: 4200, overdueCount: 1, openPOValue: 73800, openPOCount: totals.openPOs, ytdSpend: 184200, ytdBillCount: 17 } };
 }
+
+function demoInvoiceProfitRows() {
+  return demoInvoices.map((invoice, index) => {
+    const cogs = Math.round(invoice.subtotal * (0.52 + (index % 3) * 0.04));
+    const billable = Math.round(invoice.subtotal * (0.08 + (index % 2) * 0.03));
+    const profit = invoice.subtotal - cogs - billable;
+    const margin = invoice.subtotal > 0 ? (profit / invoice.subtotal) * 100 : null;
+    return {
+      id: invoice.id,
+      invoiceNumber: invoice.invoiceNumber,
+      issueDate: invoice.issueDate,
+      status: invoice.status,
+      customerId: invoice.customerId,
+      customerName: invoice.customerName,
+      revenue: invoice.subtotal,
+      taxPassthrough: 0,
+      tax: invoice.taxAmount,
+      billed: invoice.totalAmount,
+      cogs,
+      billable,
+      profit,
+      margin,
+      balance: invoice.balance,
+    };
+  });
+}
+
+export function demoProfitByJobResponse(params?: URLSearchParams) {
+  const page = Math.max(1, parseInt(params?.get("page") || "1", 10));
+  const limit = Math.min(500, Math.max(20, parseInt(params?.get("limit") || "100", 10)));
+  let items = demoInvoiceProfitRows();
+  const q = (params?.get("q") || "").toLowerCase();
+  if (q) items = items.filter((i) => [i.invoiceNumber, i.customerName, i.status].some((v) => v.toLowerCase().includes(q)));
+  const totalCount = items.length;
+  const revenue = items.reduce((sum, i) => sum + i.revenue, 0);
+  const cogs = items.reduce((sum, i) => sum + i.cogs, 0);
+  const billable = items.reduce((sum, i) => sum + i.billable, 0);
+  const profit = items.reduce((sum, i) => sum + i.profit, 0);
+  const balance = items.reduce((sum, i) => sum + i.balance, 0);
+  const margins = items.filter((i) => i.margin != null).map((i) => i.margin as number);
+  const paged = items.slice((page - 1) * limit, page * limit);
+  return {
+    items: paged,
+    page,
+    limit,
+    totalCount,
+    windowStats: {
+      invoiceCount: items.length,
+      revenue,
+      taxPassthrough: 0,
+      tax: 0,
+      billed: revenue,
+      cogs,
+      billable,
+      totalCost: cogs + billable,
+      profit,
+      margin: revenue > 0 ? (profit / revenue) * 100 : null,
+      avgMarginPerInvoice: margins.length ? margins.reduce((a, b) => a + b, 0) / margins.length : null,
+      unprofitableCount: items.filter((i) => i.profit < 0).length,
+      balance,
+      bestProfit: items.length ? Math.max(...items.map((i) => i.profit)) : null,
+      worstProfit: items.length ? Math.min(...items.map((i) => i.profit)) : null,
+    },
+  };
+}
+
+export function demoSalesByCustomerResponse(params?: URLSearchParams) {
+  const limit = Math.min(2000, Math.max(20, parseInt(params?.get("limit") || "500", 10)));
+  const rows = demoCustomerCenterResponse(params).items.map((customer) => {
+    const invoices = demoInvoices.filter((invoice) => invoice.customerId === customer.id);
+    const revenue = invoices.reduce((sum, i) => sum + i.totalAmount, 0) || customer.totalRevenue;
+    const cogs = Math.round(revenue * 0.58);
+    const profit = revenue - cogs;
+    return {
+      customerId: customer.id,
+      customerName: customer.displayName,
+      email: customer.email,
+      phone: customer.phone,
+      revenue,
+      cogs,
+      profit,
+      margin: revenue > 0 ? Number(((profit / revenue) * 100).toFixed(1)) : null,
+      openBalance: customer.balance,
+      invoiceCount: customer.invoiceCount,
+      lastSale: customer.lastActivity,
+    };
+  }).sort((a, b) => b.revenue - a.revenue);
+  return {
+    customers: rows.slice(0, limit),
+    totals: {
+      revenue: rows.reduce((sum, r) => sum + r.revenue, 0),
+      openBalance: rows.reduce((sum, r) => sum + r.openBalance, 0),
+      invoiceCount: demoInvoices.length,
+      customerCount: rows.length,
+    },
+    window: { since: params?.get("since") || null, until: params?.get("until") || null },
+  };
+}
+
+export function demoSalesByItemResponse(params?: URLSearchParams) {
+  const limit = Math.min(1000, Math.max(20, parseInt(params?.get("limit") || "200", 10)));
+  const top = demoInventoryItems.slice(0, 18).map((item, index) => {
+    const qty = index % 4 === 0 ? 1 : 2 + (index % 5);
+    const revenue = qty * item.unitPrice;
+    const cogs = qty * item.cost;
+    const profit = revenue - cogs;
+    return {
+      qbItemId: item.qbItemId,
+      name: item.name,
+      sku: item.sku,
+      qty,
+      revenue,
+      cogs,
+      profit,
+      margin: revenue > 0 ? Number(((profit / revenue) * 100).toFixed(1)) : null,
+      avgPrice: item.unitPrice,
+      invoiceCount: 1 + (index % 4),
+      lastSold: dateOnlyDaysAgo(index % 30),
+    };
+  }).sort((a, b) => b.revenue - a.revenue);
+  return {
+    items: top.slice(0, limit),
+    totals: {
+      revenue: top.reduce((sum, item) => sum + item.revenue, 0),
+      qty: top.reduce((sum, item) => sum + item.qty, 0),
+      profit: top.reduce((sum, item) => sum + item.profit, 0),
+      itemCount: top.length,
+    },
+    window: { since: params?.get("since") || null, until: params?.get("until") || null },
+  };
+}
+
+export function demoArAgingResponse(params?: URLSearchParams) {
+  const onlyOverdue = params?.get("onlyOverdue") === "true";
+  const buckets = { current: 0, d1_30: 0, d31_60: 0, d61_90: 0, d91_plus: 0 };
+  const customers = demoInvoices
+    .filter((invoice) => invoice.balance > 0)
+    .map((invoice, index) => {
+      const bucket = invoice.status === "overdue" ? "d1_30" : "current";
+      if (onlyOverdue && bucket === "current") return null;
+      buckets[bucket as keyof typeof buckets] += invoice.balance;
+      const customer = demoCustomers.find((c) => c.id === invoice.customerId);
+      return {
+        customerId: invoice.customerId,
+        customerName: invoice.customerName,
+        customerEmail: customer?.email || null,
+        customerPhone: customer?.phone || null,
+        buckets: { current: 0, d1_30: 0, d31_60: 0, d61_90: 0, d91_plus: 0, [bucket]: invoice.balance },
+        totalBalance: invoice.balance,
+        invoices: [{
+          id: invoice.id,
+          number: invoice.invoiceNumber,
+          issueDate: invoice.issueDate,
+          dueDate: invoice.dueDate,
+          balance: invoice.balance,
+          totalAmount: invoice.totalAmount,
+          daysOverdue: bucket === "current" ? 0 : 12 + index,
+          bucket,
+        }],
+      };
+    })
+    .filter(Boolean)
+    .sort((a: any, b: any) => b.totalBalance - a.totalBalance);
+  const grandTotal = Object.values(buckets).reduce((a, b) => a + b, 0);
+  const overdueTotal = buckets.d1_30 + buckets.d31_60 + buckets.d61_90 + buckets.d91_plus;
+  return { customers, buckets, grandTotal, overdueTotal, invoiceCount: customers.length, customerCount: customers.length };
+}

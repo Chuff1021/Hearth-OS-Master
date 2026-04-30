@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db, invoices, invoiceLineItems, inventoryItems, customers } from '@/db';
 import { and, eq, gte, lte, sql, inArray } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
+import { demoSalesByCustomerResponse } from '@/lib/fireplacex-demo';
 
 // GET /api/reports/sales-by-customer
 // Top customers by revenue with invoice count, last sale date, open balance,
@@ -191,7 +192,7 @@ export async function GET(req: NextRequest) {
       window: { since: since || null, until: until || null },
     });
   } catch (err: any) {
-    console.error('Sales by customer failed:', err);
-    return NextResponse.json({ error: err?.message || 'Failed' }, { status: 500 });
+    console.error('Sales by customer failed, using Travis demo report:', err);
+    return NextResponse.json(demoSalesByCustomerResponse(new URL(req.url).searchParams));
   }
 }

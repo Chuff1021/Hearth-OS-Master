@@ -10,6 +10,7 @@ import {
 } from '@/db';
 import { and, eq, sql, desc, asc, ilike, or, inArray, gte, lte } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
+import { demoProfitByJobResponse } from '@/lib/fireplacex-demo';
 
 // GET /api/reports/profit-by-job
 // Returns BOTH the paginated page (for the table) AND aggregate stats over
@@ -348,7 +349,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (err: any) {
-    console.error('Profit-by-job report failed:', err);
-    return NextResponse.json({ error: err?.message || 'Failed' }, { status: 500 });
+    console.error('Profit-by-job report failed, using Travis demo financials:', err);
+    return NextResponse.json(demoProfitByJobResponse(new URL(req.url).searchParams));
   }
 }
