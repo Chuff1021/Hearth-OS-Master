@@ -1,10 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 import postgres from "postgres";
 import { demoPayrollResponse } from "@/lib/fireplacex-demo";
+import { readJsonFile, writeJsonFileWithBackup } from "@/lib/persist-json";
 
 const PAYROLL_EMAIL = "aaronsfireplace.shelly@gmail.com";
 
 let initDone = false;
+const PAYROLL_FILE = "payroll-demo-store.json";
+
+type PayrollStore = { approvals: any[]; reports: any[]; adjustments: any[]; runs: any[] };
+
+function loadPayrollStore(): PayrollStore {
+  const store = readJsonFile<PayrollStore>(PAYROLL_FILE, { approvals: [], reports: [], adjustments: [], runs: [] });
+  if (!Array.isArray(store.approvals)) store.approvals = [];
+  if (!Array.isArray(store.reports)) store.reports = [];
+  if (!Array.isArray(store.adjustments)) store.adjustments = [];
+  if (!Array.isArray(store.runs)) store.runs = [];
+  return store;
+}
+
+function savePayrollStore(store: PayrollStore) { writeJsonFileWithBackup(PAYROLL_FILE, store); }
 
 function getSql() {
   const url = process.env.DATABASE_URL;
@@ -48,7 +63,17 @@ export async function GET(request: NextRequest) {
   const sql = getSql();
   if (!sql) {
     const weekStart = new URL(request.url).searchParams.get("weekStart") || new Date().toISOString().slice(0, 10);
-    return NextResponse.json(demoPayrollResponse(weekStart));
+    const demo = demoPayrollResponse(weekStart);
+    const store = loadPayrollStore();
+    const approvalsByTech = new Map((demo.approvals || []).map((a: any) => [a.tech_id, a]));
+    for (const approval of store.approvals.filter((a) => a.week_start === weekStart)) approvalsByTech.set(approval.tech_id, approval);
+    return NextResponse.json({
+      ...demo,
+      approvals: [...approvalsByTech.values()],
+      reports: [...store.reports.filter((r) => r.week_start === weekStart), ...(demo.reports || [])],
+      adjustments: store.adjustments.filter((a) => a.week_start === weekStart),
+      runs: store.runs.filter((r) => r.week_start === weekStart),
+    });
   }
 
   try {
@@ -79,7 +104,61 @@ export async function GET(request: NextRequest) {
 // POST: approve a tech's timesheet OR send payroll report
 export async function POST(request: NextRequest) {
   const sql = getSql();
-  if (!sql) return NextResponse.json({ error: "No database" }, { status: 500 });
+  if (!sql) {
+    const body = await request.json();
+    const { action } = body;
+    const store = loadPayrollStore();
+
+    if (action === "approve") {
+      const { techId, techName, weekStart, totalMinutes } = body;
+      if (!techId || !weekStart) return NextResponse.json({ error: "techId and weekStart required" }, { status: 400 });
+      const regularMin = Math.min(Number(totalMinutes || 0), 2400);
+      const overtimeMin = Math.max(0, Number(totalMinutes || 0) - 2400);
+      const row = { id: `ta-demo-${techId}-${weekStart}`, tech_id: techId, tech_name: techName || techId, week_start: weekStart, total_minutes: Number(totalMinutes || 0), overtime_minutes: overtimeMin, regular_hours: (regularMin / 60).toFixed(2), overtime_hours: (overtimeMin / 60).toFixed(2), approved_by: "Eric", approved_at: new Date().toISOString() };
+      store.approvals = store.approvals.filter((a) => !(a.tech_id === techId && a.week_start === weekStart));
+      store.approvals.unshift(row);
+      savePayrollStore(store);
+      return NextResponse.json({ approved: true, techId, weekStart, approval: row });
+    }
+
+    if (action === "adjustment") {
+      const row = { id: `pa-${Date.now()}`, week_start: body.weekStart, tech_id: body.techId, tech_name: body.techName, type: body.type || "bonus", label: body.label || "Payroll adjustment", amount: Number(body.amount || 0), taxable: body.taxable !== false, created_at: new Date().toISOString() };
+      store.adjustments.unshift(row);
+      savePayrollStore(store);
+      return NextResponse.json({ adjustment: row }, { status: 201 });
+    }
+
+    if (action === "run_payroll") {
+      const run = { id: `payrun-${Date.now()}`, week_start: body.weekStart, status: body.status || "draft", pay_date: body.payDate || new Date().toISOString().slice(0, 10), gross_pay: Number(body.grossPay || 0), employer_taxes: Number(body.employerTaxes || 0), net_pay: Number(body.netPay || 0), employee_count: Number(body.employeeCount || 0), created_at: new Date().toISOString(), synced_to_quickbooks: false };
+      store.runs.unshift(run);
+      savePayrollStore(store);
+      return NextResponse.json({ run }, { status: 201 });
+    }
+
+    if (action === "send_report") {
+      const { weekStart, approvals: approvalData } = body;
+      if (!weekStart || !approvalData?.length) return NextResponse.json({ error: "weekStart and approvals required" }, { status: 400 });
+      const csvLines = ["Employee,Regular Hours,Overtime Hours,Total Hours,Gross Pay,Week Starting"];
+      let totalHours = 0;
+      let grossPay = 0;
+      for (const a of approvalData) {
+        const rate = Number(a.rate || 34);
+        const regular = Math.min(a.totalMinutes, 2400) / 60;
+        const overtime = Math.max(0, a.totalMinutes - 2400) / 60;
+        const gross = regular * rate + overtime * rate * 1.5;
+        totalHours += a.totalMinutes / 60;
+        grossPay += gross;
+        csvLines.push(`${a.techName || a.techId},${regular.toFixed(2)},${overtime.toFixed(2)},${(a.totalMinutes / 60).toFixed(2)},${gross.toFixed(2)},${weekStart}`);
+      }
+      const csv = csvLines.join("\n");
+      const report = { id: `pr-demo-${Date.now()}`, week_start: weekStart, sent_to: "demo-payroll@travis-demo.com", sent_at: new Date().toISOString(), report_csv: csv, tech_count: approvalData.length, total_hours: totalHours.toFixed(2), gross_pay: grossPay.toFixed(2) };
+      store.reports.unshift(report);
+      savePayrollStore(store);
+      return NextResponse.json({ reportId: report.id, emailSent: false, sentTo: null, csv, techCount: approvalData.length, totalHours: totalHours.toFixed(2), grossPay: grossPay.toFixed(2) });
+    }
+
+    return NextResponse.json({ error: "Unknown action" }, { status: 400 });
+  }
 
   try {
     await ensureTable(sql);

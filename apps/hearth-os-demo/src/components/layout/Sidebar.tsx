@@ -198,6 +198,16 @@ const navItems = [
         ),
       },
       {
+        label: "Payroll",
+        href: "/payroll",
+        badge: null,
+        icon: (
+          <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+            <path d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm3 1a1 1 0 000 2h6a1 1 0 100-2H7zm0 4a1 1 0 100 2h6a1 1 0 100-2H7zm0 4a1 1 0 100 2h3a1 1 0 100-2H7z" />
+          </svg>
+        ),
+      },
+      {
         label: "Settings",
         href: "/admin/settings",
         badge: null,
