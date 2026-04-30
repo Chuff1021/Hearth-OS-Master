@@ -30,6 +30,7 @@ const iconTone: Record<string, { bg: string; color: string; border: string }> = 
   "Reports": { bg: "rgba(255,255,255,0.04)", color: "#C7D2FE", border: "rgba(255,255,255,0.08)" },
   "Team": { bg: "rgba(255,255,255,0.04)", color: "#C7D2FE", border: "rgba(255,255,255,0.08)" },
   "Time Admin": { bg: "rgba(255,255,255,0.04)", color: "#C7D2FE", border: "rgba(255,255,255,0.08)" },
+  "Payroll": { bg: "rgba(255,255,255,0.04)", color: "#C7D2FE", border: "rgba(255,255,255,0.08)" },
   "Settings": { bg: "rgba(255,255,255,0.04)", color: "#C7D2FE", border: "rgba(255,255,255,0.08)" },
 };
 
