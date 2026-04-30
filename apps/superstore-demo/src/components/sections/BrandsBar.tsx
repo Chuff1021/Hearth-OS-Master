@@ -3,9 +3,14 @@ import { ArrowRight, ShieldCheck } from "lucide-react";
 import { cozyBrandNames } from "@/lib/store-config";
 
 const brandGroups = [
-  { label: "Stoves & Fireplaces", brands: ["Avalon", "Fireplace Xtrordinair", "Hearthstone", "Lopi", "Pacific Energy", "Vermont Castings"] },
-  { label: "BBQ Grills", brands: ["Broilmaster", "Modern Home Products", "Solaire Infrared Grilling"] },
-  { label: "Glass Doors", brands: ["Design Specialties", "David Kimberly Door Company", "Portland Willamette", "Residential Retreat", "Stoll"] },
+  { label: "Fireplaces", brands: ["Empire Comfort Systems", "Fireplace Xtrordinair", "Lopi", "Majestic"] },
+  { label: "Electric Fireplaces", brands: ["SimpliFire", "Modern Flames"] },
+  { label: "BBQ Grills", brands: ["Broilmaster Premium Grills"] },
+  { label: "Gas Logs", brands: ["Hargrove Gas Logs", "Empire Comfort Systems"] },
+  { label: "Glass Doors", brands: ["Design Specialties", "Stoll Industries"] },
+  { label: "Gas & Wood Stoves", brands: ["Empire Stove", "Fireplace Xtrordinair", "Hearthstone Stoves", "Lopi"] },
+  { label: "Stone Products", brands: ["Boulder Creek Stone"] },
+  { label: "Accessories", brands: ["Pilgrim Home & Hearth", "Stoll Industries", "Dagan LLC"] },
 ];
 
 function slugifyBrand(name: string) {
@@ -32,7 +37,7 @@ export function BrandsBar() {
           </p>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-4 xl:grid-cols-4">
           {brandGroups.map((group) => (
             <div key={group.label} className="border border-white/12 bg-white/[0.06] p-5 shadow-[0_30px_90px_rgba(0,0,0,0.28)] backdrop-blur-xl">
               <p className="text-xs font-black uppercase tracking-[0.2em] text-[#fde428]">{group.label}</p>
