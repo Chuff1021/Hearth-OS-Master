@@ -63,7 +63,7 @@ export interface StoreConfig {
 export const defaultStoreConfig: StoreConfig = {
   storeName: "A Cozy Fireplace",
   tagline: "Your complete neighborhood fireplace, wood stove, gas grill, gas lamp and fireplace accessories store.",
-  logo: "/acozy-logo.svg",
+  logo: "/acozy-logo.png",
   favicon: "/favicon.ico",
   
   phone: "630-778-1781",
@@ -82,11 +82,11 @@ export const defaultStoreConfig: StoreConfig = {
   },
   
   theme: {
-    primaryColor: "#b53824",
-    secondaryColor: "#5b2117",
-    accentColor: "#f0a12b",
-    headerBg: "#2a1711",
-    footerBg: "#170d09",
+    primaryColor: "#002e5b",
+    secondaryColor: "#001f3d",
+    accentColor: "#fde428",
+    headerBg: "#002e5b",
+    footerBg: "#001f3d",
   },
   
   business: {

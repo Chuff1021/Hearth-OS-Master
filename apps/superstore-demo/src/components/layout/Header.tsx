@@ -17,7 +17,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
   return (
     <>
-      <div className="hidden bg-[#11100e] text-white md:block">
+      <div className="hidden bg-[#002e5b] text-white md:block">
         <div className="mx-auto flex max-w-[1640px] items-center justify-between px-5 py-2 text-[13px]">
           <div className="flex items-center divide-x divide-white/20">
             {[
@@ -34,11 +34,11 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-[#ff7a18]/25 bg-[#080808] shadow-lg shadow-black/20">
+      <header className="sticky top-0 z-50 border-b border-[#fde428]/25 bg-[#002e5b] shadow-lg shadow-black/20">
         <div className="mx-auto max-w-[1640px] px-4 md:px-5">
           <div className="flex h-20 items-center justify-between gap-4 md:h-24">
             <button
-              className="p-2 text-white transition hover:text-[#ffb36b] lg:hidden"
+              className="p-2 text-white transition hover:text-[#fde428] lg:hidden"
               onClick={() => setIsMenuOpen((current) => !current)}
               aria-label="Toggle menu"
             >
@@ -58,16 +58,16 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
             <div className="hidden min-w-[360px] flex-1 lg:block xl:pl-4">
               <form action="/search" method="GET" className="mx-auto w-full max-w-[980px]">
-                <div className="flex h-12 items-center border border-[#ff7a18]/45 bg-[#fffaf2] shadow-inner shadow-black/10">
+                <div className="flex h-12 items-center border border-[#fde428]/45 bg-[#f7fbff] shadow-inner shadow-black/10">
                   <input
                     type="text"
                     name="q"
                     placeholder="Search by brand, model, SKU, or part number"
-                    className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm text-[#201914] outline-none placeholder:text-[#7a6a5a]"
+                    className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm text-[#001f3d] outline-none placeholder:text-[#52677d]"
                   />
                   <button
                     type="submit"
-                    className="flex h-full w-14 items-center justify-center border-l border-[#e0cbb4] bg-[#ff7a18] text-black transition hover:bg-[#ff963f]"
+                    className="flex h-full w-14 items-center justify-center border-l border-[#e0cbb4] bg-[#fde428] text-black transition hover:bg-[#fff06a]"
                     aria-label="Search"
                   >
                     <Search className="h-4 w-4" />
@@ -79,7 +79,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
             <div className="hidden items-center gap-5 lg:flex">
               <Link
                 href="/contractor-portal"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition hover:border-[#ff7a18] hover:text-[#ffb36b]"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition hover:border-[#fde428] hover:text-[#fde428]"
               >
                 Contractor Portal
               </Link>
@@ -88,7 +88,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                 <p>Order Online or Call</p>
                 <a
                   href={`tel:${defaultStoreConfig.phone}`}
-                  className="block font-semibold text-white hover:text-[#ffb36b]"
+                  className="block font-semibold text-white hover:text-[#fde428]"
                 >
                   {defaultStoreConfig.phone}
                 </a>
@@ -96,21 +96,21 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 block text-xs text-[#ffb36b] hover:text-white"
+                  className="mt-1 block text-xs text-[#fde428] hover:text-white"
                 >
                   {defaultStoreConfig.address.street}, {defaultStoreConfig.address.city}
                 </a>
               </div>
 
               <button
-                className="relative flex items-center gap-2 text-white transition-colors hover:text-[#ffb36b]"
+                className="relative flex items-center gap-2 text-white transition-colors hover:text-[#fde428]"
                 onClick={toggleCart}
                 aria-label="Shopping cart"
               >
                 <ShoppingCart className="h-5 w-5" />
                 <span className="text-sm">Cart</span>
                 {getItemCount() > 0 && (
-                  <span className="absolute -right-2 -top-2 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#ff7a18] text-[10px] font-semibold text-black">
+                  <span className="absolute -right-2 -top-2 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#fde428] text-[10px] font-semibold text-black">
                     {getItemCount()}
                   </span>
                 )}
@@ -132,7 +132,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               >
                 <ShoppingCart className="h-5 w-5 text-white" />
                 {getItemCount() > 0 && (
-                  <span className="absolute -right-1 -top-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#ff7a18] text-[10px] font-semibold text-black">
+                  <span className="absolute -right-1 -top-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#fde428] text-[10px] font-semibold text-black">
                     {getItemCount()}
                   </span>
                 )}
@@ -162,11 +162,11 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
           )}
         </div>
 
-        <div className="hidden border-t border-white/10 bg-[#15120f] lg:block">
+        <div className="hidden border-t border-white/10 bg-[#001f3d] lg:block">
           <nav className="mx-auto flex h-10 max-w-[1640px] items-center px-5">
             <Link
               href="/contractor-portal"
-              className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#ffb36b] transition-colors hover:text-white"
+              className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#fde428] transition-colors hover:text-white"
             >
               Contractor Portal
             </Link>
@@ -179,7 +179,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               >
                 <Link
                   href={`/category/${category.slug}`}
-                  className="flex h-10 items-center gap-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#f3e7d4] transition-colors hover:text-[#ffb36b]"
+                  className="flex h-10 items-center gap-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#eef6ff] transition-colors hover:text-[#fde428]"
                 >
                   {category.name}
                   {category.subcategories && <ChevronDown className="h-4 w-4" />}
@@ -191,7 +191,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                       <Link
                         key={subcategory.id}
                         href={`/category/${subcategory.slug}`}
-                        className="block px-4 py-2 text-sm text-[#424242] transition-colors hover:bg-[#faf7f1] hover:text-[#a54210]"
+                        className="block px-4 py-2 text-sm text-[#424242] transition-colors hover:bg-[#faf7f1] hover:text-[#002e5b]"
                       >
                         {subcategory.name}
                       </Link>
@@ -202,7 +202,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
             ))}
             <Link
               href="/category/parts"
-              className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#f3e7d4] transition-colors hover:text-[#ffb36b]"
+              className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#eef6ff] transition-colors hover:text-[#fde428]"
             >
               Parts Department
             </Link>
@@ -214,7 +214,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
             <nav className="space-y-2 px-4 py-4">
               <Link
                 href="/contractor-portal"
-                className="block py-2 text-sm font-bold text-[#a54210]"
+                className="block py-2 text-sm font-bold text-[#002e5b]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contractor Portal
