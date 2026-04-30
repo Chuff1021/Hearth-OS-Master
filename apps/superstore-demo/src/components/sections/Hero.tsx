@@ -4,9 +4,9 @@ import { Flame, Search, ShieldCheck, Truck, Wrench } from "lucide-react";
 import { defaultStoreConfig } from "@/lib/store-config";
 
 const trustItems = [
-  { icon: ShieldCheck, label: "Established 1989" },
+  { icon: ShieldCheck, label: "In business since 1995" },
   { icon: Wrench, label: "Fireplace expertise" },
-  { icon: Truck, label: "Nationwide parts access" },
+  { icon: Truck, label: "Three Illinois showrooms" },
 ];
 
 export function Hero() {
@@ -27,15 +27,15 @@ export function Hero() {
         <div className="max-w-3xl">
           <div className="mb-7 inline-flex max-w-full items-center gap-2 border border-[#ff7a18]/40 bg-black/45 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#ffb36b] backdrop-blur sm:gap-3 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
             <Flame className="h-4 w-4 fill-[#ff7a18] text-[#ff7a18]" />
-            Aaron&apos;s Fireplace Co. · Est. 1989
+            A Cozy Fireplace · Est. 1995
           </div>
 
           <h1 className="max-w-4xl text-[38px] font-black leading-[1.08] tracking-[-0.035em] text-white md:text-[54px] xl:text-[66px]">
-            Discover the Fireplace Your Home Deserves
+            A Warmer Home Starts at A Cozy Fireplace
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-[#f3e7d4] md:text-xl">
-            Discover the fireplace your home deserves with expert guidance from a real fireplace company. Shop fireplaces, inserts, stoves, and hard-to-find parts — not a generic big-box catalog.
+            Shop fireplaces, inserts, stoves, gas logs, grills, glass doors, accessories, and replacement parts with help from a neighborhood hearth specialist serving Naperville, Crest Hill, and New Lenox.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -49,13 +49,13 @@ export function Hero() {
               href="/category/parts"
               className="inline-flex items-center justify-center border border-white/30 bg-white/10 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-white backdrop-blur transition hover:border-[#ff7a18] hover:text-[#ffb36b]"
             >
-              Find Parts
+              Shop Parts
             </Link>
             <Link
               href="/service-appointment"
               className="inline-flex items-center justify-center border border-[#ff7a18]/50 bg-black/35 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-[#ffb36b] backdrop-blur transition hover:bg-[#ff7a18] hover:text-black"
             >
-              Book Service Appointment
+              Schedule Service
             </Link>
           </div>
 
@@ -103,7 +103,7 @@ export function Hero() {
                 Get Help Choosing a Fireplace
               </Link>
               <p className="mx-auto mt-4 max-w-sm text-sm leading-6 text-[#d9cbb9]">
-                Click here to get expert help with choosing the right fireplace.
+                Get help choosing the right fireplace, insert, stove, or gas log set for your home.
               </p>
             </div>
           </div>

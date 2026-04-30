@@ -61,38 +61,38 @@ export interface StoreConfig {
 
 // Default configuration — Aaron's Fireplace Co.
 export const defaultStoreConfig: StoreConfig = {
-  storeName: "Aaron's Fireplace Co.",
-  tagline: "Fireplaces, inserts, stoves, and parts since 1989",
-  logo: "/logo.png",
+  storeName: "A Cozy Fireplace",
+  tagline: "Your complete neighborhood fireplace, wood stove, gas grill, gas lamp and fireplace accessories store.",
+  logo: "/acozy-logo.svg",
   favicon: "/favicon.ico",
   
-  phone: "(417) 732-9775",
-  email: "aaronsfireplaceco@yahoo.com",
+  phone: "630-778-1781",
+  email: "info@acozyfireplace.com",
   address: {
-    street: "611 E Harrison St",
-    city: "Republic",
-    state: "MO",
-    zip: "65738",
+    street: "503 W. 87th Street",
+    city: "Naperville",
+    state: "IL",
+    zip: "60565",
   },
   
   social: {
-    facebook: "https://facebook.com/Aaronsfireplaceco",
+    facebook: "https://www.facebook.com/acozyfireplace",
     instagram: "",
     youtube: "",
   },
   
   theme: {
-    primaryColor: "#b91c1c", // Deep Red
-    secondaryColor: "#1e3a5f", // Navy Blue
-    accentColor: "#f59e0b", // Amber
-    headerBg: "#1f2937", // Gray-800
-    footerBg: "#111827", // Gray-900
+    primaryColor: "#b53824",
+    secondaryColor: "#5b2117",
+    accentColor: "#f0a12b",
+    headerBg: "#2a1711",
+    footerBg: "#170d09",
   },
   
   business: {
     hours: {
-      weekdays: "9:00 AM - 5:00 PM",
-      saturday: "By appointment",
+      weekdays: "10:00 AM - 6:00 PM",
+      saturday: "10:00 AM - 5:00 PM",
       sunday: "Closed",
     },
     showrooms: true,
@@ -104,22 +104,26 @@ export const defaultStoreConfig: StoreConfig = {
   },
   
   seo: {
-    metaTitle: "Aaron's Fireplace Co. | Fireplaces, Inserts, Stoves & Parts",
-    metaDescription: "Shop fireplaces, inserts, stoves, replacement parts, and hearth supplies from Aaron's Fireplace Co. Expert support, trusted brands, and nationwide online ordering.",
+    metaTitle: "A Cozy Fireplace | Fireplace Store in Naperville, Crest Hill & New Lenox",
+    metaDescription: "A Cozy Fireplace sells and installs fireplaces, inserts, stoves, grills, gas logs, glass doors, accessories, and replacement parts across Naperville, Crest Hill, and New Lenox, Illinois.",
     keywords: [
-      "fireplace",
-      "fireplace store Republic MO",
-      "gas fireplace",
-      "wood stove",
-      "electric fireplace",
-      "fireplace insert",
-      "pellet stove",
-      "fireplace accessories",
-      "Aaron's Fireplace Co.",
-      "Aaron's Fireplace Co.",
-      "fireplace superstore",
+      "A Cozy Fireplace",
+      "fireplace store Naperville IL",
+      "fireplace store Crest Hill IL",
+      "fireplace store New Lenox IL",
+      "gas fireplace inserts",
+      "wood stoves",
+      "gas logs",
+      "glass fireplace doors",
+      "BBQ grills",
       "fireplace parts",
-      "fireplace replacement parts",
+      "Lopi",
+      "Fireplace Xtrordinair",
+      "Avalon",
+      "Hearthstone",
+      "Pacific Energy",
+      "Vermont Castings",
+      "Broilmaster",
     ],
   },
 };

@@ -24,10 +24,10 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
       <div className="relative border-y border-[#ff7a18]/20 bg-[#11100e]/90">
         <div className="mx-auto flex max-w-[1640px] flex-col gap-5 px-4 py-8 md:px-5 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.26em] text-[#ff8a24]">Aaron&apos;s Fireplace Co.</p>
+            <p className="text-xs font-black uppercase tracking-[0.26em] text-[#ff8a24]">A Cozy Fireplace</p>
             <h3 className="mt-2 text-2xl font-black tracking-[-0.04em] text-white">Need help before you order?</h3>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-[#d8c7b2]">
-              Fireplaces, parts, service, and contractor projects can get technical. Send us the model number, photos, or project details and we&apos;ll help point you in the right direction.
+              Fireplaces, inserts, stoves, gas logs, glass doors, grills, and service can get technical. Send us your model number, photos, or project details and our hearth team will help point you in the right direction.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -144,10 +144,10 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
             <h4 className={`${footerHeadingClass} mt-8`}>Services</h4>
             <ul className="space-y-2">
               <li><Link href="/showrooms" className={footerLinkClass}>Visit Our Showroom</Link></li>
-              <li><Link href="/local/fireplace-store-republic-mo" className={footerLinkClass}>Republic Fireplace Store</Link></li>
-              <li><Link href="/local/fireplace-store-springfield-mo" className={footerLinkClass}>Springfield Fireplace Store</Link></li>
+              <li><Link href="/contact" className={footerLinkClass}>Naperville Fireplace Store</Link></li>
+              <li><Link href="/contact" className={footerLinkClass}>Crest Hill Fireplace Store</Link></li>
               <li><Link href="/installation" className={footerLinkClass}>Installation Planning</Link></li>
-              <li><Link href="/local/fireplace-installation-springfield-mo" className={footerLinkClass}>Springfield Installation Help</Link></li>
+              <li><Link href="/contact" className={footerLinkClass}>New Lenox Fireplace Store</Link></li>
               <li><Link href="/financing" className={footerLinkClass}>Financing Options</Link></li>
               <li><Link href="/trade-program" className={footerLinkClass}>Trade Program</Link></li>
             </ul>
@@ -156,10 +156,10 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
 
         <div className="mt-10 grid gap-4 border-y border-white/10 py-8 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: Truck, title: "Nationwide Parts", text: "Localized part photos and SKU search" },
-            { icon: ShieldCheck, title: "Real Company", text: "Republic, Missouri showroom" },
-            { icon: Wrench, title: "Service Support", text: "Gas, wood, and pellet service requests" },
-            { icon: Phone, title: "Expert Help", text: "Call before you order if unsure" },
+            { icon: Truck, title: "Three Showrooms", text: "Naperville, Crest Hill, and New Lenox" },
+            { icon: ShieldCheck, title: "Since 1995", text: "Over 100 years of collective experience" },
+            { icon: Wrench, title: "Service Support", text: "Gas fireplace maintenance and repair" },
+            { icon: Phone, title: "Expert Help", text: "Personal hearth product consultation" },
           ].map(({ icon: Icon, title, text }) => (
             <div key={title} className="border border-white/10 bg-white/[0.04] p-5">
               <Icon className="h-6 w-6 text-[#ff7a18]" />
