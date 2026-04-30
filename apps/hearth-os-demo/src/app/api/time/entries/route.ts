@@ -20,6 +20,9 @@ export async function GET(request: NextRequest) {
     console.error('Time entries failed, using Travis demo timesheets:', err);
     entries = demoTimeEntriesResponse({ techId: techId || undefined, openOnly, date: date || undefined });
   }
+  if (entries.length === 0) {
+    entries = demoTimeEntriesResponse({ techId: techId || undefined, openOnly, date: date || undefined });
+  }
 
   // Filter by week if requested
   if (weekOf) {
