@@ -106,6 +106,20 @@ function CustomersListInner() {
   const [dir, setDir] = useState<"asc" | "desc">("desc");
   const [data, setData] = useState<ListResponse | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [creating, setCreating] = useState(false);
+  const [customerForm, setCustomerForm] = useState({
+    firstName: "",
+    lastName: "",
+    companyName: "",
+    email: "",
+    phone: "",
+    line1: "",
+    city: "",
+    state: "OR",
+    zip: "",
+    notes: "",
+  });
 
   const fetchList = useCallback(async () => {
     setLoading(true);
@@ -124,6 +138,44 @@ function CustomersListInner() {
     if (sort === col) setDir(dir === "asc" ? "desc" : "asc");
     else { setSort(col); setDir(col === "name" ? "asc" : "desc"); }
   };
+
+  async function handleCreateCustomer() {
+    const firstName = customerForm.firstName.trim();
+    const lastName = customerForm.lastName.trim();
+    const companyName = customerForm.companyName.trim();
+    const displayName = companyName || [firstName, lastName].filter(Boolean).join(" ").trim();
+    if (!displayName || !firstName || !lastName) return;
+    setCreating(true);
+    try {
+      const res = await fetch("/api/customers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          displayName,
+          firstName,
+          lastName,
+          companyName: companyName || undefined,
+          email: customerForm.email.trim() || undefined,
+          phone: customerForm.phone.trim() || undefined,
+          address: customerForm.line1.trim() ? {
+            line1: customerForm.line1.trim(),
+            city: customerForm.city.trim(),
+            state: customerForm.state.trim(),
+            zip: customerForm.zip.trim(),
+          } : undefined,
+          notes: customerForm.notes.trim() || undefined,
+          tags: ["demo-created"],
+        }),
+      });
+      if (res.ok) {
+        setShowCreateModal(false);
+        setCustomerForm({ firstName: "", lastName: "", companyName: "", email: "", phone: "", line1: "", city: "", state: "OR", zip: "", notes: "" });
+        await fetchList();
+      }
+    } finally {
+      setCreating(false);
+    }
+  }
 
   return (
     <div className="flex h-screen overflow-hidden" style={{ background: "var(--color-bg)" }}>
@@ -152,10 +204,9 @@ function CustomersListInner() {
                   Sync from QuickBooks
                 </button>
                 <button
-                  className="px-4 py-2 rounded-lg text-sm font-semibold bg-orange-500 text-white"
-                  title="Coming soon"
-                  disabled
-                  style={{ opacity: 0.6, cursor: "not-allowed" }}
+                  onClick={() => setShowCreateModal(true)}
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-white"
+                  style={{ background: "#d65050" }}
                 >
                   + New customer
                 </button>
@@ -295,7 +346,47 @@ function CustomersListInner() {
           </div>
         </main>
       </div>
+      {showCreateModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.55)" }}>
+          <div className="w-full max-w-2xl rounded-2xl overflow-hidden" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)" }}>
+            <div className="px-6 py-4 flex items-center justify-between" style={{ borderBottom: "1px solid var(--color-border)" }}>
+              <h2 className="font-bold text-lg" style={{ color: "var(--color-text-primary)" }}>Create New Customer</h2>
+              <button onClick={() => setShowCreateModal(false)} className="text-xl" style={{ color: "var(--color-text-muted)" }}>×</button>
+            </div>
+            <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Field label="First name" value={customerForm.firstName} onChange={(v) => setCustomerForm({ ...customerForm, firstName: v })} />
+              <Field label="Last name" value={customerForm.lastName} onChange={(v) => setCustomerForm({ ...customerForm, lastName: v })} />
+              <Field label="Company" value={customerForm.companyName} onChange={(v) => setCustomerForm({ ...customerForm, companyName: v })} />
+              <Field label="Phone" value={customerForm.phone} onChange={(v) => setCustomerForm({ ...customerForm, phone: v })} />
+              <Field label="Email" value={customerForm.email} onChange={(v) => setCustomerForm({ ...customerForm, email: v })} />
+              <Field label="Street address" value={customerForm.line1} onChange={(v) => setCustomerForm({ ...customerForm, line1: v })} />
+              <Field label="City" value={customerForm.city} onChange={(v) => setCustomerForm({ ...customerForm, city: v })} />
+              <div className="grid grid-cols-2 gap-3">
+                <Field label="State" value={customerForm.state} onChange={(v) => setCustomerForm({ ...customerForm, state: v })} />
+                <Field label="ZIP" value={customerForm.zip} onChange={(v) => setCustomerForm({ ...customerForm, zip: v })} />
+              </div>
+              <label className="md:col-span-2 text-xs font-medium" style={{ color: "var(--color-text-secondary)" }}>
+                Notes
+                <textarea value={customerForm.notes} onChange={(e) => setCustomerForm({ ...customerForm, notes: e.target.value })} rows={3} className="mt-1 w-full px-3 py-2 rounded-lg outline-none" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)", color: "var(--color-text-primary)" }} />
+              </label>
+            </div>
+            <div className="px-6 py-4 flex justify-end gap-3" style={{ borderTop: "1px solid var(--color-border)" }}>
+              <button onClick={() => setShowCreateModal(false)} className="px-4 py-2 rounded-lg text-sm font-semibold" style={{ background: "var(--color-surface-2)", color: "var(--color-text-secondary)" }}>Cancel</button>
+              <button onClick={handleCreateCustomer} disabled={creating || !customerForm.firstName.trim() || !customerForm.lastName.trim()} className="px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-50" style={{ background: "#d65050" }}>{creating ? "Creating…" : "Create Customer"}</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
+  );
+}
+
+function Field({ label, value, onChange }: { label: string; value: string; onChange: (v: string) => void }) {
+  return (
+    <label className="text-xs font-medium" style={{ color: "var(--color-text-secondary)" }}>
+      {label}
+      <input value={value} onChange={(e) => onChange(e.target.value)} className="mt-1 w-full px-3 py-2 rounded-lg outline-none" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)", color: "var(--color-text-primary)" }} />
+    </label>
   );
 }
 

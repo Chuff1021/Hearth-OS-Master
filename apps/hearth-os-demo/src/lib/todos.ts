@@ -1,4 +1,6 @@
 import postgres from 'postgres';
+import { readJsonFile, writeJsonFileWithBackup } from '@/lib/persist-json';
+import { demoTodos } from '@/lib/fireplacex-demo';
 
 export type TodoPriority = 'low' | 'medium' | 'high' | 'urgent';
 export type TodoStatus = 'pending' | 'in_progress' | 'completed' | 'cancelled';
@@ -28,9 +30,10 @@ export interface Todo {
 
 let sqlClient: ReturnType<typeof postgres> | null = null;
 let initPromise: Promise<void> | null = null;
+const TODOS_FILE = 'todos.json';
 
 function getSql() {
-  if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL is required for durable todo storage');
+  if (!process.env.DATABASE_URL) return null;
   if (!sqlClient) {
     sqlClient = postgres(process.env.DATABASE_URL, {
       max: 3,
@@ -42,8 +45,49 @@ function getSql() {
   return sqlClient;
 }
 
+function cloneDemoTodo(todo: any): Todo {
+  return { ...todo, tags: Array.isArray(todo.tags) ? [...todo.tags] : [] } as Todo;
+}
+
+function loadFileTodos(): Todo[] {
+  return readJsonFile<Todo[]>(TODOS_FILE, []);
+}
+
+function saveFileTodos(todos: Todo[]) {
+  writeJsonFileWithBackup(TODOS_FILE, todos);
+}
+
+function applyTodoFilters(todos: Todo[], filters?: {
+  status?: TodoStatus;
+  priority?: TodoPriority;
+  assignedTo?: string;
+  relatedJobId?: string;
+  relatedCustomerId?: string;
+  overdue?: boolean;
+}) {
+  let filtered = [...todos];
+  if (filters?.status) filtered = filtered.filter((t) => t.status === filters.status);
+  if (filters?.priority) filtered = filtered.filter((t) => t.priority === filters.priority);
+  if (filters?.assignedTo) filtered = filtered.filter((t) => t.assignedTo === filters.assignedTo);
+  if (filters?.relatedJobId) filtered = filtered.filter((t) => t.relatedJobId === filters.relatedJobId);
+  if (filters?.relatedCustomerId) filtered = filtered.filter((t) => t.relatedCustomerId === filters.relatedCustomerId);
+  if (filters?.overdue) {
+    const today = new Date().toISOString().split('T')[0];
+    filtered = filtered.filter((t) => !!t.dueDate && t.dueDate < today && t.status !== 'completed' && t.status !== 'cancelled');
+  }
+  return filtered;
+}
+
+function getFileTodosWithSeed(): Todo[] {
+  const local = loadFileTodos();
+  const localIds = new Set(local.map((todo) => todo.id));
+  const seeded = (demoTodos as unknown as Todo[]).filter((todo) => !localIds.has(todo.id)).map(cloneDemoTodo);
+  return [...local, ...seeded].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+}
+
 async function ensureTable() {
   const sql = getSql();
+  if (!sql) return;
   if (!initPromise) {
     initPromise = (async () => {
       await sql`
@@ -113,6 +157,7 @@ export async function getTodos(filters?: {
   overdue?: boolean;
 }): Promise<Todo[]> {
   const sql = getSql();
+  if (!sql) return applyTodoFilters(getFileTodosWithSeed(), filters);
   await ensureTable();
 
   const rows: any[] = await sql`select * from todos_live order by updated_at desc`;
@@ -133,6 +178,7 @@ export async function getTodos(filters?: {
 
 export async function getTodoById(id: string): Promise<Todo | undefined> {
   const sql = getSql();
+  if (!sql) return getFileTodosWithSeed().find((todo) => todo.id === id);
   await ensureTable();
   const rows = await sql`select * from todos_live where id = ${id} limit 1`;
   return rows[0] ? mapRow(rows[0]) : undefined;
@@ -140,10 +186,23 @@ export async function getTodoById(id: string): Promise<Todo | undefined> {
 
 export async function createTodo(todo: Omit<Todo, 'id' | 'createdAt' | 'updatedAt'>): Promise<Todo> {
   const sql = getSql();
-  await ensureTable();
-
   const id = `todo-${Math.random().toString(36).slice(2, 10)}`;
   const now = new Date().toISOString();
+  const created: Todo = {
+    ...todo,
+    id,
+    createdAt: now,
+    updatedAt: now,
+    completedAt: todo.status === 'completed' ? now : todo.completedAt,
+    tags: todo.tags || [],
+  };
+
+  if (!sql) {
+    saveFileTodos([created, ...loadFileTodos()]);
+    return created;
+  }
+
+  await ensureTable();
 
   await sql`
     insert into todos_live (
@@ -159,13 +218,31 @@ export async function createTodo(todo: Omit<Todo, 'id' | 'createdAt' | 'updatedA
     )
   `;
 
-  const created = await getTodoById(id);
-  if (!created) throw new Error('Failed to create todo');
-  return created;
+  const inserted = await getTodoById(id);
+  if (!inserted) throw new Error('Failed to create todo');
+  return inserted;
 }
 
 export async function updateTodo(id: string, updates: Partial<Todo>): Promise<Todo | null> {
   const sql = getSql();
+  if (!sql) {
+    let todos = loadFileTodos();
+    let idx = todos.findIndex((todo) => todo.id === id);
+    if (idx === -1) {
+      const seeded = getFileTodosWithSeed().find((todo) => todo.id === id);
+      if (!seeded) return null;
+      todos = [seeded, ...todos];
+      idx = 0;
+    }
+    todos[idx] = {
+      ...todos[idx],
+      ...updates,
+      updatedAt: new Date().toISOString(),
+      completedAt: updates.status === 'completed' ? new Date().toISOString() : todos[idx].completedAt,
+    };
+    saveFileTodos(todos);
+    return todos[idx];
+  }
   await ensureTable();
 
   const existing = await getTodoById(id);
@@ -204,6 +281,14 @@ export async function updateTodo(id: string, updates: Partial<Todo>): Promise<To
 
 export async function deleteTodo(id: string): Promise<boolean> {
   const sql = getSql();
+  if (!sql) {
+    const todos = loadFileTodos();
+    const idx = todos.findIndex((todo) => todo.id === id);
+    if (idx === -1) return false;
+    todos.splice(idx, 1);
+    saveFileTodos(todos);
+    return true;
+  }
   await ensureTable();
   const res = await sql`delete from todos_live where id = ${id}`;
   return (res.count || 0) > 0;
@@ -211,6 +296,18 @@ export async function deleteTodo(id: string): Promise<boolean> {
 
 export async function getTodoStats() {
   const sql = getSql();
+  if (!sql) {
+    const todos = getFileTodosWithSeed();
+    const today = new Date().toISOString().split('T')[0];
+    return {
+      total: todos.length,
+      pending: todos.filter((t) => t.status === 'pending').length,
+      inProgress: todos.filter((t) => t.status === 'in_progress').length,
+      completed: todos.filter((t) => t.status === 'completed').length,
+      overdue: todos.filter((t) => !!t.dueDate && t.dueDate < today && t.status !== 'completed' && t.status !== 'cancelled').length,
+      dueToday: todos.filter((t) => t.dueDate === today && t.status !== 'completed' && t.status !== 'cancelled').length,
+    };
+  }
   await ensureTable();
 
   const rows = await sql<{

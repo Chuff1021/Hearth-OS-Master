@@ -135,7 +135,11 @@ function saveStore(store: Store) {
 
 export function getCustomers(): Customer[] {
   const customers = loadStore().customers;
-  return customers.length ? customers : demoCustomers.map((customer) => ({ ...customer, address: customer.address ? { ...customer.address } : undefined, tags: [...customer.tags] })) as Customer[];
+  const localIds = new Set(customers.map((customer) => customer.id));
+  const seeded = demoCustomers
+    .filter((customer) => !localIds.has(customer.id))
+    .map((customer) => ({ ...customer, address: customer.address ? { ...customer.address } : undefined, tags: [...customer.tags] })) as Customer[];
+  return [...customers, ...seeded];
 }
 
 export function getCustomerById(id: string): Customer | undefined {
@@ -171,7 +175,12 @@ export function createCustomer(data: Omit<Customer, 'id' | 'createdAt' | 'update
 export function updateCustomer(id: string, data: Partial<Customer>): Customer | null {
   const store = loadStore();
   const idx = store.customers.findIndex((c) => c.id === id);
-  if (idx === -1) return null;
+  if (idx === -1) {
+    const seeded = getCustomers().find((c) => c.id === id);
+    if (!seeded) return null;
+    store.customers.push(seeded);
+    return updateCustomer(id, data);
+  }
   store.customers[idx] = { ...store.customers[idx], ...data, updatedAt: new Date().toISOString() };
   saveStore(store);
   return store.customers[idx];

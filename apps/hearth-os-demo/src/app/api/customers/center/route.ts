@@ -3,6 +3,7 @@ import { db, customers, invoices, payments } from '@/db';
 import { and, eq, sql, ilike, or } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
 import { demoCustomerCenterResponse } from '@/lib/fireplacex-demo';
+import { getCustomers, getInvoices } from '@/lib/data-store';
 
 // GET /api/customers/center
 // Customer center list with rolled-up A/R + revenue stats per customer
@@ -171,6 +172,39 @@ export async function GET(req: NextRequest) {
     });
   } catch (err: any) {
     console.error('Customer center list failed, using Travis demo customers:', err);
-    return NextResponse.json(demoCustomerCenterResponse(new URL(req.url).searchParams));
+    const searchParams = new URL(req.url).searchParams;
+    const q = (searchParams.get('q') || '').trim().toLowerCase();
+    const filter = (searchParams.get('filter') || 'active').toLowerCase();
+    const invoices = getInvoices();
+    let items = getCustomers().map((c) => {
+      const customerInvoices = invoices.filter((i) => i.customerId === c.id);
+      const balance = customerInvoices.reduce((sum, i) => sum + i.balance, 0) || c.balance || 0;
+      const totalRevenue = customerInvoices.reduce((sum, i) => sum + i.totalAmount, 0) || c.totalRevenue || 0;
+      return {
+        id: c.id,
+        qbCustomerId: c.id,
+        displayName: c.displayName,
+        firstName: c.firstName,
+        lastName: c.lastName,
+        companyName: c.companyName || null,
+        email: c.email || null,
+        phone: c.phone || null,
+        source: c.id.startsWith('cust-fx-') ? 'demo' : 'demo-created',
+        isActive: c.active,
+        balance,
+        invoiceCount: customerInvoices.length,
+        openInvoiceCount: customerInvoices.filter((i) => i.balance > 0).length,
+        paymentCount: customerInvoices.filter((i) => i.status === 'paid').length,
+        totalRevenue,
+        lastActivity: c.updatedAt,
+      };
+    });
+    if (q) items = items.filter((i) => [i.displayName, i.companyName, i.email, i.phone].some((v) => String(v || '').toLowerCase().includes(q)));
+    if (filter === 'active') items = items.filter((i) => i.isActive);
+    if (filter === 'inactive') items = items.filter((i) => !i.isActive);
+    if (filter === 'with_balance') items = items.filter((i) => i.balance > 0);
+    const totals = items.reduce((acc, x) => ({ customers: acc.customers + 1, balance: acc.balance + x.balance, openInvoices: acc.openInvoices + x.openInvoiceCount, revenue: acc.revenue + x.totalRevenue }), { customers: 0, balance: 0, openInvoices: 0, revenue: 0 });
+    const demo = demoCustomerCenterResponse(searchParams);
+    return NextResponse.json({ ...demo, items, totals });
   }
 }
