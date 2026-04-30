@@ -8,5 +8,11 @@
     "start": "cd apps/hearth-os-demo && npm run start",
     "lint": "cd apps/hearth-os-demo && npm run lint",
     "typecheck": "cd apps/hearth-os-demo && npm run typecheck"
-  }
+  },
+  "dependencies": {
+    "next": "^16.1.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {}
 }
