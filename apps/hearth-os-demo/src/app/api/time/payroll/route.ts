@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import postgres from "postgres";
+import { demoPayrollResponse } from "@/lib/fireplacex-demo";
 
 const PAYROLL_EMAIL = "aaronsfireplace.shelly@gmail.com";
 
@@ -45,7 +46,10 @@ async function ensureTable(sql: ReturnType<typeof postgres>) {
 // GET: check approval status for a week
 export async function GET(request: NextRequest) {
   const sql = getSql();
-  if (!sql) return NextResponse.json({ approvals: [], reports: [] });
+  if (!sql) {
+    const weekStart = new URL(request.url).searchParams.get("weekStart") || new Date().toISOString().slice(0, 10);
+    return NextResponse.json(demoPayrollResponse(weekStart));
+  }
 
   try {
     await ensureTable(sql);

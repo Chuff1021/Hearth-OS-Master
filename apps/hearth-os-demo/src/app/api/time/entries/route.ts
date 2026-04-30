@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createTimeEntry, closeOpenTimeEntry, listTimeEntries, updateTimeEntry } from '@/lib/time-entry-store';
+import { demoTimeEntriesResponse } from '@/lib/fireplacex-demo';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -8,11 +9,17 @@ export async function GET(request: NextRequest) {
   const date = searchParams.get('date');
   const weekOf = searchParams.get('weekOf'); // YYYY-MM-DD, returns Mon-Sun of that week
 
-  let entries = await listTimeEntries({
-    techId: techId || undefined,
-    openOnly,
-    date: date || undefined,
-  });
+  let entries;
+  try {
+    entries = await listTimeEntries({
+      techId: techId || undefined,
+      openOnly,
+      date: date || undefined,
+    });
+  } catch (err) {
+    console.error('Time entries failed, using Travis demo timesheets:', err);
+    entries = demoTimeEntriesResponse({ techId: techId || undefined, openOnly, date: date || undefined });
+  }
 
   // Filter by week if requested
   if (weekOf) {

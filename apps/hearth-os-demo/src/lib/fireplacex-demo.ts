@@ -385,3 +385,61 @@ export function demoTodoStatsResponse() {
     dueToday: (demoTodos as unknown as any[]).filter((t) => t.dueDate === todayIso && t.status !== "completed" && t.status !== "cancelled").length,
   };
 }
+
+function isoAt(dayOffset: number, hhmm: string) {
+  const d = new Date();
+  d.setDate(d.getDate() + dayOffset);
+  const [h, m] = hhmm.split(":").map(Number);
+  d.setHours(h, m, 0, 0);
+  return d.toISOString();
+}
+
+export const demoTimeEntries = [
+  { id: "time-ti-001", techId: "tech-fx-001", techName: "Mason Reed", clockInAt: isoAt(0, "07:42"), clockOutAt: isoAt(0, "12:18"), totalMinutes: 276, status: "closed", editNote: "4415 HO install morning block", createdAt: isoAt(0, "07:42"), updatedAt: isoAt(0, "12:18") },
+  { id: "time-ti-002", techId: "tech-fx-001", techName: "Mason Reed", clockInAt: isoAt(0, "13:02"), clockOutAt: null, totalMinutes: null, status: "open", editNote: "DaVinci consult prep / drive", createdAt: isoAt(0, "13:02"), updatedAt: isoAt(0, "13:02") },
+  { id: "time-ti-003", techId: "tech-fx-002", techName: "Elena Cruz", clockInAt: isoAt(0, "07:55"), clockOutAt: isoAt(0, "11:10"), totalMinutes: 195, status: "closed", editNote: "Lopi blower fitment and paperwork", createdAt: isoAt(0, "07:55"), updatedAt: isoAt(0, "11:10") },
+  { id: "time-ti-004", techId: "tech-fx-002", techName: "Elena Cruz", clockInAt: isoAt(-1, "08:05"), clockOutAt: isoAt(-1, "16:35"), totalMinutes: 510, status: "closed", editNote: "Lopi wood insert service day", createdAt: isoAt(-1, "08:05"), updatedAt: isoAt(-1, "16:35") },
+  { id: "time-ti-005", techId: "tech-fx-003", techName: "Tyler Brooks", clockInAt: isoAt(0, "08:15"), clockOutAt: isoAt(0, "15:45"), totalMinutes: 450, status: "closed", editNote: "Helper - FireplaceX install and warehouse restock", createdAt: isoAt(0, "08:15"), updatedAt: isoAt(0, "15:45") },
+  { id: "time-ti-006", techId: "tech-fx-004", techName: "Nina Patel", clockInAt: isoAt(0, "08:00"), clockOutAt: isoAt(0, "12:00"), totalMinutes: 240, status: "closed", editNote: "Dispatch, permit calls, customer confirmations", createdAt: isoAt(0, "08:00"), updatedAt: isoAt(0, "12:00") },
+  { id: "time-ti-007", techId: "tech-fx-004", techName: "Nina Patel", clockInAt: isoAt(0, "12:30"), clockOutAt: null, totalMinutes: null, status: "open", editNote: "Afternoon dispatch board", createdAt: isoAt(0, "12:30"), updatedAt: isoAt(0, "12:30") },
+  { id: "time-ti-008", techId: "tech-fx-005", techName: "Owen Gallagher", clockInAt: isoAt(-2, "07:50"), clockOutAt: isoAt(-2, "16:20"), totalMinutes: 510, status: "closed", editNote: "Pellet warranty calls", createdAt: isoAt(-2, "07:50"), updatedAt: isoAt(-2, "16:20") },
+  { id: "time-ti-009", techId: "tech-fx-006", techName: "Priya Shah", clockInAt: isoAt(0, "08:30"), clockOutAt: isoAt(0, "14:15"), totalMinutes: 345, status: "closed", editNote: "A/R, PO review, demo payroll prep", createdAt: isoAt(0, "08:30"), updatedAt: isoAt(0, "14:15") },
+] as const;
+
+export function demoTimeEntriesResponse(filters?: { techId?: string; openOnly?: boolean; date?: string; weekOf?: string }) {
+  let entries: any[] = demoTimeEntries.map((entry) => ({ ...entry }));
+  if (filters?.techId) entries = entries.filter((entry) => entry.techId === filters.techId);
+  if (filters?.openOnly) entries = entries.filter((entry) => !entry.clockOutAt);
+  if (filters?.date) entries = entries.filter((entry) => entry.clockInAt.slice(0, 10) === filters.date);
+  if (filters?.weekOf) {
+    const base = new Date(filters.weekOf + "T00:00:00");
+    const monday = new Date(base);
+    monday.setDate(base.getDate() - ((base.getDay() + 6) % 7));
+    const sunday = new Date(monday);
+    sunday.setDate(monday.getDate() + 6);
+    sunday.setHours(23, 59, 59, 999);
+    entries = entries.filter((entry) => {
+      const d = new Date(entry.clockInAt);
+      return d >= monday && d <= sunday;
+    });
+  }
+  return entries;
+}
+
+export function demoPayrollResponse(weekStart: string) {
+  const entries = demoTimeEntriesResponse({ weekOf: weekStart }).filter((entry) => entry.clockOutAt);
+  const byTech = new Map<string, any>();
+  for (const entry of entries) {
+    const row = byTech.get(entry.techId) || { id: `ta-demo-${entry.techId}`, tech_id: entry.techId, tech_name: entry.techName, week_start: weekStart, total_minutes: 0, overtime_minutes: 0, regular_hours: "0.00", overtime_hours: "0.00", approved_by: "Eric", approved_at: new Date().toISOString() };
+    row.total_minutes += entry.totalMinutes || 0;
+    byTech.set(entry.techId, row);
+  }
+  const approvals = [...byTech.values()].map((row) => {
+    row.overtime_minutes = Math.max(0, row.total_minutes - 2400);
+    row.regular_hours = (Math.min(row.total_minutes, 2400) / 60).toFixed(2);
+    row.overtime_hours = (row.overtime_minutes / 60).toFixed(2);
+    return row;
+  });
+  const totalHours = approvals.reduce((sum, row) => sum + row.total_minutes / 60, 0);
+  return { approvals, reports: [{ id: "pr-demo-week", week_start: weekStart, sent_to: "demo-payroll@travis-demo.com", sent_at: new Date().toISOString(), tech_count: approvals.length, total_hours: totalHours.toFixed(2) }] };
+}
