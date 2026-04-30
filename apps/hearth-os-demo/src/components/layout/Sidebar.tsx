@@ -414,7 +414,7 @@ export default function Sidebar() {
             className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 text-white"
             style={{ background: "var(--color-travis-red)", borderRadius: 2 }}
           >
-            FX
+            TI
           </div>
           {!collapsed && (
             <div className="flex-1 min-w-0">
