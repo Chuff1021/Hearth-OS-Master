@@ -64,10 +64,10 @@ export const defaultStoreConfig: StoreConfig = {
   storeName: "A Cozy Fireplace",
   tagline: "Your complete neighborhood fireplace, wood stove, gas grill, gas lamp and fireplace accessories store.",
   logo: "/acozy-logo.png",
-  favicon: "/favicon.ico",
+  favicon: "/icon.png?v=acozy-20260430-hr",
   
   phone: "630-778-1781",
-  email: "info@acozyfireplace.com",
+  email: "acozyfp@aol.com",
   address: {
     street: "503 W. 87th Street",
     city: "Naperville",
@@ -104,7 +104,7 @@ export const defaultStoreConfig: StoreConfig = {
   },
   
   seo: {
-    metaTitle: "A Cozy Fireplace | Fireplace Store in Naperville, Crest Hill & New Lenox",
+    metaTitle: "A Cozy Fireplace",
     metaDescription: "A Cozy Fireplace sells and installs fireplaces, inserts, stoves, grills, gas logs, glass doors, accessories, and replacement parts across Naperville, Crest Hill, and New Lenox, Illinois.",
     keywords: [
       "A Cozy Fireplace",

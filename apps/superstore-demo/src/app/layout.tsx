@@ -67,10 +67,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/icon.png?v=acozy-20260430-hr", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=acozy-20260430-hr", sizes: "any" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    apple: [{ url: "/apple-touch-icon.png?v=acozy-20260430-hr", sizes: "180x180" }],
+    shortcut: [{ url: "/icon.png?v=acozy-20260430-hr", type: "image/png" }],
   },
 };
 
@@ -84,6 +85,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <title>A Cozy Fireplace</title>
+        <link rel="icon" href="/icon.png?v=acozy-20260430-hr" type="image/png" sizes="512x512" />
+        <link rel="shortcut icon" href="/icon.png?v=acozy-20260430-hr" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=acozy-20260430-hr" sizes="180x180" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
