@@ -104,20 +104,21 @@ export default function DashboardPage() {
         <main className="flex-1 overflow-y-auto">
           <div className="max-w-[1600px] mx-auto p-6 space-y-6">
 
-            {/* Hero card — Forge & Flame palette: pure white card on warm cream page,
-                subtle ember-glow gradient bleeding from the top-left. */}
+            {/* Travis Industries hero — industrial black field, red rule, white logo treatment. */}
             <div
               className="rounded-xl p-8 relative overflow-hidden"
               style={{
                 background:
-                  "radial-gradient(circle at 0% 0%, rgba(248,151,31,0.06) 0%, rgba(248,151,31,0) 40%), var(--color-surface-1)",
-                border: "1px solid var(--color-border)",
+                  "linear-gradient(135deg, rgba(0,0,0,0.94), rgba(38,38,38,0.96)), radial-gradient(circle at 88% 10%, rgba(214,80,80,0.28), transparent 34%)",
+                border: "1px solid rgba(0,0,0,0.88)",
+                boxShadow: "var(--shadow-elevated)",
               }}
             >
               <div className="flex items-start justify-between gap-6 flex-wrap">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.18em]" style={{ color: "var(--color-ff-taupe)" }}>
-                    {todayLabel()}
+                  <div className="travis-rule mb-5" />
+                  <p className="text-xs uppercase tracking-[0.24em]" style={{ color: "#d65050" }}>
+                    {todayLabel()} · The House of Fire
                   </p>
                   <h1
                     className="mt-2"
@@ -126,13 +127,13 @@ export default function DashboardPage() {
                       lineHeight: 1.1,
                       fontWeight: 700,
                       letterSpacing: "-0.02em",
-                      color: "var(--color-ff-charcoal)",
+                      color: "#ffffff",
                     }}
                   >
                     {greeting()}, {displayName}.
                   </h1>
-                  <p className="text-base mt-3 max-w-xl" style={{ color: "var(--color-text-secondary)" }}>
-                    Travis Industries demo dashboard — fake employees, customers, jobs, invoices, and dispatch data running inside the existing HearthOS product.
+                  <p className="text-base mt-3 max-w-2xl" style={{ color: "rgba(255,255,255,0.76)" }}>
+                    Manufacturer-branded dealer operations: demo employees, customers, installs, service calls, invoices, and dispatch running inside the existing HearthOS dashboard.
                   </p>
                 </div>
                 <QuickActions />
@@ -145,21 +146,21 @@ export default function DashboardPage() {
                 label="Revenue YTD"
                 value={ws ? fmtMoneyShort(ws.revenue) : "—"}
                 sublabel={ws ? `${ws.invoiceCount.toLocaleString()} invoices` : ""}
-                accent="#4f7d3a"
+                accent="#d65050"
                 href="/reports/profit-by-job?preset=ytd"
               />
               <KpiCard
                 label="Profit YTD"
                 value={ws ? fmtMoneyShort(ws.profit) : "—"}
                 sublabel={ws?.margin != null ? `${ws.margin.toFixed(1)}% margin` : ""}
-                accent={ws && ws.profit < 0 ? "#c44545" : "#f8971f"}
+                accent={ws && ws.profit < 0 ? "#9f2626" : "#262626"}
                 href="/reports/profit-by-job?preset=ytd"
               />
               <KpiCard
                 label="Owed to you"
                 value={cm ? fmtMoneyShort(cm.totalDue) : "—"}
                 sublabel={cm ? `${cm.openInvoiceCount} open · ${cm.overdueCount} overdue` : ""}
-                accent="#eaa23f"
+                accent="#d65050"
                 tone={cm && cm.overdueCount > 0 ? "warn" : undefined}
                 href="/reports/ar-aging"
               />
@@ -167,7 +168,7 @@ export default function DashboardPage() {
                 label="You owe"
                 value={vm ? fmtMoneyShort(vm.totalOwed) : "—"}
                 sublabel={vm ? `${vm.openBillCount} open · ${vm.overdueCount} overdue` : ""}
-                accent="#332e2d"
+                accent="#111111"
                 tone={vm && vm.overdueCount > 0 ? "danger" : undefined}
                 href="/vendors"
               />

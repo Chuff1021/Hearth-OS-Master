@@ -376,7 +376,7 @@ export default function Header() {
           <span className="text-xs font-bold" style={{ color: "var(--color-text-primary)" }}>{fireplacexBrand.name}</span>
           <span className="text-[10px] uppercase tracking-[0.14em]" style={{ color: "var(--color-text-muted)" }}>{fireplacexBrand.poweredBy}</span>
         </div>
-        <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: "linear-gradient(135deg, var(--color-fireplacex-red), var(--color-ember))" }}>FX</div>
+        <div className="w-9 h-9 flex items-center justify-center text-xs font-black text-white" style={{ background: "var(--color-travis-red)", borderRadius: 2 }}>TI</div>
       </div>
     </header>
   );

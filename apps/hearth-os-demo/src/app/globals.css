@@ -12,13 +12,18 @@
    * ───────────────────────────────────────────────────────────────────── */
 
   /* Brand */
-  --color-fireplacex-red: #9f1239;
-  --color-fireplacex-black: #16110f;
-  --color-fireplacex-bronze: #b45309;
-  --color-ember: #d97706;
-  --color-ember-dark: #9f1239;
-  --color-ember-light: #f59e0b;
-  --color-ember-glow: rgba(159, 18, 57, 0.20);
+  --color-travis-red: #d65050;
+  --color-travis-red-dark: #9f2626;
+  --color-travis-red-hot: #f93b3b;
+  --color-travis-black: #111111;
+  --color-travis-graphite: #262626;
+  --color-fireplacex-red: #d65050;
+  --color-fireplacex-black: #111111;
+  --color-fireplacex-bronze: #d65050;
+  --color-ember: #d65050;
+  --color-ember-dark: #9f2626;
+  --color-ember-light: #e64e4e;
+  --color-ember-glow: rgba(214, 80, 80, 0.22);
 
   /* Forge & Flame colors as standalone tokens */
   --color-ff-ember: #f8971f;
@@ -33,27 +38,27 @@
   --color-accent-cyan: #f8971f;
 
   /* Surfaces — pure white cards on warm cream page bg, like F&F */
-  --color-bg: #f8f4ef;
+  --color-bg: #f4f4f4;
   --color-surface: #ffffff;
   --color-surface-1: #ffffff;
-  --color-surface-2: #fbf7f1;
-  --color-surface-3: #f1e7dc;
-  --color-surface-4: #e6d4c3;
+  --color-surface-2: #f8f8f8;
+  --color-surface-3: #eeeeee;
+  --color-surface-4: #dedede;
 
   /* Borders — desaturated taupe with low alpha so they recede */
-  --color-border: rgba(108, 104, 102, 0.14);
-  --color-border-hover: rgba(108, 104, 102, 0.28);
+  --color-border: rgba(17, 17, 17, 0.12);
+  --color-border-hover: rgba(214, 80, 80, 0.42);
 
   /* Text — F&F uses warm taupe everywhere; we layer in deeper charcoal for primary headings */
-  --color-text-primary: #1c1714;
-  --color-text-secondary: #51463f;
-  --color-text-muted: #8b7b6f;
+  --color-text-primary: #171717;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #7a7a7a;
 
   /* Status — keep semantic but warm them slightly */
-  --color-success: #4f7d3a;
-  --color-warning: #f8971f;
-  --color-danger: #c44545;
-  --color-info: #6c6866;
+  --color-success: #2f7d32;
+  --color-warning: #d65050;
+  --color-danger: #9f2626;
+  --color-info: #262626;
 
   /* QuickBooks integration accent (kept distinct so it doesn't blend with brand) */
   --color-qb: #4f7d3a;
@@ -78,14 +83,14 @@
 
   /* Radii — F&F uses 0px, but a SaaS dashboard needs SOME softness for usability;
      compromise on 8/10/14 for sm/md/lg so it still feels crisp without being brutalist */
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.625rem;
-  --radius-xl: 0.875rem;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
 
   /* Shadows — warm taupe shadow, very subtle (matches F&F's near-flat look) */
-  --shadow-subtle: 0 1px 2px rgba(108, 104, 102, 0.04), 0 8px 20px rgba(108, 104, 102, 0.06);
-  --shadow-elevated: 0 12px 32px rgba(108, 104, 102, 0.10);
+  --shadow-subtle: 0 1px 0 rgba(17,17,17,0.04), 0 10px 28px rgba(17,17,17,0.06);
+  --shadow-elevated: 0 18px 48px rgba(17,17,17,0.14);
 
   /* Display font — same Montserrat family that F&F uses, just a heavier weight */
   --font-family-display: var(--font-display), "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -333,3 +338,30 @@ p {
 .ring-orange-500 { --tw-ring-color: var(--color-ember-glow) !important; }
 .focus\:border-orange-500:focus { border-color: var(--color-ember) !important; }
 .focus\:ring-orange-500:focus { --tw-ring-color: var(--color-ember-glow) !important; }
+
+
+/* Travis Industries demo skin: crisp industrial black/white/red, mirroring the public House of Fire site. */
+.travis-industries-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+.travis-industries-logo-mark {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  background: #d65050;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 2px;
+  box-shadow: 0 10px 24px rgba(214,80,80,0.32);
+}
+.travis-rule {
+  height: 3px;
+  width: 52px;
+  background: #d65050;
+}

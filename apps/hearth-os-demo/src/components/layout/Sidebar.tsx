@@ -4,7 +4,6 @@ import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { fireplacexBrand } from "@/lib/fireplacex-demo";
-import FlameLogo from "@/components/FlameLogo";
 
 const emptySubscribe = () => () => {};
 
@@ -244,14 +243,14 @@ export default function Sidebar() {
         className="flex items-center gap-3 px-4 py-4 flex-shrink-0"
         style={{ borderBottom: "1px solid var(--color-border)" }}
       >
-        <FlameLogo size={32} />
+        <div className="travis-industries-logo-mark">TI</div>
 
         {!collapsed && (
           <div className="flex-1 min-w-0">
-            <div className="font-bold text-sm leading-tight" style={{ color: "var(--color-text-primary)" }}>
-              FireplaceX
+            <div className="font-black text-[13px] leading-tight uppercase tracking-[-0.03em]" style={{ color: "var(--color-text-primary)" }}>
+              Travis Industries
             </div>
-            <div className="text-[10px] leading-tight" style={{ color: "var(--color-text-muted)" }}>
+            <div className="mt-1 text-[9px] leading-tight uppercase tracking-[0.18em]" style={{ color: "var(--color-travis-red)" }}>
               powered by Hearth-OS
             </div>
           </div>
@@ -298,11 +297,11 @@ export default function Sidebar() {
                     collapsed ? "justify-center" : ""
                   }`}
                   style={{
-                    background: isActive ? "rgba(59,130,246,0.065)" : "transparent",
-                    color: isActive ? "#BFDBFE" : "var(--color-text-secondary)",
-                    fontWeight: isActive ? "600" : "400",
-                    border: isActive ? "1px solid rgba(96,165,250,0.13)" : "1px solid transparent",
-                    boxShadow: isActive ? "inset 2px 0 0 rgba(96,165,250,0.72)" : "none",
+                    background: isActive ? "rgba(214,80,80,0.10)" : "transparent",
+                    color: isActive ? "var(--color-travis-red-dark)" : "var(--color-text-secondary)",
+                    fontWeight: isActive ? "700" : "500",
+                    border: isActive ? "1px solid rgba(214,80,80,0.20)" : "1px solid transparent",
+                    boxShadow: isActive ? "inset 3px 0 0 var(--color-travis-red)" : "none",
                   }}
                   onMouseEnter={(e) => {
                     if (!isActive) {
@@ -321,9 +320,9 @@ export default function Sidebar() {
                   <span
                     className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center"
                     style={{
-                      background: isActive ? "rgba(59,130,246,0.16)" : (iconTone[item.label]?.bg || "rgba(148,163,184,0.08)"),
-                      color: isActive ? "#DBEAFE" : (iconTone[item.label]?.color || "var(--color-text-secondary)"),
-                      border: `1px solid ${isActive ? "rgba(147,197,253,0.35)" : (iconTone[item.label]?.border || "rgba(148,163,184,0.16)")}`,
+                      background: isActive ? "var(--color-travis-red)" : (iconTone[item.label]?.bg || "rgba(148,163,184,0.08)"),
+                      color: isActive ? "#ffffff" : (iconTone[item.label]?.color || "var(--color-text-secondary)"),
+                      border: `1px solid ${isActive ? "rgba(214,80,80,0.55)" : (iconTone[item.label]?.border || "rgba(148,163,184,0.16)")}`,
                     }}
                   >
                     {item.icon}
@@ -414,7 +413,7 @@ export default function Sidebar() {
         <div className={`flex items-center gap-2.5 ${collapsed ? "justify-center" : ""}`}>
           <div
             className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 text-white"
-            style={{ background: "linear-gradient(135deg, var(--color-fireplacex-red), var(--color-ember))" }}
+            style={{ background: "var(--color-travis-red)", borderRadius: 2 }}
           >
             FX
           </div>
