@@ -102,9 +102,10 @@ export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const brand = await findBrandBySlug(params.slug);
+  const { slug } = await params;
+  const brand = await findBrandBySlug(slug);
 
   if (!brand) {
     return {
@@ -150,9 +151,9 @@ export async function generateMetadata({
 export default async function BrandPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const slug = params.slug;
+  const { slug } = await params;
   const [brand, allProducts] = await Promise.all([
     findBrandBySlug(slug),
     loadAllProducts(),
