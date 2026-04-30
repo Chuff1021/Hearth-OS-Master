@@ -15,6 +15,8 @@ const montserrat = Montserrat({
 
 export const dynamic = "force-dynamic";
 
+const clerkConfigured = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
+
 export const metadata: Metadata = {
   title: "Travis Industries powered by Hearth-OS",
   description:
@@ -26,11 +28,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <ClerkProvider>
-      <html lang="en" className={montserrat.variable}>
-        <body className={montserrat.className}>{children}</body>
-      </html>
-    </ClerkProvider>
+  const document = (
+    <html lang="en" className={montserrat.variable}>
+      <body className={montserrat.className}>{children}</body>
+    </html>
   );
+
+  if (!clerkConfigured) return document;
+
+  return <ClerkProvider>{document}</ClerkProvider>;
 }
