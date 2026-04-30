@@ -1,5 +1,6 @@
 import postgres from "postgres";
 import { readJsonFile, writeJsonFileWithBackup } from "@/lib/persist-json";
+import { demoJobs } from "@/lib/fireplacex-demo";
 
 export type JobStatus = "scheduled" | "in_progress" | "completed" | "cancelled" | "on_hold";
 export type JobPriority = "low" | "normal" | "high" | "urgent";
@@ -228,7 +229,8 @@ function isValidJob(job: Job) {
 export async function listJobs(): Promise<Job[]> {
   const sql = getSql();
   if (!sql) {
-    return loadFileJobs().map((job) => normalizeJob(job)).filter(isValidJob);
+    const jobs = loadFileJobs().map((job) => normalizeJob(job)).filter(isValidJob);
+    return jobs.length ? jobs : demoJobs.map((job) => normalizeJob(job)).filter(isValidJob);
   }
 
   await ensureTable();

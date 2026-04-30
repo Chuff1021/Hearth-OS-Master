@@ -12,10 +12,13 @@
    * ───────────────────────────────────────────────────────────────────── */
 
   /* Brand */
-  --color-ember: #f8971f;
-  --color-ember-dark: #c47214;
-  --color-ember-light: #eaa23f;
-  --color-ember-glow: rgba(248, 151, 31, 0.22);
+  --color-fireplacex-red: #9f1239;
+  --color-fireplacex-black: #16110f;
+  --color-fireplacex-bronze: #b45309;
+  --color-ember: #d97706;
+  --color-ember-dark: #9f1239;
+  --color-ember-light: #f59e0b;
+  --color-ember-glow: rgba(159, 18, 57, 0.20);
 
   /* Forge & Flame colors as standalone tokens */
   --color-ff-ember: #f8971f;
@@ -30,21 +33,21 @@
   --color-accent-cyan: #f8971f;
 
   /* Surfaces — pure white cards on warm cream page bg, like F&F */
-  --color-bg: #f7f6f3;
+  --color-bg: #f8f4ef;
   --color-surface: #ffffff;
   --color-surface-1: #ffffff;
-  --color-surface-2: #f7f6f3;
-  --color-surface-3: #efece6;
-  --color-surface-4: #e6e2d8;
+  --color-surface-2: #fbf7f1;
+  --color-surface-3: #f1e7dc;
+  --color-surface-4: #e6d4c3;
 
   /* Borders — desaturated taupe with low alpha so they recede */
   --color-border: rgba(108, 104, 102, 0.14);
   --color-border-hover: rgba(108, 104, 102, 0.28);
 
   /* Text — F&F uses warm taupe everywhere; we layer in deeper charcoal for primary headings */
-  --color-text-primary: #332e2d;
-  --color-text-secondary: #5b5754;
-  --color-text-muted: #8a8682;
+  --color-text-primary: #1c1714;
+  --color-text-secondary: #51463f;
+  --color-text-muted: #8b7b6f;
 
   /* Status — keep semantic but warm them slightly */
   --color-success: #4f7d3a;

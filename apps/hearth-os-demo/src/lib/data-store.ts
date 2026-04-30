@@ -1,4 +1,5 @@
 import { readJsonFile, writeJsonFileWithBackup } from '@/lib/persist-json';
+import { demoCustomers, demoInvoices } from '@/lib/fireplacex-demo';
 
 export interface Customer {
   id: string;
@@ -133,7 +134,8 @@ function saveStore(store: Store) {
 }
 
 export function getCustomers(): Customer[] {
-  return loadStore().customers;
+  const customers = loadStore().customers;
+  return customers.length ? customers : demoCustomers.map((customer) => ({ ...customer, address: customer.address ? { ...customer.address } : undefined, tags: [...customer.tags] })) as Customer[];
 }
 
 export function getCustomerById(id: string): Customer | undefined {
@@ -185,7 +187,8 @@ export function deleteCustomer(id: string): boolean {
 }
 
 export function getInvoices(): Invoice[] {
-  return loadStore().invoices;
+  const invoices = loadStore().invoices;
+  return invoices.length ? invoices : demoInvoices.map((invoice) => ({ ...invoice, lineItems: invoice.lineItems.map((line) => ({ ...line })) })) as Invoice[];
 }
 
 export function getInvoiceById(id: string): Invoice | undefined {
@@ -229,8 +232,8 @@ export function deleteInvoice(id: string): boolean {
 }
 
 export function getDashboardStats() {
-  const store = loadStore();
-  const { customers, invoices } = store;
+  const customers = getCustomers();
+  const invoices = getInvoices();
   const totalCustomers = customers.filter((c) => c.active).length;
   const totalOutstanding = invoices.filter((i) => i.balance > 0).reduce((sum, i) => sum + i.balance, 0);
   const totalOverdue = invoices.filter((i) => i.status === 'overdue').reduce((sum, i) => sum + i.balance, 0);

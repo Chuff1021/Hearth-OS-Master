@@ -11,6 +11,7 @@ import {
 } from '@/db';
 import { and, eq, desc } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
+import { demoActivity } from '@/lib/fireplacex-demo';
 
 // Real business activity feed for the dashboard, sourced from the QB-synced
 // tables (not the legacy in-memory data-store).
@@ -255,7 +256,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json({ activity: out.slice(0, limit) });
   } catch (err: any) {
-    console.error('Dashboard activity failed:', err);
-    return NextResponse.json({ error: err?.message || 'Failed' }, { status: 500 });
+    console.error('Dashboard activity failed, using FireplaceX demo activity:', err);
+    return NextResponse.json({ activity: demoActivity });
   }
 }

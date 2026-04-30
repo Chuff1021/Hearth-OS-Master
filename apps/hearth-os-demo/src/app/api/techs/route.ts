@@ -3,6 +3,7 @@ import { clerkClient } from '@clerk/nextjs/server';
 import { readJsonFile, writeJsonFileWithBackup } from '@/lib/persist-json';
 import { appendMemoryEvent } from '@/lib/long-term-memory';
 import { isClerkConfigured } from '@/lib/auth';
+import { demoTechs } from '@/lib/fireplacex-demo';
 
 type DbCtx = {
   db: any;
@@ -108,7 +109,8 @@ async function sendClerkInvite(email: string, role: Tech['role'], origin?: strin
 }
 
 export function getTechs(): Tech[] {
-  return loadStore().techs;
+  const techs = loadStore().techs;
+  return techs.length ? techs : demoTechs.map((tech) => ({ ...tech, skills: [...tech.skills], certifications: [...tech.certifications] })) as Tech[];
 }
 
 export async function GET(request: Request) {

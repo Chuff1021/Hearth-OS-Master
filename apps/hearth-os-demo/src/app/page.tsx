@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useUser } from "@clerk/nextjs";
+import { fireplacexBrand } from "@/lib/fireplacex-demo";
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
 import TodaysJobs from "@/components/dashboard/TodaysJobs";
@@ -72,8 +72,7 @@ const todayLabel = () =>
 // Page
 // ───────────────────────────────────────────────────────────────────────────
 export default function DashboardPage() {
-  const { user } = useUser();
-  const rawName = user?.firstName || user?.fullName || "there";
+  const rawName = fireplacexBrand.userName;
   const displayName = rawName.charAt(0).toUpperCase() + rawName.slice(1);
 
   const [profit, setProfit] = useState<ProfitResp | null>(null);
@@ -133,7 +132,7 @@ export default function DashboardPage() {
                     {greeting()}, {displayName}.
                   </h1>
                   <p className="text-base mt-3 max-w-xl" style={{ color: "var(--color-text-secondary)" }}>
-                    Your year-to-date pulse — revenue, profit, what&apos;s owed to you, and what you owe.
+                    FireplaceX demo dashboard — fake employees, customers, jobs, invoices, and dispatch data running inside the existing HearthOS product.
                   </p>
                 </div>
                 <QuickActions />
@@ -189,7 +188,7 @@ export default function DashboardPage() {
 
             {/* Footer attribution */}
             <p className="text-[11px] text-center pt-4" style={{ color: "var(--color-text-muted)" }}>
-              HearthOS · Heritage meets modern field service.
+              FireplaceX · powered by Hearth-OS · Demo data only.
             </p>
           </div>
         </main>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
+import { fireplacexBrand } from "@/lib/fireplacex-demo";
 
 interface SearchResult {
   id: string;
@@ -372,29 +372,11 @@ export default function Header() {
         {/* Divider */}
         <div className="w-px h-5 mx-1" style={{ background: "var(--color-border)" }}></div>
 
-        {/* User / Auth */}
-        <SignedIn>
-          <UserButton
-            afterSignOutUrl="/"
-            appearance={{
-              elements: {
-                avatarBox: "w-8 h-8",
-              },
-            }}
-          />
-        </SignedIn>
-        <SignedOut>
-          <Link
-            href="/sign-in"
-            className="px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
-            style={{
-              background: "linear-gradient(135deg, var(--color-ember), var(--color-ember-dark))",
-              color: "white",
-            }}
-          >
-            Sign In
-          </Link>
-        </SignedOut>
+        <div className="hidden md:flex flex-col items-end leading-tight">
+          <span className="text-xs font-bold" style={{ color: "var(--color-text-primary)" }}>{fireplacexBrand.name}</span>
+          <span className="text-[10px] uppercase tracking-[0.14em]" style={{ color: "var(--color-text-muted)" }}>{fireplacexBrand.poweredBy}</span>
+        </div>
+        <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: "linear-gradient(135deg, var(--color-fireplacex-red), var(--color-ember))" }}>FX</div>
       </div>
     </header>
   );
