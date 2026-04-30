@@ -153,7 +153,7 @@ export default function DashboardPage() {
                 label="Profit YTD"
                 value={ws ? fmtMoneyShort(ws.profit) : "—"}
                 sublabel={ws?.margin != null ? `${ws.margin.toFixed(1)}% margin` : ""}
-                accent={ws && ws.profit < 0 ? "#9f2626" : "#262626"}
+                accent={ws && ws.profit < 0 ? "#9f2626" : "#2f7d32"}
                 href="/reports/profit-by-job?preset=ytd"
               />
               <KpiCard
