@@ -1,0 +1,332 @@
+@import "tailwindcss";
+
+:root {
+  /* ─────────────────────────────────────────────────────────────────────
+   * Forge & Flame brand palette — ripped from forgenflame.com's CSS vars
+   *   accent-1 (108,104,102)  warm taupe     #6c6866
+   *   accent-2 (248,151,31)   ember orange   #f8971f   ← primary brand
+   *   accent-3 (51,46,45)     charcoal-brown #332e2d
+   *   accent-4 (234,162,63)   warm amber     #eaa23f
+   *   bg-1 (255,255,255)      white
+   *   bg-2 (247,246,243)      warm cream     #f7f6f3
+   * ───────────────────────────────────────────────────────────────────── */
+
+  /* Brand */
+  --color-ember: #f8971f;
+  --color-ember-dark: #c47214;
+  --color-ember-light: #eaa23f;
+  --color-ember-glow: rgba(248, 151, 31, 0.22);
+
+  /* Forge & Flame colors as standalone tokens */
+  --color-ff-ember: #f8971f;
+  --color-ff-amber: #eaa23f;
+  --color-ff-taupe: #6c6866;
+  --color-ff-charcoal: #332e2d;
+  --color-ff-cream: #f7f6f3;
+  --color-ff-cream-button: #d3d1c3;
+
+  /* Legacy aliases — kept around so older components don't blow up. */
+  --color-accent-violet: #eaa23f;
+  --color-accent-cyan: #f8971f;
+
+  /* Surfaces — pure white cards on warm cream page bg, like F&F */
+  --color-bg: #f7f6f3;
+  --color-surface: #ffffff;
+  --color-surface-1: #ffffff;
+  --color-surface-2: #f7f6f3;
+  --color-surface-3: #efece6;
+  --color-surface-4: #e6e2d8;
+
+  /* Borders — desaturated taupe with low alpha so they recede */
+  --color-border: rgba(108, 104, 102, 0.14);
+  --color-border-hover: rgba(108, 104, 102, 0.28);
+
+  /* Text — F&F uses warm taupe everywhere; we layer in deeper charcoal for primary headings */
+  --color-text-primary: #332e2d;
+  --color-text-secondary: #5b5754;
+  --color-text-muted: #8a8682;
+
+  /* Status — keep semantic but warm them slightly */
+  --color-success: #4f7d3a;
+  --color-warning: #f8971f;
+  --color-danger: #c44545;
+  --color-info: #6c6866;
+
+  /* QuickBooks integration accent (kept distinct so it doesn't blend with brand) */
+  --color-qb: #4f7d3a;
+  --color-qb-dark: #3f6630;
+
+  /* Type scale */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* Radii — F&F uses 0px, but a SaaS dashboard needs SOME softness for usability;
+     compromise on 8/10/14 for sm/md/lg so it still feels crisp without being brutalist */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.875rem;
+
+  /* Shadows — warm taupe shadow, very subtle (matches F&F's near-flat look) */
+  --shadow-subtle: 0 1px 2px rgba(108, 104, 102, 0.04), 0 8px 20px rgba(108, 104, 102, 0.06);
+  --shadow-elevated: 0 12px 32px rgba(108, 104, 102, 0.10);
+
+  /* Display font — same Montserrat family that F&F uses, just a heavier weight */
+  --font-family-display: var(--font-display), "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Backdrop tokens — drop the dot pattern; F&F is flat */
+  --bg-dot-color: transparent;
+  --bg-fade-top: transparent;
+  --bg-fade-bottom: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans), "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+h1 { font-size: var(--font-size-2xl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+
+p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+/* Scrollbar — warm taupe */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(108, 104, 102, 0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 104, 102, 0.45);
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Card variants */
+.glass-card {
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+}
+
+.shell-card {
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+}
+
+.shell-input {
+  background: var(--color-surface-2);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.shell-btn-secondary {
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.shell-table th {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  background: var(--color-surface-2);
+}
+
+.shell-table td {
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+.ui-page-mobile {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+.ui-mobile-header {
+  background: var(--color-surface-1);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ui-card {
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+}
+
+.ui-card-muted {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.ui-input,
+.ui-select,
+.ui-textarea {
+  background: var(--color-surface-1);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.ui-input:focus,
+.ui-select:focus,
+.ui-textarea:focus {
+  outline: none;
+  border-color: var(--color-ember);
+  box-shadow: 0 0 0 3px var(--color-ember-glow);
+}
+
+.ui-btn-primary {
+  background: var(--color-ember);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+.ui-btn-primary:hover {
+  background: var(--color-ember-dark);
+}
+
+.ui-btn-secondary {
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}
+
+.ui-btn-danger {
+  background: rgba(196, 69, 69, 0.1);
+  color: var(--color-danger);
+  border: 1px solid rgba(196, 69, 69, 0.28);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.ui-empty-state {
+  text-align: center;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-2);
+}
+
+.shell-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.btn-ember {
+  background: var(--color-ember);
+  color: #fff;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+}
+.btn-ember:hover {
+  background: var(--color-ember-dark);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-ember), var(--color-ember-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Motion-safe transitions */
+@media (prefers-reduced-motion: no-preference) {
+  a, button, input, select, textarea, [role="button"], .btn-ember, .glass-card {
+    transition:
+      background-color 160ms ease,
+      border-color 160ms ease,
+      color 160ms ease,
+      box-shadow 160ms ease,
+      transform 160ms ease;
+  }
+
+  .pulse-dot {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.9); }
+}
+
+/* Tailwind orange utility remap → ember */
+.bg-orange-500 { background-color: var(--color-ember) !important; }
+.hover\:bg-orange-600:hover { background-color: var(--color-ember-dark) !important; }
+.bg-orange-600 { background-color: var(--color-ember-dark) !important; }
+.text-orange-500 { color: var(--color-ember) !important; }
+.text-orange-400 { color: var(--color-ember-light) !important; }
+.border-orange-500 { border-color: var(--color-ember) !important; }
+.ring-orange-500 { --tw-ring-color: var(--color-ember-glow) !important; }
+.focus\:border-orange-500:focus { border-color: var(--color-ember) !important; }
+.focus\:ring-orange-500:focus { --tw-ring-color: var(--color-ember-glow) !important; }

@@ -1,0 +1,33 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.13.4
+    ports:
+      - "6333:6333"
+    volumes:
+      - /var/lib/hearthos-data/qdrant:/qdrant/storage
+
+  gabe-knowledge-engine:
+    build:
+      context: ./services/gabe-knowledge-engine
+    env_file:
+      - ./services/gabe-knowledge-engine/.env.example
+    environment:
+      - HEARTHOS_DATA_DIR=/var/lib/hearthos-data/gabe
+      - ENGINE_BUILD_ID=${ENGINE_BUILD_ID:-unknown}
+      - ENGINE_COMMIT_SHA=${ENGINE_COMMIT_SHA:-unknown}
+      - ENGINE_RUNTIME_NAME=${ENGINE_RUNTIME_NAME:-gabe-knowledge-engine}
+      - VENT_TEMPLATE_ACTIVE=${VENT_TEMPLATE_ACTIVE:-false}
+      - DIAGNOSTIC_RAW_ENABLED=${DIAGNOSTIC_RAW_ENABLED:-false}
+      - DATABASE_URL=${DATABASE_URL:-}
+    ports:
+      - "4100:4100"
+    volumes:
+      - /var/lib/hearthos-data/manuals:/var/lib/gabe/manuals
+      - /var/lib/hearthos-data/gabe:/var/lib/hearthos-data/gabe
+    depends_on:
+      - qdrant
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:4100/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
