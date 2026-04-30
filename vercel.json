@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd apps/hearth-os-demo && npm install && npm run build",
+  "outputDirectory": "apps/hearth-os-demo/.next",
+  "installCommand": "echo using nested app install",
+  "framework": "nextjs"
+}

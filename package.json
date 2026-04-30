@@ -1,0 +1,12 @@
+{
+  "name": "hearth-os-master",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cd apps/hearth-os-demo && npm install && npm run build",
+    "dev": "cd apps/hearth-os-demo && npm run dev",
+    "start": "cd apps/hearth-os-demo && npm run start",
+    "lint": "cd apps/hearth-os-demo && npm run lint",
+    "typecheck": "cd apps/hearth-os-demo && npm run typecheck"
+  }
+}
