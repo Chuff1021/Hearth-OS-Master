@@ -16,9 +16,9 @@ const montserrat = Montserrat({
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "HearthOS  Fireplace Field Service Management",
+  title: "Travis Industries powered by Hearth-OS",
   description:
-    "Purpose-built field service management for fireplace installation, service, and retail companies.",
+    "Demo dealer operating system for Travis Industries ecommerce, service, payments, inventory, and fireplace dealer workflows.",
 };
 
 export default function RootLayout({

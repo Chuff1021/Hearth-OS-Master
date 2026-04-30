@@ -75,3 +75,11 @@ Brands/themes:
 ## Demo data rule
 
 Use synthetic/test data only.
+
+## Current build status
+
+The Hearth-OS Travis demo surface lives at:
+
+- `apps/hearth-os-demo/src/app/travis-industries/page.tsx`
+
+It currently shows synthetic manufacturer/dealer KPIs, superstore intake events, service requests, payment revenue-share economics, and manufacturer analytics.
