@@ -42,6 +42,7 @@ function saveStore(store: TechStore) {
 }
 
 async function getDbCtx(): Promise<DbCtx | null> {
+  if (!process.env.DATABASE_URL) return null;
   try {
     const [{ db, users }, { eq, and }, { getOrCreateDefaultOrg }] = await Promise.all([
       import('@/db'),
