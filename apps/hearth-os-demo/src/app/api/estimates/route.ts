@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { db, estimates, estimateLineItems, customers } from "@/db";
 import { and, eq, desc, asc, inArray } from "drizzle-orm";
 import { getOrCreateDefaultOrg } from "@/lib/org";
+import { demoEstimates } from "@/lib/fireplacex-demo";
 
 // Reads estimates from the local DB (synced from QuickBooks) and returns them
 // in the QB shape the existing estimate builder UI consumes. Avoids hitting
@@ -129,10 +130,13 @@ export async function GET(request: NextRequest) {
     if (id) return NextResponse.json({ estimate: out[0] });
     return NextResponse.json({ estimates: out, total: out.length });
   } catch (err: any) {
-    console.error("Failed to read local estimates:", err);
-    return NextResponse.json(
-      { estimates: [], total: 0, error: err?.message || "Failed to fetch estimates" },
-      { status: 500 },
-    );
+    console.error("Failed to read local estimates, using Travis demo estimates:", err);
+    const id = new URL(request.url).searchParams.get("id");
+    if (id) {
+      const estimate = demoEstimates.find((item) => item.Id === id);
+      if (!estimate) return NextResponse.json({ error: "Estimate not found" }, { status: 404 });
+      return NextResponse.json({ estimate });
+    }
+    return NextResponse.json({ estimates: demoEstimates, total: demoEstimates.length });
   }
 }

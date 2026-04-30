@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db, inventoryItems, bills, billLineItems } from '@/db';
 import { and, eq, ilike, or, sql, desc, asc, inArray, isNull, isNotNull } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
+import { demoInventoryResponse } from '@/lib/fireplacex-demo';
 
 // Master list endpoint for the inventory workbench.
 // Returns paginated items with computed cost intel:
@@ -238,7 +239,7 @@ export async function GET(request: NextRequest) {
       categories: cats.map((c) => c.category).filter(Boolean),
     });
   } catch (err: any) {
-    console.error('Inventory list failed:', err);
-    return NextResponse.json({ error: err?.message || 'Failed to load inventory' }, { status: 500 });
+    console.error('Inventory list failed, using Travis demo inventory:', err);
+    return NextResponse.json(demoInventoryResponse(new URL(request.url).searchParams));
   }
 }

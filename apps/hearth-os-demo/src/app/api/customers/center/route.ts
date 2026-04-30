@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db, customers, invoices, payments } from '@/db';
 import { and, eq, sql, ilike, or } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
+import { demoCustomerCenterResponse } from '@/lib/fireplacex-demo';
 
 // GET /api/customers/center
 // Customer center list with rolled-up A/R + revenue stats per customer
@@ -169,7 +170,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (err: any) {
-    console.error('Customer center list failed:', err);
-    return NextResponse.json({ error: err?.message || 'Failed' }, { status: 500 });
+    console.error('Customer center list failed, using Travis demo customers:', err);
+    return NextResponse.json(demoCustomerCenterResponse(new URL(req.url).searchParams));
   }
 }

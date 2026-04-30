@@ -139,7 +139,7 @@ export function getCustomers(): Customer[] {
 }
 
 export function getCustomerById(id: string): Customer | undefined {
-  return loadStore().customers.find((c) => c.id === id);
+  return getCustomers().find((c) => c.id === id);
 }
 
 export function searchCustomersLocal(query: string): Customer[] {
@@ -192,7 +192,7 @@ export function getInvoices(): Invoice[] {
 }
 
 export function getInvoiceById(id: string): Invoice | undefined {
-  return loadStore().invoices.find((i) => i.id === id);
+  return getInvoices().find((i) => i.id === id);
 }
 
 export function getInvoicesForCustomer(customerId: string): Invoice[] {

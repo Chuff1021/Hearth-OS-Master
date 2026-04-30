@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db, vendors, bills, purchaseOrders } from '@/db';
 import { and, eq, sql, ilike, or, desc, asc } from 'drizzle-orm';
 import { getOrCreateDefaultOrg } from '@/lib/org';
+import { demoVendorResponse } from '@/lib/fireplacex-demo';
 
 // GET /api/vendors
 // QB-style vendor center list. Rolled-up per-vendor stats:
@@ -194,7 +195,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (err: any) {
-    console.error('Vendor list failed:', err);
-    return NextResponse.json({ error: err?.message || 'Failed' }, { status: 500 });
+    console.error('Vendor list failed, using Travis demo vendors:', err);
+    return NextResponse.json(demoVendorResponse());
   }
 }

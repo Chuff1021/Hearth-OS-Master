@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCustomers, getInvoices } from "@/lib/data-store";
+import { demoInventoryItems } from "@/lib/fireplacex-demo";
 import { getJobs as getJobsFromApi } from "../jobs/route";
 import { getOrCreateDefaultOrg } from "@/lib/org";
 import { db, organizations } from "@/db";
@@ -34,7 +35,7 @@ export async function GET(request: NextRequest) {
   const query = normalizeSearchValue(rawQuery);
 
   if (!query || query.length < 2) {
-    return NextResponse.json({ customers: [], jobs: [], invoices: [] });
+    return NextResponse.json({ customers: [], jobs: [], invoices: [], inventory: [] });
   }
 
   // Search local customers
@@ -95,6 +96,22 @@ export async function GET(request: NextRequest) {
       title: i.invoiceNumber,
       subtitle: `${i.customerName} • $${i.totalAmount.toFixed(2)}`,
       href: `/invoices?id=${i.id}`,
+      source: "local",
+    }));
+
+  const matchedInventory = demoInventoryItems
+    .filter((item) =>
+      item.name.toLowerCase().includes(query) ||
+      item.sku.toLowerCase().includes(query) ||
+      item.category.toLowerCase().includes(query)
+    )
+    .slice(0, 5)
+    .map((item) => ({
+      id: item.id,
+      type: "inventory" as const,
+      title: item.name,
+      subtitle: `${item.sku} • ${item.category}`,
+      href: `/inventory?q=${encodeURIComponent(item.sku)}`,
       source: "local",
     }));
 
@@ -277,5 +294,6 @@ export async function GET(request: NextRequest) {
     customers: matchedCustomers.slice(0, 10),
     jobs: matchedJobs.slice(0, 10),
     invoices: matchedInvoices.slice(0, 10),
+    inventory: matchedInventory.slice(0, 10),
   });
 }
