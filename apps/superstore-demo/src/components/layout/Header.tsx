@@ -21,9 +21,9 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
         <div className="mx-auto flex max-w-[1640px] items-center justify-between px-5 py-2 text-[13px]">
           <div className="flex items-center divide-x divide-white/20">
             {[
-              "Free Shipping on orders over $99",
-              "110% Low Price Guaranteed",
-              "Expert Sales Support",
+              "Naperville · Crest Hill · New Lenox",
+              "Fireplaces · Stoves · Grills · Gas Logs",
+              "Showroom Sales & Service Support",
             ].map((message) => (
               <span key={message} className="px-7 first:pl-0 last:pr-0">
                 {message}
@@ -62,7 +62,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                   <input
                     type="text"
                     name="q"
-                    placeholder="Search by brand, model, SKU, or part number"
+                    placeholder="Search fireplaces, stoves, grills, gas logs, doors, parts"
                     className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm text-[#001f3d] outline-none placeholder:text-[#52677d]"
                   />
                   <button
@@ -77,15 +77,8 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
             </div>
 
             <div className="hidden items-center gap-5 lg:flex">
-              <Link
-                href="/contractor-portal"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition hover:border-[#fde428] hover:text-[#fde428]"
-              >
-                Contractor Portal
-              </Link>
-
               <div className="text-right text-sm text-[#e7d9c7]">
-                <p>Order Online or Call</p>
+                <p>Visit a Showroom or Call</p>
                 <a
                   href={`tel:${defaultStoreConfig.phone}`}
                   className="block font-semibold text-white hover:text-[#fde428]"
@@ -164,13 +157,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
         <div className="hidden border-t border-white/10 bg-[#001f3d] lg:block">
           <nav className="mx-auto flex h-10 max-w-[1640px] items-center px-5">
-            <Link
-              href="/contractor-portal"
-              className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#fde428] transition-colors hover:text-white"
-            >
-              Contractor Portal
-            </Link>
-            {productCategories.slice(0, 5).map((category) => (
+            {productCategories.map((category) => (
               <div
                 key={category.id}
                 className="relative mr-5"
@@ -200,25 +187,12 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                 )}
               </div>
             ))}
-            <Link
-              href="/category/parts"
-              className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#eef6ff] transition-colors hover:text-[#fde428]"
-            >
-              Parts Department
-            </Link>
           </nav>
         </div>
 
         {isMenuOpen && (
           <div className="border-t border-black/10 bg-white lg:hidden">
             <nav className="space-y-2 px-4 py-4">
-              <Link
-                href="/contractor-portal"
-                className="block py-2 text-sm font-bold text-[#002e5b]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contractor Portal
-              </Link>
               {productCategories.map((category) => (
                 <div key={category.id}>
                   <Link

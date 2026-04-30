@@ -1,6 +1,6 @@
 import "server-only";
 
-import { sampleProducts, type Product } from "@/lib/store-config";
+import { cozyAllowedBrandSet, sampleProducts, type Product } from "@/lib/store-config";
 import { loadAccessoryProducts } from "@/lib/accessories-products";
 import { loadElectricFireplaceProducts } from "@/lib/electric-fireplace-scraped";
 import { loadElectricInsertProducts } from "@/lib/electric-inserts-scraped";
@@ -95,9 +95,14 @@ export async function loadAllProducts(): Promise<Product[]> {
     deduped.push(product);
   }
 
-  cached = deduped;
+  const cozyFiltered = deduped.filter((product) => {
+    const brand = (product.brand || "").trim().toLowerCase();
+    return cozyAllowedBrandSet.has(brand);
+  });
+
+  cached = cozyFiltered;
   cacheExpiresAt = Date.now() + CACHE_TTL_MS;
-  return deduped;
+  return cozyFiltered;
 }
 
 export async function loadProductBySlug(slug: string): Promise<Product | null> {

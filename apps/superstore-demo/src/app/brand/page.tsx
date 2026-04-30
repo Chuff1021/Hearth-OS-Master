@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { loadAllBrands } from "@/lib/all-products";
 import { seoMetadata } from "@/lib/seo-metadata";
-import { defaultStoreConfig } from "@/lib/store-config";
+import { cozyBrandNames, cozyBrandSlugMap, defaultStoreConfig } from "@/lib/store-config";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { collectionPageJsonLd, breadcrumbJsonLd } from "@/lib/site-jsonld";
 
@@ -16,7 +16,12 @@ export const metadata = seoMetadata({
 });
 
 export default async function BrandIndexPage() {
-  const brands = (await loadAllBrands()).filter((brand) => brand.count >= 3);
+  const catalogBrands = await loadAllBrands();
+  const countBySlug = new Map(catalogBrands.map((brand) => [brand.slug, brand.count]));
+  const brands = cozyBrandNames.map((name) => {
+    const slug = name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    return { name: cozyBrandSlugMap.get(slug) ?? name, slug, count: countBySlug.get(slug) ?? 0 };
+  });
 
   return (
     <main className="min-h-screen bg-[#f6efe5]">
@@ -43,10 +48,10 @@ export default async function BrandIndexPage() {
         <div className="relative mx-auto max-w-7xl">
           <p className="text-xs font-black uppercase tracking-[0.28em] text-[#fde428]">A Cozy Fireplace Brands</p>
           <h1 className="mt-5 max-w-4xl text-[42px] font-black leading-[0.98] tracking-[-0.055em] md:text-[68px]">
-            Shop fireplaces and parts by brand.
+            Shop A Cozy Fireplace brands by product line.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-[#d7e6f7]">
-            Compare hearth products and replacement parts from leading fireplace, stove, insert, and accessory manufacturers. Each brand page links into the products currently loaded in A Cozy Fireplace online catalog.
+            Only the brands A Cozy Fireplace publicly lists are shown here, including its stove and fireplace lines, BBQ grill lines, and fireplace door manufacturers.
           </p>
         </div>
       </section>
@@ -63,7 +68,7 @@ export default async function BrandIndexPage() {
                 {brand.name}
               </p>
               <p className="mt-2 text-sm text-[#52677d]">
-                {brand.count} catalog {brand.count === 1 ? "item" : "items"}
+                {brand.count > 0 ? `${brand.count} catalog ${brand.count === 1 ? "item" : "items"}` : "Showroom brand line"}
               </p>
             </Link>
           ))}

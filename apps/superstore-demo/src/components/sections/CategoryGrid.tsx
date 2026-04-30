@@ -7,7 +7,10 @@ const categoryVisuals: Record<string, string> = {
   fireplaces: "/products-upgraded/wood-fireplaces/fpx-42apex-3.webp",
   inserts: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
   stoves: "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp",
-  outdoor: "/products-upgraded/outdoor-fireplaces/fg-4024-linear-fireplace.webp",
+  "bbq-grills": "/categories/outdoor.jpg",
+  "logs-media": "/categories/logs-media.jpg",
+  "doors-screens": "/categories/doors-screens.jpg",
+  "stone-products": "/categories/mantels.jpg",
   accessories: "/categories/home-accessories.webp",
   parts: "/categories/home-parts.webp",
 };
@@ -26,11 +29,11 @@ export function CategoryGrid() {
               Shop By Category
             </p>
             <h2 className="mt-4 text-[36px] font-black leading-[1.02] tracking-[-0.045em] text-[#001f3d] md:text-[54px]">
-              Shop Fireplaces, Stoves, Inserts, and Parts
+              Shop Fireplaces, Stoves, Grills, Gas Logs, Doors, Stone, and Parts
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-[#52677d]">
-Start with the hearth category that fits your project, including Fireplace Xtrordinair fireplaces, Lopi stoves and inserts, Fire Garden outdoor fire features, and replacement-part needs.
+Start with the product line A Cozy Fireplace offers in its showrooms: fireplaces, inserts, gas and wood stoves, BBQ grills, gas logs, glass doors, stone refacing products, accessories, and replacement parts.
           </p>
         </div>
 

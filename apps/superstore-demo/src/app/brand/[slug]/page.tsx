@@ -11,7 +11,7 @@ import {
   loadAllProducts,
 } from "@/lib/all-products";
 import { absoluteUrl } from "@/lib/site-url";
-import { defaultStoreConfig, type Product } from "@/lib/store-config";
+import { cozyBrandSlugMap, defaultStoreConfig, type Product } from "@/lib/store-config";
 
 export const dynamicParams = true;
 export const revalidate = 3600;
@@ -89,12 +89,14 @@ function getFuelType(product: Product): string {
 
 async function findBrandBySlug(slug: string) {
   const brands = await loadAllBrands();
-  return brands.find((b) => b.slug === slug) ?? null;
+  const liveBrand = brands.find((b) => b.slug === slug);
+  if (liveBrand) return liveBrand;
+  const cozyBrand = cozyBrandSlugMap.get(slug);
+  return cozyBrand ? { name: cozyBrand, slug, count: 0 } : null;
 }
 
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
-  const brands = await loadAllBrands();
-  return brands.filter((b) => b.count >= 3).map((b) => ({ slug: b.slug }));
+  return Array.from(cozyBrandSlugMap.keys()).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -113,7 +115,7 @@ export async function generateMetadata({
   }
 
   const title = `${brand.name} Fireplaces & Stoves — Authorized Dealer`;
-  const description = `Shop ${brand.count} ${brand.name} fireplaces, inserts, and stoves. Authorized dealer with expert consultation, free shipping on most models, and dealer pricing.`;
+  const description = `Explore ${brand.name} products and showroom options available through A Cozy Fireplace in Naperville, Crest Hill, and New Lenox.`;
   const url = absoluteUrl(`/brand/${brand.slug}`);
 
   return {
