@@ -596,7 +596,7 @@ export default function JobDetailPage() {
               onClick={() => setActiveTab(tab)}
               className={`flex-1 py-3 text-sm font-medium capitalize transition-colors ${
                 activeTab === tab
-                  ? "text-blue-600 border-b-2 border-orange-400"
+                  ? "text-blue-600 border-b-2 border-[var(--color-ember-light)]"
                   : "text-gray-400"
               }`}
             >
@@ -665,7 +665,7 @@ export default function JobDetailPage() {
               </button>
               <Link
                 href={`/tech/payments?customer=${encodeURIComponent(job.customer || "")}&invoice=${encodeURIComponent(job.id || "")}`}
-                className="bg-gradient-to-r from-orange-500 to-amber-500 py-3 rounded-xl text-sm font-medium text-center"
+                className="bg-gradient-to-r from-[var(--color-travis-red)] to-[var(--color-ember-light)] py-3 rounded-xl text-sm font-medium text-center"
               >
                 Take Payment
               </Link>
@@ -856,7 +856,7 @@ export default function JobDetailPage() {
                         const val = String(fieldValue || "");
                         const ratings = [
                           { value: "good", label: "Good", color: "#16A34A" },
-                          { value: "fair", label: "Fair", color: "#F59E0B" },
+                          { value: "fair", label: "Fair", color: "#e64e4e" },
                           { value: "poor", label: "Poor", color: "#F97316" },
                           { value: "unsafe", label: "Unsafe", color: "#DC2626" },
                         ];
@@ -897,8 +897,8 @@ export default function JobDetailPage() {
                                   className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors"
                                   style={{
                                     background: val === opt ? "rgba(248,151,31,0.18)" : "var(--color-surface-3)",
-                                    color: val === opt ? "#9a5d12" : "var(--color-text-muted)",
-                                    border: val === opt ? "2px solid #f8971f" : "1px solid var(--color-border)",
+                                    color: val === opt ? "#9f2626" : "var(--color-text-muted)",
+                                    border: val === opt ? "2px solid #d65050" : "1px solid var(--color-border)",
                                   }}
                                 >
                                   {opt}
@@ -1439,7 +1439,7 @@ export default function JobDetailPage() {
             </div>
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {/* Invoice Header */}
-              <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 border border-blue-600/30 rounded-xl p-4">
+              <div className="bg-gradient-to-r from-[rgba(214,80,80,0.20)] to-[rgba(230,78,78,0.20)] border border-blue-600/30 rounded-xl p-4">
                 <div className="flex justify-between items-start">
                   <div>
                     <p className="text-xs text-gray-400">Invoice for</p>

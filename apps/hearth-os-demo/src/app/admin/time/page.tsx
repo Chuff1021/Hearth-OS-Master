@@ -394,11 +394,11 @@ export default function AdminTimePage() {
           </div>
           <div className="flex items-center gap-2">
             {editRequests.length > 0 && (
-              <span className="px-2 py-1 rounded-full text-xs font-bold" style={{ background: "rgba(245,158,11,0.15)", color: "#F59E0B" }}>
+              <span className="px-2 py-1 rounded-full text-xs font-bold" style={{ background: "rgba(245,158,11,0.15)", color: "#e64e4e" }}>
                 {editRequests.length} pending edit{editRequests.length > 1 ? "s" : ""}
               </span>
             )}
-            <button onClick={() => setShowManualEntry(true)} className="px-4 py-2 rounded-lg text-sm font-semibold" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}>
+            <button onClick={() => setShowManualEntry(true)} className="px-4 py-2 rounded-lg text-sm font-semibold" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}>
               + Add Entry
             </button>
           </div>
@@ -427,7 +427,7 @@ export default function AdminTimePage() {
                 {gridData.map((row) => {
                   const hrs = row.weekTotal / 60;
                   const pct = Math.min(100, (hrs / 40) * 100);
-                  const color = hrs >= 40 ? "#DC2626" : hrs >= 35 ? "#F59E0B" : "#16A34A";
+                  const color = hrs >= 40 ? "#DC2626" : hrs >= 35 ? "#e64e4e" : "#16A34A";
                   return (
                     <div key={row.tech.id} className="rounded-xl p-3" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)" }}>
                       <div className="flex items-center justify-between mb-1">
@@ -495,7 +495,7 @@ export default function AdminTimePage() {
                               return (
                                 <td key={i} className="text-center px-3 py-3 cursor-pointer hover:bg-black/5 transition-colors" onClick={() => setSelectedCell({ techId: row.tech.id, date: day.date })} style={{ background: isSelected ? "rgba(37,99,235,0.1)" : isToday ? "rgba(37,99,235,0.03)" : undefined }}>
                                   {day.minutes > 0 || day.hasOpen ? (
-                                    <span className="text-sm font-medium" style={{ color: day.hasOpen ? "#F59E0B" : "var(--color-text-primary)" }}>
+                                    <span className="text-sm font-medium" style={{ color: day.hasOpen ? "#e64e4e" : "var(--color-text-primary)" }}>
                                       {minutesToDecimal(day.minutes)}h
                                       {day.hasOpen && <span className="ml-1 w-1.5 h-1.5 rounded-full bg-yellow-500 inline-block" />}
                                     </span>
@@ -563,11 +563,11 @@ export default function AdminTimePage() {
                         <div key={entry.id} className="flex items-center justify-between p-3 rounded-lg" style={{ background: "var(--color-surface-3)", border: "1px solid var(--color-border)" }}>
                           <div>
                             <div className="text-sm font-medium" style={{ color: "var(--color-text-primary)" }}>
-                              {formatTime(entry.clockInAt)} → {entry.clockOutAt ? formatTime(entry.clockOutAt) : <span style={{ color: "#F59E0B" }}>Active</span>}
+                              {formatTime(entry.clockInAt)} → {entry.clockOutAt ? formatTime(entry.clockOutAt) : <span style={{ color: "#e64e4e" }}>Active</span>}
                             </div>
                             <div className="text-xs" style={{ color: "var(--color-text-muted)" }}>
                               {entry.totalMinutes ? formatHours(entry.totalMinutes) : "In progress"}
-                              {entry.edited && <span className="ml-2" style={{ color: "#F59E0B" }}>(edited)</span>}
+                              {entry.edited && <span className="ml-2" style={{ color: "#e64e4e" }}>(edited)</span>}
                             </div>
                           </div>
                           <button onClick={() => openEdit(entry)} className="px-3 py-1.5 rounded-lg text-xs font-medium" style={{ border: "1px solid var(--color-border)", color: "var(--color-text-secondary)" }}>
@@ -597,7 +597,7 @@ export default function AdminTimePage() {
                     onClick={sendPayrollReport}
                     disabled={sendingPayroll || Object.keys(approvals).length === 0}
                     className="px-4 py-2 rounded-lg text-sm font-semibold disabled:opacity-50"
-                    style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}
+                    style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}
                   >
                     {sendingPayroll ? "Generating..." : payrollSent ? "Resend Payroll Report" : "Send Payroll Report"}
                   </button>
@@ -644,7 +644,7 @@ export default function AdminTimePage() {
                             {isApproved ? (
                               <span className="px-2 py-1 rounded-full text-xs font-semibold" style={{ background: "rgba(22,163,74,0.12)", color: "#16A34A" }}>Approved</span>
                             ) : (
-                              <span className="px-2 py-1 rounded-full text-xs font-semibold" style={{ background: "rgba(245,158,11,0.12)", color: "#F59E0B" }}>Pending</span>
+                              <span className="px-2 py-1 rounded-full text-xs font-semibold" style={{ background: "rgba(245,158,11,0.12)", color: "#e64e4e" }}>Pending</span>
                             )}
                           </td>
                           <td className="text-right px-4 py-3">
@@ -772,7 +772,7 @@ export default function AdminTimePage() {
               )}
             </div>
             <div className="flex gap-2 mt-4">
-              <button onClick={saveEdit} disabled={saving} className="flex-1 py-2.5 rounded-lg text-sm font-semibold disabled:opacity-60" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}>
+              <button onClick={saveEdit} disabled={saving} className="flex-1 py-2.5 rounded-lg text-sm font-semibold disabled:opacity-60" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}>
                 {saving ? "Saving..." : "Save Changes"}
               </button>
               <button onClick={() => { setEditEntry(null); setEditError(""); }} className="px-4 py-2.5 rounded-lg text-sm" style={{ border: "1px solid var(--color-border)", color: "var(--color-text-muted)" }}>Cancel</button>
@@ -814,7 +814,7 @@ export default function AdminTimePage() {
               </div>
             </div>
             <div className="flex gap-2 mt-4">
-              <button onClick={addManualEntry} disabled={saving || !manualForm.techId || !manualForm.date} className="flex-1 py-2.5 rounded-lg text-sm font-semibold disabled:opacity-50" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}>
+              <button onClick={addManualEntry} disabled={saving || !manualForm.techId || !manualForm.date} className="flex-1 py-2.5 rounded-lg text-sm font-semibold disabled:opacity-50" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}>
                 {saving ? "Saving..." : "Add Entry"}
               </button>
               <button onClick={() => setShowManualEntry(false)} className="px-4 py-2.5 rounded-lg text-sm" style={{ border: "1px solid var(--color-border)", color: "var(--color-text-muted)" }}>Cancel</button>
@@ -868,7 +868,7 @@ function TimeOffCalendar({ requests, techs }: { requests: TimeOffRequest[]; tech
   const colors = (status: string) => status === "approved"
     ? { bg: "rgba(22,163,74,0.16)", border: "1px solid rgba(22,163,74,0.45)", text: "#16A34A" }
     : status === "pending"
-    ? { bg: "rgba(248,151,31,0.18)", border: "1px dashed rgba(248,151,31,0.55)", text: "#9a5d12" }
+    ? { bg: "rgba(248,151,31,0.18)", border: "1px dashed rgba(248,151,31,0.55)", text: "#9f2626" }
     : { bg: "rgba(120,120,120,0.12)", border: "1px solid rgba(120,120,120,0.3)", text: "#666" };
 
   const monthLabels: Array<{ left: number; label: string }> = [];

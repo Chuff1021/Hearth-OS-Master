@@ -6,7 +6,7 @@ const syncStats = [
   { label: "Invoices Synced", value: "—", sub: "Sync to see", color: "#98CD00", bg: "rgba(152,205,0,0.12)" },
   { label: "Payments Matched", value: "—", sub: "Sync to see", color: "#2563EB", bg: "rgba(29,78,216,0.12)" },
   { label: "Customers Linked", value: "—", sub: "Sync to see", color: "#2563EB", bg: "rgba(37,99,235,0.12)" },
-  { label: "Last Sync", value: "Never", sub: "Click Sync Now", color: "#f8971f", bg: "rgba(255,68,0,0.12)" },
+  { label: "Last Sync", value: "Never", sub: "Click Sync Now", color: "#d65050", bg: "rgba(214,80,80,0.12)" },
 ];
 
 type QuickBooksPageProps = {
@@ -192,11 +192,11 @@ export default function QuickBooksPage({ searchParams }: QuickBooksPageProps) {
             <div
               className="rounded-xl p-5"
               style={{
-                background: "rgba(255,68,0,0.08)",
-                border: "1px solid rgba(255,68,0,0.2)",
+                background: "rgba(214,80,80,0.08)",
+                border: "1px solid rgba(214,80,80,0.20)",
               }}
             >
-              <h2 className="font-semibold text-sm mb-3" style={{ color: "#f8971f" }}>
+              <h2 className="font-semibold text-sm mb-3" style={{ color: "#d65050" }}>
                 ⚠️ Requirements
               </h2>
               <ul className="space-y-2 text-sm" style={{ color: "var(--color-text-secondary)" }}>

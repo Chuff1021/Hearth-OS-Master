@@ -230,7 +230,7 @@ export default function TechApp() {
 
       <div className="p-4 space-y-4">
         {error ? (
-          <div className="px-3 py-2 rounded-lg text-sm" style={{ background: "rgba(255,68,0,0.10)", border: "1px solid rgba(255,68,0,0.22)", color: "#C2410C" }}>
+          <div className="px-3 py-2 rounded-lg text-sm" style={{ background: "rgba(214,80,80,0.10)", border: "1px solid rgba(214,80,80,0.22)", color: "#9f2626" }}>
             {error}
           </div>
         ) : null}
@@ -252,7 +252,7 @@ export default function TechApp() {
                 onClick={handleClock}
                 disabled={busyAction === "clock" || loading}
                 className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-60"
-                style={{ background: "rgba(255,68,0,0.14)", color: "#C2410C" }}
+                style={{ background: "rgba(214,80,80,0.14)", color: "#9f2626" }}
               >
                 {busyAction === "clock" ? "Saving..." : "Clock Out"}
               </button>
@@ -261,7 +261,7 @@ export default function TechApp() {
                 onClick={handleClock}
                 disabled={busyAction === "clock" || loading}
                 className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-60"
-                style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}
+                style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}
               >
                 {busyAction === "clock" ? "Saving..." : "Clock In"}
               </button>
@@ -276,7 +276,7 @@ export default function TechApp() {
             { label: "Open", value: session?.stats.upcomingJobs ?? 0 },
           ].map((stat) => (
             <div key={stat.label} className="rounded-2xl p-3" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)" }}>
-              <p className="text-2xl font-bold" style={{ color: "#C2410C" }}>{stat.value}</p>
+              <p className="text-2xl font-bold" style={{ color: "#9f2626" }}>{stat.value}</p>
               <p className="text-xs mt-1" style={{ color: "var(--color-text-muted)" }}>{stat.label} Jobs</p>
             </div>
           ))}
@@ -290,7 +290,7 @@ export default function TechApp() {
                 Saved from live GPS pings while clocked in
               </p>
             </div>
-            <div className="text-2xl font-bold" style={{ color: "#C2410C" }}>
+            <div className="text-2xl font-bold" style={{ color: "#9f2626" }}>
               {(session?.stats.milesToday ?? 0).toFixed(1)}
             </div>
           </div>
@@ -303,7 +303,7 @@ export default function TechApp() {
                 onClick={() => setTab("active")}
                 className="px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors"
                 style={{
-                  background: tab === "active" ? "linear-gradient(135deg, #FF6A00, #F59E0B)" : "var(--color-surface-3)",
+                  background: tab === "active" ? "linear-gradient(135deg, #d65050, #e64e4e)" : "var(--color-surface-3)",
                   color: tab === "active" ? "#fff" : "var(--color-text-muted)",
                   border: tab === "active" ? "none" : "1px solid var(--color-border)",
                 }}
@@ -314,7 +314,7 @@ export default function TechApp() {
                 onClick={() => setTab("history")}
                 className="px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors"
                 style={{
-                  background: tab === "history" ? "linear-gradient(135deg, #FF6A00, #F59E0B)" : "var(--color-surface-3)",
+                  background: tab === "history" ? "linear-gradient(135deg, #d65050, #e64e4e)" : "var(--color-surface-3)",
                   color: tab === "history" ? "#fff" : "var(--color-text-muted)",
                   border: tab === "history" ? "none" : "1px solid var(--color-border)",
                 }}
@@ -322,7 +322,7 @@ export default function TechApp() {
                 History ({completedJobs.length})
               </button>
             </div>
-            <Link href="/tech/profile" className="text-sm font-medium" style={{ color: "#C2410C" }}>
+            <Link href="/tech/profile" className="text-sm font-medium" style={{ color: "#9f2626" }}>
               Profile
             </Link>
           </div>
@@ -365,7 +365,7 @@ export default function TechApp() {
                             <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>{job.title}</p>
                           </div>
                           <div className="text-right">
-                            <span className="inline-flex px-2 py-1 rounded-full text-[11px] font-semibold" style={{ background: "rgba(255,106,0,0.10)", color: "#C2410C" }}>
+                            <span className="inline-flex px-2 py-1 rounded-full text-[11px] font-semibold" style={{ background: "rgba(255,106,0,0.10)", color: "#9f2626" }}>
                               {statusLabel}
                             </span>
                             <p className="text-xs mt-1" style={{ color: "var(--color-text-muted)" }}>{formatSchedule(job)}</p>
@@ -396,7 +396,7 @@ export default function TechApp() {
                             disabled={!isClockedIn || busyAction === job.id}
                             className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${!isClockedIn ? "cursor-not-allowed opacity-50" : ""}`}
                             style={{
-                              background: job.status === "in_progress" ? "rgba(22,163,74,0.14)" : "linear-gradient(135deg, #FF6A00, #F59E0B)",
+                              background: job.status === "in_progress" ? "rgba(22,163,74,0.14)" : "linear-gradient(135deg, #d65050, #e64e4e)",
                               color: job.status === "in_progress" ? "#15803D" : "#fff",
                             }}
                           >

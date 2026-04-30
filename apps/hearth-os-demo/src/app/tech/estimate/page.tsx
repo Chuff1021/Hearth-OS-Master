@@ -163,7 +163,7 @@ export default function EstimatePage() {
 
       {/* AI Estimate Builder */}
       <div className="p-4">
-        <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 border border-blue-600/50 rounded-xl p-4 mb-4">
+        <div className="bg-gradient-to-r from-[rgba(214,80,80,0.20)] to-[rgba(230,78,78,0.20)] border border-blue-600/50 rounded-xl p-4 mb-4">
           <div className="flex items-center gap-2 mb-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

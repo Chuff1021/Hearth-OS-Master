@@ -186,7 +186,7 @@ export default function SettingsPage() {
                 <h2 className="text-lg font-semibold mb-4" style={{ color: "var(--color-text-primary)" }}>
                   Subscription & Billing
                 </h2>
-                <div className="p-4 rounded-lg bg-gradient-to-r from-orange-500/20 to-amber-500/20 border border-orange-500/30 mb-6">
+                <div className="p-4 rounded-lg bg-gradient-to-r from-[rgba(214,80,80,0.20)] to-[rgba(230,78,78,0.20)] border border-orange-500/30 mb-6">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="font-semibold text-orange-400">Professional Plan</p>
@@ -217,7 +217,7 @@ export default function SettingsPage() {
                         <p className="font-medium" style={{ color: "var(--color-text-primary)" }}>Visa ending in 4242</p>
                         <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>Expires 12/2027</p>
                       </div>
-                      <button className="text-sm text-orange-400 hover:text-orange-300">Update</button>
+                      <button className="text-sm text-orange-400 hover:text-[var(--color-ember-light)]">Update</button>
                     </div>
                   </div>
                 </div>

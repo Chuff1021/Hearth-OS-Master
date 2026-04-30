@@ -111,8 +111,8 @@ export default function SalesByItemPage() {
                 {[["30","Last 30"],["90","Last 90"],["365","Last 365"],["ytd","YTD"],["all","All time"]].map(([k,l]) => (
                   <button key={k} onClick={() => setPreset(k)} className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{
                     background: preset === k ? "rgba(248,151,31,0.16)" : "var(--color-surface-1)",
-                    color: preset === k ? "#9a5d12" : "var(--color-text-muted)",
-                    border: preset === k ? "1px solid #f8971f" : "1px solid var(--color-border)",
+                    color: preset === k ? "#9f2626" : "var(--color-text-muted)",
+                    border: preset === k ? "1px solid #d65050" : "1px solid var(--color-border)",
                   }}>{l}</button>
                 ))}
               </div>
@@ -177,7 +177,7 @@ export default function SalesByItemPage() {
                           <td className="px-4 py-3 text-right text-sm" style={{ color: "var(--color-text-secondary)" }}>{fmtMoney(r.avgPrice)}</td>
                           <td className="px-4 py-3 text-right font-semibold" style={{ color: "var(--color-text-primary)" }}>{fmtMoney(r.revenue)}</td>
                           <td className="px-4 py-3 text-right" style={{ color: r.profit < 0 ? "#DC2626" : r.profit > 0 ? "#16A34A" : "var(--color-text-muted)" }}>{fmtMoney(r.profit)}</td>
-                          <td className="px-4 py-3 text-right text-sm" style={{ color: r.margin == null ? "var(--color-text-muted)" : r.margin < 0 ? "#DC2626" : r.margin < 15 ? "#F59E0B" : "#16A34A" }}>
+                          <td className="px-4 py-3 text-right text-sm" style={{ color: r.margin == null ? "var(--color-text-muted)" : r.margin < 0 ? "#DC2626" : r.margin < 15 ? "#e64e4e" : "#16A34A" }}>
                             {r.margin == null ? "—" : `${r.margin.toFixed(1)}%`}
                           </td>
                           <td className="px-4 py-3 text-right text-sm" style={{ color: "var(--color-text-secondary)" }}>{r.invoiceCount}</td>

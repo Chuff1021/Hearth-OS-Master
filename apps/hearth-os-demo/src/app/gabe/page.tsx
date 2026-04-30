@@ -61,7 +61,7 @@ function renderMarkdown(text: string) {
       if (first.type === "link") {
         parts.push(
           <a key={key++} href={first.match![2]} target="_blank" rel="noreferrer"
-            className="font-medium underline" style={{ color: "#FF6A00" }}>
+            className="font-medium underline" style={{ color: "#d65050" }}>
             {first.match![1]}
           </a>
         );
@@ -207,7 +207,7 @@ export default function GabeChatPage() {
         {/* Chat header */}
         <div className="px-6 py-3 flex items-center justify-between flex-shrink-0" style={{ borderBottom: "1px solid var(--color-border)" }}>
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg font-bold" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg font-bold" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}>
               G
             </div>
             <div>
@@ -231,7 +231,7 @@ export default function GabeChatPage() {
           <div className="max-w-3xl mx-auto px-6 py-6 space-y-4">
             {messages.length === 0 && !loading && (
               <div className="text-center py-16">
-                <div className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)" }}>
+                <div className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)" }}>
                   G
                 </div>
                 <h2 className="text-xl font-bold mb-2" style={{ color: "var(--color-text-primary)" }}>Ask GABE anything</h2>
@@ -261,14 +261,14 @@ export default function GabeChatPage() {
             {messages.map((msg, i) => (
               <div key={i} className={`flex gap-3 ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                 {msg.role === "assistant" && (
-                  <div className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center text-sm font-bold" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}>
+                  <div className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center text-sm font-bold" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}>
                     G
                   </div>
                 )}
                 <div
                   className="max-w-[80%] rounded-2xl px-4 py-3"
                   style={{
-                    background: msg.role === "user" ? "linear-gradient(135deg, #FF6A00, #F59E0B)" : "var(--color-surface-1)",
+                    background: msg.role === "user" ? "linear-gradient(135deg, #d65050, #e64e4e)" : "var(--color-surface-1)",
                     color: msg.role === "user" ? "#fff" : "var(--color-text-primary)",
                     border: msg.role === "assistant" ? "1px solid var(--color-border)" : undefined,
                     boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
@@ -285,7 +285,7 @@ export default function GabeChatPage() {
 
             {loading && (
               <div className="flex gap-3 justify-start">
-                <div className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center text-sm font-bold" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}>
+                <div className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center text-sm font-bold" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}>
                   G
                 </div>
                 <div className="rounded-2xl px-4 py-3" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)" }}>
@@ -326,7 +326,7 @@ export default function GabeChatPage() {
               onClick={sendMessage}
               disabled={!input.trim() || loading}
               className="px-5 py-3 rounded-xl text-sm font-semibold disabled:opacity-50 transition-colors"
-              style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}
+              style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}
             >
               {loading ? "..." : "Send"}
             </button>

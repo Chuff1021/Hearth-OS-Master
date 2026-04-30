@@ -335,7 +335,7 @@ export default function Sidebar() {
                           className="text-[10px] font-bold px-1.5 py-0.5 rounded-full"
                           style={{
                             background: isActive ? "rgba(248,151,31,0.28)" : "rgba(248,151,31,0.18)",
-                            color: "#f8971f",
+                            color: "#d65050",
                           }}
                         >
                           {item.badge}

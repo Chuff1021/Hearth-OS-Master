@@ -1023,7 +1023,7 @@ export default function InvoicesPage() {
                       <button
                         onClick={() => selectedInvoice && setPnlOpen({ id: selectedInvoice.id, label: selectedInvoice.invoiceNumber || selectedInvoice.id })}
                         className="px-3 py-1.5 rounded-lg text-xs font-semibold"
-                        style={{ border: "1px solid var(--color-border)", background: "var(--color-surface-2)", color: "#9a5d12" }}
+                        style={{ border: "1px solid var(--color-border)", background: "var(--color-surface-2)", color: "#9f2626" }}
                       >
                         P&amp;L
                       </button>
@@ -1185,7 +1185,7 @@ export default function InvoicesPage() {
                                     setSelectedInvoice({ ...selectedInvoice, lineItems });
                                   }}
                                   className="ml-auto px-2 py-1 rounded text-[11px] font-semibold"
-                                  style={{ background: "rgba(255,68,0,0.12)", color: "#C2410C" }}
+                                  style={{ background: "rgba(214,80,80,0.12)", color: "#9f2626" }}
                                 >
                                   Remove
                                 </button>
@@ -1287,7 +1287,7 @@ export default function InvoicesPage() {
                     <button
                       onClick={() => handlePayNow(selectedInvoice)}
                       className="w-full px-4 py-2.5 rounded-lg text-sm font-semibold"
-                      style={{ background: "linear-gradient(135deg, #f8971f, #f8971f)", color: "white" }}
+                      style={{ background: "linear-gradient(135deg, #d65050, #d65050)", color: "white" }}
                     >
                       Pay Now (Square)
                     </button>

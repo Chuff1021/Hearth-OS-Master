@@ -311,7 +311,7 @@ export default function InventoryPage() {
                 );
               })}
               {searching && (
-                <span className="ml-2 px-2 py-0.5 rounded text-xs" style={{ background: "rgba(255,68,0,0.15)", color: "#eaa23f" }}>
+                <span className="ml-2 px-2 py-0.5 rounded text-xs" style={{ background: "rgba(214,80,80,0.15)", color: "#e64e4e" }}>
                   Searching all
                 </span>
               )}
@@ -373,7 +373,7 @@ export default function InventoryPage() {
                           <td className="px-3 py-2 text-right" style={{ color: "var(--color-text-primary)" }}>
                             {fmtMoney(item.unitPrice)}
                           </td>
-                          <td className="px-3 py-2 text-right" style={{ color: costMismatch ? "#F59E0B" : "var(--color-text-primary)" }}>
+                          <td className="px-3 py-2 text-right" style={{ color: costMismatch ? "#e64e4e" : "var(--color-text-primary)" }}>
                             {fmtMoney(item.cost)}
                             {costMismatch && <span className="ml-1 text-[10px]" title="Current cost differs from last paid by &gt;10%">⚠</span>}
                           </td>
@@ -593,7 +593,7 @@ function PriceAuditModal({ onClose, onApplied }: { onClose: () => void; onApplie
                   onClick={() => setSource(opt.id)}
                   className="px-2.5 py-1 rounded-lg text-xs"
                   style={{
-                    background: source === opt.id ? "#f8971f" : "var(--color-surface-2)",
+                    background: source === opt.id ? "#d65050" : "var(--color-surface-2)",
                     color: source === opt.id ? "white" : "var(--color-text-secondary)",
                     border: "1px solid var(--color-border)",
                   }}
@@ -617,7 +617,7 @@ function PriceAuditModal({ onClose, onApplied }: { onClose: () => void; onApplie
                   onClick={() => setMonthsBack(m)}
                   className="px-2.5 py-1 rounded-lg text-xs"
                   style={{
-                    background: monthsBack === m ? "#f8971f" : "var(--color-surface-2)",
+                    background: monthsBack === m ? "#d65050" : "var(--color-surface-2)",
                     color: monthsBack === m ? "white" : "var(--color-text-secondary)",
                     border: "1px solid var(--color-border)",
                   }}
@@ -634,7 +634,7 @@ function PriceAuditModal({ onClose, onApplied }: { onClose: () => void; onApplie
                   onClick={() => setMinPct(p)}
                   className="px-2.5 py-1 rounded-lg text-xs"
                   style={{
-                    background: minPct === p ? "#f8971f" : "var(--color-surface-2)",
+                    background: minPct === p ? "#d65050" : "var(--color-surface-2)",
                     color: minPct === p ? "white" : "var(--color-text-secondary)",
                     border: "1px solid var(--color-border)",
                   }}
@@ -705,7 +705,7 @@ function PriceAuditModal({ onClose, onApplied }: { onClose: () => void; onApplie
               <tbody>
                 {data.rows.map((r) => {
                   const checked = selected.has(r.id);
-                  const deltaColor = r.noCostSet ? "#F59E0B" : r.delta > 0 ? "#FF204E" : "#16A34A";
+                  const deltaColor = r.noCostSet ? "#e64e4e" : r.delta > 0 ? "#FF204E" : "#16A34A";
                   return (
                     <tr key={r.id} style={{ borderTop: "1px solid var(--color-border)" }}>
                       <td className="px-3 py-2">
@@ -715,7 +715,7 @@ function PriceAuditModal({ onClose, onApplied }: { onClose: () => void; onApplie
                         <div className="font-medium" style={{ color: "var(--color-text-primary)" }}>
                           {r.name}
                           {r.noCostSet && (
-                            <span className="ml-2 text-[9px] uppercase tracking-wide px-1.5 py-0.5 rounded" style={{ background: "rgba(245,158,11,0.15)", color: "#F59E0B" }}>
+                            <span className="ml-2 text-[9px] uppercase tracking-wide px-1.5 py-0.5 rounded" style={{ background: "rgba(245,158,11,0.15)", color: "#e64e4e" }}>
                               no cost set
                             </span>
                           )}
@@ -797,7 +797,7 @@ function PriceAuditModal({ onClose, onApplied }: { onClose: () => void; onApplie
 }
 
 function SummaryStat({ label, value, tone }: { label: string; value: string; tone?: "good" | "warn" | "danger" }) {
-  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#F59E0B" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
+  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#e64e4e" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
   return (
     <div className="px-3 py-2 rounded-lg" style={{ background: "var(--color-surface-2)" }}>
       <p className="text-[10px] uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>{label}</p>
@@ -810,7 +810,7 @@ function SummaryStat({ label, value, tone }: { label: string; value: string; ton
 // Subcomponents
 // ───────────────────────────────────────────────────────────────────────────
 function StatCard({ label, value, tone, onClick, active }: { label: string; value: number | string; tone?: "good" | "warn" | "danger"; onClick?: () => void; active?: boolean }) {
-  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#F59E0B" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
+  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#e64e4e" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
   const Tag: any = onClick ? "button" : "div";
   return (
     <Tag
@@ -831,7 +831,7 @@ function FilterPill<V extends string>({ label, value, current, onClick }: { labe
       onClick={() => onClick(value)}
       className="px-3 py-2 rounded-lg text-xs font-medium transition-colors"
       style={{
-        background: active ? "#f8971f" : "var(--color-surface-1)",
+        background: active ? "#d65050" : "var(--color-surface-1)",
         color: active ? "white" : "var(--color-text-secondary)",
         border: "1px solid var(--color-border)",
       }}
@@ -956,7 +956,7 @@ function TrimModal({ onClose, onApplied }: { onClose: () => void; onApplied: () 
                   onClick={() => setMonthsBack(m)}
                   className="px-3 py-1.5 rounded-lg text-sm"
                   style={{
-                    background: monthsBack === m ? "#f8971f" : "var(--color-surface-2)",
+                    background: monthsBack === m ? "#d65050" : "var(--color-surface-2)",
                     color: monthsBack === m ? "white" : "var(--color-text-secondary)",
                     border: "1px solid var(--color-border)",
                   }}
@@ -1000,7 +1000,7 @@ function TrimModal({ onClose, onApplied }: { onClose: () => void; onApplied: () 
                 </div>
                 <div className="flex justify-between">
                   <span>Will be marked untracked</span>
-                  <strong style={{ color: "#F59E0B" }}>{preview.wouldBecomeUntracked.toLocaleString()}</strong>
+                  <strong style={{ color: "#e64e4e" }}>{preview.wouldBecomeUntracked.toLocaleString()}</strong>
                 </div>
                 <div className="flex justify-between text-xs pt-1.5 mt-1.5" style={{ borderTop: "1px solid var(--color-border)", color: "var(--color-text-muted)" }}>
                   <span>Currently tracked</span>
@@ -1172,7 +1172,7 @@ function DetailDrawer({ itemId, onClose, onSaved }: { itemId: string; onClose: (
             <button
               onClick={applySuggestedCost}
               className="mt-3 px-3 py-2 rounded-lg text-xs font-medium"
-              style={{ background: "rgba(255, 68, 0, 0.15)", color: "#eaa23f", border: "1px solid #f8971f" }}
+              style={{ background: "rgba(255, 68, 0, 0.15)", color: "#e64e4e", border: "1px solid #d65050" }}
             >
               Update current cost to match last paid: {fmtMoney(cs.lastPaidCost)}
             </button>

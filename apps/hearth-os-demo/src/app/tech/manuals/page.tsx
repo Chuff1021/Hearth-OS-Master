@@ -407,7 +407,7 @@ export default function ManualsPage() {
             {grouped.map((group) => (
               <section key={group.brand}>
                 <div className="flex items-center justify-between mb-2">
-                  <h2 className="text-sm font-semibold text-orange-300">{group.brand}</h2>
+                  <h2 className="text-sm font-semibold text-[var(--color-ember-light)]">{group.brand}</h2>
                   <span className="text-xs ">{group.manuals.length} model{group.manuals.length === 1 ? "" : "s"}</span>
                 </div>
                 <div className="space-y-3">
@@ -444,7 +444,7 @@ export default function ManualsPage() {
                           className="flex-1 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
                           style={{
                             background: ingestingId === manual.id ? "rgba(245,158,11,0.15)" : "rgba(37,99,235,0.12)",
-                            color: ingestingId === manual.id ? "#F59E0B" : "#2563EB",
+                            color: ingestingId === manual.id ? "#e64e4e" : "#2563EB",
                             border: `1px solid ${ingestingId === manual.id ? "rgba(245,158,11,0.3)" : "rgba(37,99,235,0.25)"}`,
                           }}
                         >
@@ -459,7 +459,7 @@ export default function ManualsPage() {
                                 className="h-full rounded-full transition-all"
                                 style={{
                                   width: `${Math.round((ingestProgress.current / ingestProgress.total) * 100)}%`,
-                                  background: "linear-gradient(90deg, #2563EB, #F59E0B)",
+                                  background: "linear-gradient(90deg, #2563EB, #e64e4e)",
                                 }}
                               />
                             </div>

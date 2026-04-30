@@ -4,9 +4,9 @@
   /* ─────────────────────────────────────────────────────────────────────
    * Forge & Flame brand palette — ripped from forgenflame.com's CSS vars
    *   accent-1 (108,104,102)  warm taupe     #6c6866
-   *   accent-2 (248,151,31)   ember orange   #f8971f   ← primary brand
+   *   accent-2 (248,151,31)   ember orange   #d65050   ← primary brand
    *   accent-3 (51,46,45)     charcoal-brown #332e2d
-   *   accent-4 (234,162,63)   warm amber     #eaa23f
+   *   accent-4 (234,162,63)   warm amber     #e64e4e
    *   bg-1 (255,255,255)      white
    *   bg-2 (247,246,243)      warm cream     #f7f6f3
    * ───────────────────────────────────────────────────────────────────── */
@@ -26,16 +26,16 @@
   --color-ember-glow: rgba(214, 80, 80, 0.22);
 
   /* Forge & Flame colors as standalone tokens */
-  --color-ff-ember: #f8971f;
-  --color-ff-amber: #eaa23f;
+  --color-ff-ember: #d65050;
+  --color-ff-amber: #e64e4e;
   --color-ff-taupe: #6c6866;
   --color-ff-charcoal: #332e2d;
   --color-ff-cream: #f7f6f3;
   --color-ff-cream-button: #d3d1c3;
 
   /* Legacy aliases — kept around so older components don't blow up. */
-  --color-accent-violet: #eaa23f;
-  --color-accent-cyan: #f8971f;
+  --color-accent-violet: #e64e4e;
+  --color-accent-cyan: #d65050;
 
   /* Surfaces — pure white cards on warm cream page bg, like F&F */
   --color-bg: #f4f4f4;

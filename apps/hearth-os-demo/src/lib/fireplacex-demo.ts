@@ -16,7 +16,7 @@ export const fireplacexBrand = {
 
 export const demoTechs = [
   { id: "tech-fx-001", name: "Mason Reed", email: "mason.reed@fireplacex-demo.com", phone: "(503) 555-0184", color: "#B91C1C", initials: "MR", role: "lead", active: true, skills: ["Gas inserts", "DaVinci installs", "Venting"], certifications: ["NFI Gas", "Factory Certified"], hireDate: "2022-03-14" },
-  { id: "tech-fx-002", name: "Elena Cruz", email: "elena.cruz@fireplacex-demo.com", phone: "(503) 555-0147", color: "#D97706", initials: "EC", role: "tech", active: true, skills: ["Wood inserts", "Annual service", "Troubleshooting"], certifications: ["NFI Wood"], hireDate: "2023-06-02" },
+  { id: "tech-fx-002", name: "Elena Cruz", email: "elena.cruz@fireplacex-demo.com", phone: "(503) 555-0147", color: "#d65050", initials: "EC", role: "tech", active: true, skills: ["Wood inserts", "Annual service", "Troubleshooting"], certifications: ["NFI Wood"], hireDate: "2023-06-02" },
   { id: "tech-fx-003", name: "Tyler Brooks", email: "tyler.brooks@fireplacex-demo.com", phone: "(503) 555-0129", color: "#374151", initials: "TB", role: "tech", active: true, skills: ["Install helper", "Chase inspections", "Parts"], certifications: ["Apprentice"], hireDate: "2024-01-22" },
   { id: "tech-fx-004", name: "Nina Patel", email: "nina.patel@fireplacex-demo.com", phone: "(503) 555-0166", color: "#7F1D1D", initials: "NP", role: "dispatcher", active: true, skills: ["Dispatch", "Permits", "Customer care"], certifications: [], hireDate: "2021-09-09" },
 ] as const;

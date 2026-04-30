@@ -6,7 +6,7 @@ type Tab = "jobs" | "inbox" | "manuals" | "payments" | "gabe" | "profile";
 
 export default function TechBottomNav({ active }: { active: Tab }) {
   const base = "flex flex-1 flex-col items-center justify-center transition-colors";
-  const activeStyle = { color: "#FF6A00" };
+  const activeStyle = { color: "#d65050" };
   const inactiveStyle = { color: "var(--color-text-muted)" };
 
   return (

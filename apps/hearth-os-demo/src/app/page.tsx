@@ -204,7 +204,7 @@ export default function DashboardPage() {
 function KpiCard({ label, value, sublabel, accent, tone, href }: { label: string; value: string; sublabel?: string; accent: string; tone?: "warn" | "danger"; href?: string }) {
   const Tag: any = href ? Link : "div";
   const props: any = href ? { href } : {};
-  const accentColor = tone === "danger" ? "#c44545" : tone === "warn" ? "#eaa23f" : accent;
+  const accentColor = tone === "danger" ? "#c44545" : tone === "warn" ? "#e64e4e" : accent;
   return (
     <Tag
       {...props}

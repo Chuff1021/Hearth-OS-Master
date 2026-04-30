@@ -256,7 +256,7 @@ export default function PaymentsPage() {
   function getStatusBadge(status: string) {
     switch (status) {
       case "completed": return { color: "#16A34A", bg: "rgba(22,163,74,0.12)", label: "Completed" };
-      case "pending":   return { color: "#9a5d12", bg: "rgba(248,151,31,0.12)", label: "Pending" };
+      case "pending":   return { color: "#9f2626", bg: "rgba(214,80,80,0.12)", label: "Pending" };
       case "failed":    return { color: "#DC2626", bg: "rgba(220,38,38,0.12)", label: "Failed" };
       case "refunded":  return { color: "#7C3AED", bg: "rgba(124,58,237,0.12)", label: "Refunded" };
       default:          return { color: "var(--color-text-muted)", bg: "var(--color-surface-2)", label: status };
@@ -300,8 +300,8 @@ export default function PaymentsPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
                 { label: "Received", value: fmtMoney(totalReceived), accent: "#16A34A" },
-                { label: "Pending",  value: fmtMoney(totalPending),  accent: "#f8971f" },
-                { label: "This view", value: fmtMoney(totalReceived + totalPending), accent: "#f8971f" },
+                { label: "Pending",  value: fmtMoney(totalPending),  accent: "#d65050" },
+                { label: "This view", value: fmtMoney(totalReceived + totalPending), accent: "#d65050" },
                 { label: "Transactions", value: String(payments.length), accent: "var(--color-text-muted)" },
               ].map((t) => (
                 <div key={t.label} className="p-4 rounded-xl" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)", borderLeft: `4px solid ${t.accent}` }}>
@@ -320,7 +320,7 @@ export default function PaymentsPage() {
                     Enter the customer card with Square&apos;s secure form, or send them a hosted checkout link.
                   </p>
                 </div>
-                <span className="text-[10px] uppercase tracking-wide font-semibold px-2 py-0.5 rounded" style={{ background: squareReady ? "rgba(22,163,74,0.12)" : "rgba(248,151,31,0.12)", color: squareReady ? "#16A34A" : "#9a5d12", border: `1px solid ${squareReady ? "rgba(22,163,74,0.35)" : "rgba(248,151,31,0.35)"}` }}>
+                <span className="text-[10px] uppercase tracking-wide font-semibold px-2 py-0.5 rounded" style={{ background: squareReady ? "rgba(22,163,74,0.12)" : "rgba(214,80,80,0.12)", color: squareReady ? "#16A34A" : "#9f2626", border: `1px solid ${squareReady ? "rgba(22,163,74,0.35)" : "rgba(248,151,31,0.35)"}` }}>
                   {squareReady ? "Card form ready" : "Loading card form…"}
                 </span>
               </div>
@@ -408,7 +408,7 @@ export default function PaymentsPage() {
                     onClick={chargeCard}
                     disabled={chargingCard || !squareReady}
                     className="py-3 rounded-lg text-sm font-semibold text-white disabled:opacity-60 transition-opacity hover:opacity-90"
-                    style={{ background: "linear-gradient(135deg, #f8971f, #eaa23f)" }}
+                    style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)" }}
                   >
                     {chargingCard ? "Processing…" : `Charge Card${form.amount ? ` ${fmtMoney(Number(form.amount) || 0)}` : ""}`}
                   </button>
@@ -427,11 +427,11 @@ export default function PaymentsPage() {
               {checkoutUrl && (
                 <div className="rounded-lg p-3 space-y-2" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)" }}>
                   <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>Payment link</div>
-                  <a href={checkoutUrl} target="_blank" rel="noreferrer" className="text-xs break-all" style={{ color: "#f8971f" }}>{checkoutUrl}</a>
+                  <a href={checkoutUrl} target="_blank" rel="noreferrer" className="text-xs break-all" style={{ color: "#d65050" }}>{checkoutUrl}</a>
                   <div className="grid grid-cols-3 gap-2">
-                    <button onClick={() => openText(checkoutUrl)} className="py-1.5 rounded-md text-xs font-semibold" style={{ background: "rgba(248,151,31,0.12)", color: "#9a5d12", border: "1px solid rgba(248,151,31,0.25)" }}>Text</button>
-                    <button onClick={() => openEmail(checkoutUrl)} className="py-1.5 rounded-md text-xs font-semibold" style={{ background: "rgba(248,151,31,0.12)", color: "#9a5d12", border: "1px solid rgba(248,151,31,0.25)" }}>Email</button>
-                    <button onClick={() => shareLink("Square payment link", checkoutUrl)} className="py-1.5 rounded-md text-xs font-semibold" style={{ background: "rgba(248,151,31,0.12)", color: "#9a5d12", border: "1px solid rgba(248,151,31,0.25)" }}>Share</button>
+                    <button onClick={() => openText(checkoutUrl)} className="py-1.5 rounded-md text-xs font-semibold" style={{ background: "rgba(214,80,80,0.12)", color: "#9f2626", border: "1px solid rgba(248,151,31,0.25)" }}>Text</button>
+                    <button onClick={() => openEmail(checkoutUrl)} className="py-1.5 rounded-md text-xs font-semibold" style={{ background: "rgba(214,80,80,0.12)", color: "#9f2626", border: "1px solid rgba(248,151,31,0.25)" }}>Email</button>
+                    <button onClick={() => shareLink("Square payment link", checkoutUrl)} className="py-1.5 rounded-md text-xs font-semibold" style={{ background: "rgba(214,80,80,0.12)", color: "#9f2626", border: "1px solid rgba(248,151,31,0.25)" }}>Share</button>
                   </div>
                 </div>
               )}
@@ -467,8 +467,8 @@ export default function PaymentsPage() {
                     className="px-3 py-1.5 rounded-full text-xs font-semibold capitalize transition-colors"
                     style={{
                       background: filter === status ? "rgba(248,151,31,0.16)" : "var(--color-surface-1)",
-                      color: filter === status ? "#9a5d12" : "var(--color-text-muted)",
-                      border: filter === status ? "1px solid #f8971f" : "1px solid var(--color-border)",
+                      color: filter === status ? "#9f2626" : "var(--color-text-muted)",
+                      border: filter === status ? "1px solid #d65050" : "1px solid var(--color-border)",
                     }}
                   >
                     {status}
@@ -525,7 +525,7 @@ export default function PaymentsPage() {
                           </td>
                           <td className="px-4 py-3 text-sm">
                             {payment.receiptUrl ? (
-                              <a href={payment.receiptUrl} target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "#f8971f" }}>View</a>
+                              <a href={payment.receiptUrl} target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "#d65050" }}>View</a>
                             ) : (
                               <span style={{ color: "var(--color-text-muted)" }}>—</span>
                             )}

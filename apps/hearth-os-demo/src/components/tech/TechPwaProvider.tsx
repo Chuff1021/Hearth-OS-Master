@@ -111,7 +111,7 @@ export default function TechPwaProvider() {
               type="button"
               onClick={handleInstall}
               className="rounded-xl px-3 py-2 text-xs font-semibold text-white"
-              style={{ background: "linear-gradient(135deg, #ff6a00, #f59e0b)" }}
+              style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)" }}
             >
               Install
             </button>
@@ -120,7 +120,7 @@ export default function TechPwaProvider() {
               type="button"
               onClick={() => setDismissed(true)}
               className="rounded-xl px-3 py-2 text-xs font-semibold"
-              style={{ color: "#C2410C", background: "rgba(255,106,0,0.1)" }}
+              style={{ color: "#9f2626", background: "rgba(255,106,0,0.1)" }}
             >
               Got it
             </button>

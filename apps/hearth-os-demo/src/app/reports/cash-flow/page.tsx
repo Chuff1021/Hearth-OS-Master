@@ -66,8 +66,8 @@ export default function CashFlowPage() {
               {[3, 6, 12, 24].map((n) => (
                 <button key={n} onClick={() => setMonthsBack(n)} className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{
                   background: monthsBack === n ? "rgba(248,151,31,0.16)" : "var(--color-surface-1)",
-                  color: monthsBack === n ? "#9a5d12" : "var(--color-text-muted)",
-                  border: monthsBack === n ? "1px solid #f8971f" : "1px solid var(--color-border)",
+                  color: monthsBack === n ? "#9f2626" : "var(--color-text-muted)",
+                  border: monthsBack === n ? "1px solid #d65050" : "1px solid var(--color-border)",
                 }}>Last {n} mo</button>
               ))}
             </div>

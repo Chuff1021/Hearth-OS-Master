@@ -189,12 +189,12 @@ export default function TechTimeHistoryPage() {
                   <p className="text-sm font-semibold" style={{ color: "var(--color-text-primary)" }}>Weekly Total</p>
                   {isOvertime && <p className="text-[10px] font-bold" style={{ color: "#DC2626" }}>OVERTIME</p>}
                 </div>
-                <p className="text-2xl font-bold" style={{ color: isOvertime ? "#DC2626" : "#C2410C" }}>{minutesToDecimal(weekTotal)}h</p>
+                <p className="text-2xl font-bold" style={{ color: isOvertime ? "#DC2626" : "#9f2626" }}>{minutesToDecimal(weekTotal)}h</p>
               </div>
               <div className="w-full h-2 rounded-full mt-2" style={{ background: "var(--color-surface-3)" }}>
                 <div className="h-full rounded-full transition-all" style={{
                   width: `${Math.min(100, (weekTotal / 60 / 40) * 100)}%`,
-                  background: isOvertime ? "#DC2626" : weekTotal / 60 >= 35 ? "#F59E0B" : "#16A34A",
+                  background: isOvertime ? "#DC2626" : weekTotal / 60 >= 35 ? "#e64e4e" : "#16A34A",
                 }} />
               </div>
               <p className="text-[10px] mt-1 text-right" style={{ color: "var(--color-text-muted)" }}>{minutesToDecimal(weekTotal)} / 40.0 hours</p>
@@ -223,9 +223,9 @@ export default function TechTimeHistoryPage() {
                         <div key={entry.id} className="flex items-center justify-between py-1.5">
                           <div>
                             <span className="text-xs font-medium" style={{ color: "var(--color-text-primary)" }}>
-                              {formatTime(entry.clockInAt)} → {entry.clockOutAt ? formatTime(entry.clockOutAt) : <span style={{ color: "#F59E0B" }}>Active</span>}
+                              {formatTime(entry.clockInAt)} → {entry.clockOutAt ? formatTime(entry.clockOutAt) : <span style={{ color: "#e64e4e" }}>Active</span>}
                             </span>
-                            {entry.edited && <span className="text-[10px] ml-1.5" style={{ color: "#F59E0B" }}>(edited)</span>}
+                            {entry.edited && <span className="text-[10px] ml-1.5" style={{ color: "#e64e4e" }}>(edited)</span>}
                           </div>
                           <div className="flex items-center gap-2">
                             <span className="text-xs" style={{ color: "var(--color-text-muted)" }}>
@@ -274,7 +274,7 @@ export default function TechTimeHistoryPage() {
               </div>
               {requestStatus && <p className="text-xs" style={{ color: requestStatus.includes("submitted") ? "#16A34A" : "#DC2626" }}>{requestStatus}</p>}
             </div>
-            <button onClick={submitEditRequest} disabled={!editRequestForm.reason} className="w-full mt-4 py-2.5 rounded-lg text-sm font-semibold disabled:opacity-50" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}>
+            <button onClick={submitEditRequest} disabled={!editRequestForm.reason} className="w-full mt-4 py-2.5 rounded-lg text-sm font-semibold disabled:opacity-50" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}>
               Submit Edit Request
             </button>
           </div>

@@ -245,7 +245,7 @@ function CustomerHero({ customer, summary }: { customer: DetailResponse["custome
 
         <div className="text-right">
           <p className="text-[11px] uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>Open balance</p>
-          <p className="text-3xl font-bold mt-1" style={{ color: summary.invoiceOpenBalance > 0 ? "#F59E0B" : "var(--color-text-primary)" }}>
+          <p className="text-3xl font-bold mt-1" style={{ color: summary.invoiceOpenBalance > 0 ? "#e64e4e" : "var(--color-text-primary)" }}>
             {fmtMoney(summary.invoiceOpenBalance)}
           </p>
         </div>
@@ -275,7 +275,7 @@ function CustomerHero({ customer, summary }: { customer: DetailResponse["custome
 }
 
 function Stat({ label, value, hint, tone }: { label: string; value: string; hint?: string; tone?: "warn" | "danger" | "good" | "brand" }) {
-  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#F59E0B" : tone === "good" ? "#16A34A" : tone === "brand" ? "#0EA5E9" : "var(--color-text-primary)";
+  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#e64e4e" : tone === "good" ? "#16A34A" : tone === "brand" ? "#0EA5E9" : "var(--color-text-primary)";
   return (
     <div className="p-4 rounded-xl" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)" }}>
       <p className="text-[10px] uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>{label}</p>
@@ -293,13 +293,13 @@ function Tab({ v, cur, on, count, children }: { v: Tab; cur: Tab; on: (v: Tab) =
       className="px-4 py-2.5 text-sm font-medium relative transition-colors"
       style={{
         color: active ? "var(--color-text-primary)" : "var(--color-text-muted)",
-        borderBottom: active ? "2px solid #f8971f" : "2px solid transparent",
+        borderBottom: active ? "2px solid #d65050" : "2px solid transparent",
         marginBottom: "-1px",
       }}
     >
       {children}
       {typeof count === "number" && count > 0 && (
-        <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded font-semibold" style={{ background: active ? "#f8971f" : "var(--color-surface-2)", color: active ? "white" : "var(--color-text-muted)" }}>
+        <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded font-semibold" style={{ background: active ? "#d65050" : "var(--color-surface-2)", color: active ? "white" : "var(--color-text-muted)" }}>
           {count}
         </span>
       )}
@@ -327,7 +327,7 @@ function TxnTable({ rows, onRowClick }: { rows: Txn[]; onRowClick: (t: Txn) => v
             const overdue = t.type === "invoice" && isOverdue(t.date, t.balance);
             const statusColor = overdue ? "#FF204E" :
               t.type === "payment" ? "#16A34A" :
-              t.balance > 0 ? "#F59E0B" :
+              t.balance > 0 ? "#e64e4e" :
               "var(--color-text-muted)";
             const statusText = overdue ? "Overdue" : (t.status || "—");
             const isClickable = t.type === "invoice";
@@ -343,7 +343,7 @@ function TxnTable({ rows, onRowClick }: { rows: Txn[]; onRowClick: (t: Txn) => v
                 <td className="px-3 py-2.5">
                   <span className="text-[10px] uppercase tracking-wide font-semibold px-2 py-0.5 rounded-full" style={{
                     background: t.type === "invoice" ? "rgba(245,158,11,0.15)" : "rgba(22,163,74,0.15)",
-                    color: t.type === "invoice" ? "#F59E0B" : "#16A34A",
+                    color: t.type === "invoice" ? "#e64e4e" : "#16A34A",
                   }}>
                     {t.type === "invoice" ? "Invoice" : "Payment"}
                   </span>
@@ -357,7 +357,7 @@ function TxnTable({ rows, onRowClick }: { rows: Txn[]; onRowClick: (t: Txn) => v
                 <td className="px-3 py-2.5 text-right font-medium" style={{ color: t.type === "payment" ? "#16A34A" : "var(--color-text-primary)" }}>
                   {t.type === "payment" ? `+${fmtMoney(t.total)}` : fmtMoney(t.total)}
                 </td>
-                <td className="px-3 py-2.5 text-right font-medium" style={{ color: t.balance > 0 ? "#F59E0B" : "var(--color-text-muted)" }}>
+                <td className="px-3 py-2.5 text-right font-medium" style={{ color: t.balance > 0 ? "#e64e4e" : "var(--color-text-muted)" }}>
                   {t.balance > 0 ? fmtMoney(t.balance) : "—"}
                 </td>
               </tr>

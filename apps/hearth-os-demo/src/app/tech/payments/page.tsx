@@ -298,7 +298,7 @@ export default function TechPaymentsPage() {
           <button
             onClick={loadPayments}
             className="px-3 py-2 rounded-xl text-sm font-medium"
-            style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C", border: "1px solid rgba(255,106,0,0.18)" }}
+            style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626", border: "1px solid rgba(255,106,0,0.18)" }}
           >
             Refresh
           </button>
@@ -307,7 +307,7 @@ export default function TechPaymentsPage() {
 
       <div className="p-4 space-y-4">
         {error ? (
-          <div className="px-3 py-2 rounded-xl text-sm" style={{ background: "rgba(255,68,0,0.10)", border: "1px solid rgba(255,68,0,0.22)", color: "#C2410C" }}>
+          <div className="px-3 py-2 rounded-xl text-sm" style={{ background: "rgba(214,80,80,0.10)", border: "1px solid rgba(214,80,80,0.22)", color: "#9f2626" }}>
             {error}
           </div>
         ) : null}
@@ -315,11 +315,11 @@ export default function TechPaymentsPage() {
         <div className="grid grid-cols-2 gap-3">
           <div className="rounded-2xl p-4" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)" }}>
             <div className="text-xs" style={{ color: "var(--color-text-muted)" }}>Completed</div>
-            <div className="text-2xl font-bold mt-1" style={{ color: "#C2410C" }}>{formatCurrency(completedToday)}</div>
+            <div className="text-2xl font-bold mt-1" style={{ color: "#9f2626" }}>{formatCurrency(completedToday)}</div>
           </div>
           <div className="rounded-2xl p-4" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)" }}>
             <div className="text-xs" style={{ color: "var(--color-text-muted)" }}>Recent Payments</div>
-            <div className="text-2xl font-bold mt-1" style={{ color: "#C2410C" }}>{payments.length}</div>
+            <div className="text-2xl font-bold mt-1" style={{ color: "#9f2626" }}>{payments.length}</div>
           </div>
         </div>
 
@@ -390,7 +390,7 @@ export default function TechPaymentsPage() {
               onClick={chargeCard}
               disabled={chargingCard || !squareReady}
               className="w-full py-3 rounded-xl text-sm font-semibold disabled:opacity-60"
-              style={{ background: "#C2410C", color: "#fff" }}
+              style={{ background: "#9f2626", color: "#fff" }}
             >
               {chargingCard ? "Processing Card..." : squareReady ? "Charge Card" : "Loading Card Form..."}
             </button>
@@ -400,7 +400,7 @@ export default function TechPaymentsPage() {
             onClick={createCheckout}
             disabled={creating}
             className="w-full py-3 rounded-xl text-sm font-semibold disabled:opacity-60"
-            style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "#fff" }}
+            style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "#fff" }}
           >
             {creating ? "Creating Square link..." : "Create Square Payment Link"}
           </button>
@@ -414,17 +414,17 @@ export default function TechPaymentsPage() {
           {checkoutUrl ? (
             <div className="space-y-3 rounded-2xl p-4" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)" }}>
               <div className="text-sm font-medium" style={{ color: "var(--color-text-primary)" }}>Payment link ready</div>
-              <a href={checkoutUrl} target="_blank" rel="noreferrer" className="text-sm break-all" style={{ color: "#C2410C" }}>
+              <a href={checkoutUrl} target="_blank" rel="noreferrer" className="text-sm break-all" style={{ color: "#9f2626" }}>
                 {checkoutUrl}
               </a>
               <div className="grid grid-cols-3 gap-2">
-                <button onClick={() => openText(checkoutUrl)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                <button onClick={() => openText(checkoutUrl)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                   Text
                 </button>
-                <button onClick={() => openEmail(checkoutUrl)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                <button onClick={() => openEmail(checkoutUrl)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                   Email
                 </button>
-                <button onClick={() => shareLink("Square payment link", checkoutUrl)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                <button onClick={() => shareLink("Square payment link", checkoutUrl)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                   Share
                 </button>
               </div>
@@ -434,17 +434,17 @@ export default function TechPaymentsPage() {
           {receiptUrl ? (
             <div className="space-y-3 rounded-2xl p-4" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)" }}>
               <div className="text-sm font-medium" style={{ color: "var(--color-text-primary)" }}>Square receipt ready</div>
-              <a href={receiptUrl} target="_blank" rel="noreferrer" className="text-sm break-all" style={{ color: "#C2410C" }}>
+              <a href={receiptUrl} target="_blank" rel="noreferrer" className="text-sm break-all" style={{ color: "#9f2626" }}>
                 {receiptUrl}
               </a>
               <div className="grid grid-cols-3 gap-2">
-                <button onClick={() => openText(receiptUrl, true)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                <button onClick={() => openText(receiptUrl, true)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                   Text Receipt
                 </button>
-                <button onClick={() => openEmail(receiptUrl, true)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                <button onClick={() => openEmail(receiptUrl, true)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                   Email Receipt
                 </button>
-                <button onClick={() => shareLink("Square receipt", receiptUrl)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                <button onClick={() => shareLink("Square receipt", receiptUrl)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                   Share
                 </button>
               </div>
@@ -479,20 +479,20 @@ export default function TechPaymentsPage() {
                     </div>
                     <div className="text-right">
                       <div className="font-semibold" style={{ color: "var(--color-text-primary)" }}>{formatCurrency(payment.amount)}</div>
-                      <div className="text-xs mt-1" style={{ color: payment.status === "completed" ? "#15803D" : payment.status === "pending" ? "#C2410C" : "#DC2626" }}>
+                      <div className="text-xs mt-1" style={{ color: payment.status === "completed" ? "#15803D" : payment.status === "pending" ? "#9f2626" : "#DC2626" }}>
                         {payment.status.toUpperCase()}
                       </div>
                     </div>
                   </div>
                   {payment.receiptUrl ? (
                     <div className="grid grid-cols-3 gap-2 mt-3">
-                      <button onClick={() => openText(payment.receiptUrl!, true)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                      <button onClick={() => openText(payment.receiptUrl!, true)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                         Text Receipt
                       </button>
-                      <button onClick={() => openEmail(payment.receiptUrl!, true)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                      <button onClick={() => openEmail(payment.receiptUrl!, true)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                         Email Receipt
                       </button>
-                      <button onClick={() => shareLink("Square receipt", payment.receiptUrl!)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#C2410C" }}>
+                      <button onClick={() => shareLink("Square receipt", payment.receiptUrl!)} className="py-2 rounded-xl text-sm font-medium" style={{ background: "rgba(255,106,0,0.12)", color: "#9f2626" }}>
                         Share
                       </button>
                     </div>

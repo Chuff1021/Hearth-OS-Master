@@ -262,7 +262,7 @@ function CustomersListInner() {
                         </td>
                         <td className="px-4 py-3 text-center">
                           {c.openInvoiceCount > 0 ? (
-                            <span className="text-sm font-medium" style={{ color: "#F59E0B" }}>{c.openInvoiceCount}</span>
+                            <span className="text-sm font-medium" style={{ color: "#e64e4e" }}>{c.openInvoiceCount}</span>
                           ) : (
                             <span className="text-xs" style={{ color: "var(--color-text-muted)" }}>—</span>
                           )}
@@ -272,7 +272,7 @@ function CustomersListInner() {
                         </td>
                         <td className="px-4 py-3 text-right">
                           {c.balance > 0 ? (
-                            <span className="text-sm font-semibold" style={{ color: "#F59E0B" }}>{fmtMoney(c.balance)}</span>
+                            <span className="text-sm font-semibold" style={{ color: "#e64e4e" }}>{fmtMoney(c.balance)}</span>
                           ) : (
                             <span className="text-xs" style={{ color: "var(--color-text-muted)" }}>$0</span>
                           )}
@@ -302,7 +302,7 @@ function CustomersListInner() {
 function MoneyTile({ label, value, hint, tone, onClick }: { label: string; value: string; hint?: string; tone?: "good" | "warn" | "danger" | "brand"; onClick?: () => void }) {
   const accent =
     tone === "danger" ? "#FF204E" :
-    tone === "warn" ? "#F59E0B" :
+    tone === "warn" ? "#e64e4e" :
     tone === "good" ? "#16A34A" :
     tone === "brand" ? "#0EA5E9" :
     "var(--color-text-primary)";
@@ -327,7 +327,7 @@ function Pill<V extends string>({ label, v, cur, on }: { label: string; v: V; cu
       onClick={() => on(v)}
       className="px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition-colors"
       style={{
-        background: active ? "#f8971f" : "var(--color-surface-1)",
+        background: active ? "#d65050" : "var(--color-surface-1)",
         color: active ? "white" : "var(--color-text-secondary)",
         border: "1px solid var(--color-border)",
       }}

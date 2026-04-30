@@ -113,9 +113,9 @@ const statusConfig: Record<
   },
   en_route: {
     label: "En Route",
-    color: "#f8971f",
-    bg: "rgba(255,68,0,0.12)",
-    dotColor: "#f8971f",
+    color: "#d65050",
+    bg: "rgba(214,80,80,0.12)",
+    dotColor: "#d65050",
     pulse: true,
   },
   scheduled: {
@@ -260,7 +260,7 @@ export default function TodaysJobs() {
                   borderLeft: job.priority === "emergency"
                     ? "3px solid #FF204E"
                     : job.priority === "high"
-                      ? "3px solid #f8971f"
+                      ? "3px solid #d65050"
                       : "3px solid transparent",
                 }}
                 onMouseEnter={(e) => {
@@ -314,7 +314,7 @@ export default function TodaysJobs() {
                       {job.priority === "high" && (
                         <span
                           className="text-[10px] font-bold px-2 py-0.5 rounded-md"
-                          style={{ background: "rgba(255,68,0,0.2)", color: "#f8971f" }}
+                          style={{ background: "rgba(214,80,80,0.20)", color: "#d65050" }}
                         >
                           ↑ HIGH
                         </span>
@@ -338,9 +338,9 @@ export default function TodaysJobs() {
                       <div
                         className="mt-1.5 text-xs px-2.5 py-1.5 rounded-lg"
                         style={{
-                          background: "rgba(255,68,0,0.1)",
-                          color: "#f8971f",
-                          border: "1px solid rgba(255,68,0,0.15)",
+                          background: "rgba(214,80,80,0.10)",
+                          color: "#d65050",
+                          border: "1px solid rgba(214,80,80,0.15)",
                         }}
                       >
                         {job.notes}

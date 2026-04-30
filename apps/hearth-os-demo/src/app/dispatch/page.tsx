@@ -97,7 +97,7 @@ export default function DispatchPage() {
 
   function markerHtml(color: string, active: boolean, initials: string) {
     const size = active ? 26 : 22;
-    const ring = active ? "rgba(255,68,0,0.35)" : "rgba(37,99,235,0.30)";
+    const ring = active ? "rgba(214,80,80,0.35)" : "rgba(37,99,235,0.30)";
     return `<div style="width:${size}px;height:${size}px;border-radius:999px;background:${color};box-shadow:0 0 0 4px ${ring};border:2px solid #fff;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;font-family:system-ui;">${(initials || '?').slice(0,2).toUpperCase()}</div>`;
   }
 
@@ -265,7 +265,7 @@ export default function DispatchPage() {
 
     for (const t of liveTechs) {
       const active = t.id === selectedTechId;
-      const color = active ? '#f8971f' : '#2563EB';
+      const color = active ? '#d65050' : '#2563EB';
       const initials = deriveInitials(displayTechName(t), t.initials);
       const icon = L.divIcon({ html: markerHtml(color, active, initials), className: '', iconSize: [26, 26], iconAnchor: [13, 13] });
       const latlng: [number, number] = [t.location!.lat, t.location!.lng];
@@ -405,7 +405,7 @@ export default function DispatchPage() {
           current,
           dest,
         ],
-        { color: '#f8971f', weight: 3, opacity: 0.8, dashArray: '8 6' }
+        { color: '#d65050', weight: 3, opacity: 0.8, dashArray: '8 6' }
       ).addTo(map);
     }
 
@@ -508,7 +508,7 @@ export default function DispatchPage() {
                     <div key={t.id} className="text-xs" style={{ color: 'var(--color-text-muted)' }}>
                       <span className="font-medium" style={{ color: 'var(--color-text-secondary)' }}>{displayTechName(t)}:</span>{' '}
                       {t.location
-                        ? <span style={{ color: stale ? '#F59E0B' : 'inherit' }}>
+                        ? <span style={{ color: stale ? '#e64e4e' : 'inherit' }}>
                             {t.location.lat.toFixed(4)}, {t.location.lng.toFixed(4)} · {formatAge(t.location.timestamp)}
                           </span>
                         : 'No GPS ping'}
@@ -528,7 +528,7 @@ export default function DispatchPage() {
                     <div key={`gps-${t.id}`} className="p-2 rounded-lg" style={{ background: 'var(--color-surface-3)', border: `1px solid ${stale ? 'rgba(245,158,11,0.4)' : 'var(--color-border)'}` }}>
                       <div className="flex items-center justify-between">
                         <div className="text-xs font-semibold">{displayTechName(t)}</div>
-                        <div className="text-[10px] font-semibold" style={{ color: stale ? '#F59E0B' : '#16A34A' }}>
+                        <div className="text-[10px] font-semibold" style={{ color: stale ? '#e64e4e' : '#16A34A' }}>
                           {formatAge(t.location!.timestamp)}
                         </div>
                       </div>
@@ -565,7 +565,7 @@ export default function DispatchPage() {
                       const matched = techs.some((t) => t.location?.timestamp === p.timestamp);
                       return (
                         <div key={i} className="flex items-center justify-between text-[11px] px-2 py-1 rounded" style={{ background: 'var(--color-surface-3)' }}>
-                          <span style={{ color: matched ? '#16A34A' : '#F59E0B' }}>
+                          <span style={{ color: matched ? '#16A34A' : '#e64e4e' }}>
                             {matched ? '✓' : '!'} {p.techName || p.techEmail || p.techId}
                           </span>
                           <span style={{ color: 'var(--color-text-muted)' }}>{formatAge(p.timestamp)}</span>
@@ -573,7 +573,7 @@ export default function DispatchPage() {
                       );
                     })}
                     {gpsDebug.allPings.some((p) => !techs.some((t) => t.location?.timestamp === p.timestamp)) && (
-                      <p className="text-[11px] mt-1" style={{ color: '#F59E0B' }}>
+                      <p className="text-[11px] mt-1" style={{ color: '#e64e4e' }}>
                         ! = pinging but not matched to a team member. Check that their email in Settings matches their login.
                       </p>
                     )}

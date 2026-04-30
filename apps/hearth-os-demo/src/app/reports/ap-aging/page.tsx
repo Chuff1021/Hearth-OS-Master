@@ -17,7 +17,7 @@ const BUCKET_LABEL: Record<Bucket, string> = {
 };
 const BUCKET_COLOR: Record<Bucket, string> = {
   current: "var(--color-text-muted)",
-  d1_30: "#F59E0B",
+  d1_30: "#e64e4e",
   d31_60: "#F97316",
   d61_90: "#EF4444",
   d91_plus: "#DC2626",

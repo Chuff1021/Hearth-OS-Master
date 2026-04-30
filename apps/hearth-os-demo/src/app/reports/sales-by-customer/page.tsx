@@ -104,8 +104,8 @@ export default function SalesByCustomerPage() {
                 {[["30","Last 30"],["90","Last 90"],["365","Last 365"],["ytd","YTD"],["all","All time"]].map(([k,l]) => (
                   <button key={k} onClick={() => setPreset(k)} className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{
                     background: preset === k ? "rgba(248,151,31,0.16)" : "var(--color-surface-1)",
-                    color: preset === k ? "#9a5d12" : "var(--color-text-muted)",
-                    border: preset === k ? "1px solid #f8971f" : "1px solid var(--color-border)",
+                    color: preset === k ? "#9f2626" : "var(--color-text-muted)",
+                    border: preset === k ? "1px solid #d65050" : "1px solid var(--color-border)",
                   }}>{l}</button>
                 ))}
               </div>
@@ -126,7 +126,7 @@ export default function SalesByCustomerPage() {
             {data && (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <Tile label="Total revenue" value={fmtMoney(data.totals.revenue)} accent="#16A34A" />
-                <Tile label="Open balance" value={fmtMoney(data.totals.openBalance)} accent="#f8971f" />
+                <Tile label="Open balance" value={fmtMoney(data.totals.openBalance)} accent="#d65050" />
                 <Tile label="Customers" value={String(data.totals.customerCount)} accent="var(--color-text-muted)" />
                 <Tile label="Invoices" value={String(data.totals.invoiceCount)} accent="var(--color-text-muted)" />
               </div>
@@ -169,10 +169,10 @@ export default function SalesByCustomerPage() {
                           <td className="px-4 py-3 text-right text-sm" style={{ color: "var(--color-text-secondary)" }}>{r.invoiceCount}</td>
                           <td className="px-4 py-3 text-right font-semibold" style={{ color: "var(--color-text-primary)" }}>{fmtMoney(r.revenue)}</td>
                           <td className="px-4 py-3 text-right" style={{ color: r.profit < 0 ? "#DC2626" : r.profit > 0 ? "#16A34A" : "var(--color-text-muted)" }}>{fmtMoney(r.profit)}</td>
-                          <td className="px-4 py-3 text-right text-sm" style={{ color: r.margin == null ? "var(--color-text-muted)" : r.margin < 0 ? "#DC2626" : r.margin < 15 ? "#F59E0B" : "#16A34A" }}>
+                          <td className="px-4 py-3 text-right text-sm" style={{ color: r.margin == null ? "var(--color-text-muted)" : r.margin < 0 ? "#DC2626" : r.margin < 15 ? "#e64e4e" : "#16A34A" }}>
                             {r.margin == null ? "—" : `${r.margin.toFixed(1)}%`}
                           </td>
-                          <td className="px-4 py-3 text-right text-sm" style={{ color: r.openBalance > 0 ? "#f8971f" : "var(--color-text-muted)" }}>
+                          <td className="px-4 py-3 text-right text-sm" style={{ color: r.openBalance > 0 ? "#d65050" : "var(--color-text-muted)" }}>
                             {r.openBalance > 0 ? fmtMoney(r.openBalance) : "—"}
                           </td>
                           <td className="px-4 py-3 text-sm" style={{ color: "var(--color-text-muted)" }}>{fmtDate(r.lastSale)}</td>

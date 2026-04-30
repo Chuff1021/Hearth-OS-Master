@@ -118,7 +118,7 @@ const profitColor = (p: number) => (p < 0 ? "#FF204E" : p > 0 ? "#16A34A" : "var
 const marginColor = (m: number | null) => {
   if (m == null) return "var(--color-text-muted)";
   if (m < 0) return "#FF204E";
-  if (m < 15) return "#F59E0B";
+  if (m < 15) return "#e64e4e";
   return "#16A34A";
 };
 
@@ -295,7 +295,7 @@ export default function ProfitByJobPage() {
                         <td className="px-3 py-2 text-right" style={{ color: "var(--color-text-secondary)" }}>{fmtMoney(r.billable)}</td>
                         <td className="px-3 py-2 text-right font-medium" style={{ color: profitColor(r.profit) }}>{fmtSignedMoney(r.profit)}</td>
                         <td className="px-3 py-2 text-right" style={{ color: marginColor(r.margin) }}>{fmtPct(r.margin)}</td>
-                        <td className="px-3 py-2 text-right text-xs" style={{ color: r.balance > 0 ? "#F59E0B" : "var(--color-text-muted)" }}>
+                        <td className="px-3 py-2 text-right text-xs" style={{ color: r.balance > 0 ? "#e64e4e" : "var(--color-text-muted)" }}>
                           {r.balance > 0 ? fmtMoney(r.balance) : "—"}
                         </td>
                       </tr>
@@ -371,7 +371,7 @@ function WindowStatsBanner({ data, preset, loading }: { data: ListResponse | nul
         {w && w.balance > 0 && (
           <div className="text-right">
             <p className="text-[10px] uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>Open A/R</p>
-            <p className="text-sm font-semibold" style={{ color: "#F59E0B" }}>{fmtMoney(w.balance)}</p>
+            <p className="text-sm font-semibold" style={{ color: "#e64e4e" }}>{fmtMoney(w.balance)}</p>
           </div>
         )}
       </div>
@@ -400,7 +400,7 @@ function WindowStatsBanner({ data, preset, loading }: { data: ListResponse | nul
 }
 
 function BannerStat({ label, value, hint, tone, big }: { label: string; value: string; hint?: string; tone?: "good" | "warn" | "danger"; big?: boolean }) {
-  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#F59E0B" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
+  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#e64e4e" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
   return (
     <div className="p-3 rounded-lg" style={{ background: "var(--color-surface-2)" }}>
       <p className="text-[10px] uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>{label}</p>
@@ -414,7 +414,7 @@ function BannerStat({ label, value, hint, tone, big }: { label: string; value: s
 // Sub-components
 // ───────────────────────────────────────────────────────────────────────────
 function Stat({ label, value, tone }: { label: string; value: string; tone?: "good" | "warn" | "danger" }) {
-  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#F59E0B" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
+  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#e64e4e" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
   return (
     <div className="p-4 rounded-xl" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)" }}>
       <p className="text-xs uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>{label}</p>
@@ -430,7 +430,7 @@ function ProfitPill({ label, value, current, onClick }: { label: string; value: 
       onClick={() => onClick(value)}
       className="px-3 py-2 rounded-lg text-xs font-medium"
       style={{
-        background: active ? "#f8971f" : "var(--color-surface-1)",
+        background: active ? "#d65050" : "var(--color-surface-1)",
         color: active ? "white" : "var(--color-text-secondary)",
         border: "1px solid var(--color-border)",
       }}
@@ -614,7 +614,7 @@ function ProfitDetailDrawer({ jobId, onClose }: { jobId: string; onClose: () => 
                           BILL {b.billNumber ? `#${b.billNumber} · ` : ""}{fmtDate(b.issueDate)}
                         </div>
                       </div>
-                      <span className="font-medium" style={{ color: "#F59E0B" }}>{fmtMoney(b.amount)}</span>
+                      <span className="font-medium" style={{ color: "#e64e4e" }}>{fmtMoney(b.amount)}</span>
                     </button>
                   ))}
                 </div>
@@ -646,11 +646,11 @@ function ProfitDetailDrawer({ jobId, onClose }: { jobId: string; onClose: () => 
                   </tr>
                   <tr>
                     <td className="py-1.5" style={{ color: "var(--color-text-secondary)" }}>− Material cost (COGS)</td>
-                    <td className="py-1.5 text-right" style={{ color: "#F59E0B" }}>{fmtMoney(data.summary.cogs)}</td>
+                    <td className="py-1.5 text-right" style={{ color: "#e64e4e" }}>{fmtMoney(data.summary.cogs)}</td>
                   </tr>
                   <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
                     <td className="py-1.5" style={{ color: "var(--color-text-secondary)" }}>− Other expenses (bills)</td>
-                    <td className="py-1.5 text-right" style={{ color: "#F59E0B" }}>{fmtMoney(data.summary.billable)}</td>
+                    <td className="py-1.5 text-right" style={{ color: "#e64e4e" }}>{fmtMoney(data.summary.billable)}</td>
                   </tr>
                   <tr style={{ borderBottom: "2px solid var(--color-border)" }}>
                     <td className="py-2 font-semibold" style={{ color: "var(--color-text-primary)" }}>Profit</td>
@@ -665,7 +665,7 @@ function ProfitDetailDrawer({ jobId, onClose }: { jobId: string; onClose: () => 
                   {data.summary.balance > 0 && (
                     <tr>
                       <td className="py-1.5 text-xs" style={{ color: "var(--color-text-muted)" }}>Open balance</td>
-                      <td className="py-1.5 text-right text-xs" style={{ color: "#F59E0B" }}>{fmtMoney(data.summary.balance)}</td>
+                      <td className="py-1.5 text-right text-xs" style={{ color: "#e64e4e" }}>{fmtMoney(data.summary.balance)}</td>
                     </tr>
                   )}
                 </tbody>
@@ -689,7 +689,7 @@ function ProfitDetailDrawer({ jobId, onClose }: { jobId: string; onClose: () => 
 }
 
 function BigStat({ label, value, hint, tone }: { label: string; value: string; hint?: string; tone?: "good" | "warn" | "danger" }) {
-  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#F59E0B" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
+  const color = tone === "danger" ? "#FF204E" : tone === "warn" ? "#e64e4e" : tone === "good" ? "#16A34A" : "var(--color-text-primary)";
   return (
     <div className="p-3 rounded-lg" style={{ background: "var(--color-surface-2)" }}>
       <p className="text-[10px] uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>{label}</p>

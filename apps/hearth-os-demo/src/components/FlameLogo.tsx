@@ -19,13 +19,13 @@ export default function FlameLogo({ className, size = 32, variant = "tile" }: Pr
   const flameOuter = (
     <linearGradient id={outer} x1="50%" y1="100%" x2="50%" y2="0%">
       <stop offset="0%" stopColor="#cc6510" />
-      <stop offset="55%" stopColor="#f8971f" />
-      <stop offset="100%" stopColor="#eaa23f" />
+      <stop offset="55%" stopColor="#d65050" />
+      <stop offset="100%" stopColor="#e64e4e" />
     </linearGradient>
   );
   const flameInner = (
     <linearGradient id={inner} x1="50%" y1="100%" x2="50%" y2="0%">
-      <stop offset="0%" stopColor="#f8971f" />
+      <stop offset="0%" stopColor="#d65050" />
       <stop offset="55%" stopColor="#ffcd6b" />
       <stop offset="100%" stopColor="#fff5d6" />
     </linearGradient>
@@ -65,7 +65,7 @@ export default function FlameLogo({ className, size = 32, variant = "tile" }: Pr
         width: size,
         height: size,
         borderRadius: Math.round(size / 4.5),
-        background: "linear-gradient(135deg, #f8971f 0%, #eaa23f 100%)",
+        background: "linear-gradient(135deg, #d65050 0%, #e64e4e 100%)",
         boxShadow: "0 0 16px rgba(248,151,31,0.45), inset 0 1px 0 rgba(255,243,210,0.35)",
         display: "flex",
         alignItems: "center",

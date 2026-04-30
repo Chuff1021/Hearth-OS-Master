@@ -194,7 +194,7 @@ export default function ARAgingPage() {
                                 v === 0 ? "var(--color-text-muted)" :
                                 b === "current" ? "var(--color-text-secondary)" :
                                 b === "d91_plus" || b === "d61_90" ? "#FF204E" :
-                                "#F59E0B";
+                                "#e64e4e";
                               return (
                                 <td key={b} className="px-3 py-3 text-right" style={{ color, fontWeight: v > 0 ? 500 : 400 }}>
                                   {v > 0 ? fmtMoney(v) : "—"}
@@ -261,7 +261,7 @@ export default function ARAgingPage() {
 }
 
 function BucketCard({ label, value, tone, subtitle }: { label: string; value: string; tone: "good" | "warn" | "danger"; subtitle?: string }) {
-  const accent = tone === "danger" ? "#FF204E" : tone === "warn" ? "#F59E0B" : "#16A34A";
+  const accent = tone === "danger" ? "#FF204E" : tone === "warn" ? "#e64e4e" : "#16A34A";
   return (
     <div className="p-4 rounded-xl" style={{ background: "var(--color-surface-1)", border: "1px solid var(--color-border)", borderTop: `3px solid ${accent}` }}>
       <p className="text-[11px] uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>{label}</p>

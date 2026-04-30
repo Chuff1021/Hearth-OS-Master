@@ -628,7 +628,7 @@ export default function EstimatesPage() {
 
               <textarea value={prompt} onChange={(e) => setPrompt(e.target.value)} rows={3} placeholder="Example: build me a bid on a 42 Apex wood fireplace with timberline face and 25 feet of pipe" className="w-full px-3 py-2 rounded-lg resize-none" style={{ background: "var(--color-surface-3)", border: "1px solid var(--color-border)" }} />
               <div className="mt-3 flex gap-2 flex-wrap">
-                <button onClick={generateFromAI} disabled={aiGenerating || !prompt.trim()} className="px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-60 flex items-center gap-2" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)" }}>
+                <button onClick={generateFromAI} disabled={aiGenerating || !prompt.trim()} className="px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-60 flex items-center gap-2" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)" }}>
                   {aiGenerating ? (
                     <>
                       <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" /></svg>
@@ -767,7 +767,7 @@ export default function EstimatesPage() {
                         <button onClick={(event) => { event.stopPropagation(); printEstimate(e); }} className="py-1.5 rounded-lg text-xs font-semibold" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)" }}>Print</button>
                         <button onClick={(event) => { event.stopPropagation(); downloadEstimate(e); }} className="py-1.5 rounded-lg text-xs font-semibold" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)" }}>Download</button>
                         <button onClick={(event) => { event.stopPropagation(); beginEditEstimate(e); }} className="py-1.5 rounded-lg text-xs font-semibold" style={{ background: "var(--color-surface-2)", border: "1px solid var(--color-border)" }}>Edit</button>
-                        <button onClick={(event) => { event.stopPropagation(); setPnlOpen({ id: e.Id, label: e.DocNumber || e.Id }); }} className="py-1.5 rounded-lg text-xs font-semibold" style={{ background: "rgba(248,151,31,0.12)", color: "#9a5d12", border: "1px solid rgba(248,151,31,0.25)" }}>P&amp;L</button>
+                        <button onClick={(event) => { event.stopPropagation(); setPnlOpen({ id: e.Id, label: e.DocNumber || e.Id }); }} className="py-1.5 rounded-lg text-xs font-semibold" style={{ background: "rgba(214,80,80,0.12)", color: "#9f2626", border: "1px solid rgba(248,151,31,0.25)" }}>P&amp;L</button>
                         <button onClick={(event) => { event.stopPropagation(); scheduleFromEstimate(e); }} className="py-1.5 rounded-lg text-xs font-semibold" style={{ background: "rgba(37,99,235,0.12)", color: "#2563EB", border: "1px solid rgba(37,99,235,0.25)" }}>Schedule</button>
                       </div>
 
@@ -789,7 +789,7 @@ export default function EstimatesPage() {
                           onClick={(event) => { event.stopPropagation(); convertEstimateToInvoice(e); }}
                           disabled={convertingEstimateId === e.Id}
                           className="mt-2 w-full py-1.5 rounded-lg text-xs font-semibold text-white"
-                          style={{ background: "linear-gradient(135deg, #f8971f, #f8971f)", opacity: convertingEstimateId === e.Id ? 0.7 : 1 }}
+                          style={{ background: "linear-gradient(135deg, #d65050, #d65050)", opacity: convertingEstimateId === e.Id ? 0.7 : 1 }}
                         >
                           {convertingEstimateId === e.Id ? "Converting..." : "Convert to Invoice"}
                         </button>
@@ -841,7 +841,7 @@ export default function EstimatesPage() {
                           <button
                             onClick={() => setPnlOpen({ id: selectedEstimate.Id, label: selectedEstimate.DocNumber || selectedEstimate.Id })}
                             className="px-3 py-1.5 rounded-lg text-xs font-semibold"
-                            style={{ background: "rgba(248,151,31,0.12)", color: "#9a5d12", border: "1px solid rgba(248,151,31,0.25)" }}
+                            style={{ background: "rgba(214,80,80,0.12)", color: "#9f2626", border: "1px solid rgba(248,151,31,0.25)" }}
                           >
                             P&amp;L
                           </button>

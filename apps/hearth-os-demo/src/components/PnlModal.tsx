@@ -124,7 +124,7 @@ export default function PnlModal({ type, id, docLabel, onClose }: Props) {
               <div className="grid grid-cols-3 gap-3 p-5" style={{ borderBottom: "1px solid var(--color-border)" }}>
                 <Tile label="Revenue" value={fmtMoney(data.summary.totalRevenue)} sub={`Products ${fmtMoney(data.summary.productRevenue)} · Labor ${fmtMoney(data.summary.laborRevenue)}`} />
                 <Tile label="Profit" value={fmtSigned(data.summary.totalProfit)} valueColor={profitColor(data.summary.totalProfit)} sub={`Margin ${fmtPct(data.summary.margin)}`} />
-                <Tile label="Scott's share" value={fmtMoney(data.splits.scottTotal)} valueColor="#9a5d12" sub={`Product 15% + Labor 20%`} />
+                <Tile label="Scott's share" value={fmtMoney(data.splits.scottTotal)} valueColor="#9f2626" sub={`Product 15% + Labor 20%`} />
               </div>
 
               {/* Line breakdown */}
@@ -157,8 +157,8 @@ export default function PnlModal({ type, id, docLabel, onClose }: Props) {
                             </td>
                             <td className="py-1.5 px-1" style={{ color: "var(--color-text-muted)" }}>
                               <span className="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded" style={{
-                                background: l.bucket === "labor" ? "rgba(59,130,246,0.12)" : l.bucket === "product" ? "rgba(248,151,31,0.12)" : "var(--color-surface-2)",
-                                color: l.bucket === "labor" ? "#2563EB" : l.bucket === "product" ? "#9a5d12" : "var(--color-text-muted)",
+                                background: l.bucket === "labor" ? "rgba(59,130,246,0.12)" : l.bucket === "product" ? "rgba(214,80,80,0.12)" : "var(--color-surface-2)",
+                                color: l.bucket === "labor" ? "#2563EB" : l.bucket === "product" ? "#9f2626" : "var(--color-text-muted)",
                               }}>{l.bucket}</span>
                             </td>
                             <td className="py-1.5 px-1 text-right" style={{ color: "var(--color-text-secondary)" }}>{l.quantity}</td>
@@ -191,7 +191,7 @@ export default function PnlModal({ type, id, docLabel, onClose }: Props) {
                     </tr>
                     <tr>
                       <td className="py-1.5 pl-4 text-xs" style={{ color: "var(--color-text-muted)" }}>× 15% → Scott</td>
-                      <td className="py-1.5 text-right text-xs" style={{ color: "#9a5d12" }}>{fmtMoney(data.splits.scottProductShare)}</td>
+                      <td className="py-1.5 text-right text-xs" style={{ color: "#9f2626" }}>{fmtMoney(data.splits.scottProductShare)}</td>
                     </tr>
                     <tr>
                       <td className="py-1.5" style={{ color: "var(--color-text-secondary)" }}>Labor revenue</td>
@@ -199,11 +199,11 @@ export default function PnlModal({ type, id, docLabel, onClose }: Props) {
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
                       <td className="py-1.5 pl-4 text-xs" style={{ color: "var(--color-text-muted)" }}>× 20% → Scott</td>
-                      <td className="py-1.5 text-right text-xs" style={{ color: "#9a5d12" }}>{fmtMoney(data.splits.scottLaborShare)}</td>
+                      <td className="py-1.5 text-right text-xs" style={{ color: "#9f2626" }}>{fmtMoney(data.splits.scottLaborShare)}</td>
                     </tr>
                     <tr>
                       <td className="py-2 font-semibold" style={{ color: "var(--color-text-primary)" }}>Scott total</td>
-                      <td className="py-2 text-right font-semibold" style={{ color: "#9a5d12" }}>{fmtMoney(data.splits.scottTotal)}</td>
+                      <td className="py-2 text-right font-semibold" style={{ color: "#9f2626" }}>{fmtMoney(data.splits.scottTotal)}</td>
                     </tr>
                     <tr style={{ borderTop: "2px solid var(--color-border)" }}>
                       <td className="py-2 font-semibold" style={{ color: "var(--color-text-primary)" }}>Owner net (after Scott)</td>

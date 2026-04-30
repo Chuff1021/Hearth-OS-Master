@@ -79,7 +79,7 @@ const HOURS = Array.from({ length: 12 }, (_, i) => i + 7); // 7am-6pm
 
 const STATUS_COLORS: Record<string, string> = {
   scheduled: "#2563EB",
-  in_progress: "#F59E0B",
+  in_progress: "#e64e4e",
   completed: "#16A34A",
   cancelled: "#9CA3AF",
   on_hold: "#8B5CF6",
@@ -650,7 +650,7 @@ export default function SchedulePage() {
             <button
               onClick={() => setShowCreate(true)}
               className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
-              style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)", color: "white" }}
+              style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)", color: "white" }}
             >
               + New Job
             </button>
@@ -677,7 +677,7 @@ export default function SchedulePage() {
           };
           return (
             <div className="px-6 py-2 flex items-start gap-3 flex-wrap" style={{ borderBottom: "1px solid var(--color-border)", background: "rgba(248,151,31,0.06)" }}>
-              <span className="text-[11px] font-semibold uppercase tracking-wide pt-1" style={{ color: "#9a5d12" }}>Out:</span>
+              <span className="text-[11px] font-semibold uppercase tracking-wide pt-1" style={{ color: "#9f2626" }}>Out:</span>
               <div className="flex flex-wrap gap-1.5 flex-1">
                 {inRange.map((t) => {
                   const tech = techs.find((x) => x.id === t.techId);
@@ -694,7 +694,7 @@ export default function SchedulePage() {
                       <span style={{ color: "var(--color-text-muted)" }}>·</span>
                       <span>{fmtDay(t.startDate)}{t.startDate !== t.endDate ? ` – ${fmtDay(t.endDate)}` : ""}</span>
                       <span style={{ color: "var(--color-text-muted)" }}>·</span>
-                      <span style={{ color: "#9a5d12" }}>{TYPE_LABELS[t.type] || t.type}</span>
+                      <span style={{ color: "#9f2626" }}>{TYPE_LABELS[t.type] || t.type}</span>
                     </span>
                   );
                 })}
@@ -940,8 +940,8 @@ export default function SchedulePage() {
                                 top: 2,
                                 height: Math.max(duration * 90 - 4, 42),
                                 background: "var(--color-surface-1)",
-                                border: `1px solid ${isHighPriority ? "#F59E0B" : "var(--color-border)"}`,
-                                borderLeft: `4px solid ${isHighPriority ? "#F59E0B" : techColor}`,
+                                border: `1px solid ${isHighPriority ? "#e64e4e" : "var(--color-border)"}`,
+                                borderLeft: `4px solid ${isHighPriority ? "#e64e4e" : techColor}`,
                                 opacity: draggedJobId === job.id ? 0.6 : 1,
                                 boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
                               }}
@@ -1035,7 +1035,7 @@ export default function SchedulePage() {
                 />
                 {formErrors.customerName && <p className="text-xs mt-1" style={{ color: "#FF204E" }}>{formErrors.customerName}</p>}
                 {customerLoading && <p className="text-xs mt-1" style={{ color: "var(--color-text-muted)" }}>Looking up customers...</p>}
-                {customerLookupError && <p className="text-xs mt-1" style={{ color: "#f8971f" }}>{customerLookupError}</p>}
+                {customerLookupError && <p className="text-xs mt-1" style={{ color: "#d65050" }}>{customerLookupError}</p>}
                 {customerResults.length > 0 && !selectedCustomer && (
                   <div className="mt-2 rounded-lg overflow-hidden" style={{ border: "1px solid var(--color-border)", background: "var(--color-surface-2)" }}>
                     {customerResults.slice(0, 6).map((c) => (
@@ -1150,7 +1150,7 @@ export default function SchedulePage() {
                 {formErrors.assignedTechs && <p className="text-xs mt-1" style={{ color: "#FF204E" }}>{formErrors.assignedTechs}</p>}
               </div>
             </div>
-            <button onClick={createJob} disabled={saving} className="w-full mt-4 py-2.5 rounded-lg text-white font-semibold" style={{ background: "linear-gradient(135deg, #FF6A00, #F59E0B)" }}>
+            <button onClick={createJob} disabled={saving} className="w-full mt-4 py-2.5 rounded-lg text-white font-semibold" style={{ background: "linear-gradient(135deg, #d65050, #e64e4e)" }}>
               {saving ? "Saving..." : "Create Job"}
             </button>
           </div>
@@ -1216,7 +1216,7 @@ export default function SchedulePage() {
               {selectedJob.propertyAddress && (
                 <div className="flex items-start gap-3">
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(245,158,11,0.1)" }}>
-                    <svg className="w-5 h-5" style={{ color: "#F59E0B" }} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    <svg className="w-5 h-5" style={{ color: "#e64e4e" }} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   </div>
                   <div>
                     <p className="text-sm" style={{ color: "var(--color-text-primary)" }}>{selectedJob.propertyAddress}</p>
@@ -1264,9 +1264,9 @@ export default function SchedulePage() {
               {selectedJob.priority && selectedJob.priority !== "normal" && (
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: selectedJob.priority === "urgent" ? "rgba(220,38,38,0.1)" : "rgba(245,158,11,0.1)" }}>
-                    <svg className="w-5 h-5" style={{ color: selectedJob.priority === "urgent" ? "#DC2626" : "#F59E0B" }} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+                    <svg className="w-5 h-5" style={{ color: selectedJob.priority === "urgent" ? "#DC2626" : "#e64e4e" }} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
                   </div>
-                  <p className="text-sm font-medium" style={{ color: selectedJob.priority === "urgent" ? "#DC2626" : "#F59E0B" }}>
+                  <p className="text-sm font-medium" style={{ color: selectedJob.priority === "urgent" ? "#DC2626" : "#e64e4e" }}>
                     {selectedJob.priority.charAt(0).toUpperCase() + selectedJob.priority.slice(1)} Priority
                   </p>
                 </div>
