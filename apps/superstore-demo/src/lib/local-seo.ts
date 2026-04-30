@@ -27,7 +27,7 @@ export const localLandingPages: LocalLandingPage[] = [
     description:
       "Shop fireplaces, inserts, stoves, and replacement parts from A Cozy Fireplace in Naperville, IL. Local showroom support, expert sizing, and nationwide shipping.",
     intro:
-      "A Cozy Fireplace serves Naperville homeowners, builders, and remodelers with showroom-backed fireplace selection, installation guidance, and a deep online catalog of hearth products and parts.",
+      "A Cozy Fireplace serves Naperville homeowners, builders, and remodelers with showroom-backed fireplace selection, installation guidance, and a showroom-backed selection of hearth products and parts.",
     services: [
       "Gas, wood, electric, pellet, and outdoor fireplace selection",
       "Fireplace insert sizing and replacement guidance",
@@ -104,7 +104,7 @@ export const localLandingPages: LocalLandingPage[] = [
       "Gas, wood, pellet, electric, and outdoor hearth products",
       "Fireplace insert and stove comparisons",
       "Parts support for major hearth manufacturers",
-      "Local consultation with direct online catalog access",
+      "Local consultation with showroom product support",
     ],
     nearbyCategories: sharedCategories,
   },

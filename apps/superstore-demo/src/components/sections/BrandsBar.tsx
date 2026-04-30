@@ -29,11 +29,11 @@ export function BrandsBar() {
               A Cozy Fireplace Brand Lines
             </p>
             <h2 className="mt-4 text-[34px] font-black leading-[1.04] tracking-[-0.045em] text-white md:text-[52px]">
-              The brands A Cozy Fireplace actually carries.
+              Brands available through A Cozy Fireplace.
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-[#d7e6f7]">
-            The demo catalog is now focused around A Cozy Fireplace's public product lines: fireplaces, gas and wood stoves, BBQ grills, gas logs, glass doors, stone products, accessories, and parts.
+            Browse the fireplace, stove, grill, gas log, glass door, stone, and accessory manufacturers represented across A Cozy Fireplace's showroom product lines.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export function BrandsBar() {
             href="/brand"
             className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.07] px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-sm backdrop-blur-md transition hover:border-[#fde428] hover:bg-[#fde428] hover:text-black"
           >
-            View {cozyBrandNames.length} A Cozy Brands <ArrowRight className="h-4 w-4" />
+            View A Cozy Brands <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

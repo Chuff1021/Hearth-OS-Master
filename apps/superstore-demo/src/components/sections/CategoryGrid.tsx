@@ -4,15 +4,15 @@ import { ArrowRight, Flame } from "lucide-react";
 import { productCategories } from "@/lib/store-config";
 
 const categoryVisuals: Record<string, string> = {
-  fireplaces: "/products-upgraded/wood-fireplaces/fpx-42apex-3.webp",
-  inserts: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
-  stoves: "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp",
-  "bbq-grills": "/categories/outdoor.jpg",
-  "logs-media": "/categories/logs-media.jpg",
-  "doors-screens": "/categories/doors-screens.jpg",
-  "stone-products": "/categories/mantels.jpg",
-  accessories: "/categories/home-accessories.webp",
-  parts: "/categories/home-parts.webp",
+  fireplaces: "/acozy/fireplaces.jpg",
+  inserts: "/acozy/gas-wood-stoves.jpg",
+  stoves: "/acozy/gas-wood-stoves.jpg",
+  "bbq-grills": "/acozy/bbq-grills.jpg",
+  "logs-media": "/acozy/gas-logs.jpg",
+  "doors-screens": "/acozy/glass-doors.jpg",
+  "stone-products": "/acozy/stone-products.jpg",
+  accessories: "/acozy/accessories.jpg",
+  parts: "/acozy/accessories.jpg",
 };
 
 export function CategoryGrid() {
@@ -29,11 +29,11 @@ export function CategoryGrid() {
               Shop By Category
             </p>
             <h2 className="mt-4 text-[36px] font-black leading-[1.02] tracking-[-0.045em] text-[#001f3d] md:text-[54px]">
-              Shop Fireplaces, Stoves, Grills, Gas Logs, Doors, Stone, and Parts
+              Shop Fireplaces, Stoves, Grills, Gas Logs, Glass Doors, Stone, and Accessories
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-[#52677d]">
-Start with the product line A Cozy Fireplace offers in its showrooms: fireplaces, inserts, gas and wood stoves, BBQ grills, gas logs, glass doors, stone refacing products, accessories, and replacement parts.
+Find the right product line for your project, then visit one of three local showrooms for sizing, finish choices, installation planning, and service support.
           </p>
         </div>
 

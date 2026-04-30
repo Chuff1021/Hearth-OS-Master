@@ -223,9 +223,9 @@ export default function DesignToolPage() {
 
         <aside className="space-y-4">
           {[
-            { icon: Flame, title: "Practical planning", text: "This tool collects buying signals and fitment details A Cozy Fireplace can actually act on." },
+            { icon: Flame, title: "Practical planning", text: "Share room details, appliance type, style preferences, and project goals so A Cozy Fireplace can help narrow the right options." },
             { icon: Camera, title: "Photos still help", text: "Room or model photos can be reviewed by an expert instead of pretending AI will solve everything." },
-            { icon: Wrench, title: "Built for follow-up", text: "The end goal is a quote, part match, or shortlist — not a novelty demo." },
+            { icon: Wrench, title: "Built for follow-up", text: "Use the results to start a quote, showroom visit, part match, or product shortlist." },
             { icon: Phone, title: "Expert-assisted", text: "Fireplace purchases are complex. This flow supports human trust instead of replacing it." },
             { icon: Mail, title: "Easy follow-up", text: "Your answers turn into a clear email A Cozy Fireplace can review before calling or replying." },
             { icon: Zap, title: "Fast path", text: "A customer can answer the basics in under two minutes." },

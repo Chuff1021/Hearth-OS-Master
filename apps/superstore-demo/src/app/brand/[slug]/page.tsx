@@ -76,7 +76,7 @@ function getBrandBlurb(brandName: string, productCount: number): string {
     return BRAND_BLURBS[normalized];
   }
 
-  return `A Cozy Fireplace is an authorized ${brandName} dealer carrying ${productCount} live ${brandName} models — fireplaces, inserts, and stoves selected for our local install crews and our online customers. Every order is backed by manufacturer warranty, dealer pricing, and direct phone access to a fireplace specialist who knows the line.`;
+  return `A Cozy Fireplace carries ${brandName} products through its local showrooms. Stop in or contact the team for current displays, model availability, measurements, finish options, and installation planning.`;
 }
 
 function getFuelType(product: Product): string {
@@ -241,7 +241,7 @@ export default async function BrandPage({
               Authorized Dealer
             </span>
             <span className="inline-flex items-center gap-2 border border-[#c8d8e8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#d7e6f7]">
-              {products.length} models in stock
+              {products.length} catalog items
             </span>
             <span className="inline-flex items-center gap-2 border border-[#c8d8e8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#d7e6f7]">
               <Truck className="h-4 w-4" />
@@ -287,13 +287,13 @@ export default async function BrandPage({
         {products.length === 0 ? (
           <div className="border border-[#c8d8e8] bg-[#ffffff] px-6 py-16 text-center text-[#52677d]">
             <p className="text-lg">
-              No {brand.name} products are currently displayed online.
+              {brand.name} is available through A Cozy Fireplace showrooms.
             </p>
             <Link
               href="/contact"
               className="mt-6 inline-flex bg-[#fde428] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#fff06a]"
             >
-              Contact Us For Availability
+              Ask About This Brand
             </Link>
           </div>
         ) : (
@@ -312,7 +312,7 @@ export default async function BrandPage({
               Talk to a {brand.name} specialist
             </p>
             <p className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#001f3d]">
-              Dealer pricing, expert sizing, free shipping on most {brand.name} models.
+              Get help choosing the right {brand.name} product for your fireplace, stove, grill, or hearth project.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">

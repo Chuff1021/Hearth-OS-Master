@@ -48,10 +48,10 @@ export default async function BrandIndexPage() {
         <div className="relative mx-auto max-w-7xl">
           <p className="text-xs font-black uppercase tracking-[0.28em] text-[#fde428]">A Cozy Fireplace Brands</p>
           <h1 className="mt-5 max-w-4xl text-[42px] font-black leading-[0.98] tracking-[-0.055em] md:text-[68px]">
-            Shop A Cozy Fireplace brands by product line.
+            Shop A Cozy Fireplace brands.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-[#d7e6f7]">
-            Only the brands A Cozy Fireplace publicly lists are shown here, including its stove and fireplace lines, BBQ grill lines, and fireplace door manufacturers.
+            Browse brands carried across A Cozy Fireplace product lines, including fireplaces, stoves, electric fireplaces, gas logs, grills, glass doors, stone products, and accessories.
           </p>
         </div>
       </section>
@@ -68,7 +68,7 @@ export default async function BrandIndexPage() {
                 {brand.name}
               </p>
               <p className="mt-2 text-sm text-[#52677d]">
-                {brand.count > 0 ? `${brand.count} catalog ${brand.count === 1 ? "item" : "items"}` : "Showroom brand line"}
+                {brand.count > 0 ? `${brand.count} catalog ${brand.count === 1 ? "item" : "items"}` : "Available showroom brand"}
               </p>
             </Link>
           ))}

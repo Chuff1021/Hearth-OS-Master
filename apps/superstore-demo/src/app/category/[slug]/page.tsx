@@ -33,7 +33,6 @@ const FEATURED_BRANDS = [
   "Superior",
   "Empire",
   "Pearl Mantels",
-  "Fire Garden",
 ];
 
 type ResolvedCategory = {
@@ -112,15 +111,15 @@ const RICH_INTRO_BY_SLUG: Record<string, string> = {
   fireplaces:
     "A Cozy Fireplace carries a full lineup of gas, wood-burning, electric, and outdoor fireplaces from Travis Industries, Fireplace Xtrordinair, Lopi, Napoleon, Superior, and Empire. Whether you're framing in a brand new linear gas hearth or replacing an old masonry firebox, our team can size, vent, and ship the right unit nationwide.",
   "gas-fireplaces":
-    "Shop direct vent and B-vent gas fireplaces from the brands installers actually trust — Fireplace Xtrordinair, Napoleon, Superior, Empire, and more. Filter by BTU, width, vent style, and price to compare every model side by side, then call our specialists for sizing, gas line, and finish recommendations.",
+    "Shop direct vent and B-vent gas fireplaces from trusted showroom brands — Empire Comfort Systems, Fireplace Xtrordinair, Lopi, and Majestic. Filter by BTU, width, vent style, and price to compare every model side by side, then call our specialists for sizing, gas line, and finish recommendations.",
   "wood-fireplaces":
     "Browse EPA-certified wood-burning fireplaces from Lopi, Travis Industries, and other top hearth builders. These radiant heat machines deliver the look of a real wood fire with modern combustion efficiency, secondary burn tubes, and large viewing glass — built to heat the whole house when the power goes out.",
   "electric-fireplaces":
     "Plug-and-play electric fireplaces from Dimplex, Modern Flames, Touchstone, and more — no venting, no gas line, no chimney required. Wall-mount, recessed, and built-in linear styles ship to all 50 states with realistic flame technology and supplemental heat for any room.",
   "outdoor-fireplaces":
-    "Bring the hearth outside with Fire Garden and other premium outdoor gas fireplaces engineered for patios, pool decks, and outdoor kitchens. Stainless burners, weather-tight construction, and contemporary linear designs make a statement in any outdoor living space.",
+    "Bring the hearth outside with outdoor fireplace and fire feature options for patios, pool decks, and outdoor kitchens. Visit a showroom for help matching the product to your space and fuel setup.",
   inserts:
-    "Convert an inefficient masonry fireplace into a real heat source with a high-efficiency gas, wood, pellet, or electric insert. A Cozy Fireplace stocks the most popular sizes from Lopi, Fireplace Xtrordinair, Napoleon, and Superior — and our experts measure your existing firebox so the new insert drops in clean.",
+    "Convert an inefficient masonry fireplace into a real heat source with a high-efficiency gas, wood, pellet, or electric insert. A Cozy Fireplace stocks the most popular sizes from Lopi, Fireplace Xtrordinair, Empire, and Majestic — and our experts measure your existing firebox so the new insert drops in clean.",
   "gas-inserts":
     "Direct vent gas fireplace inserts from Fireplace Xtrordinair, Napoleon, Superior, and Empire turn cold, drafty masonry fireplaces into 70-80% efficient zone heaters. Compare BTU output, viewing area, ember bed style, and remote options — then schedule a free measure with our certified hearth team.",
   "wood-inserts":
@@ -138,17 +137,17 @@ const RICH_INTRO_BY_SLUG: Record<string, string> = {
   "gas-stoves":
     "Cast iron and steel gas stoves with the warmth of a hearth and the convenience of thermostatic control. Direct vent and B-vent options from Lopi, Napoleon, and Empire — perfect for bedrooms, additions, basements, and anywhere a chimney isn't practical.",
   outdoor:
-    "Build a complete outdoor living space with fire pits, outdoor fireplaces, and gas burners from Fire Garden and other patio brands. Stainless construction, weather-rated electronics, and contemporary linear styling ship anywhere in the lower 48.",
+    "Plan a comfortable outdoor living space with grill and fire-feature guidance from A Cozy Fireplace’s showroom team.",
   "fire-pits":
     "Linear and round gas fire pit burners, pans, and complete fire pit tables. Match-light and electronic ignition options sized from 24-inch patio designs all the way up to commercial 60-inch builds.",
   accessories:
-    "Mantels, hearth pads, screens, glass doors, remotes, and decorative media — everything you need to finish a fireplace project. Pearl Mantels, Magra Hearth, and Skytech are stocked and ready to ship.",
+    "Mantels, hearth pads, screens, glass doors, remotes, and decorative media — everything you need to finish a fireplace project. Pilgrim Home & Hearth, Stoll Industries, Dagan, and related accessory options are available through the showroom.",
   mantels:
     "Pearl Mantels solid wood mantel shelves and surrounds, plus Magra Hearth heat-resistant mantel beams and hearth slabs. Made in the USA, sized to fit standard openings, and ready to install with included hardware.",
   "remotes-controls":
     "Replacement and upgrade fireplace remotes, receivers, wall thermostats, and ignition modules from Skytech, Mertik Maxitrol, and other OEM-equivalent control brands. Match the right control to your existing valve so the fireplace works exactly the way it should.",
   "doors-screens":
-    "Custom and stock fireplace glass doors, mesh curtain screens, and decorative grille screens. Protect kids and pets, slow down heat loss, and finish the front of any masonry or factory-built fireplace.",
+    "Fireplace glass doors and screens from Design Specialties and Stoll Industries. Protect kids and pets, slow down heat loss, and finish the front of any masonry or factory-built fireplace.",
   "logs-media":
     "Vented and vent-free gas log sets, plus glass media, decorative stones, and ceramic ember beds. Match the look of your fireplace's burner and finish off the flame appearance with the right realistic media.",
   parts:
@@ -401,7 +400,7 @@ export default async function CategoryPage(
       <section className="border-b border-[#e0e0e0]">
         <div className="mx-auto max-w-[1640px] px-4 py-8 md:px-5 md:py-10 xl:py-12">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#a54210]">
-            A Cozy Fireplace Superstore
+            A Cozy Fireplace
           </p>
           <h1 className="mt-2 text-[34px] font-black leading-[1.08] tracking-[-0.045em] text-[#212121] md:text-[44px] xl:text-[56px]">
             {resolved.name}

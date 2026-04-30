@@ -8,7 +8,7 @@ import { ChevronRight, SlidersHorizontal } from "lucide-react";
 import { resolveProductImage } from "@/lib/product-images";
 import type { Product } from "@/lib/store-config";
 
-const FEATURED_FILTER_BRANDS = ["Lopi", "Fireplace Xtrordinair", "Fire Garden"];
+const FEATURED_FILTER_BRANDS = ["Lopi", "Fireplace Xtrordinair", "Empire Comfort Systems", "Majestic"];
 const FUEL_TYPE_ORDER = ["Gas", "Wood", "Electric", "Pellet", "Outdoor", "Other"];
 
 const MIRRORED_CATEGORY_SLUGS = new Set([
