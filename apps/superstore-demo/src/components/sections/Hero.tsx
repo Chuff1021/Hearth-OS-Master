@@ -20,7 +20,7 @@ export function Hero() {
           className="object-cover opacity-45"
           priority
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(255,122,24,0.28),transparent_34%),linear-gradient(90deg,#050505_0%,rgba(5,5,5,0.92)_33%,rgba(5,5,5,0.58)_67%,rgba(5,5,5,0.30)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(253,228,40,0.28),transparent_34%),linear-gradient(90deg,#050505_0%,rgba(5,5,5,0.92)_33%,rgba(5,5,5,0.58)_67%,rgba(5,5,5,0.30)_100%)]" />
       </div>
 
       <div className="relative mx-auto grid min-h-[690px] max-w-[1640px] items-center gap-12 px-4 py-16 md:px-5 lg:grid-cols-[1.02fr_0.78fr] lg:py-24">
@@ -88,7 +88,7 @@ export function Hero() {
         <div className="hidden lg:block">
           <div className="ml-auto max-w-[500px] border border-[#fde428]/35 bg-black/55 p-6 shadow-2xl shadow-black/50 backdrop-blur">
             <Image
-              src="/logo.png"
+              src="/acozy-logo.png"
               alt={defaultStoreConfig.storeName}
               width={1100}
               height={1016}

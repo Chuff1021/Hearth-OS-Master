@@ -76,7 +76,7 @@ function getBrandBlurb(brandName: string, productCount: number): string {
     return BRAND_BLURBS[normalized];
   }
 
-  return `Aaron's Fireplace Co. is an authorized ${brandName} dealer carrying ${productCount} live ${brandName} models — fireplaces, inserts, and stoves selected for our local install crews and our online customers. Every order is backed by manufacturer warranty, dealer pricing, and direct phone access to a fireplace specialist who knows the line.`;
+  return `A Cozy Fireplace is an authorized ${brandName} dealer carrying ${productCount} live ${brandName} models — fireplaces, inserts, and stoves selected for our local install crews and our online customers. Every order is backed by manufacturer warranty, dealer pricing, and direct phone access to a fireplace specialist who knows the line.`;
 }
 
 function getFuelType(product: Product): string {
@@ -107,7 +107,7 @@ export async function generateMetadata({
   if (!brand) {
     return {
       title: "Brand Not Found",
-      description: "The brand you are looking for is not available at Aaron's Fireplace Co.",
+      description: "The brand you are looking for is not available at A Cozy Fireplace",
       robots: { index: false, follow: true },
     };
   }
@@ -122,14 +122,14 @@ export async function generateMetadata({
     alternates: { canonical: url },
     openGraph: {
       type: "website",
-      title: `${title} | Aaron's Fireplace Co.`,
+      title: `${title} | A Cozy Fireplace`,
       description,
       url,
       siteName: defaultStoreConfig.storeName,
       locale: "en_US",
       images: [
         {
-          url: "/logo.png",
+          url: "/acozy-logo.png",
           width: 1200,
           height: 630,
           alt: `${brand.name} at ${defaultStoreConfig.storeName}`,
@@ -138,9 +138,9 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | Aaron's Fireplace Co.`,
+      title: `${title} | A Cozy Fireplace`,
       description,
-      images: ["/logo.png"],
+      images: ["/acozy-logo.png"],
     },
   };
 }
@@ -209,56 +209,56 @@ export default async function BrandPage({
         ])}
       />
 
-      <div className="border-b border-[#e6dccb] bg-[#fffdf9]">
+      <div className="border-b border-[#e6dccb] bg-[#ffffff]">
         <div className="mx-auto max-w-7xl px-4 py-3 md:px-6">
-          <nav className="flex items-center gap-2 text-sm text-[#6f6255]">
+          <nav className="flex items-center gap-2 text-sm text-[#52677d]">
             <Link href="/" className="hover:text-[#a54210]">
               Home
             </Link>
             <ChevronRight className="h-4 w-4" />
             <span className="text-[#3a2f25]">Brands</span>
             <ChevronRight className="h-4 w-4" />
-            <span className="font-semibold text-[#1d1712]">{brand.name}</span>
+            <span className="font-semibold text-[#001f3d]">{brand.name}</span>
           </nav>
         </div>
       </div>
 
-      <section className="relative overflow-hidden bg-[#0b0b0a] px-4 py-16 text-white md:px-6 md:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,122,24,0.22),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(255,179,107,0.12),transparent_24%)]" />
+      <section className="relative overflow-hidden bg-[#001f3d] px-4 py-16 text-white md:px-6 md:py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(253,228,40,0.24),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(255,179,107,0.12),transparent_24%)]" />
         <div className="relative mx-auto max-w-7xl">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#ff9a3d]">
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#fde428]">
             Authorized {brand.name} Dealer
           </p>
           <h1 className="mt-5 text-[42px] font-black leading-[0.98] tracking-[-0.055em] md:text-[68px]">
             {brand.name} Fireplaces &amp; Stoves
           </h1>
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-2 border border-[#ff7a18] bg-[#ff7a18]/15 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#ffb56b]">
+            <span className="inline-flex items-center gap-2 border border-[#fde428] bg-[#fde428]/15 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#fde428]">
               <ShieldCheck className="h-4 w-4" />
               Authorized Dealer
             </span>
-            <span className="inline-flex items-center gap-2 border border-[#ded5c8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#e6d8c4]">
+            <span className="inline-flex items-center gap-2 border border-[#c8d8e8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#d7e6f7]">
               {products.length} models in stock
             </span>
-            <span className="inline-flex items-center gap-2 border border-[#ded5c8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#e6d8c4]">
+            <span className="inline-flex items-center gap-2 border border-[#c8d8e8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#d7e6f7]">
               <Truck className="h-4 w-4" />
               Free shipping eligible
             </span>
           </div>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-[#e6d8c4]">{blurb}</p>
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-[#d7e6f7]">{blurb}</p>
           <p className="mt-4 max-w-3xl text-base leading-7 text-[#cabba4]">
             Need help choosing the right {brand.name} model? Call{" "}
-            <a className="text-[#ff9a3d] hover:underline" href={`tel:${defaultStoreConfig.phone}`}>
+            <a className="text-[#fde428] hover:underline" href={`tel:${defaultStoreConfig.phone}`}>
               {defaultStoreConfig.phone}
             </a>{" "}
-            or visit our showroom — every {brand.name} sale is supported by an Aaron&apos;s Fireplace
+            or visit our showroom — every {brand.name} sale is supported by an A Cozy Fireplace
             Co. specialist who knows the line.
           </p>
         </div>
       </section>
 
       {fuelBreakdown.length > 1 && (
-        <section className="border-b border-[#e6dccb] bg-[#fffdf9]">
+        <section className="border-b border-[#e6dccb] bg-[#ffffff]">
           <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
             <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">
               {brand.name} by fuel type
@@ -267,9 +267,9 @@ export default async function BrandPage({
               {fuelBreakdown.map((entry) => (
                 <div
                   key={entry.label}
-                  className="border border-[#ded5c8] bg-[#fff7ed] px-5 py-3 text-sm text-[#3a2f25]"
+                  className="border border-[#c8d8e8] bg-[#f7fbff] px-5 py-3 text-sm text-[#3a2f25]"
                 >
-                  <span className="font-black uppercase tracking-[0.14em] text-[#1d1712]">
+                  <span className="font-black uppercase tracking-[0.14em] text-[#001f3d]">
                     {entry.label}
                   </span>
                   <span className="ml-2 text-[#8a5a35]">{entry.count} models</span>
@@ -282,13 +282,13 @@ export default async function BrandPage({
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:px-6">
         {products.length === 0 ? (
-          <div className="border border-[#ded5c8] bg-[#fffdf9] px-6 py-16 text-center text-[#6f6255]">
+          <div className="border border-[#c8d8e8] bg-[#ffffff] px-6 py-16 text-center text-[#52677d]">
             <p className="text-lg">
               No {brand.name} products are currently displayed online.
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex bg-[#ff7a18] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
+              className="mt-6 inline-flex bg-[#fde428] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#fff06a]"
             >
               Contact Us For Availability
             </Link>
@@ -302,27 +302,27 @@ export default async function BrandPage({
         )}
       </section>
 
-      <section className="border-t border-[#e6dccb] bg-[#fffdf9]">
+      <section className="border-t border-[#e6dccb] bg-[#ffffff]">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:px-6">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.18em] text-[#a54210]">
               Talk to a {brand.name} specialist
             </p>
-            <p className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#1d1712]">
+            <p className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#001f3d]">
               Dealer pricing, expert sizing, free shipping on most {brand.name} models.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
             <a
               href={`tel:${defaultStoreConfig.phone}`}
-              className="inline-flex items-center gap-2 bg-black px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-[#1d1712]"
+              className="inline-flex items-center gap-2 bg-black px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-[#001f3d]"
             >
               <Phone className="h-4 w-4" />
               Call {defaultStoreConfig.phone}
             </a>
             <Link
               href="/contact"
-              className="inline-flex bg-[#ff7a18] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
+              className="inline-flex bg-[#fde428] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#fff06a]"
             >
               Request a Quote
             </Link>

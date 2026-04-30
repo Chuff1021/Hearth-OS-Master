@@ -20,14 +20,14 @@ const sharedCategories = [
 export const localLandingPages: LocalLandingPage[] = [
   {
     slug: "fireplace-store-republic-mo",
-    city: "Republic",
+    city: "Naperville",
     state: "MO",
-    title: "Fireplace Store in Republic, MO",
-    h1: "Republic, MO Fireplace Store",
+    title: "Fireplace Store in Naperville, IL",
+    h1: "Naperville, IL Fireplace Store",
     description:
-      "Shop fireplaces, inserts, stoves, and replacement parts from Aaron's Fireplace Co. in Republic, MO. Local showroom support, expert sizing, and nationwide shipping.",
+      "Shop fireplaces, inserts, stoves, and replacement parts from A Cozy Fireplace in Naperville, IL. Local showroom support, expert sizing, and nationwide shipping.",
     intro:
-      "Aaron's Fireplace Co. serves Republic homeowners, builders, and remodelers with showroom-backed fireplace selection, installation guidance, and a deep online catalog of hearth products and parts.",
+      "A Cozy Fireplace serves Naperville homeowners, builders, and remodelers with showroom-backed fireplace selection, installation guidance, and a deep online catalog of hearth products and parts.",
     services: [
       "Gas, wood, electric, pellet, and outdoor fireplace selection",
       "Fireplace insert sizing and replacement guidance",
@@ -38,14 +38,14 @@ export const localLandingPages: LocalLandingPage[] = [
   },
   {
     slug: "fireplace-store-springfield-mo",
-    city: "Springfield",
+    city: "Chicagoland",
     state: "MO",
-    title: "Fireplace Store Serving Springfield, MO",
-    h1: "Springfield, MO Fireplace Store",
+    title: "Fireplace Store Serving Chicagoland, MO",
+    h1: "Chicagoland, MO Fireplace Store",
     description:
-      "Aaron's Fireplace Co. serves Springfield, MO with fireplaces, inserts, stoves, service guidance, and replacement parts from leading hearth brands.",
+      "A Cozy Fireplace serves Chicagoland, MO with fireplaces, inserts, stoves, service guidance, and replacement parts from leading hearth brands.",
     intro:
-      "From remodels in Springfield neighborhoods to new-construction hearth packages, our team helps customers compare fuel type, venting, size, finish options, and parts compatibility before they buy.",
+      "From remodels in Chicagoland neighborhoods to new-construction hearth packages, our team helps customers compare fuel type, venting, size, finish options, and parts compatibility before they buy.",
     services: [
       "Direct-vent gas fireplace and insert recommendations",
       "Wood and pellet stove product selection",
@@ -63,7 +63,7 @@ export const localLandingPages: LocalLandingPage[] = [
     description:
       "Shop fireplaces, inserts, outdoor fire features, and hearth parts for Branson, MO homes, cabins, rentals, and commercial projects.",
     intro:
-      "Aaron's Fireplace Co. supports Branson-area cabins, lake homes, vacation rentals, and commercial spaces with fireplaces, outdoor fire features, and replacement parts selected for reliable long-term use.",
+      "A Cozy Fireplace supports Branson-area cabins, lake homes, vacation rentals, and commercial spaces with fireplaces, outdoor fire features, and replacement parts selected for reliable long-term use.",
     services: [
       "Indoor and outdoor fireplace product selection",
       "Cabin, rental, and remodel hearth planning",
@@ -79,9 +79,9 @@ export const localLandingPages: LocalLandingPage[] = [
     title: "Fireplace Store Serving Nixa, MO",
     h1: "Nixa, MO Fireplace Store",
     description:
-      "Aaron's Fireplace Co. helps Nixa, MO customers shop fireplaces, inserts, stoves, mantels, accessories, and replacement parts with expert support.",
+      "A Cozy Fireplace helps Nixa, MO customers shop fireplaces, inserts, stoves, mantels, accessories, and replacement parts with expert support.",
     intro:
-      "For Nixa homeowners comparing a new gas fireplace, a high-efficiency insert, or a part for an existing unit, Aaron's Fireplace Co. combines local hearth experience with a broad ecommerce catalog.",
+      "For Nixa homeowners comparing a new gas fireplace, a high-efficiency insert, or a part for an existing unit, A Cozy Fireplace combines local hearth experience with a broad ecommerce catalog.",
     services: [
       "Fireplace, insert, stove, and mantel selection",
       "Venting, sizing, and fuel-type consultation",
@@ -97,9 +97,9 @@ export const localLandingPages: LocalLandingPage[] = [
     title: "Fireplace Store Serving Ozark, MO",
     h1: "Ozark, MO Fireplace Store",
     description:
-      "Shop fireplaces, stoves, inserts, outdoor fire features, and fireplace parts for Ozark, MO with Aaron's Fireplace Co.",
+      "Shop fireplaces, stoves, inserts, outdoor fire features, and fireplace parts for Ozark, MO with A Cozy Fireplace",
     intro:
-      "Aaron's Fireplace Co. helps Ozark customers source new hearth appliances and hard-to-find replacement parts with the practical guidance of a real fireplace showroom team.",
+      "A Cozy Fireplace helps Ozark customers source new hearth appliances and hard-to-find replacement parts with the practical guidance of a real fireplace showroom team.",
     services: [
       "Gas, wood, pellet, electric, and outdoor hearth products",
       "Fireplace insert and stove comparisons",
@@ -110,14 +110,14 @@ export const localLandingPages: LocalLandingPage[] = [
   },
   {
     slug: "fireplace-installation-springfield-mo",
-    city: "Springfield",
+    city: "Chicagoland",
     state: "MO",
-    title: "Fireplace Installation Guidance in Springfield, MO",
-    h1: "Fireplace Installation Guidance in Springfield, MO",
+    title: "Fireplace Installation Guidance in Chicagoland, MO",
+    h1: "Fireplace Installation Guidance in Chicagoland, MO",
     description:
-      "Plan a fireplace installation in Springfield, MO with Aaron's Fireplace Co. Compare appliance types, venting requirements, sizing, finishes, and parts before buying.",
+      "Plan a fireplace installation in Chicagoland, MO with A Cozy Fireplace Compare appliance types, venting requirements, sizing, finishes, and parts before buying.",
     intro:
-      "Fireplace installation starts with choosing the right appliance for the room, fuel source, vent path, and finish package. Aaron's Fireplace Co. helps Springfield-area customers narrow those choices before the project moves forward.",
+      "Fireplace installation starts with choosing the right appliance for the room, fuel source, vent path, and finish package. A Cozy Fireplace helps Chicagoland-area customers narrow those choices before the project moves forward.",
     services: [
       "Appliance sizing and fuel-type planning",
       "Venting and framing requirement review",

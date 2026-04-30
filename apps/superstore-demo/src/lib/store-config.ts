@@ -59,7 +59,7 @@ export interface StoreConfig {
   };
 }
 
-// Default configuration — Aaron's Fireplace Co.
+// Default configuration — A Cozy Fireplace
 export const defaultStoreConfig: StoreConfig = {
   storeName: "A Cozy Fireplace",
   tagline: "Your complete neighborhood fireplace, wood stove, gas grill, gas lamp and fireplace accessories store.",

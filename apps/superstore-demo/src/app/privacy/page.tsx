@@ -3,7 +3,7 @@ import { seoMetadata } from "@/lib/seo-metadata";
 
 export const metadata = seoMetadata({
   title: 'Privacy Policy',
-  description: "Privacy policy for Aaron's Fireplace Co. covering customer information, website inquiries, orders, contact forms, and data protection.",
+  description: "Privacy policy for A Cozy Fireplace covering customer information, website inquiries, orders, contact forms, and data protection.",
   path: "/privacy",
 });
 

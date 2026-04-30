@@ -1,6 +1,6 @@
 <svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Aaron&apos;s Fireplace Co. product photo placeholder</title>
-  <desc id="desc">Aaron&apos;s Fireplace Co. branded placeholder for products with no photo available.</desc>
+  <title id="title">A Cozy Fireplace product photo placeholder</title>
+  <desc id="desc">A Cozy Fireplace branded placeholder for products with no photo available.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="1200" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF7ED"/>
@@ -20,7 +20,7 @@
     <rect x="138" y="130" width="924" height="920" rx="44" fill="#FFFDF8" stroke="#E5C8A9" stroke-width="4"/>
   </g>
 
-  <image href="/logo.png" x="310" y="198" width="580" height="205" preserveAspectRatio="xMidYMid meet"/>
+  <image href="/acozy-logo.png" x="310" y="198" width="580" height="205" preserveAspectRatio="xMidYMid meet"/>
 
   <g transform="translate(0 18)">
     <path d="M600 338C560 408 516 464 516 535C516 622 586 692 674 692C761 692 832 623 832 536C832 472 795 426 756 380C724 342 693 306 681 258C660 298 634 323 600 338Z" fill="#8B3A18" opacity="0.12"/>
@@ -30,7 +30,7 @@
 
   <rect x="300" y="748" width="600" height="130" rx="26" fill="#2F2418"/>
   <text x="600" y="817" text-anchor="middle" fill="#FFF8EC" font-size="43" font-family="Arial, Helvetica, sans-serif" font-weight="800" letter-spacing="0.5">No product photo available</text>
-  <text x="600" y="862" text-anchor="middle" fill="#F4C17A" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="600">Aaron&apos;s Fireplace Co.</text>
+  <text x="600" y="862" text-anchor="middle" fill="#F4C17A" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="600">A Cozy Fireplace</text>
 
   <text x="600" y="970" text-anchor="middle" fill="#6E5845" font-size="28" font-family="Arial, Helvetica, sans-serif">We&apos;re working to add accurate product imagery.</text>
 </svg>

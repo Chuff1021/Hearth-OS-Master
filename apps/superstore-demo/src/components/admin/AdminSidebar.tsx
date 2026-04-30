@@ -32,7 +32,7 @@ export default function AdminSidebar() {
             <Flame className="w-5 h-5 text-white" />
           </div>
           <div>
-            <div className="text-white font-bold text-sm leading-tight">Aaron&apos;s</div>
+            <div className="text-white font-bold text-sm leading-tight">A Cozy Fireplace</div>
             <div className="text-gray-400 text-xs">Admin Dashboard</div>
           </div>
         </Link>

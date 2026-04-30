@@ -42,7 +42,7 @@ export function PdpGallery({ product }: GalleryProps) {
 
   return (
     <div>
-      <div className="aspect-square bg-gradient-to-br from-gray-50 to-[#f2eee7] rounded-2xl relative overflow-hidden border border-[#eadfce]">
+      <div className="aspect-square bg-gradient-to-br from-gray-50 to-[#f2eee7] rounded-2xl relative overflow-hidden border border-[#c8d8e8]">
         <Image
           src={selectedProductImage}
           alt={product.name}

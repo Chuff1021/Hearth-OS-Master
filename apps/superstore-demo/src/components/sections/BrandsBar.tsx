@@ -26,13 +26,13 @@ export function BrandsBar() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-t border-[#ff7a18]/20 bg-[#0d0b0a] py-16 text-white md:py-20" id="featured-brands">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,122,24,0.18),transparent_30%),radial-gradient(circle_at_84%_66%,rgba(255,255,255,0.08),transparent_24%),linear-gradient(180deg,#120f0c_0%,#1d1510_54%,#090807_100%)]" />
+    <section className="relative overflow-hidden border-t border-[#fde428]/20 bg-[#001f3d] py-16 text-white md:py-20" id="featured-brands">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(253,228,40,0.18),transparent_30%),radial-gradient(circle_at_84%_66%,rgba(255,255,255,0.08),transparent_24%),linear-gradient(180deg,#120f0c_0%,#1d1510_54%,#090807_100%)]" />
       <div className="relative mx-auto max-w-[1640px] px-4 md:px-5">
         <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_0.55fr] lg:items-end">
           <div>
             <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.26em] text-[#b84d13]">
-              <ShieldCheck className="h-4 w-4 text-[#ff7a18]" />
+              <ShieldCheck className="h-4 w-4 text-[#fde428]" />
               Trusted Hearth Brands
             </p>
             <h2 className="mt-4 text-[34px] font-black leading-[1.04] tracking-[-0.045em] text-white md:text-[52px]">
@@ -50,9 +50,9 @@ export function BrandsBar() {
               <Link
                 key={brand.name}
                 href={`/brand/${brand.slug}`}
-                className="group relative flex h-[118px] items-center justify-center overflow-hidden rounded-2xl border border-white/12 bg-white/90 px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#ff7a18]/75 hover:bg-white hover:shadow-[0_18px_42px_rgba(255,122,24,0.24)]"
+                className="group relative flex h-[118px] items-center justify-center overflow-hidden rounded-2xl border border-white/12 bg-white/90 px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#fde428]/75 hover:bg-white hover:shadow-[0_18px_42px_rgba(253,228,40,0.24)]"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-[#ff7a18]/8 opacity-0 transition group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-[#fde428]/8 opacity-0 transition group-hover:opacity-100" />
                 <div className={`relative w-full transition duration-300 group-hover:scale-[1.035] ${brand.featuredImage ? "h-full" : "h-[70px]"}`}>
                   <Image
                     src={brand.logo}
@@ -70,7 +70,7 @@ export function BrandsBar() {
         <div className="mt-8 flex justify-center">
           <Link
             href="/brand"
-            className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.07] px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-sm backdrop-blur-md transition hover:border-[#ff7a18] hover:bg-[#ff7a18] hover:text-black"
+            className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.07] px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-sm backdrop-blur-md transition hover:border-[#fde428] hover:bg-[#fde428] hover:text-black"
           >
             View All Brands <ArrowRight className="h-4 w-4" />
           </Link>

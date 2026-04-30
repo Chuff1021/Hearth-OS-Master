@@ -4,7 +4,7 @@ import { seoMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = seoMetadata({
   title: 'Schedule Fireplace Service',
-  description: "Request fireplace, stove, or insert service help from Aaron's Fireplace Co. for maintenance, diagnostics, cleaning, and repair planning.",
+  description: "Request fireplace, stove, or insert service help from A Cozy Fireplace for maintenance, diagnostics, cleaning, and repair planning.",
   path: "/service-appointment",
 });
 

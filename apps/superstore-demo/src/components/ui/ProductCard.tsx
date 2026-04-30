@@ -34,7 +34,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={cardHref}
-      className="group flex h-full flex-col overflow-hidden border border-[#ded5c8] bg-[#fffdf9] transition-all duration-300 hover:-translate-y-1 hover:border-[#ff7a18] hover:shadow-[0_28px_70px_rgba(32,20,10,0.14)]"
+      className="group flex h-full flex-col overflow-hidden border border-[#c8d8e8] bg-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:border-[#fde428] hover:shadow-[0_28px_70px_rgba(32,20,10,0.14)]"
     >
       <div className="relative aspect-[1.08/1] overflow-hidden bg-[#f2eee7]">
         <Image
@@ -49,11 +49,11 @@ export function ProductCard({ product }: { product: Product }) {
             {product.brand || "Fireplace"}
           </span>
           {isContactForPricing ? (
-            <span className="bg-[#ff7a18] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-black">
+            <span className="bg-[#fde428] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-black">
               Contact for Pricing
             </span>
           ) : product.salePrice && (
-            <span className="bg-[#ff7a18] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-black">
+            <span className="bg-[#fde428] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-black">
               Save {discount}%
             </span>
           )}
@@ -61,7 +61,7 @@ export function ProductCard({ product }: { product: Product }) {
         {!isContactForPricing && (
           <button
             onClick={handleAddToCart}
-            className="absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-lg transition hover:bg-[#ff7a18] hover:text-black"
+            className="absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-lg transition hover:bg-[#fde428] hover:text-black"
             aria-label="Add to cart"
           >
             <ShoppingCart className="h-5 w-5" />
@@ -71,16 +71,16 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#8a5a35]">
-          <Flame className="h-3.5 w-3.5 text-[#ff7a18]" />
+          <Flame className="h-3.5 w-3.5 text-[#fde428]" />
           {product.sku || "Model available"}
         </div>
-        <h3 className="line-clamp-3 min-h-[4.5rem] text-[17px] font-black leading-6 tracking-[-0.02em] text-[#1d1712] transition-colors group-hover:text-[#a54210]">
+        <h3 className="line-clamp-3 min-h-[4.5rem] text-[17px] font-black leading-6 tracking-[-0.02em] text-[#001f3d] transition-colors group-hover:text-[#a54210]">
           {product.name}
         </h3>
 
         <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-[#6a6258]">
           {product.specifications?.Width && (
-            <span className="inline-flex items-center gap-1.5 border border-[#eadfce] bg-white px-2 py-1.5">
+            <span className="inline-flex items-center gap-1.5 border border-[#c8d8e8] bg-white px-2 py-1.5">
               <Ruler className="h-3.5 w-3.5 text-[#a54210]" /> {product.specifications.Width}
             </span>
           )}
@@ -96,11 +96,11 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
 
         <div className="mt-auto pt-5">
-          <div className="flex items-end justify-between gap-3 border-t border-[#eadfce] pt-4">
+          <div className="flex items-end justify-between gap-3 border-t border-[#c8d8e8] pt-4">
             <div>
               <p className="text-[11px] uppercase tracking-[0.16em] text-[#8a8175]">{isContactForPricing ? "Dealer pricing" : "Starting at"}</p>
               <div className="flex items-baseline gap-2">
-                <span className={isContactForPricing ? "inline-flex items-center justify-center border border-[#a54210] bg-[#a54210] px-3 py-2 text-sm font-black uppercase tracking-[0.08em] text-white transition group-hover:bg-[#7f2f0b]" : "text-xl font-black text-[#1d1712]"}>{isContactForPricing ? "Contact for Pricing" : formatPrice(displayPrice)}</span>
+                <span className={isContactForPricing ? "inline-flex items-center justify-center border border-[#a54210] bg-[#a54210] px-3 py-2 text-sm font-black uppercase tracking-[0.08em] text-white transition group-hover:bg-[#7f2f0b]" : "text-xl font-black text-[#001f3d]"}>{isContactForPricing ? "Contact for Pricing" : formatPrice(displayPrice)}</span>
                 {!isContactForPricing && product.salePrice && <span className="text-sm text-[#8a8175] line-through">{formatPrice(product.price)}</span>}
               </div>
             </div>

@@ -1,5 +1,5 @@
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://aaronsfireplaceco.com"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://superstore-demo.vercel.app"
 ).replace(/\/+$/, "");
 
 export function absoluteUrl(path: string): string {

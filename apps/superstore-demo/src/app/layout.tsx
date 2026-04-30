@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/logo.png",
+        url: "/acozy-logo.png",
         width: 1200,
         height: 630,
         alt: defaultStoreConfig.storeName,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultStoreConfig.seo.metaTitle,
     description: defaultStoreConfig.seo.metaDescription,
-    images: ["/logo.png"],
+    images: ["/acozy-logo.png"],
   },
   robots: {
     index: true,

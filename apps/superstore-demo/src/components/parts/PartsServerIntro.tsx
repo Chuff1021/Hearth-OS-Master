@@ -25,15 +25,15 @@ export function PartsServerIntro({ slug, products }: PartsServerIntroProps) {
   const visibleProducts = products.slice(0, 8);
 
   return (
-    <section className="bg-[#0b0b0a] text-white">
-      <div className="border-b border-[#ff7a18]/20 bg-[#11100e]">
+    <section className="bg-[#001f3d] text-white">
+      <div className="border-b border-[#fde428]/20 bg-[#002e5b]">
         <div className="mx-auto max-w-[1480px] px-4 py-3 md:px-6">
           <nav className="flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[#d8c7b2]" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-[#ffb36b]">Home</Link>
+            <Link href="/" className="hover:text-[#fde428]">Home</Link>
             <ChevronRight className="h-3.5 w-3.5" />
             {!isLandingPage && (
               <>
-                <Link href="/category/parts" className="hover:text-[#ffb36b]">Parts</Link>
+                <Link href="/category/parts" className="hover:text-[#fde428]">Parts</Link>
                 <ChevronRight className="h-3.5 w-3.5" />
               </>
             )}
@@ -42,25 +42,25 @@ export function PartsServerIntro({ slug, products }: PartsServerIntroProps) {
         </div>
       </div>
 
-      <div className="relative overflow-hidden border-b border-[#ff7a18]/20 bg-[#11100e] px-4 py-14 md:px-6">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,122,24,0.20),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(255,179,107,0.12),transparent_24%)]" />
+      <div className="relative overflow-hidden border-b border-[#fde428]/20 bg-[#002e5b] px-4 py-14 md:px-6">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(253,228,40,0.20),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(255,179,107,0.12),transparent_24%)]" />
         <div className="relative mx-auto max-w-[1480px]">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#ff9a3d]">Aaron&apos;s Parts Department</p>
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#fde428]">A Cozy Parts Department</p>
           <h1 className="mt-4 max-w-5xl text-[42px] font-black leading-[0.98] tracking-[-0.055em] md:text-[68px]">{name}</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-[#e6d8c4]">{description}</p>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-[#d7e6f7]">{description}</p>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             <div className="border border-white/10 bg-white/[0.06] p-4">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#ff9a3d]">Indexed parts</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fde428]">Indexed parts</p>
               <p className="mt-2 text-3xl font-black">{products.length.toLocaleString()}</p>
             </div>
             <div className="border border-white/10 bg-white/[0.06] p-4">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#ff9a3d]">Catalog brands</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fde428]">Catalog brands</p>
               <p className="mt-2 text-3xl font-black">{partsCatalogStats.indexedBrands}</p>
             </div>
             <div className="border border-white/10 bg-white/[0.06] p-4">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#ff9a3d]">Need fitment help?</p>
-              <Link href="/contact" className="mt-2 inline-block text-sm font-black uppercase tracking-[0.14em] text-[#ffb36b]">Ask a specialist</Link>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fde428]">Need fitment help?</p>
+              <Link href="/contact" className="mt-2 inline-block text-sm font-black uppercase tracking-[0.14em] text-[#fde428]">Ask a specialist</Link>
             </div>
           </div>
         </div>
@@ -68,44 +68,44 @@ export function PartsServerIntro({ slug, products }: PartsServerIntroProps) {
 
       <div className="bg-[#f6efe5] px-4 py-8 text-[#211a15] md:px-6">
         <div className="mx-auto grid max-w-[1480px] gap-6 lg:grid-cols-3">
-          <div className="border border-[#ded5c8] bg-[#fffdf9] p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#ff7a18]">Departments</p>
+          <div className="border border-[#c8d8e8] bg-[#ffffff] p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#fde428]">Departments</p>
             <div className="mt-4 grid gap-2">
               <Link href="/category/parts" className="font-bold text-[#201914] hover:text-[#a54210]">All Fireplace Parts</Link>
               {partsDepartments.map((item) => (
-                <Link key={item.slug} href={`/category/${item.slug}`} className="text-sm text-[#6f6255] hover:text-[#a54210]">{item.name}</Link>
+                <Link key={item.slug} href={`/category/${item.slug}`} className="text-sm text-[#52677d] hover:text-[#a54210]">{item.name}</Link>
               ))}
             </div>
           </div>
 
-          <div className="border border-[#ded5c8] bg-[#fffdf9] p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#ff7a18]">Popular brands</p>
+          <div className="border border-[#c8d8e8] bg-[#ffffff] p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#fde428]">Popular brands</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {brands.map((brand) => (
-                <Link key={brand} href={`/category/${slug}`} className="rounded-full border border-[#ded5c8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{brand}</Link>
+                <Link key={brand} href={`/category/${slug}`} className="rounded-full border border-[#c8d8e8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{brand}</Link>
               ))}
             </div>
           </div>
 
-          <div className="border border-[#ded5c8] bg-[#fffdf9] p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#ff7a18]">Common part types</p>
+          <div className="border border-[#c8d8e8] bg-[#ffffff] p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#fde428]">Common part types</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {partsPartTypes.map((partType) => (
-                <Link key={partType} href={`/category/${slug}`} className="rounded-full border border-[#ded5c8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{partType}</Link>
+                <Link key={partType} href={`/category/${slug}`} className="rounded-full border border-[#c8d8e8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{partType}</Link>
               ))}
             </div>
           </div>
         </div>
 
         {visibleProducts.length > 0 && (
-          <div className="mx-auto mt-6 max-w-[1480px] border border-[#ded5c8] bg-[#fffdf9] p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#ff7a18]">Sample parts in this section</p>
+          <div className="mx-auto mt-6 max-w-[1480px] border border-[#c8d8e8] bg-[#ffffff] p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#fde428]">Sample parts in this section</p>
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {visibleProducts.map((product) => (
-                <Link key={product.id} href={`/product/${product.slug}`} className="border border-[#eadfce] bg-[#fff7ed] p-4 hover:border-[#a54210]">
+                <Link key={product.id} href={`/product/${product.slug}`} className="border border-[#c8d8e8] bg-[#f7fbff] p-4 hover:border-[#a54210]">
                   <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#a54210]">{product.brand}</p>
                   <h2 className="mt-2 line-clamp-2 text-sm font-black text-[#201914]">{product.name}</h2>
-                  <p className="mt-2 text-xs text-[#6f6255]">SKU: {product.sku}</p>
+                  <p className="mt-2 text-xs text-[#52677d]">SKU: {product.sku}</p>
                 </Link>
               ))}
             </div>

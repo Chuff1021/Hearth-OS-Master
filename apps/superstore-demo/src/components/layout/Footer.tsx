@@ -19,7 +19,7 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
 
   return (
     <footer className="relative overflow-hidden bg-[#001f3d] text-[#dbe8f7]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_8%,rgba(255,122,24,0.16),transparent_28%),radial-gradient(circle_at_84%_28%,rgba(255,179,107,0.10),transparent_24%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_8%,rgba(253,228,40,0.16),transparent_28%),radial-gradient(circle_at_84%_28%,rgba(253,228,40,0.10),transparent_24%)]" />
 
       <div className="relative border-y border-[#fde428]/20 bg-[#002e5b]/90">
         <div className="mx-auto flex max-w-[1640px] flex-col gap-5 px-4 py-8 md:px-5 lg:flex-row lg:items-center lg:justify-between">
@@ -45,7 +45,7 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-[1.15fr_0.8fr_0.9fr_0.85fr]">
           <div className="border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
             <Image
-              src={lightLogoUrl ?? "/logo.png"}
+              src={lightLogoUrl ?? "/acozy-logo.png"}
               alt={defaultStoreConfig.storeName}
               width={260}
               height={120}

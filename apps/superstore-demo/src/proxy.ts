@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-const CANONICAL_HOST = "aaronsfireplaceco.com";
+const CANONICAL_HOST = "superstore-demo.vercel.app";
 
 export function proxy(request: NextRequest) {
   const host = request.headers.get("host")?.toLowerCase();

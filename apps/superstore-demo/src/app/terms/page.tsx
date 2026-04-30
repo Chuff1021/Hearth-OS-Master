@@ -3,7 +3,7 @@ import { seoMetadata } from "@/lib/seo-metadata";
 
 export const metadata = seoMetadata({
   title: 'Terms of Service',
-  description: "Terms and conditions for using Aaron's Fireplace Co.'s website, product catalog, order support, quote requests, and online services.",
+  description: "Terms and conditions for using A Cozy Fireplace's website, product catalog, order support, quote requests, and online services.",
   path: "/terms",
 });
 
@@ -94,7 +94,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Governing Law</h2>
             <p className="text-gray-600">
-              These terms and conditions are governed by and construed in accordance with the laws of the State of Missouri, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
+              These terms and conditions are governed by and construed in accordance with the laws of the State of Illinois, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
             </p>
           </div>
 

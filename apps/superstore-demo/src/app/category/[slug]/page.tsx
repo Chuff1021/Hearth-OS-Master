@@ -110,7 +110,7 @@ function filterProductsForCategory(
 
 const RICH_INTRO_BY_SLUG: Record<string, string> = {
   fireplaces:
-    "Aaron's Fireplace Co. carries a full lineup of gas, wood-burning, electric, and outdoor fireplaces from Travis Industries, Fireplace Xtrordinair, Lopi, Napoleon, Superior, and Empire. Whether you're framing in a brand new linear gas hearth or replacing an old masonry firebox, our team can size, vent, and ship the right unit nationwide.",
+    "A Cozy Fireplace carries a full lineup of gas, wood-burning, electric, and outdoor fireplaces from Travis Industries, Fireplace Xtrordinair, Lopi, Napoleon, Superior, and Empire. Whether you're framing in a brand new linear gas hearth or replacing an old masonry firebox, our team can size, vent, and ship the right unit nationwide.",
   "gas-fireplaces":
     "Shop direct vent and B-vent gas fireplaces from the brands installers actually trust — Fireplace Xtrordinair, Napoleon, Superior, Empire, and more. Filter by BTU, width, vent style, and price to compare every model side by side, then call our specialists for sizing, gas line, and finish recommendations.",
   "wood-fireplaces":
@@ -120,7 +120,7 @@ const RICH_INTRO_BY_SLUG: Record<string, string> = {
   "outdoor-fireplaces":
     "Bring the hearth outside with Fire Garden and other premium outdoor gas fireplaces engineered for patios, pool decks, and outdoor kitchens. Stainless burners, weather-tight construction, and contemporary linear designs make a statement in any outdoor living space.",
   inserts:
-    "Convert an inefficient masonry fireplace into a real heat source with a high-efficiency gas, wood, pellet, or electric insert. Aaron's Fireplace Co. stocks the most popular sizes from Lopi, Fireplace Xtrordinair, Napoleon, and Superior — and our experts measure your existing firebox so the new insert drops in clean.",
+    "Convert an inefficient masonry fireplace into a real heat source with a high-efficiency gas, wood, pellet, or electric insert. A Cozy Fireplace stocks the most popular sizes from Lopi, Fireplace Xtrordinair, Napoleon, and Superior — and our experts measure your existing firebox so the new insert drops in clean.",
   "gas-inserts":
     "Direct vent gas fireplace inserts from Fireplace Xtrordinair, Napoleon, Superior, and Empire turn cold, drafty masonry fireplaces into 70-80% efficient zone heaters. Compare BTU output, viewing area, ember bed style, and remote options — then schedule a free measure with our certified hearth team.",
   "wood-inserts":
@@ -171,7 +171,7 @@ function buildIntro(resolved: ResolvedCategory, count: number): string {
   const fromMap = RICH_INTRO_BY_SLUG[resolved.slug];
   if (fromMap) return fromMap;
 
-  return `Shop ${count}+ ${resolved.name.toLowerCase()} from top hearth brands like Travis Industries, Lopi, Napoleon, Superior, and Empire. Aaron's Fireplace Co. ships nationwide with free expert consultation, in-house sizing support, and dealer-direct pricing. ${resolved.description}.`;
+  return `Shop ${count}+ ${resolved.name.toLowerCase()} from top hearth brands like Travis Industries, Lopi, Napoleon, Superior, and Empire. A Cozy Fireplace ships nationwide with free expert consultation, in-house sizing support, and dealer-direct pricing. ${resolved.description}.`;
 }
 
 function buildMetaDescription(resolved: ResolvedCategory, count: number): string {
@@ -206,17 +206,17 @@ export async function generateMetadata(
       alternates: { canonical: absoluteUrl(`/category/${slug}`) },
       openGraph: {
         type: "website",
-        title: `${name} — Aaron's Fireplace Co.`,
+        title: `${name} — A Cozy Fireplace`,
         description,
         url: absoluteUrl(`/category/${slug}`),
         siteName: defaultStoreConfig.storeName,
-        images: ["/logo.png"],
+        images: ["/acozy-logo.png"],
       },
       twitter: {
         card: "summary_large_image",
-        title: `${name} — Aaron's Fireplace Co.`,
+        title: `${name} — A Cozy Fireplace`,
         description,
-        images: ["/logo.png"],
+        images: ["/acozy-logo.png"],
       },
     };
   }
@@ -239,7 +239,7 @@ export async function generateMetadata(
   const ogImageProduct = products.find((p) => p.images?.[0]);
   const ogImage = ogImageProduct?.images?.[0]
     ? absoluteUrl(ogImageProduct.images[0])
-    : `${SITE_URL}/logo.png`;
+    : `${SITE_URL}/acozy-logo.png`;
 
   const title = count > 0
     ? `${resolved.name} — ${count}+ Models`
@@ -251,7 +251,7 @@ export async function generateMetadata(
     alternates: { canonical: absoluteUrl(`/category/${slug}`) },
     openGraph: {
       type: "website",
-      title: `${resolved.name} — Aaron's Fireplace Co.`,
+      title: `${resolved.name} — A Cozy Fireplace`,
       description,
       url: absoluteUrl(`/category/${slug}`),
       siteName: defaultStoreConfig.storeName,
@@ -266,7 +266,7 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: `${resolved.name} — Aaron's Fireplace Co.`,
+      title: `${resolved.name} — A Cozy Fireplace`,
       description,
       images: [ogImage],
     },
@@ -284,7 +284,7 @@ export default async function CategoryPage(
   if (isPartsCategorySlug(slug)) {
     const name = resolved?.name ?? "Fireplace Parts";
     const description =
-      "Shop OEM and OEM-equivalent fireplace, wood stove, pellet stove, and gas appliance replacement parts with expert fitment support from Aaron's Fireplace Co.";
+      "Shop OEM and OEM-equivalent fireplace, wood stove, pellet stove, and gas appliance replacement parts with expert fitment support from A Cozy Fireplace";
     const allProducts = await loadAllProducts();
     const partsProducts = allProducts.filter((product) =>
       slug === "parts"
@@ -401,7 +401,7 @@ export default async function CategoryPage(
       <section className="border-b border-[#e0e0e0]">
         <div className="mx-auto max-w-[1640px] px-4 py-8 md:px-5 md:py-10 xl:py-12">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#a54210]">
-            Aaron&apos;s Fireplace Superstore
+            A Cozy Fireplace Superstore
           </p>
           <h1 className="mt-2 text-[34px] font-black leading-[1.08] tracking-[-0.045em] text-[#212121] md:text-[44px] xl:text-[56px]">
             {resolved.name}
