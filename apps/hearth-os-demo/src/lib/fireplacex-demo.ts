@@ -6,12 +6,12 @@ const daysAgo = (days: number) => {
 };
 
 export const fireplacexBrand = {
-  name: "FireplaceX",
-  fullName: "Fireplace Xtrordinair Dealer Ops",
+  name: "Travis Industries",
+  fullName: "Travis Industries Dealer Ops",
   poweredBy: "powered by Hearth-OS",
   userName: "Mason",
-  userEmail: "mason@fireplacex-demo.com",
-  tagline: "Premium hearth installs, service, and dealer operations.",
+  userEmail: "mason@travis-demo.com",
+  tagline: "Premium hearth manufacturing, dealer operations, installs, and service.",
 };
 
 export const demoTechs = [

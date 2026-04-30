@@ -132,7 +132,7 @@ export default function DashboardPage() {
                     {greeting()}, {displayName}.
                   </h1>
                   <p className="text-base mt-3 max-w-xl" style={{ color: "var(--color-text-secondary)" }}>
-                    FireplaceX demo dashboard — fake employees, customers, jobs, invoices, and dispatch data running inside the existing HearthOS product.
+                    Travis Industries demo dashboard — fake employees, customers, jobs, invoices, and dispatch data running inside the existing HearthOS product.
                   </p>
                 </div>
                 <QuickActions />
@@ -188,7 +188,7 @@ export default function DashboardPage() {
 
             {/* Footer attribution */}
             <p className="text-[11px] text-center pt-4" style={{ color: "var(--color-text-muted)" }}>
-              FireplaceX · powered by Hearth-OS · Demo data only.
+              Travis Industries · powered by Hearth-OS · Demo data only.
             </p>
           </div>
         </main>

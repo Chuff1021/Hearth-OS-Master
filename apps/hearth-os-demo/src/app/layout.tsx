@@ -18,9 +18,9 @@ export const dynamic = "force-dynamic";
 const clerkConfigured = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
 
 export const metadata: Metadata = {
-  title: "FireplaceX powered by Hearth-OS",
+  title: "Travis Industries powered by Hearth-OS",
   description:
-    "Existing HearthOS dashboard branded for FireplaceX with fake employees, customers, jobs, invoices, dispatch, and dealer workflows.",
+    "Existing HearthOS dashboard branded for Travis Industries with fake employees, customers, jobs, invoices, dispatch, and dealer workflows.",
 };
 
 export default function RootLayout({
