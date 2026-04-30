@@ -9,8 +9,8 @@ export const fireplacexBrand = {
   name: "Travis Industries",
   fullName: "Travis Industries Dealer Ops",
   poweredBy: "powered by Hearth-OS",
-  userName: "Mason",
-  userEmail: "mason@travis-demo.com",
+  userName: "Eric",
+  userEmail: "eric@travis-demo.com",
   tagline: "Premium hearth manufacturing, dealer operations, installs, and service.",
 };
 
