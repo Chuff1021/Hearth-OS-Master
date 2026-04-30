@@ -254,7 +254,8 @@ export async function listJobs(): Promise<Job[]> {
 export async function getJob(id: string): Promise<Job | null> {
   const sql = getSql();
   if (!sql) {
-    return loadFileJobs().find((job) => job.id === id) || null;
+    const jobs = loadFileJobs().map((job) => normalizeJob(job)).filter(isValidJob);
+    return jobs.find((job) => job.id === id) || demoJobs.map((job) => normalizeJob(job)).find((job) => job.id === id) || null;
   }
 
   await ensureTable();
@@ -350,7 +351,8 @@ export async function updateJobRecord(id: string, updates: Partial<Job>): Promis
 
   const sql = getSql();
   if (!sql) {
-    const jobs = loadFileJobs();
+    let jobs = loadFileJobs().map((job) => normalizeJob(job)).filter(isValidJob);
+    if (jobs.length === 0) jobs = demoJobs.map((job) => normalizeJob(job)).filter(isValidJob);
     const idx = jobs.findIndex((job) => job.id === id);
     if (idx === -1) return null;
     jobs[idx] = next;

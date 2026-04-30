@@ -351,3 +351,37 @@ export function demoArAgingResponse(params?: URLSearchParams) {
   const overdueTotal = buckets.d1_30 + buckets.d31_60 + buckets.d61_90 + buckets.d91_plus;
   return { customers, buckets, grandTotal, overdueTotal, invoiceCount: customers.length, customerCount: customers.length };
 }
+
+export const demoTodos = [
+  { id: "todo-ti-001", title: "Confirm venting parts for Megan Carter install", description: "Verify 6-5/8 pipe count, horizontal termination, and black glass media before Mason leaves for the 4415 HO install.", priority: "urgent", status: "pending", dueDate: today(), relatedJobId: "job-fx-001", relatedJobNumber: "TI-J1048", relatedCustomerId: "cust-fx-001", relatedCustomerName: "Megan Carter", relatedCustomerPhone: "(503) 555-0118", assignedTo: "tech-fx-004", assignedToName: "Nina Patel", assignedToEmail: "nina.patel@travis-demo.com", createdBy: "admin", createdByName: "Eric", createdAt: daysAgo(1), updatedAt: daysAgo(0), tags: ["install", "parts", "FireplaceX"] },
+  { id: "todo-ti-002", title: "Send DaVinci finish option packet", description: "Prepare three finish/face/media options for North Ridge Builders before the site measure appointment.", priority: "high", status: "in_progress", dueDate: today(), relatedJobId: "job-fx-002", relatedJobNumber: "TI-J1049", relatedCustomerId: "cust-fx-002", relatedCustomerName: "North Ridge Builders", relatedCustomerPhone: "(971) 555-0199", assignedTo: "tech-fx-006", assignedToName: "Priya Shah", assignedToEmail: "priya.shah@travis-demo.com", createdBy: "admin", createdByName: "Eric", createdAt: daysAgo(2), updatedAt: daysAgo(0), tags: ["DaVinci", "builder", "estimate"] },
+  { id: "todo-ti-003", title: "Order low-stock GSR2 remote kits", description: "Inventory is trending low. Create PO to Travis demo supply for GSR2 remote kits and thermocouple kits.", priority: "medium", status: "pending", dueDate: dateOnlyDaysAgo(-1), assignedTo: "tech-fx-006", assignedToName: "Priya Shah", assignedToEmail: "priya.shah@travis-demo.com", createdBy: "admin", createdByName: "Eric", createdAt: daysAgo(1), updatedAt: daysAgo(1), tags: ["inventory", "purchase-order", "Travis"] },
+  { id: "todo-ti-004", title: "Call Dawson Lake House about Maestro vent path", description: "Confirm chase dimensions and whether the DaVinci Maestro wall is framed before the consult.", priority: "high", status: "pending", dueDate: today(), relatedJobId: "job-fx-004", relatedJobNumber: "TI-J1051", relatedCustomerId: "cust-fx-006", relatedCustomerName: "Dawson Lake House", relatedCustomerPhone: "(541) 555-0168", assignedTo: "tech-fx-001", assignedToName: "Mason Reed", assignedToEmail: "mason.reed@travis-demo.com", createdBy: "admin", createdByName: "Eric", createdAt: daysAgo(0), updatedAt: daysAgo(0), tags: ["DaVinci", "pre-call"] },
+  { id: "todo-ti-005", title: "Collect completion photos for Lopi blower service", description: "Attach before/after photos and serial number photo to Caleb Morris job record.", priority: "medium", status: "completed", dueDate: dateOnlyDaysAgo(0), relatedJobId: "job-fx-003", relatedJobNumber: "TI-J1050", relatedCustomerId: "cust-fx-003", relatedCustomerName: "Caleb Morris", relatedCustomerPhone: "(360) 555-0133", assignedTo: "tech-fx-002", assignedToName: "Elena Cruz", assignedToEmail: "elena.cruz@travis-demo.com", createdBy: "admin", createdByName: "Eric", createdAt: daysAgo(1), updatedAt: daysAgo(0), completedAt: daysAgo(0), tags: ["Lopi", "service", "photos"] },
+  { id: "todo-ti-006", title: "Review A/R before demo meeting", description: "Use A/R Aging and Profit by Job reports to show open balance and margin workflow.", priority: "medium", status: "pending", dueDate: dateOnlyDaysAgo(-2), assignedTo: "tech-fx-006", assignedToName: "Priya Shah", assignedToEmail: "priya.shah@travis-demo.com", createdBy: "admin", createdByName: "Eric", createdAt: daysAgo(0), updatedAt: daysAgo(0), tags: ["reports", "finance", "demo"] },
+  { id: "todo-ti-007", title: "Prep Fire Garden startup checklist", description: "Make sure outdoor burner startup checklist includes leak test, flame pattern tune, and owner handoff.", priority: "low", status: "pending", dueDate: dateOnlyDaysAgo(-3), relatedJobId: "job-fx-005", relatedJobNumber: "TI-J1052", relatedCustomerId: "cust-fx-007", relatedCustomerName: "Willamette Patio Co.", relatedCustomerPhone: "(503) 555-0157", assignedTo: "tech-fx-005", assignedToName: "Owen Gallagher", assignedToEmail: "owen.gallagher@travis-demo.com", createdBy: "admin", createdByName: "Eric", createdAt: daysAgo(1), updatedAt: daysAgo(1), tags: ["Fire Garden", "checklist"] },
+] as const;
+
+export function demoTodosResponse(filters?: { status?: string; priority?: string; assignedTo?: string; relatedJobId?: string; relatedCustomerId?: string; overdue?: boolean }) {
+  const todayIso = today();
+  let todos: any[] = demoTodos.map((todo) => ({ ...todo, tags: [...todo.tags] }));
+  if (filters?.status) todos = todos.filter((t) => t.status === filters.status);
+  if (filters?.priority) todos = todos.filter((t) => t.priority === filters.priority);
+  if (filters?.assignedTo) todos = todos.filter((t) => t.assignedTo === filters.assignedTo);
+  if (filters?.relatedJobId) todos = todos.filter((t) => t.relatedJobId === filters.relatedJobId);
+  if (filters?.relatedCustomerId) todos = todos.filter((t) => t.relatedCustomerId === filters.relatedCustomerId);
+  if (filters?.overdue) todos = todos.filter((t) => !!t.dueDate && t.dueDate < todayIso && t.status !== "completed" && t.status !== "cancelled");
+  return todos;
+}
+
+export function demoTodoStatsResponse() {
+  const todayIso = today();
+  return {
+    total: demoTodos.length,
+    pending: demoTodos.filter((t) => t.status === "pending").length,
+    inProgress: demoTodos.filter((t) => t.status === "in_progress").length,
+    completed: demoTodos.filter((t) => t.status === "completed").length,
+    overdue: (demoTodos as unknown as any[]).filter((t) => !!t.dueDate && t.dueDate < todayIso && t.status !== "completed" && t.status !== "cancelled").length,
+    dueToday: (demoTodos as unknown as any[]).filter((t) => t.dueDate === todayIso && t.status !== "completed" && t.status !== "cancelled").length,
+  };
+}

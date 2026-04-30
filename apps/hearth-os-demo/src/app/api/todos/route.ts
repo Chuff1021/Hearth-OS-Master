@@ -8,6 +8,7 @@ import {
   getTodoStats,
   type Todo 
 } from "@/lib/todos";
+import { demoTodosResponse, demoTodoStatsResponse } from "@/lib/fireplacex-demo";
 
 // GET - Get todos with optional filters
 export async function GET(request: NextRequest) {
@@ -43,8 +44,25 @@ export async function GET(request: NextRequest) {
     const todos = await getTodos(filters);
     return NextResponse.json({ todos });
   } catch (err) {
-    console.error("Failed to get todos:", err);
-    return NextResponse.json({ error: "Failed to get todos" }, { status: 500 });
+    console.error("Failed to get todos, using Travis demo todos:", err);
+    const { searchParams } = new URL(request.url);
+    if (searchParams.get("stats") === "true") return NextResponse.json(demoTodoStatsResponse());
+    const filters = {
+      status: searchParams.get("status") || undefined,
+      priority: searchParams.get("priority") || undefined,
+      assignedTo: searchParams.get("assignedTo") || undefined,
+      relatedJobId: searchParams.get("jobId") || undefined,
+      relatedCustomerId: searchParams.get("customerId") || undefined,
+      overdue: searchParams.get("overdue") === "true" ? true : undefined,
+    };
+    const id = searchParams.get("id");
+    const todos = demoTodosResponse(filters);
+    if (id) {
+      const todo = todos.find((item) => item.id === id);
+      if (!todo) return NextResponse.json({ error: "Todo not found" }, { status: 404 });
+      return NextResponse.json(todo);
+    }
+    return NextResponse.json({ todos });
   }
 }
 
