@@ -119,11 +119,8 @@ export const defaultStoreConfig: StoreConfig = {
       "fireplace parts",
       "Lopi",
       "Fireplace Xtrordinair",
-      "Avalon",
-      "Hearthstone",
-      "Pacific Energy",
-      "Vermont Castings",
-      "Broilmaster",
+      "Hearthstone Stoves",
+      "Broilmaster Premium Grills",
     ],
   },
 };
