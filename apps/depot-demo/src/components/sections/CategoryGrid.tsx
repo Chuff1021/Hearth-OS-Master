@@ -8,7 +8,7 @@ const categoryVisuals: Record<string, string> = {
   inserts: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
   stoves: "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp",
   "bbq-grills": "/depot/mhp-grill-family.jpg",
-  "logs-media": "/depot/Hearth_Classics.jpg",
+  "logs-media": "/depot/RUSTIC_20TIMBERS.jpg",
   "doors-screens": "/depot/Portland_Willamete_doors.jpg",
   "stone-products": "/depot/Boral_Lime_tone-Cedar-1.jpg",
   accessories: "/products-upgraded/accessories/doors-screens/pilgrim-44-inch-forged-iron-fireplace-screen-with-doors-3.webp",
