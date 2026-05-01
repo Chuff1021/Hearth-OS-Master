@@ -287,7 +287,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
           <section className="overflow-hidden border border-[#c8d8e8] bg-[#ffffff] shadow-[0_24px_80px_rgba(32,20,10,0.10)]">
             <div className="px-6 py-7 md:px-8 md:py-8">
               <div className="mx-auto max-w-[920px] text-center">
-                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#fde428]">
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#002e5b]">
                   {isLandingPage ? "Replacement Parts" : "Department Parts"}
                 </p>
                 <h1 className="mt-4 text-[34px] font-black leading-tight tracking-[-0.03em] text-[#201914] md:text-[44px]">
@@ -304,11 +304,11 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                 <div className="mt-8 border border-[#d7cab8] bg-[#ffffff] p-5 text-left shadow-[0_18px_45px_rgba(82,52,23,0.08)]">
                   <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_220px]">
                     <label className="block">
-                      <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fde428]">
+                      <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#002e5b]">
                         Search Part Number, SKU, or Product Name
                       </span>
-                      <div className="mt-3 flex h-14 items-center gap-3 border border-[#fde428]/45 bg-[#ffffff] px-4">
-                        <Search className="h-5 w-5 text-[#fde428]" />
+                      <div className="mt-3 flex h-14 items-center gap-3 border border-[#002e5b]/35 bg-[#ffffff] px-4">
+                        <Search className="h-5 w-5 text-[#002e5b]" />
                         <input
                           value={partsQuery}
                           onChange={(event) => setPartsQuery(event.target.value)}
@@ -320,17 +320,17 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
 
                     <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
                       <div className="border border-[#c8d8e8] bg-[#f7fbff] px-4 py-3">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fde428]">Products</p>
+                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#002e5b]">Products</p>
                         <p className="mt-2 text-2xl font-black text-[#201914]">
                           {partsCatalogStats.indexedProducts.toLocaleString()}
                         </p>
                       </div>
                       <div className="border border-[#c8d8e8] bg-[#f7fbff] px-4 py-3">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fde428]">Brands</p>
+                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#002e5b]">Brands</p>
                         <p className="mt-2 text-2xl font-black text-[#201914]">{partsCatalogStats.indexedBrands}</p>
                       </div>
                       <div className="border border-[#c8d8e8] bg-[#f7fbff] px-4 py-3">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fde428]">Showing</p>
+                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#002e5b]">Showing</p>
                         <p className="mt-2 text-2xl font-black text-[#201914]">{filteredProducts.length.toLocaleString()}</p>
                       </div>
                     </div>
@@ -355,7 +355,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                       )}
                       <Link
                         href={isLandingPage ? "/category/parts" : `/category/${slug}`}
-                        className="ml-2 text-[#fde428] hover:text-[#fde428]"
+                        className="ml-2 font-bold text-[#002e5b] hover:text-[#001f3d]"
                       >
                         Clear filters
                       </Link>
@@ -369,13 +369,13 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
           <section className="mt-8 border border-[#c8d8e8] bg-[#ffffff] shadow-[0_24px_80px_rgba(32,20,10,0.10)] px-6 py-6 md:px-8">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#fde428]">Shop by Brand</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#002e5b]">Shop by Brand</p>
                 <h2 className="mt-2 text-3xl font-black text-[#201914]">Click a brand to filter real parts</h2>
               </div>
               <label className="block w-full max-w-[360px]">
                 <span className="sr-only">Search brands</span>
-                <div className="flex h-12 items-center gap-3 border border-[#fde428]/45 bg-[#ffffff] px-4">
-                  <Search className="h-4 w-4 text-[#fde428]" />
+                <div className="flex h-12 items-center gap-3 border border-[#002e5b]/35 bg-[#ffffff] px-4">
+                  <Search className="h-4 w-4 text-[#002e5b]" />
                   <input
                     value={brandQuery}
                     onChange={(event) => setBrandQuery(event.target.value)}
@@ -400,14 +400,14 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                 >
                   <div
                     className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                      activeBrand === brand.name ? "bg-[#ffffff] text-[#fde428]" : "bg-[#f7fbff] text-[#fde428]"
+                      activeBrand === brand.name ? "bg-[#ffffff] text-[#002e5b]" : "bg-[#f7fbff] text-[#002e5b]"
                     }`}
                   >
                     {toBrandBadge(brand.name)}
                   </div>
                   <div>
                     <p className="text-base font-black">{brand.name}</p>
-                    <p className={`text-xs uppercase tracking-[0.14em] ${activeBrand === brand.name ? "text-white/80" : "text-[#fde428]"}`}>
+                    <p className={`text-xs uppercase tracking-[0.14em] ${activeBrand === brand.name ? "text-black/70" : "text-[#002e5b]"}`}>
                       View parts
                     </p>
                   </div>
@@ -426,7 +426,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
             <section className="mt-8">
               <div className="mb-5 flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#fde428]">Shop by Department</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#002e5b]">Shop by Department</p>
                   <h2 className="mt-2 text-3xl font-black text-[#201914]">Core parts categories</h2>
                 </div>
               </div>
@@ -448,8 +448,8 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                     </div>
                     <div className="px-5 py-5">
                       <h3 className="text-xl font-black text-[#201914]">{item.name}</h3>
-                      <p className="mt-3 text-sm leading-6 text-[#d8c7b2]">{item.description}</p>
-                      <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#fde428]">
+                      <p className="mt-3 text-sm leading-6 text-[#52677d]">{item.description}</p>
+                      <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#002e5b]">
                         Browse department
                       </p>
                     </div>
@@ -462,7 +462,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
           <section className="mt-8 border border-[#c8d8e8] bg-[#ffffff] shadow-[0_24px_80px_rgba(32,20,10,0.10)] px-6 py-6 md:px-8">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#fde428]">Parts Results</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#002e5b]">Parts Results</p>
                 <h2 className="mt-2 text-3xl font-black text-[#201914]">
                   {isLandingPage ? "Imported parts ready to browse" : `${department?.name} results`}
                 </h2>
@@ -499,7 +499,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                         />
                       </div>
                       <div className="px-4 py-4">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#fde428]">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#002e5b]">
                           {product.brand} | {partType}
                         </p>
                         <h3 className="mt-2 line-clamp-3 min-h-[72px] text-base font-black leading-6 text-[#201914]">
@@ -513,7 +513,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                               <p className="text-sm text-[#8a7b6b] line-through">{formatPrice(product.price)}</p>
                             )}
                           </div>
-                          <span className="text-sm font-medium text-[#fde428]">View Part</span>
+                          <span className="text-sm font-bold text-[#002e5b]">View Part</span>
                         </div>
                       </div>
                     </Link>
@@ -527,7 +527,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
             <section className="mt-8 border border-[#c8d8e8] bg-[#ffffff] shadow-[0_24px_80px_rgba(32,20,10,0.10)] px-6 py-6 md:px-8">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#fde428]">Featured Brands</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#002e5b]">Featured Brands</p>
                   <h2 className="mt-2 text-3xl font-black text-[#201914]">Major parts brands</h2>
                 </div>
               </div>
@@ -540,12 +540,12 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                     rel="nofollow"
                     className="flex min-h-[84px] items-center gap-4 border border-[#c8d8e8] bg-[#ffffff] px-4 py-4 transition hover:-translate-y-0.5 hover:border-[#fde428] hover:shadow-[0_18px_45px_rgba(253,228,40,0.12)]"
                   >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f7fbff] text-sm font-bold text-[#fde428]">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f7fbff] text-sm font-bold text-[#002e5b]">
                       {toBrandBadge(brand)}
                     </div>
                     <div>
                       <p className="text-base font-black text-[#201914]">{brand}</p>
-                      <p className="text-xs uppercase tracking-[0.14em] text-[#fde428]">View parts</p>
+                      <p className="text-xs uppercase tracking-[0.14em] text-[#002e5b]">View parts</p>
                     </div>
                   </Link>
                 ))}

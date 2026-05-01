@@ -69,29 +69,29 @@ export function PartsServerIntro({ slug, products }: PartsServerIntroProps) {
       <div className="bg-[#f6efe5] px-4 py-8 text-[#211a15] md:px-6">
         <div className="mx-auto grid max-w-[1480px] gap-6 lg:grid-cols-3">
           <div className="border border-[#c8d8e8] bg-[#ffffff] p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#fde428]">Departments</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#002e5b]">Departments</p>
             <div className="mt-4 grid gap-2">
-              <Link href="/category/parts" className="font-bold text-[#201914] hover:text-[#a54210]">All Fireplace Parts</Link>
+              <Link href="/category/parts" className="font-bold text-[#201914] hover:text-[#002e5b]">All Fireplace Parts</Link>
               {partsDepartments.map((item) => (
-                <Link key={item.slug} href={`/category/${item.slug}`} className="text-sm text-[#52677d] hover:text-[#a54210]">{item.name}</Link>
+                <Link key={item.slug} href={`/category/${item.slug}`} className="text-sm text-[#52677d] hover:text-[#002e5b]">{item.name}</Link>
               ))}
             </div>
           </div>
 
           <div className="border border-[#c8d8e8] bg-[#ffffff] p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#fde428]">Popular brands</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#002e5b]">Popular brands</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {brands.map((brand) => (
-                <Link key={brand} href={`/category/${slug}`} className="rounded-full border border-[#c8d8e8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{brand}</Link>
+                <Link key={brand} href={`/category/${slug}`} className="rounded-full border border-[#c8d8e8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#002e5b] hover:text-[#002e5b]">{brand}</Link>
               ))}
             </div>
           </div>
 
           <div className="border border-[#c8d8e8] bg-[#ffffff] p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#fde428]">Common part types</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#002e5b]">Common part types</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {partsPartTypes.map((partType) => (
-                <Link key={partType} href={`/category/${slug}`} className="rounded-full border border-[#c8d8e8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{partType}</Link>
+                <Link key={partType} href={`/category/${slug}`} className="rounded-full border border-[#c8d8e8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#002e5b] hover:text-[#002e5b]">{partType}</Link>
               ))}
             </div>
           </div>
@@ -99,11 +99,11 @@ export function PartsServerIntro({ slug, products }: PartsServerIntroProps) {
 
         {visibleProducts.length > 0 && (
           <div className="mx-auto mt-6 max-w-[1480px] border border-[#c8d8e8] bg-[#ffffff] p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#fde428]">Sample parts in this section</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#002e5b]">Sample parts in this section</p>
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {visibleProducts.map((product) => (
-                <Link key={product.id} href={`/product/${product.slug}`} className="border border-[#c8d8e8] bg-[#f7fbff] p-4 hover:border-[#a54210]">
-                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#a54210]">{product.brand}</p>
+                <Link key={product.id} href={`/product/${product.slug}`} className="border border-[#c8d8e8] bg-[#f7fbff] p-4 hover:border-[#002e5b]">
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#002e5b]">{product.brand}</p>
                   <h2 className="mt-2 line-clamp-2 text-sm font-black text-[#201914]">{product.name}</h2>
                   <p className="mt-2 text-xs text-[#52677d]">SKU: {product.sku}</p>
                 </Link>

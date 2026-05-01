@@ -98,7 +98,12 @@ function filterProductsForCategory(
       new Map(
         [
           ...base,
-          ...products.filter((product) => product.brand === "Lopi"),
+          ...products.filter(
+            (product) =>
+              product.brand === "Lopi" &&
+              product.categoryId !== "parts" &&
+              !product.subcategoryId?.includes("parts"),
+          ),
         ].map((product) => [product.id, product]),
       ).values(),
     );
