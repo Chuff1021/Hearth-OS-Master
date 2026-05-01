@@ -8,7 +8,7 @@ const showrooms = [
     city: "Naperville, IL 60565",
     phone: "630-778-1781",
     mapQuery: "A Cozy Fireplace 503 W 87th Street Naperville IL 60565",
-    position: "left-[31%] top-[34%]",
+    position: "left-[20%] top-[12%]",
   },
   {
     name: "Crest Hill Showroom",
@@ -17,7 +17,7 @@ const showrooms = [
     city: "Crest Hill, IL 60403",
     phone: "815-725-5556",
     mapQuery: "A Cozy Fireplace 2124 Plainfield Road Crest Hill IL 60403",
-    position: "left-[50%] top-[50%]",
+    position: "left-[27%] top-[72%]",
   },
   {
     name: "New Lenox Showroom",
@@ -26,7 +26,7 @@ const showrooms = [
     city: "New Lenox, IL 60451",
     phone: "815-462-8889",
     mapQuery: "A Cozy Fireplace 390 N Cedar Road New Lenox IL 60451",
-    position: "left-[67%] top-[67%]",
+    position: "left-[79%] top-[87%]",
   },
 ];
 
@@ -34,6 +34,7 @@ export function ShowroomMap() {
   const allLocationsQuery = encodeURIComponent(
     "A Cozy Fireplace Naperville Crest Hill New Lenox IL"
   );
+  const mapBBox = "-88.22,41.48,-87.90,41.76";
 
   return (
     <section className="relative overflow-hidden bg-[#f7fbff] px-4 py-16 md:px-6 md:py-20">
@@ -91,43 +92,42 @@ export function ShowroomMap() {
         </div>
 
         <div className="overflow-hidden border border-[#002e5b]/20 bg-white shadow-[0_28px_90px_rgba(0,46,91,0.18)]">
-          <div className="relative min-h-[560px] bg-[#dcecf7]">
-            <div className="absolute inset-0 opacity-80 [background-image:linear-gradient(90deg,rgba(0,46,91,0.08)_1px,transparent_1px),linear-gradient(rgba(0,46,91,0.08)_1px,transparent_1px)] [background-size:56px_56px]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_28%,rgba(253,228,40,0.24),transparent_22%),radial-gradient(circle_at_68%_70%,rgba(0,46,91,0.14),transparent_26%)]" />
+          <div className="relative min-h-[560px] bg-[#d9e6ee]">
+            <iframe
+              title="A Cozy Fireplace showroom map"
+              src={`https://www.openstreetmap.org/export/embed.html?bbox=${encodeURIComponent(mapBBox)}&layer=mapnik`}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full border-0 grayscale-[15%] saturate-[0.95]"
+            />
 
-            <div className="absolute left-[8%] right-[10%] top-[42%] h-3 -rotate-[9deg] rounded-full bg-white/85 shadow-[0_0_0_1px_rgba(0,46,91,0.16)]" />
-            <div className="absolute bottom-[18%] left-[20%] right-[12%] h-3 rotate-[16deg] rounded-full bg-white/85 shadow-[0_0_0_1px_rgba(0,46,91,0.16)]" />
-            <div className="absolute bottom-[12%] left-[47%] top-[12%] w-3 rotate-[5deg] rounded-full bg-white/85 shadow-[0_0_0_1px_rgba(0,46,91,0.16)]" />
-            <div className="absolute left-[18%] top-[18%] rounded-full bg-white/80 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#52677d]">Naperville</div>
-            <div className="absolute left-[50%] top-[38%] rounded-full bg-white/80 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#52677d]">Crest Hill</div>
-            <div className="absolute bottom-[20%] right-[12%] rounded-full bg-white/80 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#52677d]">New Lenox</div>
-
-            {showrooms.map((showroom) => (
-              <a
-                key={showroom.name}
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(showroom.mapQuery)}`}
-                target="_blank"
-                rel="noreferrer"
-                className={`group absolute ${showroom.position} z-10 -translate-x-1/2 -translate-y-full`}
-                aria-label={`Open directions to ${showroom.name}`}
-              >
-                <div className="relative flex flex-col items-center">
-                  <div className="absolute top-8 h-10 w-10 rounded-full bg-[#002e5b]/18 blur-md transition group-hover:bg-[#002e5b]/28" />
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-4 border-white bg-[#fde428] text-[#002e5b] shadow-[0_16px_40px_rgba(0,46,91,0.35)] transition group-hover:-translate-y-1 group-hover:scale-105">
-                    <MapPin className="h-7 w-7 fill-[#002e5b]" />
+            <div className="pointer-events-none absolute inset-0">
+              {showrooms.map((showroom) => (
+                <a
+                  key={showroom.name}
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(showroom.mapQuery)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`pointer-events-auto group absolute ${showroom.position} z-10 -translate-x-1/2 -translate-y-full`}
+                  aria-label={`Open directions to ${showroom.name}`}
+                >
+                  <div className="relative flex flex-col items-center">
+                    <div className="absolute top-8 h-11 w-11 rounded-full bg-[#002e5b]/25 blur-md" />
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full border-4 border-white bg-[#fde428] text-[#002e5b] shadow-[0_16px_40px_rgba(0,46,91,0.42)] transition group-hover:-translate-y-1 group-hover:scale-105">
+                      <MapPin className="h-7 w-7 fill-[#002e5b]" />
+                    </div>
+                    <div className="mt-2 whitespace-nowrap border border-[#002e5b]/15 bg-white px-3 py-2 text-center shadow-[0_12px_30px_rgba(0,46,91,0.22)]">
+                      <p className="text-sm font-black text-[#001f3d]">{showroom.shortName}</p>
+                      <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#002e5b]">A Cozy Fireplace</p>
+                    </div>
                   </div>
-                  <div className="mt-2 whitespace-nowrap border border-[#002e5b]/15 bg-white px-3 py-2 text-center shadow-[0_12px_30px_rgba(0,46,91,0.18)]">
-                    <p className="text-sm font-black text-[#001f3d]">{showroom.shortName}</p>
-                    <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#002e5b]">A Cozy Fireplace</p>
-                  </div>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
+            </div>
 
             <div className="absolute bottom-5 left-5 right-5 flex flex-col gap-3 border border-[#002e5b]/15 bg-white/95 p-4 shadow-[0_18px_45px_rgba(0,46,91,0.16)] sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-[#002e5b]">Showroom Map</p>
-                <p className="mt-1 text-sm font-semibold text-[#52677d]">Three marked A Cozy Fireplace locations in Chicago’s western and southwest suburbs.</p>
+                <p className="mt-1 text-sm font-semibold text-[#52677d]">Real map view with fixed pins for all three A Cozy Fireplace locations.</p>
               </div>
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${allLocationsQuery}`}
