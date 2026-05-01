@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { seoMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = seoMetadata({
-  title: "Contact The Depot Fireplace and Stove Center",
-  description: "Contact The Depot Fireplace and Stove Center for fireplace selection, replacement parts, installation planning, service questions, and showroom support in Tilton, IL.",
+  title: "Contact A Cozy Fireplace",
+  description: "Contact A Cozy Fireplace for fireplace selection, replacement parts, installation planning, service questions, and showroom support in Naperville, IL.",
   path: "/contact",
 });
 

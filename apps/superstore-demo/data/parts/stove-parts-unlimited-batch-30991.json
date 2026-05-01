@@ -348,7 +348,7 @@
     "productId": "43660",
     "sku": "SRV4200-111",
     "slug": "srv4200-111",
-    "name": "Dimplex On-Device Controls (SRV4200-111)",
+    "name": "SimpliFire On-Device Controls (SRV4200-111)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -357,7 +357,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Inception Parts",
-      "Dimplex On-Device Controls (SRV4200-111)"
+      "SimpliFire On-Device Controls (SRV4200-111)"
     ],
     "price": 127,
     "priceDisplay": "$127.00",
@@ -365,7 +365,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Control & Circuit Boards",
-    "description": "Replacement on-device controls for Dimplex electric fireplaces. OEM HHT part # SRV4200-111",
+    "description": "Replacement on-device controls for SimpliFire electric fireplaces. OEM HHT part # SRV4200-111",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-on-device-controls-srv4200-111-p/srv4200-111.htm"
   },
@@ -1262,7 +1262,7 @@
     "productId": "43700",
     "sku": "HDWR-FORMAT",
     "slug": "hdwr-format",
-    "name": "Dimplex 36\" Format Series Hardware Kit (HDWR-FORMAT)",
+    "name": "SimpliFire 36\" Format Series Hardware Kit (HDWR-FORMAT)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -1271,7 +1271,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Format Series Parts",
-      "Dimplex 36\" Format Series Hardware Kit (HDWR-FORMAT)"
+      "SimpliFire 36\" Format Series Hardware Kit (HDWR-FORMAT)"
     ],
     "price": 30,
     "priceDisplay": "$30.00",
@@ -1279,7 +1279,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Hardware",
-    "description": "Replacement appliance and mantle hardware kit for Dimplex electric fireplaces. OEM HHT part # HDWR-FORMAT",
+    "description": "Replacement appliance and mantle hardware kit for SimpliFire electric fireplaces. OEM HHT part # HDWR-FORMAT",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-36-format-series-hardware-kit-hdwr-format-p/hdwr-format.htm"
   },
@@ -2293,7 +2293,7 @@
     "productId": "43426",
     "sku": "SRV2326-174",
     "slug": "srv2326-174",
-    "name": "Dimplex SF-INC36 Moons Power Supply (SRV2326-174)",
+    "name": "SimpliFire SF-INC36 Moons Power Supply (SRV2326-174)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -2302,7 +2302,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Inception Parts",
-      "Dimplex SF-INC36 Moons Power Supply (SRV2326-174)"
+      "SimpliFire SF-INC36 Moons Power Supply (SRV2326-174)"
     ],
     "price": 251,
     "priceDisplay": "$251.00",
@@ -2310,7 +2310,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Power Supplies",
-    "description": "Replacement Moons power supply for Dimplex electric fireplaces. OEM HHT part # SRV2326-174",
+    "description": "Replacement Moons power supply for SimpliFire electric fireplaces. OEM HHT part # SRV2326-174",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-sf-inc36-moons-power-supply-srv2326-174-p/srv2326-174.htm"
   },
@@ -2763,7 +2763,7 @@
     "productId": "43686",
     "sku": "FRONT-OD55",
     "slug": "front-od55",
-    "name": "Dimplex 55\" Forum Front (FRONT-OD55)",
+    "name": "SimpliFire 55\" Forum Front (FRONT-OD55)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -2772,7 +2772,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Forum Series Parts",
-      "Dimplex 55\" Forum Front (FRONT-OD55)"
+      "SimpliFire 55\" Forum Front (FRONT-OD55)"
     ],
     "price": 290,
     "priceDisplay": "$290.00",
@@ -2780,7 +2780,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Decorative Fronts & Surrounds",
-    "description": "Replacement front for Dimplex outdoor electric fireplaces. OEM HHT part # FRONT-OD55",
+    "description": "Replacement front for SimpliFire outdoor electric fireplaces. OEM HHT part # FRONT-OD55",
     "imageUrl": "/products/parts/front-od55.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-55-forum-front-front-od55-p/front-od55.htm"
   },
@@ -2860,16 +2860,16 @@
     "productId": "44216",
     "sku": "01-00140",
     "slug": "01-00140",
-    "name": "Dimplex Orion Traditional Projector Board (01-00140)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames Orion Traditional Projector Board (01-00140)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
+      "Modern Flames Electric Fireplace Parts",
       "Orion Series Parts",
-      "Dimplex Orion Traditional Projector Board (01-00140)"
+      "Modern Flames Orion Traditional Projector Board (01-00140)"
     ],
     "price": 40,
     "priceDisplay": "$40.00",
@@ -2877,7 +2877,7 @@
     "inStock": true,
     "stock": 2,
     "partType": "Control & Circuit Boards",
-    "description": "Replacement projector board for Dimplex electric fireplaces. OEM Dimplex part # 01-00140",
+    "description": "Replacement projector board for Modern Flames electric fireplaces. OEM Modern Flames part # 01-00140",
     "imageUrl": "/products/parts/01-00140.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-orion-traditional-projector-board-01-00140-p/01-00140.htm"
   },
@@ -2981,7 +2981,7 @@
     "productId": "43494",
     "sku": "SRV2564-150",
     "slug": "srv2564-150",
-    "name": "Monessen & Dimplex US-ACM Module (SRV2564-150)",
+    "name": "Monessen & SimpliFire US-ACM Module (SRV2564-150)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -2990,7 +2990,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Inception Parts",
-      "Monessen & Dimplex US-ACM Module (SRV2564-150)"
+      "Monessen & SimpliFire US-ACM Module (SRV2564-150)"
     ],
     "price": 151,
     "priceDisplay": "$151.00",
@@ -2998,7 +2998,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Control Modules",
-    "description": "Replacement US-ACM module for Monessen gas fireplaces and Dimplex electric stoves. OEM HHT part # SRV2564-150",
+    "description": "Replacement US-ACM module for Monessen gas fireplaces and SimpliFire electric stoves. OEM HHT part # SRV2564-150",
     "imageUrl": "/products/parts/srv2564-150.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/monessen-simplifire-us-acm-module-srv2564-150-p/srv2564-150.htm"
   },
@@ -3054,15 +3054,15 @@
     "productId": "44209",
     "sku": "MF-PRO-MTC",
     "slug": "mf-pro-mtc",
-    "name": "Dimplex LPM/LPS Touch Control Panel (MF-PRO-MTC)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames LPM/LPS Touch Control Panel (MF-PRO-MTC)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
-      "Dimplex LPM/LPS Touch Control Panel (MF-PRO-MTC)"
+      "Modern Flames Electric Fireplace Parts",
+      "Modern Flames LPM/LPS Touch Control Panel (MF-PRO-MTC)"
     ],
     "price": 16,
     "priceDisplay": "$16.00",
@@ -3070,7 +3070,7 @@
     "inStock": true,
     "stock": 3,
     "partType": "Control & Circuit Boards",
-    "description": "Replacement touch control panel for Dimplex electric fireplaces. OEM Dimplex part #  MF-PRO-MTC",
+    "description": "Replacement touch control panel for Modern Flames electric fireplaces. OEM Modern Flames part #  MF-PRO-MTC",
     "imageUrl": "/products/parts/mf-pro-mtc.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-lpm-lps-touch-control-panel-mf-pro-mtc-p/mf-pro-mtc.htm"
   },
@@ -3372,7 +3372,7 @@
     "productId": "43852",
     "sku": "SF-PLUGIN",
     "slug": "sf-plugin",
-    "name": "Dimplex Power Cord (SF-PLUGIN)",
+    "name": "SimpliFire Power Cord (SF-PLUGIN)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -3381,7 +3381,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Scion Series Parts",
-      "Dimplex Power Cord (SF-PLUGIN)"
+      "SimpliFire Power Cord (SF-PLUGIN)"
     ],
     "price": 34,
     "priceDisplay": "$34.00",
@@ -3389,7 +3389,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Cords & Power Receptacles",
-    "description": "Replacement power cord for Dimplex electric fireplaces. OEM HHT part # SF-PLUGIN",
+    "description": "Replacement power cord for SimpliFire electric fireplaces. OEM HHT part # SF-PLUGIN",
     "imageUrl": "/products/parts/sf-plugin.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-power-cord-sf-plugin-p/sf-plugin.htm"
   },
@@ -4014,15 +4014,15 @@
     "productId": "44199",
     "sku": "01-00070",
     "slug": "01-00070",
-    "name": "Dimplex Landscape Pro Multi & Slim Step Motor (01-00070)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames Landscape Pro Multi & Slim Step Motor (01-00070)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
-      "Dimplex Landscape Pro Multi & Slim Step Motor (01-00070)"
+      "Modern Flames Electric Fireplace Parts",
+      "Modern Flames Landscape Pro Multi & Slim Step Motor (01-00070)"
     ],
     "price": 10,
     "priceDisplay": "$10.00",
@@ -4030,7 +4030,7 @@
     "inStock": true,
     "stock": 3,
     "partType": "Heating Elements",
-    "description": "Replacement step motor for Dimplex electric fireplaces. OEM Dimplex part # 01-00070",
+    "description": "Replacement step motor for Modern Flames electric fireplaces. OEM Modern Flames part # 01-00070",
     "imageUrl": "/products/parts/01-00070.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-landscape-pro-multi-slim-step-motor-01-00070-p/01-00070.htm"
   },
@@ -4757,16 +4757,16 @@
     "productId": "44221",
     "sku": "01-00103",
     "slug": "01-00103",
-    "name": "Dimplex Orion Traditional Flame Processor Board (01-00103)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames Orion Traditional Flame Processor Board (01-00103)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
+      "Modern Flames Electric Fireplace Parts",
       "Orion Series Parts",
-      "Dimplex Orion Traditional Flame Processor Board (01-00103)"
+      "Modern Flames Orion Traditional Flame Processor Board (01-00103)"
     ],
     "price": 410,
     "priceDisplay": "$410.00",
@@ -4774,7 +4774,7 @@
     "inStock": true,
     "stock": 1,
     "partType": "Control & Circuit Boards",
-    "description": "Replacement flame processor board for Dimplex electric fireplaces. OEM Dimplex part # 01-00103",
+    "description": "Replacement flame processor board for Modern Flames electric fireplaces. OEM Modern Flames part # 01-00103",
     "imageUrl": "/products/parts/01-00103.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-orion-traditional-flame-processor-board-01-00103-p/01-00103.htm"
   },
@@ -4807,15 +4807,15 @@
     "productId": "44204",
     "sku": "01-00004",
     "slug": "01-00004",
-    "name": "Dimplex Spectrum Slimline LED Ember Light Section (01-00004)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames Spectrum Slimline LED Ember Light Section (01-00004)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
-      "Dimplex Spectrum Slimline LED Ember Light Section (01-00004)"
+      "Modern Flames Electric Fireplace Parts",
+      "Modern Flames Spectrum Slimline LED Ember Light Section (01-00004)"
     ],
     "price": 10,
     "priceDisplay": "$10.00",
@@ -4823,7 +4823,7 @@
     "inStock": true,
     "stock": 1,
     "partType": "Lights & Bulbs",
-    "description": "Replacement LED ember light section for Dimplex electric fireplaces. OEM Dimplex part # 01-00004",
+    "description": "Replacement LED ember light section for Modern Flames electric fireplaces. OEM Modern Flames part # 01-00004",
     "imageUrl": "/products/parts/01-00004.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-spectrum-slimline-led-ember-light-section-01-00004-p/01-00004.htm"
   },
@@ -4831,7 +4831,7 @@
     "productId": "43301",
     "sku": "SRV4200-193",
     "slug": "srv4200-193",
-    "name": "Dimplex SF-INC36 USB A to B Cable (SRV4200-193)",
+    "name": "SimpliFire SF-INC36 USB A to B Cable (SRV4200-193)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -4840,7 +4840,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Inception Parts",
-      "Dimplex SF-INC36 USB A to B Cable (SRV4200-193)"
+      "SimpliFire SF-INC36 USB A to B Cable (SRV4200-193)"
     ],
     "price": 74,
     "priceDisplay": "$74.00",
@@ -4848,7 +4848,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Wires & Wire Harnesses",
-    "description": "Replacement USB A to B cable for Dimplex electric fireplaces. OEM HHT part # SRV4200-193",
+    "description": "Replacement USB A to B cable for SimpliFire electric fireplaces. OEM HHT part # SRV4200-193",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-sf-inc36-usb-a-to-b-cable-srv4200-193-p/srv4200-193.htm"
   },
@@ -5373,7 +5373,7 @@
     "productId": "43703",
     "sku": "LED-OD43",
     "slug": "led-od43",
-    "name": "Dimplex 43\" Forum LED Assembly (LED-OD43)",
+    "name": "SimpliFire 43\" Forum LED Assembly (LED-OD43)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -5382,7 +5382,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Forum Series Parts",
-      "Dimplex 43\" Forum LED Assembly (LED-OD43)"
+      "SimpliFire 43\" Forum LED Assembly (LED-OD43)"
     ],
     "price": 287,
     "priceDisplay": "$287.00",
@@ -5390,7 +5390,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Lights & Bulbs",
-    "description": "Replacement LED assembly for Dimplex outdoor electric fireplaces. OEM HHT part # LED-OD43",
+    "description": "Replacement LED assembly for SimpliFire outdoor electric fireplaces. OEM HHT part # LED-OD43",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-43-forum-led-assembly-led-od43-p/led-od43.htm"
   },
@@ -5833,7 +5833,7 @@
     "productId": "43307",
     "sku": "SRV4200-220",
     "slug": "srv4200-220",
-    "name": "Dimplex SF-INC36 TECO-SIL Media (SRV4200-220)",
+    "name": "SimpliFire SF-INC36 TECO-SIL Media (SRV4200-220)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -5842,7 +5842,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Inception Parts",
-      "Dimplex SF-INC36 TECO-SIL Media (SRV4200-220)"
+      "SimpliFire SF-INC36 TECO-SIL Media (SRV4200-220)"
     ],
     "price": 144,
     "priceDisplay": "$144.00",
@@ -5850,7 +5850,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Logs & Media",
-    "description": "Replacement TECO-SIL media for Dimplex electric fireplaces. OEM HHT part # SRV4200-220",
+    "description": "Replacement TECO-SIL media for SimpliFire electric fireplaces. OEM HHT part # SRV4200-220",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-sf-inc36-teco-sil-media-srv4200-220-p/srv4200-220.htm"
   },
@@ -6006,7 +6006,7 @@
     "productId": "43723",
     "sku": "PANELS-OD",
     "slug": "panels-od",
-    "name": "Dimplex Forum Series Panels (PANELS-OD)",
+    "name": "SimpliFire Forum Series Panels (PANELS-OD)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -6015,7 +6015,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Forum Series Parts",
-      "Dimplex Forum Series Panels (PANELS-OD)"
+      "SimpliFire Forum Series Panels (PANELS-OD)"
     ],
     "price": 37,
     "priceDisplay": "$37.00",
@@ -6023,7 +6023,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Panels & Trim",
-    "description": "Replacement set of 2 panels for Dimplex outdoor electric fireplaces. OEM HHT part # PANELS-OD",
+    "description": "Replacement set of 2 panels for SimpliFire outdoor electric fireplaces. OEM HHT part # PANELS-OD",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-forum-series-panels-panels-od-p/panels-od.htm"
   },
@@ -7397,15 +7397,15 @@
     "productId": "44208",
     "sku": "01-00071",
     "slug": "01-00071",
-    "name": "Dimplex LPM/LPS Flame LED Light Section (01-00071)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames LPM/LPS Flame LED Light Section (01-00071)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
-      "Dimplex LPM/LPS Flame LED Light Section (01-00071)"
+      "Modern Flames Electric Fireplace Parts",
+      "Modern Flames LPM/LPS Flame LED Light Section (01-00071)"
     ],
     "price": 37.5,
     "priceDisplay": "$37.50",
@@ -7413,7 +7413,7 @@
     "inStock": true,
     "stock": 2,
     "partType": "Lights & Bulbs",
-    "description": "Replacement LED flame light section for Dimplex electric fireplaces. OEM Dimplex part # 01-00071",
+    "description": "Replacement LED flame light section for Modern Flames electric fireplaces. OEM Modern Flames part # 01-00071",
     "imageUrl": "/products/parts/01-00071.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-lpm-lps-flame-led-light-section-01-00071-p/01-00071.htm"
   },
@@ -7810,16 +7810,16 @@
     "productId": "44217",
     "sku": "01-00077",
     "slug": "01-00077",
-    "name": "Dimplex LPM/LPS Main Circuit Board (01-00077)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames LPM/LPS Main Circuit Board (01-00077)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
+      "Modern Flames Electric Fireplace Parts",
       "Orion Series Parts",
-      "Dimplex LPM/LPS Main Circuit Board (01-00077)"
+      "Modern Flames LPM/LPS Main Circuit Board (01-00077)"
     ],
     "price": 152,
     "priceDisplay": "$152.00",
@@ -7827,7 +7827,7 @@
     "inStock": true,
     "stock": 1,
     "partType": "Control & Circuit Boards",
-    "description": "Replacement circuit board for Dimplex electric fireplaces. OEM Dimplex part # 01-00077",
+    "description": "Replacement circuit board for Modern Flames electric fireplaces. OEM Modern Flames part # 01-00077",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-lpm-lps-main-circuit-board-01-00077-p/01-00077.htm"
   },
@@ -7957,7 +7957,7 @@
     "productId": "43297",
     "sku": "SRV4200-175",
     "slug": "srv4200-175",
-    "name": "Dimplex SF-INC36 Basic ECM Assembly (SRV4200-175)",
+    "name": "SimpliFire SF-INC36 Basic ECM Assembly (SRV4200-175)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -7966,7 +7966,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Inception Parts",
-      "Dimplex SF-INC36 Basic ECM Assembly (SRV4200-175)"
+      "SimpliFire SF-INC36 Basic ECM Assembly (SRV4200-175)"
     ],
     "price": 197,
     "priceDisplay": "$197.00",
@@ -7974,7 +7974,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Control & Circuit Boards",
-    "description": "Replacement basic ECM assembly for Dimplex electric fireplaces. OEM HHT part # SRV4200-175",
+    "description": "Replacement basic ECM assembly for SimpliFire electric fireplaces. OEM HHT part # SRV4200-175",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-sf-inc36-basic-ecm-assembly-srv4200-175-p/srv4200-175.htm"
   },
@@ -8176,7 +8176,7 @@
     "productId": "43302",
     "sku": "SRV4200-194",
     "slug": "srv4200-194",
-    "name": "Dimplex SF-INC36 4K HDMI Cable (SRV4200-194)",
+    "name": "SimpliFire SF-INC36 4K HDMI Cable (SRV4200-194)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -8185,7 +8185,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Inception Parts",
-      "Dimplex SF-INC36 4K HDMI Cable (SRV4200-194)"
+      "SimpliFire SF-INC36 4K HDMI Cable (SRV4200-194)"
     ],
     "price": 70,
     "priceDisplay": "$70.00",
@@ -8193,7 +8193,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Wires & Wire Harnesses",
-    "description": "Replacement 4K HDMI cable for Dimplex electric fireplaces. OEM HHT part # SRV4200-194",
+    "description": "Replacement 4K HDMI cable for SimpliFire electric fireplaces. OEM HHT part # SRV4200-194",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-sf-inc36-4k-hdmi-cable-srv4200-194-p/srv4200-194.htm"
   },
@@ -8446,7 +8446,7 @@
     "productId": "43676",
     "sku": "ACCENT-OD43",
     "slug": "accent-od43",
-    "name": "Dimplex 43\" Forum Accent LED (ACCENT-OD43)",
+    "name": "SimpliFire 43\" Forum Accent LED (ACCENT-OD43)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -8455,7 +8455,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Forum Series Parts",
-      "Dimplex 43\" Forum Accent LED (ACCENT-OD43)"
+      "SimpliFire 43\" Forum Accent LED (ACCENT-OD43)"
     ],
     "price": 74,
     "priceDisplay": "$74.00",
@@ -8463,7 +8463,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Lights & Bulbs",
-    "description": "Replacement accent LED strip for Dimplex outdoor electric fireplaces. OEM HHT part # ACCENT-OD43",
+    "description": "Replacement accent LED strip for SimpliFire outdoor electric fireplaces. OEM HHT part # ACCENT-OD43",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-43-forum-accent-led-accent-od43-p/accent-od43.htm"
   },
@@ -9086,15 +9086,15 @@
     "productId": "44153",
     "sku": "01-00075",
     "slug": "01-00075",
-    "name": "Dimplex LPM & LPS Series Remote (01-00075)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames LPM & LPS Series Remote (01-00075)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
-      "Dimplex LPM & LPS Series Remote (01-00075)"
+      "Modern Flames Electric Fireplace Parts",
+      "Modern Flames LPM & LPS Series Remote (01-00075)"
     ],
     "price": 61.5,
     "priceDisplay": "$61.50",
@@ -9102,7 +9102,7 @@
     "inStock": true,
     "stock": 2,
     "partType": "Remotes & Receivers",
-    "description": "Replacement remote for Dimplex electric fireplaces. OEM Dimplex part # 01-00075",
+    "description": "Replacement remote for Modern Flames electric fireplaces. OEM Modern Flames part # 01-00075",
     "imageUrl": "/products/parts/01-00075.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-lpm-lps-series-remote-01-00075-p/01-00075.htm"
   },
@@ -9158,7 +9158,7 @@
     "productId": "43837",
     "sku": "REMOTE-GI32",
     "slug": "remote-gi32",
-    "name": "Dimplex GI-32-ZC Remote (REMOTE-GI32)",
+    "name": "SimpliFire GI-32-ZC Remote (REMOTE-GI32)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -9167,7 +9167,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Electric Insert Series Parts",
-      "Dimplex GI-32-ZC Remote (REMOTE-GI32)"
+      "SimpliFire GI-32-ZC Remote (REMOTE-GI32)"
     ],
     "price": 16,
     "priceDisplay": "$16.00",
@@ -9175,7 +9175,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Remotes & Receivers",
-    "description": "Replacement remote for Dimplex electric fireplaces. OEM HHT part # REMOTE-GI32",
+    "description": "Replacement remote for SimpliFire electric fireplaces. OEM HHT part # REMOTE-GI32",
     "imageUrl": "/products/parts/remote-gi32.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-gi-32-zc-remote-remote-gi32-p/remote-gi32.htm"
   },
@@ -9602,7 +9602,7 @@
     "productId": "43727",
     "sku": "PLUGIN-OD",
     "slug": "plugin-od",
-    "name": "Dimplex Forum Series Power Cord (PLUGIN-OD)",
+    "name": "SimpliFire Forum Series Power Cord (PLUGIN-OD)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -9611,7 +9611,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Forum Series Parts",
-      "Dimplex Forum Series Power Cord (PLUGIN-OD)"
+      "SimpliFire Forum Series Power Cord (PLUGIN-OD)"
     ],
     "price": 172,
     "priceDisplay": "$172.00",
@@ -9619,7 +9619,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Cords & Power Receptacles",
-    "description": "Replacement power cord for Dimplex outdoor electric fireplaces. OEM HHT part # PLUGIN-OD",
+    "description": "Replacement power cord for SimpliFire outdoor electric fireplaces. OEM HHT part # PLUGIN-OD",
     "imageUrl": "/products/parts/plugin-od.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-forum-series-power-cord-plugin-od-p/plugin-od.htm"
   },
@@ -9652,7 +9652,7 @@
     "productId": "43714",
     "sku": "LOGS-OD",
     "slug": "logs-od",
-    "name": "Dimplex Forum Series Log Set (LOGS-OD)",
+    "name": "SimpliFire Forum Series Log Set (LOGS-OD)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -9661,7 +9661,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Forum Series Parts",
-      "Dimplex Forum Series Log Set (LOGS-OD)"
+      "SimpliFire Forum Series Log Set (LOGS-OD)"
     ],
     "price": 378,
     "priceDisplay": "$378.00",
@@ -9669,7 +9669,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Logs & Media",
-    "description": "Replacement log set for Dimplex outdoor electric fireplaces. OEM HHT part # LOGS-OD",
+    "description": "Replacement log set for SimpliFire outdoor electric fireplaces. OEM HHT part # LOGS-OD",
     "imageUrl": "/products/parts/logs-od.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-forum-series-log-set-logs-od-p/logs-od.htm"
   },
@@ -10731,16 +10731,16 @@
     "productId": "44172",
     "sku": "01-00110",
     "slug": "01-00110",
-    "name": "Dimplex Orion Series Remote (01-00110)",
-    "brand": "Dimplex Electric",
+    "name": "Modern Flames Orion Series Remote (01-00110)",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
+      "Modern Flames Electric Fireplace Parts",
       "Orion Series Parts",
-      "Dimplex Orion Series Remote (01-00110)"
+      "Modern Flames Orion Series Remote (01-00110)"
     ],
     "price": 55,
     "priceDisplay": "$55.00",
@@ -10748,7 +10748,7 @@
     "inStock": true,
     "stock": 5,
     "partType": "Remotes & Receivers",
-    "description": "Replacement remote for Dimplex electric fireplaces. OEM Dimplex part # 01-00110",
+    "description": "Replacement remote for Modern Flames electric fireplaces. OEM Modern Flames part # 01-00110",
     "imageUrl": "",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-flames-orion-series-remote-01-00110-p/01-00110.htm"
   },
@@ -11171,7 +11171,7 @@
     "productId": "43680",
     "sku": "CRYSTAL-OD",
     "slug": "crystal-od",
-    "name": "Dimplex Forum Crystal Media (CRYSTAL-OD)",
+    "name": "SimpliFire Forum Crystal Media (CRYSTAL-OD)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -11180,7 +11180,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Forum Series Parts",
-      "Dimplex Forum Crystal Media (CRYSTAL-OD)"
+      "SimpliFire Forum Crystal Media (CRYSTAL-OD)"
     ],
     "price": 299,
     "priceDisplay": "$299.00",
@@ -11188,7 +11188,7 @@
     "inStock": true,
     "stock": null,
     "partType": "Logs & Media",
-    "description": "Replacement large and small clear crystal media for Dimplex outdoor electric fireplaces. OEM HHT part # CRYSTAL-OD",
+    "description": "Replacement large and small clear crystal media for SimpliFire outdoor electric fireplaces. OEM HHT part # CRYSTAL-OD",
     "imageUrl": "/products/parts/crystal-od.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-forum-crystal-media-crystal-od-p/crystal-od.htm"
   },
@@ -11909,13 +11909,13 @@
     "sku": "MFPS2",
     "slug": "mfps2",
     "name": "Modern Landscape Pro Slim and Multi Series Flames Power Switch (MFPS2)",
-    "brand": "Dimplex Electric",
+    "brand": "Modern Flames Electric",
     "department": "Electric Fireplace Parts",
-    "breadcrumbBrand": "Dimplex Electric Fireplace Parts",
+    "breadcrumbBrand": "Modern Flames Electric Fireplace Parts",
     "breadcrumbs": [
       "Home",
       "Electric Fireplace Parts",
-      "Dimplex Electric Fireplace Parts",
+      "Modern Flames Electric Fireplace Parts",
       "Modern Landscape Pro Slim and Multi Series Flames Power Switch (MFPS2)"
     ],
     "price": 10,
@@ -11924,7 +11924,7 @@
     "inStock": true,
     "stock": 2,
     "partType": "Switches",
-    "description": "Replacement power switch for Dimplex electric fireplaces. OEM Dimplex part # MFPS2",
+    "description": "Replacement power switch for Modern Flames electric fireplaces. OEM Modern Flames part # MFPS2",
     "imageUrl": "/products/parts/mfps2.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/modern-landscape-pro-slim-and-multi-series-flames-power-switch-mfps2-p/mfps2.htm"
   },

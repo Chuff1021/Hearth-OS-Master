@@ -1,0 +1,169 @@
+[
+  {
+    "sku": "SPF-SF-INS30",
+    "name": "Dimplex 30 Inch Electric Fireplace Insert",
+    "slug": "spf-sf-ins30",
+    "price": 1299.99,
+    "salePrice": 1059,
+    "brand": "Dimplex",
+    "imageUrl": "/products/electric-inserts/spf-sf-ins30-357095b6.webp",
+    "productUrl": "https://www.efireplacestore.com/spf-sf-ins30.html",
+    "rating": 5,
+    "reviewCount": 2,
+    "isBestSeller": true
+  },
+  {
+    "sku": "SPF-SF-INS35",
+    "name": "Dimplex 35 Inch Electric Fireplace Insert",
+    "slug": "spf-sf-ins35",
+    "price": 1569.99,
+    "salePrice": 1279,
+    "brand": "Dimplex",
+    "imageUrl": "/products/electric-inserts/spf-sf-ins35-357095b6.webp",
+    "productUrl": "https://www.efireplacestore.com/spf-sf-ins35.html",
+    "rating": 4,
+    "reviewCount": 1,
+    "isBestSeller": true
+  },
+  {
+    "sku": "SPF-SF-INS25",
+    "name": "Dimplex 25 Inch Electric Fireplace Insert",
+    "slug": "spf-sf-ins25",
+    "price": 1179.99,
+    "salePrice": 959,
+    "brand": "Dimplex",
+    "imageUrl": "/products/electric-inserts/spf-sf-ins25-357095b6.webp",
+    "productUrl": "https://www.efireplacestore.com/spf-sf-ins25.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false
+  },
+  {
+    "sku": "DIM-XHD33G",
+    "name": "Dimplex 33 Inch Multi-Fire XHD Linear Electric Fireplace Insert with Fire Glass Kit",
+    "slug": "dim-xhd33g",
+    "price": 1229.99,
+    "salePrice": 998.99,
+    "brand": "Dimplex",
+    "imageUrl": "/products-upgraded/electric-inserts/dim-xhd33g.webp",
+    "productUrl": "https://www.efireplacestore.com/dim-xhd33g.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/dim-xhd33g.webp"
+    ]
+  },
+  {
+    "sku": "SPF-GI-32-ZC",
+    "name": "Simplifire 31 Inch Electric Fireplace Insert",
+    "slug": "spf-gi-32-zc",
+    "price": 919.99,
+    "salePrice": 749,
+    "brand": "Simplifire",
+    "imageUrl": "/products-upgraded/electric-inserts/spf-gi-32-zc.webp",
+    "productUrl": "https://www.efireplacestore.com/spf-gi-32-zc.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/spf-gi-32-zc.webp"
+    ]
+  },
+  {
+    "sku": "DPX-DFI2310",
+    "name": "Dimplex DFI2310 Deluxe 23 Inch Modern Electric Fireplace Insert",
+    "slug": "dpx-dfi2310",
+    "price": 809.99,
+    "salePrice": 660.65,
+    "brand": "Dimplex",
+    "imageUrl": "/products-upgraded/electric-inserts/dpx-dfi2310.webp",
+    "productUrl": "https://www.efireplacestore.com/dpx-dfi2310.html",
+    "rating": 4.8,
+    "reviewCount": 4,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/dpx-dfi2310.webp"
+    ]
+  },
+  {
+    "sku": "AMA-INS-FM-34",
+    "name": "Amantii 34 Inch INS-FM Black Steel Electric Fireplace Insert (Modern)",
+    "slug": "ama-ins-fm-34",
+    "price": 3199.99,
+    "salePrice": 2599,
+    "brand": "Amantii",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-ins-fm-34.webp",
+    "productUrl": "https://www.efireplacestore.com/ama-ins-fm-34.html",
+    "rating": 5,
+    "reviewCount": 2,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-ins-fm-34.webp"
+    ]
+  },
+  {
+    "sku": "AMA-TRD-26-I",
+    "name": "Amantii 26 Inch Traditional Smart Electric Fireplace Insert",
+    "slug": "ama-trd-26-i",
+    "price": 1849.99,
+    "salePrice": 1499,
+    "brand": "Amantii",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-trd-26-i.webp",
+    "productUrl": "https://www.efireplacestore.com/ama-trd-26-i.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-trd-26-i.webp"
+    ]
+  },
+  {
+    "sku": "AMA-TRD-38-I",
+    "name": "Amantii 38 Inch Traditional Smart Electric Fireplace Insert",
+    "slug": "ama-trd-38-i",
+    "price": 2949.99,
+    "salePrice": 2399,
+    "brand": "Amantii",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-trd-38-i.webp",
+    "productUrl": "https://www.efireplacestore.com/ama-trd-38-i.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-trd-38-i.webp"
+    ]
+  },
+  {
+    "sku": "AMA-INS-FM-30",
+    "name": "Amantii 30 Inch INS-FM Black Steel Electric Fireplace Insert (Modern)",
+    "slug": "ama-ins-fm-30",
+    "price": 2949.99,
+    "salePrice": 2399,
+    "brand": "Amantii",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-ins-fm-30.webp",
+    "productUrl": "https://www.efireplacestore.com/ama-ins-fm-30.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-ins-fm-30.webp"
+    ]
+  },
+  {
+    "sku": "AMA-ZECL-31-3228-STL-I-ARCH",
+    "name": "Amantii 31 Inch Zero-Clearance Traditional Electric Fireplace Insert",
+    "slug": "ama-zecl-31-3228-stl-i-arch",
+    "price": 2079.99,
+    "salePrice": 1688,
+    "brand": "Amantii",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-zecl-31-3228-stl-i-arch.webp",
+    "productUrl": "https://www.efireplacestore.com/ama-zecl-31-3228-stl-i-arch.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-zecl-31-3228-stl-i-arch.webp"
+    ]
+  }
+]

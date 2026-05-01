@@ -17,13 +17,13 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
   return (
     <>
-      <div className="hidden bg-[#111111] text-white md:block">
+      <div className="hidden bg-[#002e5b] text-white md:block">
         <div className="mx-auto flex max-w-[1640px] items-center justify-between px-5 py-2 text-[13px]">
           <div className="flex items-center divide-x divide-white/20">
             {[
-              "Tilton, Illinois · Serving Illiana",
-              "Fireplaces · Stoves · Inserts · Grills",
-              "Sales · Service · Installation",
+              "Naperville · Crest Hill · New Lenox",
+              "Fireplaces · Stoves · Grills · Gas Logs",
+              "Showroom Sales & Service Support",
             ].map((message) => (
               <span key={message} className="px-7 first:pl-0 last:pr-0">
                 {message}
@@ -34,11 +34,11 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-[#e8b900]/25 bg-[#111111] shadow-lg shadow-black/20">
+      <header className="sticky top-0 z-50 border-b border-[#fde428]/25 bg-[#002e5b] shadow-lg shadow-black/20">
         <div className="mx-auto max-w-[1640px] px-4 md:px-5">
           <div className="flex h-20 items-center justify-between gap-4 md:h-24">
             <button
-              className="p-2 text-white transition hover:text-[#e8b900] lg:hidden"
+              className="p-2 text-white transition hover:text-[#fde428] lg:hidden"
               onClick={() => setIsMenuOpen((current) => !current)}
               aria-label="Toggle menu"
             >
@@ -58,16 +58,16 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
             <div className="hidden min-w-[360px] flex-1 lg:block xl:pl-4">
               <form action="/search" method="GET" className="mx-auto w-full max-w-[980px]">
-                <div className="flex h-12 items-center border border-[#e8b900]/45 bg-[#f7efd6] shadow-inner shadow-black/10">
+                <div className="flex h-12 items-center border border-[#fde428]/45 bg-[#f7fbff] shadow-inner shadow-black/10">
                   <input
                     type="text"
                     name="q"
                     placeholder="Search fireplaces, stoves, grills, gas logs, doors, parts"
-                    className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm text-[#111111] outline-none placeholder:text-[#5f5140]"
+                    className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm text-[#001f3d] outline-none placeholder:text-[#52677d]"
                   />
                   <button
                     type="submit"
-                    className="flex h-full w-14 items-center justify-center border-l border-[#e0cbb4] bg-[#e8b900] text-black transition hover:bg-[#ffd94a]"
+                    className="flex h-full w-14 items-center justify-center border-l border-[#e0cbb4] bg-[#fde428] text-black transition hover:bg-[#fff06a]"
                     aria-label="Search"
                   >
                     <Search className="h-4 w-4" />
@@ -81,7 +81,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                 <p>Visit a Showroom or Call</p>
                 <a
                   href={`tel:${defaultStoreConfig.phone}`}
-                  className="block font-semibold text-white hover:text-[#e8b900]"
+                  className="block font-semibold text-white hover:text-[#fde428]"
                 >
                   {defaultStoreConfig.phone}
                 </a>
@@ -89,21 +89,21 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 block text-xs text-[#e8b900] hover:text-white"
+                  className="mt-1 block text-xs text-[#fde428] hover:text-white"
                 >
                   {defaultStoreConfig.address.street}, {defaultStoreConfig.address.city}
                 </a>
               </div>
 
               <button
-                className="relative flex items-center gap-2 text-white transition-colors hover:text-[#e8b900]"
+                className="relative flex items-center gap-2 text-white transition-colors hover:text-[#fde428]"
                 onClick={toggleCart}
                 aria-label="Shopping cart"
               >
                 <ShoppingCart className="h-5 w-5" />
                 <span className="text-sm">Cart</span>
                 {getItemCount() > 0 && (
-                  <span className="absolute -right-2 -top-2 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#e8b900] text-[10px] font-semibold text-black">
+                  <span className="absolute -right-2 -top-2 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#fde428] text-[10px] font-semibold text-black">
                     {getItemCount()}
                   </span>
                 )}
@@ -125,7 +125,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               >
                 <ShoppingCart className="h-5 w-5 text-white" />
                 {getItemCount() > 0 && (
-                  <span className="absolute -right-1 -top-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#e8b900] text-[10px] font-semibold text-black">
+                  <span className="absolute -right-1 -top-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#fde428] text-[10px] font-semibold text-black">
                     {getItemCount()}
                   </span>
                 )}
@@ -155,7 +155,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
           )}
         </div>
 
-        <div className="hidden border-t border-white/10 bg-[#111111] lg:block">
+        <div className="hidden border-t border-white/10 bg-[#001f3d] lg:block">
           <nav className="mx-auto flex h-10 max-w-[1640px] items-center px-5">
             {productCategories.map((category) => (
               <div
@@ -166,7 +166,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               >
                 <Link
                   href={`/category/${category.slug}`}
-                  className="flex h-10 items-center gap-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#f7efd6] transition-colors hover:text-[#e8b900]"
+                  className="flex h-10 items-center gap-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#eef6ff] transition-colors hover:text-[#fde428]"
                 >
                   {category.name}
                   {category.subcategories && <ChevronDown className="h-4 w-4" />}
@@ -178,7 +178,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                       <Link
                         key={subcategory.id}
                         href={`/category/${subcategory.slug}`}
-                        className="block px-4 py-2 text-sm text-[#424242] transition-colors hover:bg-[#faf7f1] hover:text-[#111111]"
+                        className="block px-4 py-2 text-sm text-[#424242] transition-colors hover:bg-[#faf7f1] hover:text-[#002e5b]"
                       >
                         {subcategory.name}
                       </Link>

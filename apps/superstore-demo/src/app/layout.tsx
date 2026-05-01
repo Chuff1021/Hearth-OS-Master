@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/depot-logo.png",
+        url: "/acozy-logo.png",
         width: 1200,
         height: 630,
         alt: defaultStoreConfig.storeName,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultStoreConfig.seo.metaTitle,
     description: defaultStoreConfig.seo.metaDescription,
-    images: ["/depot-logo.png"],
+    images: ["/acozy-logo.png"],
   },
   robots: {
     index: true,
@@ -67,11 +67,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon.png?v=depot-20260501", type: "image/png", sizes: "512x512" },
-      { url: "/favicon.ico?v=depot-20260501", sizes: "any" },
+      { url: "/icon.png?v=acozy-20260430-hr", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=acozy-20260430-hr", sizes: "any" },
     ],
-    apple: [{ url: "/apple-touch-icon.png?v=depot-20260501", sizes: "180x180" }],
-    shortcut: [{ url: "/icon.png?v=depot-20260501", type: "image/png" }],
+    apple: [{ url: "/apple-touch-icon.png?v=acozy-20260430-hr", sizes: "180x180" }],
+    shortcut: [{ url: "/icon.png?v=acozy-20260430-hr", type: "image/png" }],
   },
 };
 
@@ -86,10 +86,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>The Depot Fireplace and Stove Center</title>
-        <link rel="icon" href="/icon.png?v=depot-20260501" type="image/png" sizes="512x512" />
-        <link rel="shortcut icon" href="/icon.png?v=depot-20260501" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=depot-20260501" sizes="180x180" />
+        <title>A Cozy Fireplace</title>
+        <link rel="icon" href="/icon.png?v=acozy-20260430-hr" type="image/png" sizes="512x512" />
+        <link rel="shortcut icon" href="/icon.png?v=acozy-20260430-hr" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=acozy-20260430-hr" sizes="180x180" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}

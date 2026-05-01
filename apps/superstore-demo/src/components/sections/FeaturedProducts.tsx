@@ -62,12 +62,12 @@ export function FeaturedProducts() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#111111] py-20 text-white">
+    <section className="relative overflow-hidden bg-[#002e5b] py-20 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(253,228,40,0.20),transparent_30%),radial-gradient(circle_at_82%_12%,rgba(255,179,107,0.12),transparent_24%)]" />
       <div className="relative mx-auto max-w-[1640px] px-4 md:px-5">
         <div className="mb-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div>
-            <p className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.26em] text-[#e8b900]">
+            <p className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.26em] text-[#fde428]">
               <Sparkles className="h-4 w-4" /> Featured Fireplaces
             </p>
             <h2 className="mt-4 max-w-4xl text-[38px] font-black leading-[0.98] tracking-[-0.055em] md:text-[58px]">
@@ -77,14 +77,14 @@ export function FeaturedProducts() {
 
           <div className="border border-white/10 bg-white/[0.05] p-6 backdrop-blur lg:justify-self-end">
             <div className="flex items-start gap-3">
-              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#e8b900]" />
+              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#fde428]" />
               <p className="max-w-xl text-sm leading-6 text-[#e8d9c7]">
                 Need help choosing? Send us your room, venting, and style goals and we&apos;ll help match the right fireplace to your home.
               </p>
             </div>
             <Link
               href="/design-tool"
-              className="mx-auto mt-5 flex w-fit items-center justify-center gap-2 bg-[#e8b900] px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ffd94a]"
+              className="mx-auto mt-5 flex w-fit items-center justify-center gap-2 bg-[#fde428] px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#fff06a]"
             >
               Get Help Choosing <ArrowRight className="h-4 w-4" />
             </Link>

@@ -1,0 +1,892 @@
+[
+  {
+    "sku": "BSC-NV-S-TOWNSEND-ALD-LP",
+    "name": "Buck Stove 26 1/2 Inch Townsend II Steel Vent Free Gas Heating Stove (Small)",
+    "slug": "bsc-nv-s-townsend-ald-lp",
+    "price": 2569.99,
+    "salePrice": 2089,
+    "brand": "Buck Stove",
+    "imageUrl": "/products/gas-stoves/bsc-nv-s-townsend-ald-lp-168fdf63.webp",
+    "productUrl": "https://www.efireplacestore.com/bsc-nv-s-townsend-ald-lp.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false
+  },
+  {
+    "sku": "BSC-NV-S-TOWNSEND-GY-LP",
+    "name": "Buck Stove 27 Inch Grey Steel Townsend II Vent Free Small Gas Heating Stove",
+    "slug": "bsc-nv-s-townsend-gy-lp",
+    "price": 2569.99,
+    "salePrice": 2089,
+    "brand": "Buck Stove",
+    "imageUrl": "/products/gas-stoves/bsc-nv-s-townsend-gy-lp-973cf48c.webp",
+    "productUrl": "https://www.efireplacestore.com/bsc-nv-s-townsend-gy-lp.html",
+    "rating": 3,
+    "reviewCount": 1,
+    "isBestSeller": false
+  },
+  {
+    "sku": "BSC-NV-C11272NAT-FAP12",
+    "name": "Buck Stove Model 1127 Vent Free Gas Heating Stove",
+    "slug": "bsc-nv-c11272nat-fap12",
+    "price": 1909.99,
+    "salePrice": 1550,
+    "brand": "Buck Stove",
+    "imageUrl": "/products/gas-stoves/bsc-nv-c11272nat-fap12-1b0d871a.webp",
+    "productUrl": "https://www.efireplacestore.com/bsc-nv-c11272nat-fap12.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "BSC-NV-T-33LP",
+    "name": "Buck Stove Model T-33 Vent Free Gas Heating Stove with Legs (Small)",
+    "slug": "bsc-nv-t-33lp",
+    "price": 2229.99,
+    "salePrice": 1815,
+    "brand": "Buck Stove",
+    "imageUrl": "/products/gas-stoves/bsc-nv-t-33lp-2a90c905.webp",
+    "productUrl": "https://www.efireplacestore.com/bsc-nv-t-33lp.html",
+    "rating": 4,
+    "reviewCount": 2,
+    "isBestSeller": false
+  },
+  {
+    "sku": "DSS-DS40S-IP",
+    "name": "DS Stoves 28 Inch Dawn Series Direct Vent Gas Heating Stove - Intermittent Pilot",
+    "slug": "dss-ds40s-ip",
+    "price": 5619.99,
+    "salePrice": 4565,
+    "brand": "DS Stoves",
+    "imageUrl": "/products/gas-stoves/dss-ds40s-ip-445c2c1a.webp",
+    "productUrl": "https://www.efireplacestore.com/dss-ds40s-ip.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "DSS-DS40S-SP",
+    "name": "DS Stoves 28 Inch Dawn Series Direct Vent Gas Heating Stove - Millivolt Pilot",
+    "slug": "dss-ds40s-sp",
+    "price": 4669.99,
+    "salePrice": 3795,
+    "brand": "DS Stoves",
+    "imageUrl": "/products/gas-stoves/dss-ds40s-sp-445c2c1a.webp",
+    "productUrl": "https://www.efireplacestore.com/dss-ds40s-sp.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "EMP-DVP20CC70BN",
+    "name": "Empire 22 Inch Cast Iron Direct Vent Gas Heating Stove - Intermittent Pilot",
+    "slug": "emp-dvp20cc70bn",
+    "price": 4509.99,
+    "salePrice": 3669,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp20cc70bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-dvp20cc70bn.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp20cc70bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-DVP20CC30BN",
+    "name": "Empire 22 Inch Cast Iron Direct Vent Gas Heating Stove - Millivolt Controls",
+    "slug": "emp-dvp20cc30bn",
+    "price": 4159.99,
+    "salePrice": 3379,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp20cc30bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-dvp20cc30bn.html",
+    "rating": 5,
+    "reviewCount": 2,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp20cc30bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD10CC30BN",
+    "name": "Empire 22 Inch Vent Free Cast Iron Heating Stove - 10,000 BTU",
+    "slug": "emp-vfd10cc30bn",
+    "price": 3039.99,
+    "salePrice": 2469,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd10cc30bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd10cc30bn.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd10cc30bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD20CC30BN",
+    "name": "Empire 22 Inch Vent Free Cast Iron Heating Stove - 20,000 BTU",
+    "slug": "emp-vfd20cc30bn",
+    "price": 3099.99,
+    "salePrice": 2519,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd20cc30bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd20cc30bn.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd20cc30bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD20CC70BN",
+    "name": "Empire 22 Inch Vent Free Cast Iron Heating Stove with Intermittent Pilot - 20,000 BTU",
+    "slug": "emp-vfd20cc70bn",
+    "price": 3269.99,
+    "salePrice": 2659,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd20cc70bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd20cc70bn.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd20cc70bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-DVP30CC70BN",
+    "name": "Empire 28 Inch Cast Iron Direct Vent Gas Heating Stove - Intermittent Pilot",
+    "slug": "emp-dvp30cc70bn",
+    "price": 4909.99,
+    "salePrice": 3989,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp30cc70bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-dvp30cc70bn.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp30cc70bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-DVP30CC30BN",
+    "name": "Empire 28 Inch Cast Iron Direct Vent Gas Heating Stove - Millivolt Controls",
+    "slug": "emp-dvp30cc30bn",
+    "price": 4649.99,
+    "salePrice": 3779,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp30cc30bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-dvp30cc30bn.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp30cc30bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD30CC30BN",
+    "name": "Empire 28 Inch Vent-Free Medium Cast Iron Heating Stove - Millivolt",
+    "slug": "emp-vfd30cc30bn",
+    "price": 3429.99,
+    "salePrice": 2789,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd30cc30bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd30cc30bn.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd30cc30bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD30CC70BN",
+    "name": "Empire 29 Inch Vent Free Cast Iron Heating Stove with Intermittent Pilot - 25,000 BTU",
+    "slug": "emp-vfd30cc70bn",
+    "price": 3589.99,
+    "salePrice": 2919,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd30cc70bn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd30cc70bn.html",
+    "rating": 5,
+    "reviewCount": 4,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd30cc70bn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-HRSQ25MVL",
+    "name": "Empire Hearthrite Vent Free Heating Stove (Small)",
+    "slug": "emp-hrsq25mvl",
+    "price": 1269.99,
+    "salePrice": 1034.41,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-hrsq25mvl.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-hrsq25mvl.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-hrsq25mvl.webp"
+    ]
+  },
+  {
+    "sku": "EMP-DVP30MS30FN",
+    "name": "Empire Medium Spirit Steel Direct Vent Gas Heating Stove",
+    "slug": "emp-dvp30ms30fn",
+    "price": 3369.99,
+    "salePrice": 2739,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp30ms30fn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-dvp30ms30fn.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp30ms30fn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-DVP30MS70FN",
+    "name": "Empire Medium Spirit Steel Direct Vent Gas Heating Stove - IPI Ignition",
+    "slug": "emp-dvp30ms70fn",
+    "price": 3519.99,
+    "salePrice": 2859,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp30ms70fn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-dvp30ms70fn.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp30ms70fn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD30MS70FN",
+    "name": "Empire Medium Spirit Vent Free Gas Heating Stove - IPI Pilot (Small)",
+    "slug": "emp-vfd30ms70fn",
+    "price": 2599.99,
+    "salePrice": 2109,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd30ms70fn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd30ms70fn.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd30ms70fn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD30MS30FN",
+    "name": "Empire Medium Spirit Vent Free Gas Heating Stove (Small)",
+    "slug": "emp-vfd30ms30fn",
+    "price": 2439.99,
+    "salePrice": 1979,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd30ms30fn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd30ms30fn.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd30ms30fn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-DVP20MS70FN",
+    "name": "Empire Small Spirit Direct Vent Gas Heating Stove - IPI Ignition",
+    "slug": "emp-dvp20ms70fn",
+    "price": 3489.99,
+    "salePrice": 2839,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp20ms70fn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-dvp20ms70fn.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp20ms70fn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-DVP20MS30FN",
+    "name": "Empire Small Spirit Steel Direct Vent Gas Heating Stove (Small)",
+    "slug": "emp-dvp20ms30fn",
+    "price": 3319.99,
+    "salePrice": 2699,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp20ms30fn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-dvp20ms30fn.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp20ms30fn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD20MS70FN",
+    "name": "Empire Small Spirit Vent Free Gas Heating Stove - IPI Pilot (Small)",
+    "slug": "emp-vfd20ms70fn",
+    "price": 2509.99,
+    "salePrice": 2039,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd20ms70fn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd20ms70fn.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd20ms70fn.webp"
+    ]
+  },
+  {
+    "sku": "EMP-VFD20MS30FN",
+    "name": "Empire Small Spirit Vent Free Gas Heating Stove (Small)",
+    "slug": "emp-vfd20ms30fn",
+    "price": 2369.99,
+    "salePrice": 1929,
+    "brand": "Empire",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd20ms30fn.webp",
+    "productUrl": "https://www.efireplacestore.com/emp-vfd20ms30fn.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd20ms30fn.webp"
+    ]
+  },
+  {
+    "sku": "NPL-GDS20",
+    "name": "Napoleon 19 Inch Arlington Direct Vent Gas Heating Stove (Small)",
+    "slug": "npl-gds20",
+    "price": 3353.9,
+    "salePrice": 3049,
+    "brand": "Napoleon",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds20.webp",
+    "productUrl": "https://www.efireplacestore.com/npl-gds20.html",
+    "rating": 5,
+    "reviewCount": 2,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds20.webp"
+    ]
+  },
+  {
+    "sku": "NPL-GDS25",
+    "name": "Napoleon 23 Inch Bayfield Direct Vent Gas Heating Stove",
+    "slug": "npl-gds25",
+    "price": 4882.9,
+    "salePrice": 4439,
+    "brand": "Napoleon",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds25.webp",
+    "productUrl": "https://www.efireplacestore.com/npl-gds25.html",
+    "rating": 5,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds25.webp"
+    ]
+  },
+  {
+    "sku": "NPL-GDS60",
+    "name": "Napoleon 27 Inch Knightsbridge Direct Vent B-Vent Gas Heating Stove",
+    "slug": "npl-gds60",
+    "price": 5267.9,
+    "salePrice": 4789,
+    "brand": "Napoleon",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds60.webp",
+    "productUrl": "https://www.efireplacestore.com/npl-gds60.html",
+    "rating": 4.5,
+    "reviewCount": 2,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds60.webp"
+    ]
+  },
+  {
+    "sku": "NPL-GDS50",
+    "name": "Napoleon 28 Inch Havelock Direct Vent B Vent Gas Heating Stove",
+    "slug": "npl-gds50",
+    "price": 4882.9,
+    "salePrice": 4439,
+    "brand": "Napoleon",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds50.webp",
+    "productUrl": "https://www.efireplacestore.com/npl-gds50.html",
+    "rating": 5,
+    "reviewCount": 8,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds50.webp"
+    ]
+  },
+  {
+    "sku": "NPL-GDS28-1NE",
+    "name": "Napoleon Haliburton Direct Vent Gas Heating Stove - IPI Ignition (Small)",
+    "slug": "npl-gds28-1ne",
+    "price": 4123.9,
+    "salePrice": 3749,
+    "brand": "Napoleon",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds28-1ne.webp",
+    "productUrl": "https://www.efireplacestore.com/npl-gds28-1ne.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds28-1ne.webp"
+    ]
+  },
+  {
+    "sku": "NPL-GDS28-1NSB",
+    "name": "Napoleon Haliburton Direct Vent Gas Heating Stove - Millivolt (Small)",
+    "slug": "npl-gds28-1nsb",
+    "price": 4002.9,
+    "salePrice": 3639,
+    "brand": "Napoleon",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds28-1nsb.webp",
+    "productUrl": "https://www.efireplacestore.com/npl-gds28-1nsb.html",
+    "rating": 4,
+    "reviewCount": 1,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds28-1nsb.webp"
+    ]
+  },
+  {
+    "sku": "NPL-GDS50-1NE",
+    "name": "Napoleon Havelock Direct Vent Gas Heating Stove - IPI Ignition (Small)",
+    "slug": "npl-gds50-1ne",
+    "price": 4882.9,
+    "salePrice": 4439,
+    "brand": "Napoleon",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds50-1ne.webp",
+    "productUrl": "https://www.efireplacestore.com/npl-gds50-1ne.html",
+    "rating": 5,
+    "reviewCount": 8,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds50-1ne.webp"
+    ]
+  },
+  {
+    "sku": "TNS-TN24-BODYA",
+    "name": "True North TN24 Natural Gas Heating Stove",
+    "slug": "tns-tn24-bodya",
+    "price": 4039.99,
+    "salePrice": 3285.85,
+    "brand": "True North",
+    "imageUrl": "/products/gas-stoves/tns-tn24-bodya-f288f107.webp",
+    "productUrl": "https://www.efireplacestore.com/tns-tn24-bodya.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "LOPI-RADIANTPLUSLARGEGSB",
+    "name": "Lopi Radiant Plus Large GSB",
+    "slug": "lopi-radiantpluslargegsb",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-radiantpluslargegsb.webp",
+    "productUrl": "https://www.lopistoves.com/product/radiant-plus-large-gsb/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargegsb.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargegsb-2.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargegsb-3.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargegsb-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Radiant Plus Large GSB. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-RADIANTPLUSLARGEMV",
+    "name": "Lopi Radiant Plus Large MV",
+    "slug": "lopi-radiantpluslargemv",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-radiantpluslargemv.webp",
+    "productUrl": "https://www.lopistoves.com/product/radiant-plus-large-mv/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargemv.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargemv-2.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargemv-3.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargemv-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Radiant Plus Large MV. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-RADIANTPLUSMEDIUMGSB",
+    "name": "Lopi Radiant Plus Medium GSB",
+    "slug": "lopi-radiantplusmediumgsb",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-radiantplusmediumgsb.webp",
+    "productUrl": "https://www.lopistoves.com/product/radiant-plus-medium-gsb/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediumgsb.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediumgsb-2.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediumgsb-3.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediumgsb-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Radiant Plus Medium GSB. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-RADIANTPLUSMEDIUMMV",
+    "name": "Lopi Radiant Plus Medium MV",
+    "slug": "lopi-radiantplusmediummv",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-radiantplusmediummv.webp",
+    "productUrl": "https://www.lopistoves.com/product/radiant-plus-medium-mv/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediummv.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediummv-2.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediummv-3.webp",
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediummv-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Radiant Plus Medium MV. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-DEERFIELDII",
+    "name": "Lopi Deerfield Ii",
+    "slug": "lopi-deerfieldii",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-deerfieldii.webp",
+    "productUrl": "https://www.lopistoves.com/product/deerfield-ii/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-deerfieldii.webp",
+      "/products-upgraded/gas-stoves/lopi-deerfieldii-2.webp",
+      "/products-upgraded/gas-stoves/lopi-deerfieldii-3.webp",
+      "/products-upgraded/gas-stoves/lopi-deerfieldii-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Deerfield Ii. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-34DVLDELUXEEMBERGLO",
+    "name": "Lopi 34 DVL Deluxe Ember Glo",
+    "slug": "lopi-34dvldeluxeemberglo",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-34dvldeluxeemberglo.webp",
+    "productUrl": "https://www.lopistoves.com/product/34-dvl-deluxe-ember-glo/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-34dvldeluxeemberglo.webp",
+      "/products-upgraded/gas-stoves/lopi-34dvldeluxeemberglo-2.webp",
+      "/products-upgraded/gas-stoves/lopi-34dvldeluxeemberglo-3.webp",
+      "/products-upgraded/gas-stoves/lopi-34dvldeluxeemberglo-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 34 DVL Deluxe Ember Glo. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-NORTHFIELD",
+    "name": "Lopi Northfield",
+    "slug": "lopi-northfield",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-northfield.webp",
+    "productUrl": "https://www.lopistoves.com/product/northfield/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-northfield.webp",
+      "/products-upgraded/gas-stoves/lopi-northfield-2.webp",
+      "/products-upgraded/gas-stoves/lopi-northfield-3.webp",
+      "/products-upgraded/gas-stoves/lopi-northfield-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Northfield. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-CYPRESSGSR",
+    "name": "Lopi Cypress Gsr",
+    "slug": "lopi-cypressgsr",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-cypressgsr.webp",
+    "productUrl": "https://www.lopistoves.com/product/cypress-gsr/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-cypressgsr.webp",
+      "/products-upgraded/gas-stoves/lopi-cypressgsr-2.webp",
+      "/products-upgraded/gas-stoves/lopi-cypressgsr-3.webp",
+      "/products-upgraded/gas-stoves/lopi-cypressgsr-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Cypress Gsr. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-430MODFYRE",
+    "name": "Lopi 430 Modfyre",
+    "slug": "lopi-430modfyre",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-430modfyre.webp",
+    "productUrl": "https://www.lopistoves.com/product/430-modfyre/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-430modfyre.webp",
+      "/products-upgraded/gas-stoves/lopi-430modfyre-2.webp",
+      "/products-upgraded/gas-stoves/lopi-430modfyre-3.webp",
+      "/products-upgraded/gas-stoves/lopi-430modfyre-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 430 Modfyre. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-616MODFYRE",
+    "name": "Lopi 616 Modfyre",
+    "slug": "lopi-616modfyre",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-616modfyre.webp",
+    "productUrl": "https://www.lopistoves.com/product/616-modfyre/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-616modfyre.webp",
+      "/products-upgraded/gas-stoves/lopi-616modfyre-2.webp",
+      "/products-upgraded/gas-stoves/lopi-616modfyre-3.webp",
+      "/products-upgraded/gas-stoves/lopi-616modfyre-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 616 Modfyre. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-NORTHFIELDRADIANTMV",
+    "name": "Lopi Northfield Radiant MV",
+    "slug": "lopi-northfieldradiantmv",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-northfieldradiantmv.webp",
+    "productUrl": "https://www.lopistoves.com/product/northfield-radiant-mv/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-northfieldradiantmv.webp",
+      "/products-upgraded/gas-stoves/lopi-northfieldradiantmv-2.webp",
+      "/products-upgraded/gas-stoves/lopi-northfieldradiantmv-3.webp",
+      "/products-upgraded/gas-stoves/lopi-northfieldradiantmv-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Northfield Radiant MV. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-32DVSDELUXEEMBERGLO",
+    "name": "Lopi 32 Dvs Deluxe Ember Glo",
+    "slug": "lopi-32dvsdeluxeemberglo",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-32dvsdeluxeemberglo.webp",
+    "productUrl": "https://www.lopistoves.com/product/32-dvs-deluxe-ember-glo/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-32dvsdeluxeemberglo.webp",
+      "/products-upgraded/gas-stoves/lopi-32dvsdeluxeemberglo-2.webp",
+      "/products-upgraded/gas-stoves/lopi-32dvsdeluxeemberglo-3.webp",
+      "/products-upgraded/gas-stoves/lopi-32dvsdeluxeemberglo-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 32 Dvs Deluxe Ember Glo. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-616DELUXE",
+    "name": "Lopi 616 Deluxe",
+    "slug": "lopi-616deluxe",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-616deluxe.webp",
+    "productUrl": "https://www.lopistoves.com/product/616-deluxe/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-616deluxe.webp",
+      "/products-upgraded/gas-stoves/lopi-616deluxe-2.webp",
+      "/products-upgraded/gas-stoves/lopi-616deluxe-3.webp",
+      "/products-upgraded/gas-stoves/lopi-616deluxe-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 616 Deluxe. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-GREENFIELDSTOVE",
+    "name": "Lopi Greenfield_stove",
+    "slug": "lopi-greenfieldstove",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-greenfieldstove.webp",
+    "productUrl": "https://www.lopistoves.com/product/greenfield_stove/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-greenfieldstove.webp",
+      "/products-upgraded/gas-stoves/lopi-greenfieldstove-2.webp",
+      "/products-upgraded/gas-stoves/lopi-greenfieldstove-3.webp",
+      "/products-upgraded/gas-stoves/lopi-greenfieldstove-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Greenfield_stove. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-BERKSHIRE",
+    "name": "Lopi Berkshire",
+    "slug": "lopi-berkshire",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-berkshire.webp",
+    "productUrl": "https://www.lopistoves.com/product/berkshire/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-berkshire.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshire-2.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshire-3.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshire-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Berkshire. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-BERKSHIRERADIANTMVCOPY",
+    "name": "Lopi Berkshire Radiant MV Copy",
+    "slug": "lopi-berkshireradiantmvcopy",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-berkshireradiantmvcopy.webp",
+    "productUrl": "https://www.lopistoves.com/product/berkshire-radiant-mv-copy/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmvcopy.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmvcopy-2.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmvcopy-3.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmvcopy-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Berkshire Radiant MV Copy. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-BERKSHIRERADIANTMV",
+    "name": "Lopi Berkshire Radiant MV",
+    "slug": "lopi-berkshireradiantmv",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-berkshireradiantmv.webp",
+    "productUrl": "https://www.lopistoves.com/product/berkshire-radiant-mv/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmv.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmv-2.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmv-3.webp",
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmv-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Berkshire Radiant MV. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-430DELUXE",
+    "name": "Lopi 430 Deluxe",
+    "slug": "lopi-430deluxe",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-430deluxe.webp",
+    "productUrl": "https://www.lopistoves.com/product/430-deluxe/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-430deluxe.webp",
+      "/products-upgraded/gas-stoves/lopi-430deluxe-2.webp",
+      "/products-upgraded/gas-stoves/lopi-430deluxe-3.webp",
+      "/products-upgraded/gas-stoves/lopi-430deluxe-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 430 Deluxe. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-DEERFIELD",
+    "name": "Lopi Deerfield",
+    "slug": "lopi-deerfield",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-deerfield.webp",
+    "productUrl": "https://www.lopistoves.com/product/deerfield/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-deerfield.webp",
+      "/products-upgraded/gas-stoves/lopi-deerfield-2.webp",
+      "/products-upgraded/gas-stoves/lopi-deerfield-3.webp",
+      "/products-upgraded/gas-stoves/lopi-deerfield-4.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact The Depot Fireplace and Stove Center for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Deerfield. Contact The Depot Fireplace and Stove Center for current availability, installation planning, configuration options, and dealer pricing."
+  }
+]

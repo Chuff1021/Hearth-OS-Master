@@ -1,54 +1,97 @@
 import { MapPin, Navigation, Phone } from "lucide-react";
 
-const showroom = {
-  name: "Tilton Showroom",
-  address: "6 Southgate Ct.",
-  city: "Tilton, IL 61833",
-  phone: "217-443-1060",
-  email: "thedepot33@att.net",
-  mapQuery: "The Depot Fireplace and Stove Center 6 Southgate Ct Tilton IL 61833",
-};
+const showrooms = [
+  {
+    name: "Naperville Showroom",
+    address: "503 W. 87th Street",
+    city: "Naperville, IL 60565",
+    phone: "630-778-1781",
+    mapQuery: "A Cozy Fireplace 503 W 87th Street Naperville IL 60565",
+  },
+  {
+    name: "Crest Hill Showroom",
+    address: "2124 Plainfield Road",
+    city: "Crest Hill, IL 60403",
+    phone: "815-725-5556",
+    mapQuery: "A Cozy Fireplace 2124 Plainfield Road Crest Hill IL 60403",
+  },
+  {
+    name: "New Lenox Showroom",
+    address: "390 N. Cedar Road",
+    city: "New Lenox, IL 60451",
+    phone: "815-462-8889",
+    mapQuery: "A Cozy Fireplace 390 N Cedar Road New Lenox IL 60451",
+  },
+];
 
 export function ShowroomMap() {
-  const embedQuery = encodeURIComponent(showroom.mapQuery);
+  const embedQuery = encodeURIComponent(
+    "A Cozy Fireplace Naperville Crest Hill New Lenox Illinois"
+  );
 
   return (
-    <section className="relative overflow-hidden bg-[#f7efd6] px-4 py-16 md:px-6 md:py-20">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#b91806]/40 to-transparent" />
+    <section className="relative overflow-hidden bg-[#f7fbff] px-4 py-16 md:px-6 md:py-20">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#002e5b]/35 to-transparent" />
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.26em] text-[#b91806]">Tilton Showroom</p>
-          <h2 className="mt-4 text-3xl font-black tracking-[-0.04em] text-[#111111] md:text-5xl">
-            Visit The Depot Fireplace and Stove Center in Tilton, Illinois.
+          <p className="text-xs font-black uppercase tracking-[0.26em] text-[#002e5b]">
+            Three Local Showrooms
+          </p>
+          <h2 className="mt-4 text-3xl font-black tracking-[-0.04em] text-[#001f3d] md:text-5xl">
+            Visit A Cozy Fireplace in Naperville, Crest Hill, or New Lenox.
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-[#5f5140] md:text-lg">
-            Stop into the 2,400 sq. ft. showroom for fireplaces, stoves, inserts, grills, stone, mantels, parts, service, and installation help from a factory-trained Illiana hearth team.
+          <p className="mt-5 max-w-2xl text-base leading-8 text-[#52677d] md:text-lg">
+            Stop into the showroom closest to you for fireplace planning, inserts,
+            stoves, gas logs, grills, glass doors, accessories, parts, and service
+            help from an experienced local hearth team.
           </p>
 
-          <article className="mt-8 border border-[#d9c48d] bg-white p-5 shadow-[0_18px_55px_rgba(17,17,17,0.10)]">
-            <div className="flex gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#111111] text-[#e8b900]">
-                <MapPin className="h-5 w-5" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <h3 className="text-lg font-black text-[#111111]">{showroom.name}</h3>
-                <p className="mt-1 text-sm font-semibold text-[#5f5140]">{showroom.address}<br />{showroom.city}</p>
-                <p className="mt-2 text-sm font-semibold text-[#5f5140]">Mon-Fri 8:30 AM-4:00 PM · Sat 9:00 AM-Noon</p>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <a href={`tel:${showroom.phone.replace(/[^0-9]/g, "")}`} className="inline-flex items-center gap-2 bg-[#e8b900] px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-[#111111] transition hover:bg-[#ffd94a]">
-                    <Phone className="h-3.5 w-3.5" /> {showroom.phone}
-                  </a>
-                  <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(showroom.mapQuery)}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-[#111111]/20 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-[#111111] transition hover:border-[#111111] hover:bg-[#111111] hover:text-white">
-                    <Navigation className="h-3.5 w-3.5" /> Directions
-                  </a>
+          <div className="mt-8 grid gap-4">
+            {showrooms.map((showroom) => (
+              <article
+                key={showroom.name}
+                className="group border border-[#c8d8e8] bg-white p-5 shadow-[0_18px_55px_rgba(0,46,91,0.08)] transition hover:-translate-y-0.5 hover:border-[#002e5b]/55 hover:shadow-[0_24px_70px_rgba(0,46,91,0.14)]"
+              >
+                <div className="flex gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#002e5b] text-[#fde428]">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-lg font-black text-[#001f3d]">{showroom.name}</h3>
+                    <p className="mt-1 text-sm font-semibold text-[#52677d]">
+                      {showroom.address}<br />{showroom.city}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      <a
+                        href={`tel:${showroom.phone.replace(/[^0-9]/g, "")}`}
+                        className="inline-flex items-center gap-2 bg-[#fde428] px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-[#001f3d] transition hover:bg-[#fff06a]"
+                      >
+                        <Phone className="h-3.5 w-3.5" /> {showroom.phone}
+                      </a>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(showroom.mapQuery)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 border border-[#002e5b]/20 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-[#002e5b] transition hover:border-[#002e5b] hover:bg-[#002e5b] hover:text-white"
+                      >
+                        <Navigation className="h-3.5 w-3.5" /> Directions
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </article>
+              </article>
+            ))}
+          </div>
         </div>
 
-        <div className="min-h-[520px] overflow-hidden border border-[#111111]/20 bg-white shadow-[0_28px_90px_rgba(17,17,17,0.18)]">
-          <iframe title="The Depot Fireplace and Stove Center showroom map" src={`https://www.google.com/maps?q=${embedQuery}&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-full min-h-[520px] w-full" />
+        <div className="min-h-[520px] overflow-hidden border border-[#002e5b]/20 bg-white shadow-[0_28px_90px_rgba(0,46,91,0.18)]">
+          <iframe
+            title="A Cozy Fireplace showroom map"
+            src={`https://www.google.com/maps?q=${embedQuery}&output=embed`}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="h-full min-h-[520px] w-full"
+          />
         </div>
       </div>
     </section>

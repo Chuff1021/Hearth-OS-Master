@@ -96,19 +96,19 @@ function metaDescriptionFor(product: Product): string {
 
   if (product.categoryId === "parts" || product.subcategoryId?.includes("parts")) {
     return truncateMeta(
-      `${product.brand} ${product.name}${skuText} ${partType} for fireplaces, stoves, and hearth appliances. Verify fitment with The Depot Fireplace and Stove Center before ordering.`,
+      `${product.brand} ${product.name}${skuText} ${partType} for fireplaces, stoves, and hearth appliances. Verify fitment with A Cozy Fireplace before ordering.`,
     );
   }
 
   if (product.contactForPricing || product.price <= 0) {
     return truncateMeta(
-      `${product.brand} ${product.name}${skuText} ${categoryName}. Contact The Depot Fireplace and Stove Center for pricing, availability, sizing, venting, and ordering support.`,
+      `${product.brand} ${product.name}${skuText} ${categoryName}. Contact A Cozy Fireplace for pricing, availability, sizing, venting, and ordering support.`,
     );
   }
 
   const price = product.salePrice ?? product.price;
   return truncateMeta(
-    `${product.brand} ${product.name}${skuText} ${categoryName} from The Depot Fireplace and Stove Center Shop online for ${formatPrice(price)}, with expert sizing and order support.`,
+    `${product.brand} ${product.name}${skuText} ${categoryName} from A Cozy Fireplace Shop online for ${formatPrice(price)}, with expert sizing and order support.`,
   );
 }
 
@@ -142,7 +142,7 @@ export async function generateMetadata({
     return {
       title: "Product not found",
       description:
-        "The product you're looking for is no longer available at The Depot Fireplace and Stove Center",
+        "The product you're looking for is no longer available at A Cozy Fireplace",
       robots: { index: false, follow: true },
     };
   }
@@ -154,7 +154,7 @@ export async function generateMetadata({
   const canonical = absoluteUrl(`/product/${product.slug}`);
   const primaryImage = product.images?.[0]
     ? absoluteUrl(product.images[0])
-    : `${SITE_URL}/depot-logo.png`;
+    : `${SITE_URL}/acozy-logo.png`;
 
   return {
     title: titleBase,

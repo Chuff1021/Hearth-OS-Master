@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" role="img" aria-label="A Cozy Fireplace">
+  <rect width="520" height="180" rx="8" fill="#fff7e8"/>
+  <g transform="translate(28 24)">
+    <path d="M53 118c-22-8-36-26-36-50 0-22 13-40 28-52-2 18 9 29 18 37 10-14 11-31 4-48 28 18 45 44 45 75 0 23-13 39-34 46 9-13 6-29-7-42-4 13-13 20-24 27 3-10 0-20-8-30-7 15-3 29 14 41z" fill="#b53824"/>
+    <path d="M58 124c-10-9-13-21-4-35 6 11 17 17 23 31-5 3-11 4-19 4z" fill="#f0a12b"/>
+  </g>
+  <text x="154" y="75" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#5b2117">A Cozy</text>
+  <text x="154" y="120" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="3" fill="#b53824">FIREPLACE</text>
+  <text x="157" y="146" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#6b5a45">NAPERVILLE · CREST HILL · NEW LENOX</text>
+</svg>

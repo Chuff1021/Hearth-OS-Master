@@ -1,0 +1,79 @@
+import Link from "next/link";
+
+import { loadAllBrands } from "@/lib/all-products";
+import { seoMetadata } from "@/lib/seo-metadata";
+import { cozyBrandNames, cozyBrandSlugMap, defaultStoreConfig } from "@/lib/store-config";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { collectionPageJsonLd, breadcrumbJsonLd } from "@/lib/site-jsonld";
+
+export const revalidate = 3600;
+
+export const metadata = seoMetadata({
+  title: "Fireplace Brands",
+  description:
+    "Shop fireplace, stove, insert, outdoor fire, mantel, accessory, and replacement part brands carried by The Depot Fireplace and Stove Center",
+  path: "/brand",
+});
+
+export default async function BrandIndexPage() {
+  const catalogBrands = await loadAllBrands();
+  const countBySlug = new Map(catalogBrands.map((brand) => [brand.slug, brand.count]));
+  const brands = cozyBrandNames.map((name) => {
+    const slug = name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    return { name: cozyBrandSlugMap.get(slug) ?? name, slug, count: countBySlug.get(slug) ?? 0 };
+  });
+
+  return (
+    <main className="min-h-screen bg-[#f6efe5]">
+      <StructuredData
+        id="brand-index-collection-jsonld"
+        data={collectionPageJsonLd({
+          name: `Fireplace Brands | ${defaultStoreConfig.storeName}`,
+          description:
+            "Browse fireplace, stove, insert, outdoor fire, mantel, accessory, and replacement part brands carried by The Depot Fireplace and Stove Center",
+          url: "/brand",
+          numberOfItems: brands.length,
+        })}
+      />
+      <StructuredData
+        id="brand-index-breadcrumb-jsonld"
+        data={breadcrumbJsonLd([
+          { name: "Home", url: "/" },
+          { name: "Brands", url: "/brand" },
+        ])}
+      />
+
+      <section className="relative overflow-hidden bg-[#111111] px-4 py-16 text-white md:px-6 md:py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(253,228,40,0.24),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(255,179,107,0.12),transparent_24%)]" />
+        <div className="relative mx-auto max-w-7xl">
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#e8b900]">The Depot Fireplace and Stove Center Brands</p>
+          <h1 className="mt-5 max-w-4xl text-[42px] font-black leading-[0.98] tracking-[-0.055em] md:text-[68px]">
+            Shop The Depot Fireplace and Stove Center brands.
+          </h1>
+          <p className="mt-7 max-w-3xl text-lg leading-8 text-[#f7efd6]">
+            Browse brands carried across The Depot Fireplace and Stove Center product lines, including fireplaces, stoves, electric fireplaces, gas logs, grills, glass doors, stone products, and accessories.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-12 md:px-6">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {brands.map((brand) => (
+            <Link
+              key={brand.slug}
+              href={`/brand/${brand.slug}`}
+              className="group border border-[#c8d8e8] bg-[#ffffff] p-5 shadow-[0_18px_50px_rgba(32,20,10,0.08)] transition hover:-translate-y-0.5 hover:border-[#b91806] hover:shadow-[0_24px_70px_rgba(32,20,10,0.14)]"
+            >
+              <p className="text-lg font-black tracking-[-0.03em] text-[#201914] group-hover:text-[#b91806]">
+                {brand.name}
+              </p>
+              <p className="mt-2 text-sm text-[#5f5140]">
+                {brand.count > 0 ? `${brand.count} catalog ${brand.count === 1 ? "item" : "items"}` : "Available showroom brand"}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
