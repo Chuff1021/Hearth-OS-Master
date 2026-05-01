@@ -101,7 +101,7 @@ export const partsDepartments: PartsDepartment[] = [
       { name: "SimpliFyre", sourceUrl: "https://www.stove-parts-unlimited.com/simplifyre-electric-parts/" },
       { name: "Superior", sourceUrl: "https://www.stove-parts-unlimited.com/brands/IHP.html" },
       { name: "Newmac", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Newmac.html" },
-      { name: "Modern Flames Electric", sourceUrl: "https://www.stove-parts-unlimited.com/modern-flames/" },
+      { name: "Dimplex Electric", sourceUrl: "https://www.stove-parts-unlimited.com/modern-flames/" },
       { name: "Astria", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Astria.html" },
       { name: "Forge & Flame", sourceUrl: "https://www.stove-parts-unlimited.com/forge-flame/" },
       { name: "Lennox", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Lennox.html" },

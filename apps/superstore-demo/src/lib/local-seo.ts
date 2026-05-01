@@ -20,14 +20,14 @@ const sharedCategories = [
 export const localLandingPages: LocalLandingPage[] = [
   {
     slug: "fireplace-store-republic-mo",
-    city: "Naperville",
+    city: "Tilton",
     state: "MO",
-    title: "Fireplace Store in Naperville, IL",
-    h1: "Naperville, IL Fireplace Store",
+    title: "Fireplace Store in Tilton, IL",
+    h1: "Tilton, IL Fireplace Store",
     description:
-      "Shop fireplaces, inserts, stoves, and replacement parts from A Cozy Fireplace in Naperville, IL. Local showroom support, expert sizing, and nationwide shipping.",
+      "Shop fireplaces, inserts, stoves, and replacement parts from The Depot Fireplace and Stove Center in Tilton, IL. Local showroom support, expert sizing, and nationwide shipping.",
     intro:
-      "A Cozy Fireplace serves Naperville homeowners, builders, and remodelers with showroom-backed fireplace selection, installation guidance, and a showroom-backed selection of hearth products and parts.",
+      "The Depot Fireplace and Stove Center serves Tilton homeowners, builders, and remodelers with showroom-backed fireplace selection, installation guidance, and a showroom-backed selection of hearth products and parts.",
     services: [
       "Gas, wood, electric, pellet, and outdoor fireplace selection",
       "Fireplace insert sizing and replacement guidance",
@@ -38,14 +38,14 @@ export const localLandingPages: LocalLandingPage[] = [
   },
   {
     slug: "fireplace-store-springfield-mo",
-    city: "Chicagoland",
+    city: "Illiana",
     state: "MO",
-    title: "Fireplace Store Serving Chicagoland, MO",
-    h1: "Chicagoland, MO Fireplace Store",
+    title: "Fireplace Store Serving Illiana, MO",
+    h1: "Illiana, MO Fireplace Store",
     description:
-      "A Cozy Fireplace serves Chicagoland, MO with fireplaces, inserts, stoves, service guidance, and replacement parts from leading hearth brands.",
+      "The Depot Fireplace and Stove Center serves Illiana, MO with fireplaces, inserts, stoves, service guidance, and replacement parts from leading hearth brands.",
     intro:
-      "From remodels in Chicagoland neighborhoods to new-construction hearth packages, our team helps customers compare fuel type, venting, size, finish options, and parts compatibility before they buy.",
+      "From remodels in Illiana neighborhoods to new-construction hearth packages, our team helps customers compare fuel type, venting, size, finish options, and parts compatibility before they buy.",
     services: [
       "Direct-vent gas fireplace and insert recommendations",
       "Wood and pellet stove product selection",
@@ -63,7 +63,7 @@ export const localLandingPages: LocalLandingPage[] = [
     description:
       "Shop fireplaces, inserts, outdoor fire features, and hearth parts for Branson, MO homes, cabins, rentals, and commercial projects.",
     intro:
-      "A Cozy Fireplace supports Branson-area cabins, lake homes, vacation rentals, and commercial spaces with fireplaces, outdoor fire features, and replacement parts selected for reliable long-term use.",
+      "The Depot Fireplace and Stove Center supports Branson-area cabins, lake homes, vacation rentals, and commercial spaces with fireplaces, outdoor fire features, and replacement parts selected for reliable long-term use.",
     services: [
       "Indoor and outdoor fireplace product selection",
       "Cabin, rental, and remodel hearth planning",
@@ -79,9 +79,9 @@ export const localLandingPages: LocalLandingPage[] = [
     title: "Fireplace Store Serving Nixa, MO",
     h1: "Nixa, MO Fireplace Store",
     description:
-      "A Cozy Fireplace helps Nixa, MO customers shop fireplaces, inserts, stoves, mantels, accessories, and replacement parts with expert support.",
+      "The Depot Fireplace and Stove Center helps Nixa, MO customers shop fireplaces, inserts, stoves, mantels, accessories, and replacement parts with expert support.",
     intro:
-      "For Nixa homeowners comparing a new gas fireplace, a high-efficiency insert, or a part for an existing unit, A Cozy Fireplace combines local hearth experience with a broad ecommerce catalog.",
+      "For Nixa homeowners comparing a new gas fireplace, a high-efficiency insert, or a part for an existing unit, The Depot Fireplace and Stove Center combines local hearth experience with a broad ecommerce catalog.",
     services: [
       "Fireplace, insert, stove, and mantel selection",
       "Venting, sizing, and fuel-type consultation",
@@ -97,9 +97,9 @@ export const localLandingPages: LocalLandingPage[] = [
     title: "Fireplace Store Serving Ozark, MO",
     h1: "Ozark, MO Fireplace Store",
     description:
-      "Shop fireplaces, stoves, inserts, outdoor fire features, and fireplace parts for Ozark, MO with A Cozy Fireplace",
+      "Shop fireplaces, stoves, inserts, outdoor fire features, and fireplace parts for Ozark, MO with The Depot Fireplace and Stove Center",
     intro:
-      "A Cozy Fireplace helps Ozark customers source new hearth appliances and hard-to-find replacement parts with the practical guidance of a real fireplace showroom team.",
+      "The Depot Fireplace and Stove Center helps Ozark customers source new hearth appliances and hard-to-find replacement parts with the practical guidance of a real fireplace showroom team.",
     services: [
       "Gas, wood, pellet, electric, and outdoor hearth products",
       "Fireplace insert and stove comparisons",
@@ -110,14 +110,14 @@ export const localLandingPages: LocalLandingPage[] = [
   },
   {
     slug: "fireplace-installation-springfield-mo",
-    city: "Chicagoland",
+    city: "Illiana",
     state: "MO",
-    title: "Fireplace Installation Guidance in Chicagoland, MO",
-    h1: "Fireplace Installation Guidance in Chicagoland, MO",
+    title: "Fireplace Installation Guidance in Illiana, MO",
+    h1: "Fireplace Installation Guidance in Illiana, MO",
     description:
-      "Plan a fireplace installation in Chicagoland, MO with A Cozy Fireplace Compare appliance types, venting requirements, sizing, finishes, and parts before buying.",
+      "Plan a fireplace installation in Illiana, MO with The Depot Fireplace and Stove Center Compare appliance types, venting requirements, sizing, finishes, and parts before buying.",
     intro:
-      "Fireplace installation starts with choosing the right appliance for the room, fuel source, vent path, and finish package. A Cozy Fireplace helps Chicagoland-area customers narrow those choices before the project moves forward.",
+      "Fireplace installation starts with choosing the right appliance for the room, fuel source, vent path, and finish package. The Depot Fireplace and Stove Center helps Illiana-area customers narrow those choices before the project moves forward.",
     services: [
       "Appliance sizing and fuel-type planning",
       "Venting and framing requirement review",

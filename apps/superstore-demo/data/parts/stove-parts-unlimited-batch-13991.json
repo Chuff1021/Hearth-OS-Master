@@ -1078,7 +1078,7 @@
     "productId": "23416",
     "sku": "MOTOR-ALLUS",
     "slug": "motor-allus",
-    "name": "HHT SimpliFire Allusion Motor (MOTOR-ALLUS)",
+    "name": "HHT Dimplex Allusion Motor (MOTOR-ALLUS)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -1087,7 +1087,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Scion Series Parts",
-      "HHT SimpliFire Allusion Motor (MOTOR-ALLUS)"
+      "HHT Dimplex Allusion Motor (MOTOR-ALLUS)"
     ],
     "price": 30,
     "priceDisplay": "$30.00",
@@ -1095,7 +1095,7 @@
     "inStock": true,
     "stock": 4,
     "partType": "Flame Media",
-    "description": "Replacement motor for SimpliFire electric fireplaces. OEM HHT part # MOTOR-ALLUS",
+    "description": "Replacement motor for Dimplex electric fireplaces. OEM HHT part # MOTOR-ALLUS",
     "imageUrl": "/products/parts/motor-allus.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/hht-simplifire-allusion-motor-motor-allus-p/motor-allus.htm"
   },
@@ -2255,7 +2255,7 @@
     "productId": "21345",
     "sku": "PCB-ALLUS",
     "slug": "pcb-allus",
-    "name": "SimpliFire Allusion Series PCB Board Assembly (PCB-ALLUS)",
+    "name": "Dimplex Allusion Series PCB Board Assembly (PCB-ALLUS)",
     "brand": "SimpliFyre",
     "department": "Electric Fireplace Parts",
     "breadcrumbBrand": "SimpliFyre Electric Parts",
@@ -2264,7 +2264,7 @@
       "Electric Fireplace Parts",
       "SimpliFyre Electric Parts",
       "Allusion Series Parts",
-      "SimpliFire Allusion Series PCB Board Assembly (PCB-ALLUS)"
+      "Dimplex Allusion Series PCB Board Assembly (PCB-ALLUS)"
     ],
     "price": 171,
     "priceDisplay": "$171.00",
@@ -2272,7 +2272,7 @@
     "inStock": true,
     "stock": 3,
     "partType": "Control & Circuit Boards",
-    "description": "Replacement PCB board assembly for SimpliFire electric fireplaces. OEM HHT part # PCB-ALLUS",
+    "description": "Replacement PCB board assembly for Dimplex electric fireplaces. OEM HHT part # PCB-ALLUS",
     "imageUrl": "/products/parts/pcb-allus.jpg",
     "productUrl": "https://www.stove-parts-unlimited.com/simplifire-allusion-series-pcb-board-assembly-pcb-allus-p/pcb-allus.htm"
   },

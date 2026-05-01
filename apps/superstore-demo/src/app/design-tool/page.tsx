@@ -71,16 +71,16 @@ function OptionButton({ selected, title, subtitle, onClick }: { selected: boolea
       onClick={onClick}
       className={`border p-5 text-left transition ${
         selected
-          ? "border-[#fde428] bg-[#eef6ff] shadow-[0_16px_38px_rgba(253,228,40,0.14)]"
-          : "border-[#c8d8e8] bg-white hover:border-[#fde428] hover:bg-[#f7fbff]"
+          ? "border-[#e8b900] bg-[#f7efd6] shadow-[0_16px_38px_rgba(253,228,40,0.14)]"
+          : "border-[#c8d8e8] bg-white hover:border-[#e8b900] hover:bg-[#f7efd6]"
       }`}
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="font-black tracking-[-0.02em] text-[#001f3d]">{title}</p>
-          <p className="mt-2 text-sm leading-6 text-[#52677d]">{subtitle}</p>
+          <p className="font-black tracking-[-0.02em] text-[#111111]">{title}</p>
+          <p className="mt-2 text-sm leading-6 text-[#5f5140]">{subtitle}</p>
         </div>
-        {selected && <CheckCircle className="h-5 w-5 shrink-0 text-[#fde428]" />}
+        {selected && <CheckCircle className="h-5 w-5 shrink-0 text-[#e8b900]" />}
       </div>
     </button>
   );
@@ -106,19 +106,19 @@ export default function DesignToolPage() {
     step === 4 ? Boolean(answers.budget) :
     Boolean(answers.contact);
 
-  const mailtoHref = `mailto:info@acozyfireplace.com?subject=${encodeURIComponent("Fireplace matchmaker request")}&body=${encodeURIComponent(`Contact: ${answers.contact}\nZip: ${answers.zip}\nTimeline: ${answers.timeline}\nProject type: ${answers.projectType}\nFuel: ${answers.fuel}\nRoom size: ${answers.roomSize}\nStyle: ${answers.style}\nBudget: ${answers.budget}\n\nNotes:\n${answers.notes}`)}`;
+  const mailtoHref = `mailto:thedepot33@att.net?subject=${encodeURIComponent("Fireplace matchmaker request")}&body=${encodeURIComponent(`Contact: ${answers.contact}\nZip: ${answers.zip}\nTimeline: ${answers.timeline}\nProject type: ${answers.projectType}\nFuel: ${answers.fuel}\nRoom size: ${answers.roomSize}\nStyle: ${answers.style}\nBudget: ${answers.budget}\n\nNotes:\n${answers.notes}`)}`;
 
   return (
     <main className="min-h-screen bg-[#f7f1e8]">
-      <section className="relative overflow-hidden bg-[#001f3d] px-4 py-16 text-white md:px-5 md:py-20">
+      <section className="relative overflow-hidden bg-[#111111] px-4 py-16 text-white md:px-5 md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(253,228,40,0.24),transparent_34%)]" />
         <div className="relative mx-auto max-w-5xl text-center">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#fde428]">Fireplace Matchmaker</p>
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#e8b900]">Fireplace Matchmaker</p>
           <h1 className="mt-5 text-[44px] font-black leading-[0.98] tracking-[-0.055em] md:text-[72px]">
             Find the right fireplace without guessing.
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#d7e6f7]">
-            Answer a few practical planning questions so A Cozy Fireplace can narrow fuel type, fitment, style, budget, and next steps for expert follow-up.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#f7efd6]">
+            Answer a few practical planning questions so The Depot Fireplace and Stove Center can narrow fuel type, fitment, style, budget, and next steps for expert follow-up.
           </p>
         </div>
       </section>
@@ -132,13 +132,13 @@ export default function DesignToolPage() {
                   <span>{progress}% complete</span>
                 </div>
                 <div className="h-2 bg-[#efe5d7]">
-                  <div className="h-full bg-[#fde428] transition-all" style={{ width: `${progress}%` }} />
+                  <div className="h-full bg-[#e8b900] transition-all" style={{ width: `${progress}%` }} />
                 </div>
               </div>
 
               {step === 0 && (
                 <div>
-                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#001f3d]">What are you trying to do?</h2>
+                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#111111]">What are you trying to do?</h2>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     {options.projectType.map(([title, subtitle]) => (
                       <OptionButton key={title} title={title} subtitle={subtitle} selected={answers.projectType === title} onClick={() => setAnswer("projectType", title)} />
@@ -149,7 +149,7 @@ export default function DesignToolPage() {
 
               {step === 1 && (
                 <div>
-                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#001f3d]">Preferred fuel type?</h2>
+                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#111111]">Preferred fuel type?</h2>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     {options.fuel.map(([title, subtitle]) => (
                       <OptionButton key={title} title={title} subtitle={subtitle} selected={answers.fuel === title} onClick={() => setAnswer("fuel", title)} />
@@ -160,7 +160,7 @@ export default function DesignToolPage() {
 
               {step === 2 && (
                 <div>
-                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#001f3d]">What size space are we planning for?</h2>
+                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#111111]">What size space are we planning for?</h2>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     {options.roomSize.map(([title, subtitle]) => (
                       <OptionButton key={title} title={title} subtitle={subtitle} selected={answers.roomSize === title} onClick={() => setAnswer("roomSize", title)} />
@@ -171,7 +171,7 @@ export default function DesignToolPage() {
 
               {step === 3 && (
                 <div>
-                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#001f3d]">What style feels right?</h2>
+                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#111111]">What style feels right?</h2>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     {options.style.map(([title, subtitle]) => (
                       <OptionButton key={title} title={title} subtitle={subtitle} selected={answers.style === title} onClick={() => setAnswer("style", title)} />
@@ -182,7 +182,7 @@ export default function DesignToolPage() {
 
               {step === 4 && (
                 <div>
-                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#001f3d]">What budget range should we respect?</h2>
+                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#111111]">What budget range should we respect?</h2>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     {options.budget.map(([title, subtitle]) => (
                       <OptionButton key={title} title={title} subtitle={subtitle} selected={answers.budget === title} onClick={() => setAnswer("budget", title)} />
@@ -193,47 +193,47 @@ export default function DesignToolPage() {
 
               {step === 5 && (
                 <div>
-                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#001f3d]">Where should we send your plan?</h2>
+                  <h2 className="text-3xl font-black tracking-[-0.04em] text-[#111111]">Where should we send your plan?</h2>
                   <div className="mt-6 grid gap-4">
-                    <input className="border border-[#c8d8e8] px-4 py-3 outline-none focus:border-[#fde428]" placeholder="Email or phone" value={answers.contact} onChange={(e) => setAnswer("contact", e.target.value)} />
-                    <input className="border border-[#c8d8e8] px-4 py-3 outline-none focus:border-[#fde428]" placeholder="Zip code" value={answers.zip} onChange={(e) => setAnswer("zip", e.target.value)} />
-                    <input className="border border-[#c8d8e8] px-4 py-3 outline-none focus:border-[#fde428]" placeholder="Timeline: now, 30 days, this season, researching" value={answers.timeline} onChange={(e) => setAnswer("timeline", e.target.value)} />
-                    <textarea className="min-h-32 border border-[#c8d8e8] px-4 py-3 outline-none focus:border-[#fde428]" placeholder="Optional: dimensions, model number, photos you can send later, or anything we should know" value={answers.notes} onChange={(e) => setAnswer("notes", e.target.value)} />
+                    <input className="border border-[#c8d8e8] px-4 py-3 outline-none focus:border-[#e8b900]" placeholder="Email or phone" value={answers.contact} onChange={(e) => setAnswer("contact", e.target.value)} />
+                    <input className="border border-[#c8d8e8] px-4 py-3 outline-none focus:border-[#e8b900]" placeholder="Zip code" value={answers.zip} onChange={(e) => setAnswer("zip", e.target.value)} />
+                    <input className="border border-[#c8d8e8] px-4 py-3 outline-none focus:border-[#e8b900]" placeholder="Timeline: now, 30 days, this season, researching" value={answers.timeline} onChange={(e) => setAnswer("timeline", e.target.value)} />
+                    <textarea className="min-h-32 border border-[#c8d8e8] px-4 py-3 outline-none focus:border-[#e8b900]" placeholder="Optional: dimensions, model number, photos you can send later, or anything we should know" value={answers.notes} onChange={(e) => setAnswer("notes", e.target.value)} />
                   </div>
                 </div>
               )}
 
               <div className="mt-10 flex items-center justify-between border-t border-[#c8d8e8] pt-6">
-                <button type="button" onClick={back} disabled={step === 0} className="inline-flex items-center gap-2 text-sm font-bold text-[#52677d] disabled:opacity-30">
+                <button type="button" onClick={back} disabled={step === 0} className="inline-flex items-center gap-2 text-sm font-bold text-[#5f5140] disabled:opacity-30">
                   <ArrowLeft className="h-4 w-4" /> Back
                 </button>
                 {step < steps.length - 1 ? (
-                  <button type="button" onClick={next} disabled={!canContinue} className="inline-flex items-center gap-2 bg-black px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#fde428] hover:text-black disabled:opacity-30">
+                  <button type="button" onClick={next} disabled={!canContinue} className="inline-flex items-center gap-2 bg-black px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#e8b900] hover:text-black disabled:opacity-30">
                     Continue <ArrowRight className="h-4 w-4" />
                   </button>
                 ) : (
-                  <a href={canContinue ? mailtoHref : undefined} aria-disabled={!canContinue} className={`inline-flex items-center gap-2 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] transition ${canContinue ? "bg-[#fde428] text-black hover:bg-[#fff06a]" : "cursor-not-allowed bg-[#fde428]/40 text-black/50"}`}>
+                  <a href={canContinue ? mailtoHref : undefined} aria-disabled={!canContinue} className={`inline-flex items-center gap-2 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] transition ${canContinue ? "bg-[#e8b900] text-black hover:bg-[#ffd94a]" : "cursor-not-allowed bg-[#e8b900]/40 text-black/50"}`}>
                     Email My Plan <Mail className="h-4 w-4" />
                   </a>
                 )}
               </div>
-            <p className="mt-4 text-sm text-[#52677d]">This opens your email app with the plan filled in so A Cozy Fireplace can review the details and recommend the next step.</p>
+            <p className="mt-4 text-sm text-[#5f5140]">This opens your email app with the plan filled in so The Depot Fireplace and Stove Center can review the details and recommend the next step.</p>
           </>
         </div>
 
         <aside className="space-y-4">
           {[
-            { icon: Flame, title: "Practical planning", text: "Share room details, appliance type, style preferences, and project goals so A Cozy Fireplace can help narrow the right options." },
+            { icon: Flame, title: "Practical planning", text: "Share room details, appliance type, style preferences, and project goals so The Depot Fireplace and Stove Center can help narrow the right options." },
             { icon: Camera, title: "Photos still help", text: "Room or model photos can be reviewed by an expert instead of pretending AI will solve everything." },
             { icon: Wrench, title: "Built for follow-up", text: "Use the results to start a quote, showroom visit, part match, or product shortlist." },
             { icon: Phone, title: "Expert-assisted", text: "Fireplace purchases are complex. This flow supports human trust instead of replacing it." },
-            { icon: Mail, title: "Easy follow-up", text: "Your answers turn into a clear email A Cozy Fireplace can review before calling or replying." },
+            { icon: Mail, title: "Easy follow-up", text: "Your answers turn into a clear email The Depot Fireplace and Stove Center can review before calling or replying." },
             { icon: Zap, title: "Fast path", text: "A customer can answer the basics in under two minutes." },
           ].map(({ icon: Icon, title, text }) => (
             <div key={title} className="border border-[#e2d3c0] bg-white p-5">
-              <Icon className="h-6 w-6 text-[#fde428]" />
-              <h3 className="mt-4 font-black text-[#001f3d]">{title}</h3>
-              <p className="mt-2 text-sm leading-6 text-[#52677d]">{text}</p>
+              <Icon className="h-6 w-6 text-[#e8b900]" />
+              <h3 className="mt-4 font-black text-[#111111]">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-[#5f5140]">{text}</p>
             </div>
           ))}
         </aside>

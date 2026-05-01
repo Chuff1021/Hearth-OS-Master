@@ -211,7 +211,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
     <div className="mx-auto flex max-w-[1640px] flex-col xl:flex-row">
       <aside className="hidden w-[230px] shrink-0 border-r border-[#e0e0e0] xl:block">
         <div className="border-b border-[#e0e0e0] px-5 py-8">
-          <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Shop By</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">Shop By</h2>
           <div className="mt-4 space-y-4 text-sm">
             <div>
               <p className="mb-3 font-medium text-[#424242]">Price</p>
@@ -221,7 +221,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                     type="checkbox"
                     checked={selectedPrices.includes(range)}
                     onChange={(event) => togglePrice(range, event.target.checked)}
-                    className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
+                    className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#b91806] focus:ring-0"
                   />
                   <span className="ml-4">{range}</span>
                 </label>
@@ -237,7 +237,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                       type="checkbox"
                       checked={selectedFuelTypes.includes(fuelType)}
                       onChange={(event) => toggleFuelType(fuelType, event.target.checked)}
-                      className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
+                      className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#b91806] focus:ring-0"
                     />
                     <span className="ml-4 flex-1">{fuelType}</span>
                     <span className="ml-2 text-xs text-[#8a8175]">{fuelTypeCounts[fuelType]}</span>
@@ -251,7 +251,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
         <div className="px-5 py-8">
           {featuredAvailableBrands.length > 0 && (
             <div className="mb-7 border-b border-[#e0e0e0] pb-6">
-              <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Featured Brands</h2>
+              <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">Featured Brands</h2>
               <div className="mt-4 space-y-2">
                 {featuredAvailableBrands.map((brand) => (
                   <button
@@ -260,8 +260,8 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                     onClick={() => toggleBrand(brand, !selectedBrands.includes(brand))}
                     className={`w-full border px-3 py-2 text-left text-sm font-bold transition ${
                       selectedBrands.includes(brand)
-                        ? "border-[#a54210] bg-[#a54210] text-white"
-                        : "border-[#d9c7b0] bg-[#fbf4ea] text-[#2a211b] hover:border-[#a54210]"
+                        ? "border-[#b91806] bg-[#b91806] text-white"
+                        : "border-[#d9c7b0] bg-[#fbf4ea] text-[#2a211b] hover:border-[#b91806]"
                     }`}
                   >
                     {brand} <span className="font-normal opacity-75">({brandCounts[brand]})</span>
@@ -270,7 +270,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
               </div>
             </div>
           )}
-          <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">All Brands</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">All Brands</h2>
           <div className="mt-4 max-h-[420px] overflow-auto pr-2">
             {availableBrands.map((brand) => (
               <label key={brand} className="mb-3 flex cursor-pointer items-start text-sm text-[#424242]">
@@ -278,7 +278,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                   type="checkbox"
                   checked={selectedBrands.includes(brand)}
                   onChange={(event) => toggleBrand(brand, event.target.checked)}
-                  className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
+                  className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#b91806] focus:ring-0"
                 />
                 <span className="ml-4 flex-1">{brand}</span>
                 <span className="ml-2 text-xs text-[#8a8175]">{brandCounts[brand]}</span>
@@ -299,8 +299,8 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                   onClick={() => toggleBrand(brand, !selectedBrands.includes(brand))}
                   className={`rounded-full border px-4 py-2 text-xs font-black uppercase tracking-[0.1em] transition ${
                     selectedBrands.includes(brand)
-                      ? "border-[#a54210] bg-[#a54210] text-white"
-                      : "border-[#e1cbb2] bg-[#fffaf3] text-[#2a211b] hover:border-[#a54210]"
+                      ? "border-[#b91806] bg-[#b91806] text-white"
+                      : "border-[#e1cbb2] bg-[#fffaf3] text-[#2a211b] hover:border-[#b91806]"
                   }`}
                 >
                   {brand} ({brandCounts[brand]})
@@ -349,28 +349,28 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
             <div className="mb-8 border border-[#e0e0e0] bg-[#f4f4f4] p-4 xl:hidden">
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
-                  <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Price</h2>
+                  <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">Price</h2>
                   {availablePriceBuckets.map((range) => (
                     <label key={range} className="mb-3 flex cursor-pointer items-start text-sm text-[#424242]">
                       <input
                         type="checkbox"
                         checked={selectedPrices.includes(range)}
                         onChange={(event) => togglePrice(range, event.target.checked)}
-                        className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
+                        className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#b91806] focus:ring-0"
                       />
                       <span className="ml-4">{range}</span>
                     </label>
                   ))}
                   {showFuelTypeFilter && (
                     <div className="mt-6 border-t border-[#d9c7b0] pt-5">
-                      <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Fuel Type</h2>
+                      <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">Fuel Type</h2>
                       {availableFuelTypes.map((fuelType) => (
                         <label key={fuelType} className="mb-3 flex cursor-pointer items-start text-sm text-[#424242]">
                           <input
                             type="checkbox"
                             checked={selectedFuelTypes.includes(fuelType)}
                             onChange={(event) => toggleFuelType(fuelType, event.target.checked)}
-                            className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
+                            className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#b91806] focus:ring-0"
                           />
                           <span className="ml-4 flex-1">{fuelType}</span>
                           <span className="ml-2 text-xs text-[#8a8175]">{fuelTypeCounts[fuelType]}</span>
@@ -382,7 +382,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                 <div>
                   {featuredAvailableBrands.length > 0 && (
                     <div className="mb-6">
-                      <h2 className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Featured Brands</h2>
+                      <h2 className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">Featured Brands</h2>
                       <div className="space-y-2">
                         {featuredAvailableBrands.map((brand) => (
                           <button
@@ -391,7 +391,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                             onClick={() => toggleBrand(brand, !selectedBrands.includes(brand))}
                             className={`w-full border px-3 py-2 text-left text-sm font-bold transition ${
                               selectedBrands.includes(brand)
-                                ? "border-[#a54210] bg-[#a54210] text-white"
+                                ? "border-[#b91806] bg-[#b91806] text-white"
                                 : "border-[#d9c7b0] bg-white text-[#2a211b]"
                             }`}
                           >
@@ -401,14 +401,14 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                       </div>
                     </div>
                   )}
-                  <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">All Brands</h2>
+                  <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">All Brands</h2>
                   {availableBrands.map((brand) => (
                     <label key={brand} className="mb-3 flex cursor-pointer items-start text-sm text-[#424242]">
                       <input
                         type="checkbox"
                         checked={selectedBrands.includes(brand)}
                         onChange={(event) => toggleBrand(brand, event.target.checked)}
-                        className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
+                        className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#b91806] focus:ring-0"
                       />
                       <span className="ml-4 flex-1">{brand}</span>
                       <span className="ml-2 text-xs text-[#8a8175]">{brandCounts[brand]}</span>
@@ -452,7 +452,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                         </div>
                       </div>
 
-                      <h2 className="line-clamp-4 text-sm leading-6 tracking-[0.39px] text-[#212121] transition-colors group-hover:text-[#a54210]">
+                      <h2 className="line-clamp-4 text-sm leading-6 tracking-[0.39px] text-[#212121] transition-colors group-hover:text-[#b91806]">
                         {product.name}
                       </h2>
                     </Link>
@@ -461,13 +461,13 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                       {isContactForPricing ? (
                         <Link
                           href={"/contact"}
-                          className="inline-flex w-full items-center justify-center gap-2 border border-[#a54210] bg-[#a54210] px-4 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#7f2f0b]"
+                          className="inline-flex w-full items-center justify-center gap-2 border border-[#b91806] bg-[#b91806] px-4 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#7f2f0b]"
                         >
                           Contact for Pricing
                           <ChevronRight className="h-4 w-4" />
                         </Link>
                       ) : (
-                        <span className="text-base font-bold leading-5 tracking-[0.29px] text-[#a54210] md:text-lg md:tracking-[0.32px]">
+                        <span className="text-base font-bold leading-5 tracking-[0.29px] text-[#b91806] md:text-lg md:tracking-[0.32px]">
                           {formatPagePrice(livePrice)}
                         </span>
                       )}
@@ -504,7 +504,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                     onClick={() => setPage(pageNumber)}
                     className={`flex h-[30px] w-[30px] items-center justify-center text-base ${
                       pageNumber === currentPage
-                        ? "rounded-full bg-[#a54210] font-bold text-white"
+                        ? "rounded-full bg-[#b91806] font-bold text-white"
                         : "text-[#616161]"
                     }`}
                   >

@@ -4,7 +4,7 @@ import { Truck, Package, Clock, Phone } from "lucide-react";
 
 export const metadata = seoMetadata({
   title: 'Fireplace Shipping & Delivery',
-  description: "Shipping and delivery information for fireplaces, inserts, stoves, mantels, accessories, and replacement parts from A Cozy Fireplace",
+  description: "Shipping and delivery information for fireplaces, inserts, stoves, mantels, accessories, and replacement parts from The Depot Fireplace and Stove Center",
   path: "/shipping",
 });
 
@@ -52,8 +52,8 @@ export default function ShippingPage() {
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Local Delivery</h3>
               <p className="text-gray-600 mb-4">
-                We provide local delivery and installation services within a 50-mile radius of our showroom in Naperville, Illinois.
-                This includes Chicagoland, Nixa, Ozark, Battlefield, and surrounding communities.
+                We provide local delivery and installation services within a 50-mile radius of our showroom in Tilton, Illinois.
+                This includes Illiana, Nixa, Ozark, Battlefield, and surrounding communities.
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
                 <li>Free delivery within 30 miles for orders over $1,000</li>

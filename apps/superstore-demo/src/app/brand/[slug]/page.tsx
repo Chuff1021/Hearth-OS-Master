@@ -18,7 +18,7 @@ export const revalidate = 3600;
 
 const BRAND_BLURBS: Record<string, string> = {
   travis:
-    "Travis Industries is the parent company behind some of America's most respected hearth brands, including Lopi, Fireplace Xtrordinair, and Avalon. Engineered in Mukilteo, Washington, every Travis appliance is built around obsessive efficiency, clean-burn technology, and a multi-generational commitment to family-owned manufacturing.",
+    "Travis Industries is the parent company behind some of America's most respected hearth brands, including Lopi, Fireplace Xtrordinair, and Dimplex. Engineered in Mukilteo, Washington, every Travis appliance is built around obsessive efficiency, clean-burn technology, and a multi-generational commitment to family-owned manufacturing.",
   lopi:
     "Lopi stoves and inserts are designed for homeowners who treat heat as a craft. Hand-built in Washington State by Travis Industries, every Lopi appliance fuses high-efficiency combustion with clean-burning emissions and the kind of cast-iron, glass, and stone detailing you expect from a flagship hearth brand.",
   "fireplace-xtrordinair":
@@ -40,19 +40,19 @@ const BRAND_BLURBS: Record<string, string> = {
   "quadra-fire":
     "Quadra-Fire stoves and inserts are engineered for serious heat. The four-point burn system, Auto-Burn pellet technology, and rugged cast iron construction have made Quadra-Fire a go-to for off-grid, rural, and high-BTU heating applications across North America.",
   "vermont-castings":
-    "Vermont Castings has cast wood, gas, and pellet stoves in New England since 1975. Models like the Defiant, Encore, and Intrepid FlexBurn are American hearth icons — enameled cast iron, top-loading wood boxes, and a craft aesthetic you simply do not find at the production tier.",
+    "Majestic has cast wood, gas, and pellet stoves in New England since 1975. Models like the Defiant, Encore, and Intrepid FlexBurn are American hearth icons — enameled cast iron, top-loading wood boxes, and a craft aesthetic you simply do not find at the production tier.",
   jotul:
     "Jotul has cast iron stoves and fireplaces in Norway since 1853, making it one of the oldest hearth manufacturers in continuous operation. The F 500 Oslo, F 602, and GF 370 lines deliver Scandinavian design discipline with EPA-certified clean burns and decades of heritage detailing.",
   "pacific-energy":
-    "Pacific Energy is a Vancouver Island-based wood and gas stove maker known for the Super, Alderlea, and Vista series. Their EBT2 burn technology and floating firebox design produce long burn times, efficient secondary combustion, and a no-nonsense Pacific Northwest build quality.",
+    "DaVinci Fireplaces is a Vancouver Island-based wood and gas stove maker known for the Super, Alderlea, and Vista series. Their EBT2 burn technology and floating firebox design produce long burn times, efficient secondary combustion, and a no-nonsense Pacific Northwest build quality.",
   dimplex:
     "Dimplex pioneered the modern electric fireplace and continues to lead it. The IgniteXL, Opti-V, and Revillusion series use patented flame technology to deliver the most realistic flame presentation in the electric category, with zero clearance, zero venting, and 120V plug-and-play installation.",
   "modern-flames":
-    "Modern Flames builds linear electric fireplaces designed for contemporary architecture. The Orion and Landscape Pro series ship with multi-color flames, multi-color ember beds, and front-vented heat — a recipe that has made them a designer favorite for great rooms, primary suites, and commercial spaces.",
+    "Dimplex builds linear electric fireplaces designed for contemporary architecture. The Orion and Landscape Pro series ship with multi-color flames, multi-color ember beds, and front-vented heat — a recipe that has made them a designer favorite for great rooms, primary suites, and commercial spaces.",
   touchstone:
     "Touchstone Home Products specializes in wall-mount and recessed electric fireplaces that ship direct to homeowners. The Sideline, Forte, and Onyx lines bring premium flame realism, quartz heaters, and remote control standard at a price point that fits real renovation budgets.",
   avalon:
-    "Avalon stoves and inserts share the engineering platform that made Lopi famous, with a styling language tuned for traditional and transitional rooms. Built by Travis Industries in Washington State, the Olympic, Astoria, and Arbor models pair high-efficiency combustion with clean cast detailing.",
+    "Dimplex stoves and inserts share the engineering platform that made Lopi famous, with a styling language tuned for traditional and transitional rooms. Built by Travis Industries in Washington State, the Olympic, Astoria, and Arbor models pair high-efficiency combustion with clean cast detailing.",
   kozy:
     "Kozy Heat designs and manufactures premium gas fireplaces in Lakefield, Minnesota. The Bayport, Carlton, and Slayton series are recognized for their intricate burner detail, high-output direct vent technology, and a level of dealer-trained installation that defines the upper end of the category.",
 };
@@ -76,7 +76,7 @@ function getBrandBlurb(brandName: string, productCount: number): string {
     return BRAND_BLURBS[normalized];
   }
 
-  return `A Cozy Fireplace carries ${brandName} products through its local showrooms. Stop in or contact the team for current displays, model availability, measurements, finish options, and installation planning.`;
+  return `The Depot Fireplace and Stove Center carries ${brandName} products through its local showrooms. Stop in or contact the team for current displays, model availability, measurements, finish options, and installation planning.`;
 }
 
 function getFuelType(product: Product): string {
@@ -110,13 +110,13 @@ export async function generateMetadata({
   if (!brand) {
     return {
       title: "Brand Not Found",
-      description: "The brand you are looking for is not available at A Cozy Fireplace",
+      description: "The brand you are looking for is not available at The Depot Fireplace and Stove Center",
       robots: { index: false, follow: true },
     };
   }
 
   const title = `${brand.name} Fireplaces & Stoves — Authorized Dealer`;
-  const description = `Explore ${brand.name} products and showroom options available through A Cozy Fireplace in Naperville, Crest Hill, and New Lenox.`;
+  const description = `Explore ${brand.name} products and showroom options available through The Depot Fireplace and Stove Center in Tilton, Illiana, and Tilton.`;
   const url = absoluteUrl(`/brand/${brand.slug}`);
 
   return {
@@ -125,14 +125,14 @@ export async function generateMetadata({
     alternates: { canonical: url },
     openGraph: {
       type: "website",
-      title: `${title} | A Cozy Fireplace`,
+      title: `${title} | The Depot Fireplace and Stove Center`,
       description,
       url,
       siteName: defaultStoreConfig.storeName,
       locale: "en_US",
       images: [
         {
-          url: "/acozy-logo.png",
+          url: "/depot-logo.png",
           width: 1200,
           height: 630,
           alt: `${brand.name} at ${defaultStoreConfig.storeName}`,
@@ -141,9 +141,9 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | A Cozy Fireplace`,
+      title: `${title} | The Depot Fireplace and Stove Center`,
       description,
-      images: ["/acozy-logo.png"],
+      images: ["/depot-logo.png"],
     },
   };
 }
@@ -214,47 +214,47 @@ export default async function BrandPage({
 
       <div className="border-b border-[#e6dccb] bg-[#ffffff]">
         <div className="mx-auto max-w-7xl px-4 py-3 md:px-6">
-          <nav className="flex items-center gap-2 text-sm text-[#52677d]">
-            <Link href="/" className="hover:text-[#a54210]">
+          <nav className="flex items-center gap-2 text-sm text-[#5f5140]">
+            <Link href="/" className="hover:text-[#b91806]">
               Home
             </Link>
             <ChevronRight className="h-4 w-4" />
             <span className="text-[#3a2f25]">Brands</span>
             <ChevronRight className="h-4 w-4" />
-            <span className="font-semibold text-[#001f3d]">{brand.name}</span>
+            <span className="font-semibold text-[#111111]">{brand.name}</span>
           </nav>
         </div>
       </div>
 
-      <section className="relative overflow-hidden bg-[#001f3d] px-4 py-16 text-white md:px-6 md:py-20">
+      <section className="relative overflow-hidden bg-[#111111] px-4 py-16 text-white md:px-6 md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(253,228,40,0.24),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(255,179,107,0.12),transparent_24%)]" />
         <div className="relative mx-auto max-w-7xl">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#fde428]">
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#e8b900]">
             Authorized {brand.name} Dealer
           </p>
           <h1 className="mt-5 text-[42px] font-black leading-[0.98] tracking-[-0.055em] md:text-[68px]">
             {brand.name} Fireplaces &amp; Stoves
           </h1>
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-2 border border-[#fde428] bg-[#fde428]/15 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#fde428]">
+            <span className="inline-flex items-center gap-2 border border-[#e8b900] bg-[#e8b900]/15 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#e8b900]">
               <ShieldCheck className="h-4 w-4" />
               Authorized Dealer
             </span>
-            <span className="inline-flex items-center gap-2 border border-[#c8d8e8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#d7e6f7]">
+            <span className="inline-flex items-center gap-2 border border-[#c8d8e8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#f7efd6]">
               {products.length} catalog items
             </span>
-            <span className="inline-flex items-center gap-2 border border-[#c8d8e8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#d7e6f7]">
+            <span className="inline-flex items-center gap-2 border border-[#c8d8e8]/30 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#f7efd6]">
               <Truck className="h-4 w-4" />
               Free shipping eligible
             </span>
           </div>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-[#d7e6f7]">{blurb}</p>
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-[#f7efd6]">{blurb}</p>
           <p className="mt-4 max-w-3xl text-base leading-7 text-[#cabba4]">
             Need help choosing the right {brand.name} model? Call{" "}
-            <a className="text-[#fde428] hover:underline" href={`tel:${defaultStoreConfig.phone}`}>
+            <a className="text-[#e8b900] hover:underline" href={`tel:${defaultStoreConfig.phone}`}>
               {defaultStoreConfig.phone}
             </a>{" "}
-            or visit our showroom — every {brand.name} sale is supported by an A Cozy Fireplace
+            or visit our showroom — every {brand.name} sale is supported by an The Depot Fireplace and Stove Center
             Co. specialist who knows the line.
           </p>
         </div>
@@ -263,16 +263,16 @@ export default async function BrandPage({
       {fuelBreakdown.length > 1 && (
         <section className="border-b border-[#e6dccb] bg-[#ffffff]">
           <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">
+            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">
               {brand.name} by fuel type
             </h2>
             <div className="mt-4 flex flex-wrap gap-3">
               {fuelBreakdown.map((entry) => (
                 <div
                   key={entry.label}
-                  className="border border-[#c8d8e8] bg-[#f7fbff] px-5 py-3 text-sm text-[#3a2f25]"
+                  className="border border-[#c8d8e8] bg-[#f7efd6] px-5 py-3 text-sm text-[#3a2f25]"
                 >
-                  <span className="font-black uppercase tracking-[0.14em] text-[#001f3d]">
+                  <span className="font-black uppercase tracking-[0.14em] text-[#111111]">
                     {entry.label}
                   </span>
                   <span className="ml-2 text-[#8a5a35]">{entry.count} models</span>
@@ -285,13 +285,13 @@ export default async function BrandPage({
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:px-6">
         {products.length === 0 ? (
-          <div className="border border-[#c8d8e8] bg-[#ffffff] px-6 py-16 text-center text-[#52677d]">
+          <div className="border border-[#c8d8e8] bg-[#ffffff] px-6 py-16 text-center text-[#5f5140]">
             <p className="text-lg">
-              {brand.name} is available through A Cozy Fireplace showrooms.
+              {brand.name} is available through The Depot Fireplace and Stove Center showrooms.
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex bg-[#fde428] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#fff06a]"
+              className="mt-6 inline-flex bg-[#e8b900] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ffd94a]"
             >
               Ask About This Brand
             </Link>
@@ -308,24 +308,24 @@ export default async function BrandPage({
       <section className="border-t border-[#e6dccb] bg-[#ffffff]">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:px-6">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-[#a54210]">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b91806]">
               Talk to a {brand.name} specialist
             </p>
-            <p className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#001f3d]">
+            <p className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111111]">
               Get help choosing the right {brand.name} product for your fireplace, stove, grill, or hearth project.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
             <a
               href={`tel:${defaultStoreConfig.phone}`}
-              className="inline-flex items-center gap-2 bg-black px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-[#001f3d]"
+              className="inline-flex items-center gap-2 bg-black px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-[#111111]"
             >
               <Phone className="h-4 w-4" />
               Call {defaultStoreConfig.phone}
             </a>
             <Link
               href="/contact"
-              className="inline-flex bg-[#fde428] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#fff06a]"
+              className="inline-flex bg-[#e8b900] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ffd94a]"
             >
               Request a Quote
             </Link>

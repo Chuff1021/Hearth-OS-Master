@@ -3,7 +3,7 @@ import { seoMetadata } from "@/lib/seo-metadata";
 
 export const metadata = seoMetadata({
   title: 'Terms of Service',
-  description: "Terms and conditions for using A Cozy Fireplace's website, product catalog, order support, quote requests, and online services.",
+  description: "Terms and conditions for using The Depot Fireplace and Stove Center's website, product catalog, order support, quote requests, and online services.",
   path: "/terms",
 });
 

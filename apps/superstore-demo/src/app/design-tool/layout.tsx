@@ -4,7 +4,7 @@ import { seoMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = seoMetadata({
   title: 'Fireplace Design Tool',
-  description: "Use A Cozy Fireplace's fireplace design tool to narrow down fuel type, project scope, room size, style, budget, and next steps.",
+  description: "Use The Depot Fireplace and Stove Center's fireplace design tool to narrow down fuel type, project scope, room size, style, budget, and next steps.",
   path: "/design-tool",
 });
 

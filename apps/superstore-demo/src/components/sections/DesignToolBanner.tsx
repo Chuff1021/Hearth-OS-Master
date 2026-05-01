@@ -10,11 +10,11 @@ const steps = [
 
 export function DesignToolBanner() {
   return (
-    <section className="relative overflow-hidden bg-[#002e5b] py-20 text-white">
+    <section className="relative overflow-hidden bg-[#111111] py-20 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(253,228,40,0.18),transparent_30%),radial-gradient(circle_at_80%_65%,rgba(253,228,40,0.12),transparent_28%)]" />
       <div className="relative mx-auto grid max-w-[1640px] gap-10 px-4 md:px-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.26em] text-[#fde428]">
+          <p className="text-xs font-black uppercase tracking-[0.26em] text-[#e8b900]">
             Guided fireplace planning
           </p>
           <h2 className="mt-4 max-w-3xl text-[40px] font-black leading-[0.98] tracking-[-0.055em] md:text-[58px]">
@@ -26,13 +26,13 @@ export function DesignToolBanner() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/design-tool"
-              className="inline-flex items-center justify-center gap-3 bg-[#fde428] px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#fff06a]"
+              className="inline-flex items-center justify-center gap-3 bg-[#e8b900] px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ffd94a]"
             >
               Start Matchmaker <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center border border-white/20 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:border-[#fde428] hover:text-[#fde428]"
+              className="inline-flex items-center justify-center border border-white/20 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:border-[#e8b900] hover:text-[#e8b900]"
             >
               Talk to an expert
             </Link>
@@ -43,7 +43,7 @@ export function DesignToolBanner() {
           {steps.map(({ icon: Icon, label }, index) => (
             <div key={label} className="border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
               <div className="mb-8 flex items-center justify-between">
-                <Icon className="h-7 w-7 text-[#fde428]" />
+                <Icon className="h-7 w-7 text-[#e8b900]" />
                 <span className="font-mono text-sm text-white/35">0{index + 1}</span>
               </div>
               <p className="text-lg font-bold leading-7 text-white">{label}</p>

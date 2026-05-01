@@ -114,17 +114,17 @@ function filterProductsForCategory(
 
 const RICH_INTRO_BY_SLUG: Record<string, string> = {
   fireplaces:
-    "A Cozy Fireplace carries a full lineup of gas, wood-burning, electric, and outdoor fireplaces from Travis Industries, Fireplace Xtrordinair, Lopi, Napoleon, Superior, and Empire. Whether you're framing in a brand new linear gas hearth or replacing an old masonry firebox, our team can size, vent, and ship the right unit nationwide.",
+    "The Depot Fireplace and Stove Center carries a full lineup of gas, wood-burning, electric, and outdoor fireplaces from Travis Industries, Fireplace Xtrordinair, Lopi, Napoleon, Superior, and Empire. Whether you're framing in a brand new linear gas hearth or replacing an old masonry firebox, our team can size, vent, and ship the right unit nationwide.",
   "gas-fireplaces":
     "Shop direct vent and B-vent gas fireplaces from trusted showroom brands — Empire Comfort Systems, Fireplace Xtrordinair, Lopi, and Majestic. Filter by BTU, width, vent style, and price to compare every model side by side, then call our specialists for sizing, gas line, and finish recommendations.",
   "wood-fireplaces":
     "Browse EPA-certified wood-burning fireplaces from Lopi, Travis Industries, and other top hearth builders. These radiant heat machines deliver the look of a real wood fire with modern combustion efficiency, secondary burn tubes, and large viewing glass — built to heat the whole house when the power goes out.",
   "electric-fireplaces":
-    "Plug-and-play electric fireplaces from Dimplex, Modern Flames, Touchstone, and more — no venting, no gas line, no chimney required. Wall-mount, recessed, and built-in linear styles ship to all 50 states with realistic flame technology and supplemental heat for any room.",
+    "Plug-and-play electric fireplaces from Dimplex, Dimplex, Touchstone, and more — no venting, no gas line, no chimney required. Wall-mount, recessed, and built-in linear styles ship to all 50 states with realistic flame technology and supplemental heat for any room.",
   "outdoor-fireplaces":
     "Bring the hearth outside with outdoor fireplace and fire feature options for patios, pool decks, and outdoor kitchens. Visit a showroom for help matching the product to your space and fuel setup.",
   inserts:
-    "Convert an inefficient masonry fireplace into a real heat source with a high-efficiency gas, wood, pellet, or electric insert. A Cozy Fireplace stocks the most popular sizes from Lopi, Fireplace Xtrordinair, Empire, and Majestic — and our experts measure your existing firebox so the new insert drops in clean.",
+    "Convert an inefficient masonry fireplace into a real heat source with a high-efficiency gas, wood, pellet, or electric insert. The Depot Fireplace and Stove Center stocks the most popular sizes from Lopi, Fireplace Xtrordinair, Empire, and Majestic — and our experts measure your existing firebox so the new insert drops in clean.",
   "gas-inserts":
     "Direct vent gas fireplace inserts from Fireplace Xtrordinair, Napoleon, Superior, and Empire turn cold, drafty masonry fireplaces into 70-80% efficient zone heaters. Compare BTU output, viewing area, ember bed style, and remote options — then schedule a free measure with our certified hearth team.",
   "wood-inserts":
@@ -132,7 +132,7 @@ const RICH_INTRO_BY_SLUG: Record<string, string> = {
   "pellet-inserts":
     "Hands-off, thermostat-controlled pellet inserts from Harman, Quadra-Fire, and other leading pellet stove makers. Hopper-fed combustion delivers steady heat with one fill per day — perfect for converting an underperforming masonry fireplace into a real whole-room heating appliance.",
   "electric-inserts":
-    "Drop-in electric fireplace inserts that bring instant flame ambience and supplemental heat to any existing fireplace opening. Plug-in installation, multi-color flame options, and silent fan-forced heaters from Dimplex, Modern Flames, and more.",
+    "Drop-in electric fireplace inserts that bring instant flame ambience and supplemental heat to any existing fireplace opening. Plug-in installation, multi-color flame options, and silent fan-forced heaters from Dimplex, Dimplex, and more.",
   stoves:
     "Freestanding wood, pellet, and gas stoves from Lopi, Travis Industries, Harman, and Quadra-Fire. Whether you're heating a cabin, a workshop, or your main living area, our specialists size the right BTU output and vent kit so the stove ships ready to install.",
   "wood-stoves":
@@ -142,17 +142,17 @@ const RICH_INTRO_BY_SLUG: Record<string, string> = {
   "gas-stoves":
     "Cast iron and steel gas stoves with the warmth of a hearth and the convenience of thermostatic control. Direct vent and B-vent options from Lopi, Napoleon, and Empire — perfect for bedrooms, additions, basements, and anywhere a chimney isn't practical.",
   outdoor:
-    "Plan a comfortable outdoor living space with grill and fire-feature guidance from A Cozy Fireplace’s showroom team.",
+    "Plan a comfortable outdoor living space with grill and fire-feature guidance from The Depot Fireplace and Stove Center’s showroom team.",
   "fire-pits":
     "Linear and round gas fire pit burners, pans, and complete fire pit tables. Match-light and electronic ignition options sized from 24-inch patio designs all the way up to commercial 60-inch builds.",
   accessories:
-    "Mantels, hearth pads, screens, glass doors, remotes, and decorative media — everything you need to finish a fireplace project. Pilgrim Home & Hearth, Stoll Industries, Dagan, and related accessory options are available through the showroom.",
+    "Mantels, hearth pads, screens, glass doors, remotes, and decorative media — everything you need to finish a fireplace project. Ironhaus, Stoll Industries, Dagan, and related accessory options are available through the showroom.",
   mantels:
     "Pearl Mantels solid wood mantel shelves and surrounds, plus Magra Hearth heat-resistant mantel beams and hearth slabs. Made in the USA, sized to fit standard openings, and ready to install with included hardware.",
   "remotes-controls":
     "Replacement and upgrade fireplace remotes, receivers, wall thermostats, and ignition modules from Skytech, Mertik Maxitrol, and other OEM-equivalent control brands. Match the right control to your existing valve so the fireplace works exactly the way it should.",
   "doors-screens":
-    "Fireplace glass doors and screens from Design Specialties and Stoll Industries. Protect kids and pets, slow down heat loss, and finish the front of any masonry or factory-built fireplace.",
+    "Fireplace glass doors and screens from Portland Willamette and Stoll Industries. Protect kids and pets, slow down heat loss, and finish the front of any masonry or factory-built fireplace.",
   "logs-media":
     "Vented and vent-free gas log sets, plus glass media, decorative stones, and ceramic ember beds. Match the look of your fireplace's burner and finish off the flame appearance with the right realistic media.",
   parts:
@@ -175,7 +175,7 @@ function buildIntro(resolved: ResolvedCategory, count: number): string {
   const fromMap = RICH_INTRO_BY_SLUG[resolved.slug];
   if (fromMap) return fromMap;
 
-  return `Shop ${count}+ ${resolved.name.toLowerCase()} from top hearth brands like Travis Industries, Lopi, Napoleon, Superior, and Empire. A Cozy Fireplace ships nationwide with free expert consultation, in-house sizing support, and dealer-direct pricing. ${resolved.description}.`;
+  return `Shop ${count}+ ${resolved.name.toLowerCase()} from top hearth brands like Travis Industries, Lopi, Napoleon, Superior, and Empire. The Depot Fireplace and Stove Center ships nationwide with free expert consultation, in-house sizing support, and dealer-direct pricing. ${resolved.description}.`;
 }
 
 function buildMetaDescription(resolved: ResolvedCategory, count: number): string {
@@ -210,17 +210,17 @@ export async function generateMetadata(
       alternates: { canonical: absoluteUrl(`/category/${slug}`) },
       openGraph: {
         type: "website",
-        title: `${name} — A Cozy Fireplace`,
+        title: `${name} — The Depot Fireplace and Stove Center`,
         description,
         url: absoluteUrl(`/category/${slug}`),
         siteName: defaultStoreConfig.storeName,
-        images: ["/acozy-logo.png"],
+        images: ["/depot-logo.png"],
       },
       twitter: {
         card: "summary_large_image",
-        title: `${name} — A Cozy Fireplace`,
+        title: `${name} — The Depot Fireplace and Stove Center`,
         description,
-        images: ["/acozy-logo.png"],
+        images: ["/depot-logo.png"],
       },
     };
   }
@@ -243,7 +243,7 @@ export async function generateMetadata(
   const ogImageProduct = products.find((p) => p.images?.[0]);
   const ogImage = ogImageProduct?.images?.[0]
     ? absoluteUrl(ogImageProduct.images[0])
-    : `${SITE_URL}/acozy-logo.png`;
+    : `${SITE_URL}/depot-logo.png`;
 
   const title = count > 0
     ? `${resolved.name} — ${count}+ Models`
@@ -255,7 +255,7 @@ export async function generateMetadata(
     alternates: { canonical: absoluteUrl(`/category/${slug}`) },
     openGraph: {
       type: "website",
-      title: `${resolved.name} — A Cozy Fireplace`,
+      title: `${resolved.name} — The Depot Fireplace and Stove Center`,
       description,
       url: absoluteUrl(`/category/${slug}`),
       siteName: defaultStoreConfig.storeName,
@@ -270,7 +270,7 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: `${resolved.name} — A Cozy Fireplace`,
+      title: `${resolved.name} — The Depot Fireplace and Stove Center`,
       description,
       images: [ogImage],
     },
@@ -288,7 +288,7 @@ export default async function CategoryPage(
   if (isPartsCategorySlug(slug)) {
     const name = resolved?.name ?? "Fireplace Parts";
     const description =
-      "Shop OEM and OEM-equivalent fireplace, wood stove, pellet stove, and gas appliance replacement parts with expert fitment support from A Cozy Fireplace";
+      "Shop OEM and OEM-equivalent fireplace, wood stove, pellet stove, and gas appliance replacement parts with expert fitment support from The Depot Fireplace and Stove Center";
     const allProducts = await loadAllProducts();
     const partsProducts = allProducts.filter((product) =>
       slug === "parts"
@@ -383,7 +383,7 @@ export default async function CategoryPage(
           aria-label="Breadcrumb"
           className="mb-4 mt-3 flex items-center gap-2 text-xs text-[#5b5d5b]"
         >
-          <Link href="/" className="hover:text-[#a54210]">
+          <Link href="/" className="hover:text-[#b91806]">
             Home
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
@@ -391,7 +391,7 @@ export default async function CategoryPage(
             <>
               <Link
                 href={`/category/${resolved.parent.slug}`}
-                className="hover:text-[#a54210]"
+                className="hover:text-[#b91806]"
               >
                 {resolved.parent.name}
               </Link>
@@ -404,8 +404,8 @@ export default async function CategoryPage(
 
       <section className="border-b border-[#e0e0e0]">
         <div className="mx-auto max-w-[1640px] px-4 py-8 md:px-5 md:py-10 xl:py-12">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#a54210]">
-            A Cozy Fireplace
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b91806]">
+            The Depot Fireplace and Stove Center
           </p>
           <h1 className="mt-2 text-[34px] font-black leading-[1.08] tracking-[-0.045em] text-[#212121] md:text-[44px] xl:text-[56px]">
             {resolved.name}
@@ -413,7 +413,7 @@ export default async function CategoryPage(
           <p className="mt-4 max-w-[920px] text-base leading-7 text-[#5b5d5b] md:text-[17px]">
             {introText}
           </p>
-          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#7a3a16]">
+          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#b91806]">
             {productCount > 0
               ? `${productCount} ${resolved.name.toLowerCase()} ready to ship`
               : `Curated ${resolved.name.toLowerCase()} catalog`}
@@ -432,8 +432,8 @@ export default async function CategoryPage(
                     href={`/category/${subcategory.slug}`}
                     className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                       isActive
-                        ? "border-[#a54210] bg-[#a54210] text-white"
-                        : "border-gray-300 bg-white text-gray-700 hover:border-[#a54210] hover:text-[#a54210]"
+                        ? "border-[#b91806] bg-[#b91806] text-white"
+                        : "border-gray-300 bg-white text-gray-700 hover:border-[#b91806] hover:text-[#b91806]"
                     }`}
                   >
                     {subcategory.name}
@@ -445,7 +445,7 @@ export default async function CategoryPage(
 
           {visibleFeaturedBrands.length > 0 && (
             <div className="mt-6">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#b91806]">
                 Featured brands in this collection
               </p>
               <ul className="mt-3 flex flex-wrap gap-2 text-sm">

@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 export const metadata = seoMetadata({
   title: 'Fireplace FAQ',
-  description: "Answers to common fireplace, stove, insert, installation, service, financing, and product questions from A Cozy Fireplace",
+  description: "Answers to common fireplace, stove, insert, installation, service, financing, and product questions from The Depot Fireplace and Stove Center",
   path: "/faq",
 });
 
@@ -14,7 +14,7 @@ const faqs = [
     questions: [
       {
         q: "What areas do you serve?",
-        a: "We serve Naperville, Illinois and the surrounding areas including Chicagoland, Nixa, Ozark, Battlefield, and communities within a 50-mile radius of our showroom.",
+        a: "We serve Tilton, Illinois and the surrounding areas including Illiana, Nixa, Ozark, Battlefield, and communities within a 50-mile radius of our showroom.",
       },
       {
         q: "Do you offer financing?",

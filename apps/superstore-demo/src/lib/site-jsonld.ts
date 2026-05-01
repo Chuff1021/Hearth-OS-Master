@@ -8,8 +8,8 @@ export function organizationJsonLd() {
     "@id": `${SITE_URL}/#organization`,
     name: defaultStoreConfig.storeName,
     url: SITE_URL,
-    logo: `${SITE_URL}/acozy-logo.png`,
-    image: `${SITE_URL}/acozy-logo.png`,
+    logo: `${SITE_URL}/depot-logo.png`,
+    image: `${SITE_URL}/depot-logo.png`,
     telephone: defaultStoreConfig.phone,
     email: defaultStoreConfig.email,
     address: {
@@ -38,8 +38,8 @@ export function localBusinessJsonLd() {
     name: defaultStoreConfig.storeName,
     description: defaultStoreConfig.seo.metaDescription,
     url: SITE_URL,
-    image: `${SITE_URL}/acozy-logo.png`,
-    logo: `${SITE_URL}/acozy-logo.png`,
+    image: `${SITE_URL}/depot-logo.png`,
+    logo: `${SITE_URL}/depot-logo.png`,
     telephone: defaultStoreConfig.phone,
     email: defaultStoreConfig.email,
     priceRange: "$$",
@@ -58,8 +58,8 @@ export function localBusinessJsonLd() {
     },
     areaServed: [
       { "@type": "State", name: "Illinois" },
-      { "@type": "City", name: "Naperville" },
-      { "@type": "City", name: "Chicagoland" },
+      { "@type": "City", name: "Tilton" },
+      { "@type": "City", name: "Illiana" },
       { "@type": "City", name: "Branson" },
       { "@type": "City", name: "Nixa" },
       { "@type": "City", name: "Ozark" },
@@ -122,7 +122,7 @@ export function productJsonLd(product: Product) {
   const productUrl = absoluteUrl(`/product/${product.slug}`);
   const primaryImage = product.images?.[0]
     ? absoluteUrl(product.images[0])
-    : `${SITE_URL}/acozy-logo.png`;
+    : `${SITE_URL}/depot-logo.png`;
   const allImages = (product.images ?? [])
     .filter(Boolean)
     .map((img) => absoluteUrl(img));

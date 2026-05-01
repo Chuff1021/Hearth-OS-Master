@@ -15,7 +15,7 @@ export function seoMetadata({
   title,
   description,
   path,
-  image = "/acozy-logo.png",
+  image = "/depot-logo.png",
   index = true,
 }: SeoMetadataOptions): Metadata {
   const canonical = absoluteUrl(path);
