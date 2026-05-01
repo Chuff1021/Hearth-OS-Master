@@ -5,14 +5,14 @@ import { productCategories } from "@/lib/store-config";
 
 const categoryVisuals: Record<string, string> = {
   fireplaces: "/products-upgraded/gas-fireplaces/fpx-34dvldeluxeemberglo-3.webp",
-  inserts: "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert.jpg",
+  inserts: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
   stoves: "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp",
   "bbq-grills": "/acozy/bbq-grills.jpg",
   "logs-media": "/acozy/gas-logs.jpg",
   "doors-screens": "/acozy/glass-doors.jpg",
   "stone-products": "/acozy/stone-products.jpg",
-  accessories: "/acozy/accessories.jpg",
-  parts: "/acozy/accessories.jpg",
+  accessories: "/products-upgraded/accessories/doors-screens/pilgrim-44-inch-forged-iron-fireplace-screen-with-doors-3.webp",
+  parts: "/products/parts/insert-ret.jpg",
 };
 
 export function CategoryGrid() {

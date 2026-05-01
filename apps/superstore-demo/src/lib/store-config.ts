@@ -182,9 +182,9 @@ export const productCategories: ProductCategory[] = [
     name: "Inserts",
     slug: "inserts",
     description: "Gas, wood, pellet, and electric inserts for upgrading an existing fireplace",
-    image: "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert.jpg",
+    image: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
     subcategories: [
-      { id: "gas-inserts", name: "Gas Inserts", slug: "gas-inserts", description: "Efficient gas fireplace inserts", image: "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert.jpg" },
+      { id: "gas-inserts", name: "Gas Inserts", slug: "gas-inserts", description: "Efficient gas fireplace inserts", image: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp" },
       { id: "wood-inserts", name: "Wood Inserts", slug: "wood-inserts", description: "High-efficiency wood-burning inserts", image: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp" },
       { id: "pellet-inserts", name: "Pellet Inserts", slug: "pellet-inserts", description: "Convenient pellet-burning inserts", image: "/products-upgraded/pellet-inserts/lopi-agppelletinsert.webp" },
       { id: "electric-inserts", name: "Electric Inserts", slug: "electric-inserts", description: "Easy-install electric fireplace inserts", image: "/categories/electric-inserts.jpg" },
@@ -234,7 +234,7 @@ export const productCategories: ProductCategory[] = [
     name: "Accessories",
     slug: "accessories",
     description: "Fireplace tools, screens, log baskets, remotes, controls, and hearth accessories",
-    image: "/acozy/accessories.jpg",
+    image: "/products-upgraded/accessories/doors-screens/pilgrim-44-inch-forged-iron-fireplace-screen-with-doors-3.webp",
     subcategories: [
       { id: "mantels", name: "Mantels & Hearth", slug: "mantels", description: "Mantels, surrounds, and hearth protection", image: "/acozy/stone-products.jpg" },
       { id: "remotes-controls", name: "Remotes & Controls", slug: "remotes-controls", description: "Fireplace remotes, receivers, thermostats, and controls", image: "/acozy/accessories.jpg" },
@@ -245,7 +245,7 @@ export const productCategories: ProductCategory[] = [
     name: "Parts",
     slug: "parts",
     description: "Replacement parts and fitment help by appliance type, brand, model, or SKU",
-    image: "/acozy/accessories.jpg",
+    image: "/products/parts/insert-ret.jpg",
   },
 ];
 
