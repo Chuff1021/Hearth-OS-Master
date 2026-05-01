@@ -4,9 +4,9 @@ import { ArrowRight, Flame } from "lucide-react";
 import { productCategories } from "@/lib/store-config";
 
 const categoryVisuals: Record<string, string> = {
-  fireplaces: "/acozy/fireplaces.jpg",
-  inserts: "/acozy/gas-wood-stoves.jpg",
-  stoves: "/acozy/gas-wood-stoves.jpg",
+  fireplaces: "/products-upgraded/gas-fireplaces/fpx-34dvldeluxeemberglo-3.webp",
+  inserts: "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert.jpg",
+  stoves: "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp",
   "bbq-grills": "/acozy/bbq-grills.jpg",
   "logs-media": "/acozy/gas-logs.jpg",
   "doors-screens": "/acozy/glass-doors.jpg",
